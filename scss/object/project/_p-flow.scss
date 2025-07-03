@@ -1,0 +1,105 @@
+@charset "UTF-8";
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+.p-flow {
+    padding-top: 4.4rem;
+    padding-bottom: 1rem;
+}
+
+.p-flow__container {
+    margin-top: 3.6rem;
+    display: flex;
+    max-width: 780px;
+    margin-inline: auto;
+
+}
+
+.p-flow__steps {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+.p-flow__step {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 5.8rem;
+    position: relative;
+}
+
+.p-flow__icon {
+    width: 18px;
+    height: 18px;
+    background: $red;
+    border-radius: 50%;
+    margin-right: 2.5rem;
+    position: relative;
+    flex-shrink: 0;
+
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 18px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 3px;
+        height: 9.7rem;
+        background: $red;
+        z-index: 0;
+    }
+}
+
+.p-flow__icon--arrow {
+
+    margin-right: 2.5rem;
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 18px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 3px;
+        height: 3.7rem;
+        background: $red;
+        z-index: 0;
+    }
+
+    &::after {
+        content: '';
+        width: 1em;
+        height: 1em;
+        border: 0.2em solid $red;
+        border-top: 0;
+        border-right: 0;
+        transform: rotate(-45deg);
+        transform-origin: bottom left;
+        position: absolute;
+        top: 40px;
+        left: 50%;
+        bottom: -0.05em;
+        box-sizing: border-box;
+        background: none;
+
+    }
+}
+
+.p-flow__label {
+    color: $red;
+    font-weight: 700;
+    font-size: 2.2rem;
+    line-height: calc(33/22);
+    min-width: 155px;
+    margin-right: 2rem;
+}
+
+.p-flow__desc {
+    font-size: 1.8rem;    
+    line-height: calc(30/18);
+
+}

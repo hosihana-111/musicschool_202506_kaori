@@ -1,0 +1,36 @@
+@charset "UTF-8";
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+.p-voice{
+    padding-top: 4.4rem;
+    padding-bottom: 8rem;
+}
+
+.p-voice__container{
+    margin-top: 3.6rem;
+    gap: calc(35 / 940 * 100%);
+    display: flex;
+    align-items: center;        
+}
+
+.voice-card__image{
+
+}
+
+.voice-card__body{
+    color: $white;
+    
+    margin-top: 1.7rem;
+}
+.voice-card__title{
+    font-size: 2.2rem;
+    line-height: calc(33/22);
+    font-weight: 700;
+    text-align: center;
+}
+.voice-card__desc{
+    font-size: 1.8rem;
+    line-height: calc(30/18);
+    margin-top: 1rem;
+}
