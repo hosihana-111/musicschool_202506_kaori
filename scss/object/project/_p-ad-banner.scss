@@ -1,0 +1,19 @@
+@use "../../foundation/variable" as *;
+.p-ad-banner{
+    background-color: $red;
+    color: $white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.p-ad-banner__title{
+    font-size: 2.4rem;
+    line-height: calc(50/24);
+    font-weight: 900;
+    margin-bottom: 3rem;
+}
+
+.p-ad-banner__text{
+    font-size: 1.8rem;
+    line-height: calc(30/18);
+}

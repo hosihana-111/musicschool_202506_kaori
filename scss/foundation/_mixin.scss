@@ -1,0 +1,14 @@
+$bp_pc: 768px; //pc（768px以上）
+$bp_sp: 767px; //SP（767px以下）
+
+@mixin pc {
+  @media (min-width: $bp_pc) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width: $bp_sp) {
+    @content;
+  }
+}
