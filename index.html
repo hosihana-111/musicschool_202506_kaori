@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
 </head>
 
 <body>
@@ -179,16 +179,16 @@
       </div>
     </section>
 
-    <!-- 生徒さんたちの声 -->
+    <!-- 生徒さんたちの声 　AIによる実装サポート-->
     <section id="voice" class="p-voice section-bg">
       <div class="inner">
         <h2 class="c-section-title title-white">生徒さんたちの声</h2>
-        <div class="p-voice__container">
-          <div class="p-voice__container__item voice-card">
-            <div class="voice-item__image">
+        <div class="p-voice__container autoplay">
+          <div class="p-voice__container__item">
+            <div class="voice-card__image">
               <picture>
                 <source srcset="./images/voice/voice01-pc.jpg" media="(min-width: 768px)" type="image/jpg">
-                <img src="./images/voice/voice01-sp.jpg" alt="ギターと鍵盤を使った作曲練習" />
+                <img src="./images/voice/voice01-pc.jpg" alt="証券会社勤務　丸山さん" />
               </picture>
             </div>
             <div class="voice-card__body">
@@ -198,11 +198,11 @@
               </p>
             </div>
           </div>
-          <div class="p-voice__container__card voice-card">
+          <div class="p-voice__container__item">
             <div class="voice-card__image">
               <picture>
                 <source srcset="./images/voice/voice02-pc.jpg" media="(min-width: 768px)" type="image/jpg">
-                <img src="./images/voice/voice01-sp.jpg" alt="ギターと鍵盤を使った作曲練習" />
+                <img src="./images/voice/voice02-pc.jpg" alt="IT会社勤務　S.Eさん" />
               </picture>
             </div>
             <div class="voice-card__body">
@@ -212,11 +212,11 @@
               </p>
             </div>
           </div>
-          <div class="p-voice__container__item voice-card">
+          <div class="p-voice__container__item">
             <div class="voice-card__image">
               <picture>
                 <source srcset="./images/voice/voice03-pc.jpg" media="(min-width: 768px)" type="image/jpg">
-                <img src="./images/voice/voice01-sp.jpg" alt="ギターと鍵盤を使った作曲練習" />
+                <img src="./images/voice/voice03-pc.jpg" alt="都内大学生　田森さん" />
               </picture>
             </div>
             <div class="voice-card__body">
@@ -226,11 +226,12 @@
               </p>
             </div>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- ご利用の流れ   AIによる実装サポート --> 
+    <!-- ご利用の流れ   AIによる実装サポート -->
 
     <section id="flow" class="p-flow">
       <div class="inner">
@@ -264,7 +265,7 @@
               </div>
               <div class="p-flow__step">
                 <div class="p-flow__icon p-flow__icon--arrow"></div>
-                
+
                 <div class="p-flow__label">ご入学</div>
                 <div class="p-flow__desc">
                   お申し込み完了後、レッスンがスタートします。<br>
@@ -281,17 +282,90 @@
       <div class="inner">
         <h2 class="c-section-title">よくあるご質問</h2>
         <div class="p-faq__container">
-
-
-          
-        </div>
-      </div>
+          <div class="p-faq__container__accordion">
+            <div class="accordion__container">
+              <div class="accordion__details">
+                <summary class="accordion__title js-accordion-title">
+                  <span class="faq-q">Q</span>どのような生徒さんがどれぐらいの期間で稼いでいますか？
+                </summary>
+                <div class="accordion__content">
+                  <p><span class="faq-a">A</span>コンテンツが入ります。</p>
+                </div>
+              </div>
+              <div class="accordion__details">
+                <summary class="accordion__title js-accordion-title">
+                  <span class="faq-q">Q</span>途中でプランを変更することは可能ですか？
+                </summary>
+                <div class="accordion__content">
+                  <p><span class="faq-a">A</span>途中でプラン変更も可能です。毎月15日までに申請すれば翌月からプランが変更となります。</p>
+                </div>
+              </div>
+              <div class="accordion__details">
+                <summary class="accordion__title js-accordion-title">
+                  <span class="faq-q">Q</span>入学金などの分割払いはできますか？
+                </summary>
+                <div class="accordion__content">
+                  <p><span class="faq-a">A</span>コンテンツが入ります。</p>
+                </div>
+              </div>
+              <div class="accordion__details">
+                <summary class="accordion__title js-accordion-title">
+                  <span class="faq-q">Q</span>休学することも可能ですか？
+                </summary>
+                <div class="accordion__content">
+                  <p><span class="faq-a">A</span>コンテンツが入ります。</p>
+                </div>
+              </div>
+            </div>
+          </div>
     </section>
 
     <!-- ブログ -->
     <section id="blog" class="p-blog">
       <div class="inner">
         <h2 class="c-section-title">ブログ</h2>
+        <div class="p-blog__container">
+          <div class="p-blog__card blog__card">
+            <div class="blog__card-img">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="./images/service_01.jpg">
+                    <img src="./images/service_01_sp.jpg" alt="往診サービス" title="往診サービス">
+                </picture>
+            </div>
+            <div class="blog__card-body">
+                <h3 class="service__title">往診サービス</h3>
+                <data value="0000-00-00">0000.00.00</data>
+            </div>
+        </div>
+        <div class="service__card">
+            <div class="service-img">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="./images/service_02.jpg">
+                    <img src="./images/service_02_sp.jpg" alt="ペットホテル" title="ペットホテル">
+                </picture>
+            </div>
+            <div class="service-body">
+                <h3 class="service__title">ペットホテル</h3>
+                <p class="service__text">短時間の一時預かりから宿泊までご利用いただけるサービスです。</p>
+            </div>
+        </div>
+        <div class="service__card">
+            <div class="service-img">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="./images/service_03.jpg">
+                    <img src="./images/service_03_sp.jpg" alt="トリミング" title="トリミング">
+                </picture>
+            </div>
+            <div class="service-body">
+                <h3 class="service__title">トリミング</h3>
+                <p class="service__text">動物の体に負担をかけない技術や液剤を使用いたします。</p>
+            </div>
+        </div>
+
+
+        </div>
+
+
       </div>
     </section>
 
@@ -311,5 +385,9 @@
       </div>
     </div>
   </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="js/main.js"></script>
 
 </html>
