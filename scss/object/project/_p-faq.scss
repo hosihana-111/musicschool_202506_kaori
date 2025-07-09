@@ -1,3 +1,97 @@
 @charset "UTF-8";
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
+
+.p-faq{
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.p-faq__container__accordion {
+    margin-inline: auto;
+    margin-top: 30px;
+    max-width: 880px;
+    position: relative;
+    width: 100%;
+  }
+  .accordion__title {
+    color: $black;
+    cursor: pointer;
+    font-size: 1.7rem;
+    line-height: calc(30/17);
+    padding: 2rem 2rem 1.5rem 2rem;
+  }
+
+  .accordion__details {
+    border-bottom: 1px solid $black;
+  }
+  .accordion__details:nth-of-type(1){
+    border-top: 1px solid $black;
+  }
+
+  .accordion__content {
+    background-color:rgba(203, 0, 0,0.1) ;
+    display: none;
+    padding: 2rem 2rem 1.5rem 2rem;
+  }
+  .accordion__content p{
+    color: $red;
+    font-size: 1.7rem;
+    line-height: calc(30/17);
+    font-weight: 700;
+   
+  }
+  /* 矢印 */
+  .accordion__title {
+    position: relative;
+  }
+  .accordion__title::after {
+    border-right: solid 2px $black;
+    border-top: solid 2px $black;
+    content: "";
+    display: block;
+    height: 8px;
+    position: absolute;
+    right: 25px;
+    top: 38%;
+    transform: rotate(135deg);
+    transition: transform .3s ease-in-out, top .3s ease-in-out;
+    width: 8px;
+  }
+  .accordion__title.open::after {
+    top: 45%;
+    transform: rotate(-45deg);
+  }
+  
+.faq-q {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  background: $black;
+  color: $white;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-right: 0.8rem;
+  font-family: inherit;
+  flex-shrink: 0;
+}
+
+.faq-a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    background:$red;
+    color: $white;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-right: 0.8rem;
+    font-family: inherit;
+    flex-shrink: 0;
+  }
+  

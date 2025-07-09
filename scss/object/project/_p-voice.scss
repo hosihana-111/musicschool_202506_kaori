@@ -9,28 +9,122 @@
 
 .p-voice__container{
     margin-top: 3.6rem;
-    gap: calc(35 / 940 * 100%);
-    display: flex;
-    align-items: center;        
+    position: relative;
+    
+    // slickスライダーのスタイリング
+    .slick-slide {
+        margin: 0 1.75rem; // 3.5remのgapを実現するため、左右に1.75remずつ
+    }
+    
+    .slick-arrow {
+        font-size: 0 !important;
+        color: transparent !important;
+        text-indent: -9999px;
+        overflow: hidden;
+        position: absolute;
+        top: 40%;
+        transform: translateY(-50%);
+        z-index: 2;
+        width: 4.2rem;
+        height: 4.2rem;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        outline: none;
+    }
+    
+    .slick-prev {
+        left: -1.5rem;
+    }
+    
+    .slick-next {
+        right: -1.5rem;
+    }
+    
+    .slick-arrow:before {
+        content: '';
+        display: block;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-left: 0.7rem solid #ffb3b3;
+        border-bottom: 0.7rem solid #ffb3b3;
+        border-radius: 0.2rem;
+        background: none;
+        position: relative;
+    }
+    
+    .slick-prev:before {
+        transform: rotate(45deg);
+        left: 0.2rem;
+        position: relative;
+    }
+    
+    .slick-next:before {
+        transform: rotate(-135deg);
+        left: -0.2rem;
+        position: relative;
+    }
+}
+
+.p-voice__container__item {
+      
+    text-align: center;
+    transition: transform 0.3s ease;
+    
+    &:hover {
+        transform: translateY(-0.5rem);
+    }
 }
 
 .voice-card__image{
-
+    width: 100%;  
+    margin: 0 auto 1.5rem;
+    
+ 
 }
 
 .voice-card__body{
     color: $white;
-    
-    margin-top: 1.7rem;
 }
+
 .voice-card__title{
     font-size: 2.2rem;
     line-height: calc(33/22);
     font-weight: 700;
     text-align: center;
+    margin-bottom: 1rem;
 }
+
 .voice-card__desc{
     font-size: 1.8rem;
     line-height: calc(30/18);
-    margin-top: 1rem;
+    text-align: left;
+}
+
+// レスポンシブ対応
+@include sp {
+    .p-voice__container {
+        .slick-prev,
+        .slick-next {
+            display: none !important;
+        }
+        
+       
+    }
+    
+    .p-voice__container__item {
+        padding: 1.5rem;
+    }
+    
+    .voice-card__title {
+        font-size: 1.8rem;
+    }
+    
+    .voice-card__desc {
+        font-size: 1.6rem;
+    }
 }
