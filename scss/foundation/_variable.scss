@@ -6,6 +6,12 @@ $red:    #CB0000;
 
 
 
+// 
+// @function vw($pixelSize, $baseWidth: 1080){
+//     @return calc($pixelSize / $baseWidth * 100vw);
+// }
+
+
 // font
 // Medium 500
 // Bold   900

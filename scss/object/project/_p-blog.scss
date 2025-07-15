@@ -1,7 +1,13 @@
 @charset "UTF-8";
+@use "../../foundation/base" as *;
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
 
+
+.p-blog{
+    padding-top: 3.6rem;
+    padding-bottom:22rem;
+}
 .p-blog__container {
     margin-top: 49px;
     display: flex;
@@ -68,6 +74,9 @@
 
 .blog__card-body {
     margin-top: 19px;
+    display: flex;
+    flex-direction: column;
+  
 
     @include sp {
         margin-top: 30px;
@@ -81,6 +90,7 @@
     font-weight: 700;
     line-height: calc(25/20);
     margin: 0;
+    
 
     @include sp {
         line-height: calc(30/20);
@@ -93,11 +103,13 @@
     line-height: calc(30/17);
     margin-top: 7px;
     text-align: right;
+    margin-left: auto;
 
     @include sp {
         font-size: 1.6rem;
         line-height: calc(30/16);
         text-align: center;
         margin-top: 7px;
+        margin-left: 0;
     }
 }

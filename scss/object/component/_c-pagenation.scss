@@ -1,0 +1,31 @@
+@charset "UTF-8";
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+.c-pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 8px;
+    list-style-type: none;
+    padding: 0;
+}
+.c-pagination a{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2em;
+    height: 2em;
+    border: 1px solid #000000;
+    border-radius: 1px;
+    color: #000000;
+}
+
+.pagination a:not(:hover) {
+    text-decoration: none;
+}
+.c-pagination a :nth-of-type(4){
+    border: none;
+}
+

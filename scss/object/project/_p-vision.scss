@@ -1,5 +1,7 @@
+@charset "UTF-8";
+@use "../../foundation/base" as *;
 @use "../../foundation/variable" as *;
-
+@use "../../foundation/mixin" as *;
 .p-vision{
     margin-block: 6.6rem;
     

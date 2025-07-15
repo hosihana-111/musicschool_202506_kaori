@@ -3,16 +3,18 @@
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
 
-.p-reason {
+.p-sub__blog {
     padding-top: 5.6rem;
     padding-bottom: 9rem;
 }
 
-.p-reason__container{
+.p-sub-blog__list{
     margin-top: 3.1rem;
     display: flex;
     flex-direction: column;
     gap: 5rem;
+    padding-top: 3rem;
+    padding-bottom: 7rem;
 
     @include sp{
         position: static;
@@ -22,8 +24,11 @@
         align-items: center;
     }
 }
+.p-sub-blog__item{
+    position: relative;
+}
 
-.p-reason__container__item {
+.p-sub-blog__link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,8 +40,28 @@
         align-items: flex-start;
     }
 }
+.p-sub-blog__label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $red;
+    width: 8rem;
+    height: 3rem;
+    z-index: 1;
+}
+.p-sub-blog__label-text{
+    height: 2.5rem;
+    color: $white;     
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    line-height: calc(25/15);
+    margin: 0;
+}
 
-.reason-item__image {
+.p-sub-blog__image{
     width: 40%;
     flex-shrink: 0;
     display: flex;
@@ -57,40 +82,7 @@
     }
 }
 
-.reason-item__content {
+.p-sub-blog__body {
     flex: 1;
     
-}
-
-.reason-item__title{
-    font-size: 2.2rem;
-    font-weight: 700;
-    line-height: calc(33/22);
-    text-align: left;
-    padding-left: 5rem;
-    padding-bottom: 1.2rem;
-    border-bottom: 2px solid $red;
-
-    @include sp{
-        padding-left: 0;
-        text-align: left;
-        font-size: 2rem;
-        line-height: calc(30/20);
-    }
-}
-
-.reason-item__text{
-    font-size: 1.8rem;
-    line-height: calc(33/18);
-    text-align: left;
-    display: block;
-    padding-top: 3.7rem;
-    padding-left: 5rem;
-
-    @include sp{
-        padding-left: 0;
-        text-align: left;
-        font-size:1.6rem ;
-        line-height: calc(30/16);
-    }
 }

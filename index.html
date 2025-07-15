@@ -23,10 +23,10 @@
           <div class="p-header__logo__img">
             <img src="./images/header/header-logo.svg" alt="きたむらミュージックスクール">
           </div>
-          <p class="p-header__logo__text">きたむら<br><span class="p-header__logo__text__span">ミュージックスクール</span></p>
+          <p class="p-header__logo__text">きたむら<br class="pc"><span class="p-header__logo__text__span">ミュージックスクール</span></p>
         </a>
       </h1>
-      <button class="p-header__hamburrer">
+      <button class="p-header__hamburger sp">
         <span></span>
         <span></span>
         <span></span>
@@ -34,18 +34,12 @@
       <div class="p-header__right">
         <nav class="p-header__nav">
           <ul class="p-header__nav__lists">
-            <li class="p-header__nav__list">
-              <a href="#" class="p-header__nav__list__link">料金</a>
-            </li>
-            <li class="p-header__nav__list">
-              <a href="#" class="p-header__nav__list__link">ブログ</a>
-            </li>
-            <li class="p-header__nav__list">
-              <a href="#" class="p-header__nav__list__link">卒業実績</a>
-            </li>
+            <li class="p-header__nav__list"><a href="#" >料金</a></li>
+            <li class="p-header__nav__list"><a href="#">ブログ</a></li>
+            <li class="p-header__nav__list"><a href="#" >卒業実績</a></li>
           </ul>
         </nav>
-        <div class="c-btn">
+        <div class="c-btn pc">
           <a href="#" class="c-btn__link">お問い合わせ</a>
         </div>
       </div>
@@ -63,17 +57,24 @@
         </div>
         <div class="fv__inner__text">
           <h2 class="fv__inner__text__title">
-            「音楽で生きる」を叶える<br>ミュージックスクール
+            「音楽で生きる」<br class="sp"> を叶える<br>ミュージックスクール
           </h2>
         </div>
       </div>
     </section>
 
+    <!-- TOPに戻るボタンのjsの修正をAIに依頼 -->
+
+    <div class="c-page-top">
+      <a href="#" class="c-goto-top"><img src="./images/icon/goto-top.svg" alt="トップへ戻る"></a>
+      <a href="#" class="c-btn__link c-contact-button">お問い合わせ</a>
+    </div>
+
     <!-- ビジョン -->
     <section id="vision" class="p-vision">
       <div class="inner">
         <div class="p-vision__content">
-          <h2 class="p-vision__title">全人類、ミュージシャン計画。</h2>
+          <h2 class="p-vision__title">全人類、<br class="sp"> ミュージシャン計画。</h2>
           <p class="p-vision__subtitle">私たちは音楽を愛するすべての人が、音楽に熱狂できる世界を目指しています。</p>
         </div>
         <div class="p-vision-diagram">
@@ -326,7 +327,7 @@
           <div class="p-blog__card blog__card">
             <div class="blog__card-label">
               <p class="blog__card-label-text">SNS</p>
-            </div>            
+            </div>
             <div class="blog__card-img">
               <picture>
                 <source media="(min-width: 768px)" srcset="./images/blog/blog01-pc.jpg">
@@ -341,7 +342,7 @@
           <div class="p-blog__card blog__card">
             <div class="blog__card-label">
               <p class="blog__card-label-text">集客方法</p>
-            </div>  
+            </div>
             <div class="blog__card-img">
               <picture>
                 <source media="(min-width: 768px)" srcset="./images/blog/blog02-pc.jpg">
@@ -356,7 +357,7 @@
           <div class="p-blog__card blog__card">
             <div class="blog__card-label">
               <p class="blog__card-label-text">ギター</p>
-            </div>  
+            </div>
             <div class="blog__card-img">
               <picture>
                 <source media="(min-width: 768px)" srcset="./images/blog/blog03-pc.jpg">
@@ -382,15 +383,56 @@
   <footer>
     <div class="l-footer p-footer">
       <div class="p-footer__inner">
-        <div class="p-footer__inner__left">
-          <h2 class="p-footer__title">きたむらミュージックスクール</h2>
-          <p class="p-footer__text">
-            <a href="https://www.instagram.com/kitamura_music_school/" target="_blank" rel="noopener noreferrer">
-            </a>
-          </p>
+        <nav class="footer__nav footer-nav">
+          <ul class="footer-nav__lists">
+            <li class="footer-nav__list">
+              <a href="#" class="footer-nav__link">ホーム</a>
+            </li>
+            <li class="footer-nav__list">
+              <a href="#" class="footer-nav__link">料金</a>
+            </li>
+            <li class="footer-nav__list">
+              <a href="#blog" class="footer-nav__link">ブログ</a>
+            </li>
+            <li class="footer-nav__list">
+              <a href="#" class="footer-nav__link">卒業実績</a>
+            </li>
+            
+          </ul>
+        </nav>
+        <div class="footer-logo">
+          <a href="#"><img src="./images/icon/logo-white.svg" alt="ロコ"></a>
+        </div>
+        <div>
+          <p class="footer__copyright">&copy;0000 KITAMURA music school Inc. All Rights　<span class="ib-span">kitamurakensetukogyo</span></p>
+        </div>
+
+        <div class="sns-btns">
+          <ul class="footer__sns sns">
+            <li class="sns__list">
+              <a href="#" class="sns__link" target="_blank" rel="noopener noreferrer">
+                <img src="./images/icon/icon-twitter.svg" alt="twitter">
+              </a>
+            </li>
+            <li class="sns__list">
+              <a href="#" class="sns__link" target="_blank" rel="noopener noreferrer">
+                <img src="./images/icon/icon-facebook.svg" alt="facebook">
+              </a>
+            </li>
+            <li class="sns__list">
+              <a href="#" class="sns__link" target="_blank" rel="noopener noreferrer">
+                <img src="./images/icon/icon-youtube.svg" alt="youtube">
+              </a>
+            </li>
+            <li class="sns__list">
+              <a href="#" class="sns__link" target="_blank" rel="noopener noreferrer">
+                <img src="./images/icon/icon-instagram.svg" alt="instagram">
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
+
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

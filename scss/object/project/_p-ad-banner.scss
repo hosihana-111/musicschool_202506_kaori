@@ -1,4 +1,8 @@
+@charset "UTF-8";
+@use "../../foundation/base" as *;
 @use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
 .p-ad-banner{    
     color: $white;
     padding: 2rem 0;

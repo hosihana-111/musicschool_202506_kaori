@@ -1,4 +1,7 @@
+@charset "UTF-8";
+@use "../../foundation/base" as *;
 @use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
 
 .fv__inner{
     position: relative;
@@ -13,10 +16,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+   
 }
 
 .fv__inner__text__title{
     font-size: 4rem;
     line-height: calc(60/40);
     color: $white;
+    @include sp{
+        font-size: 3rem ;
+        line-height: calc(50/30);
+        text-align: center;
+    }
 }

@@ -1,0 +1,75 @@
+@charset "UTF-8";
+@use "../../foundation/base" as *;
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+.c-page-visual {
+  position: relative;
+  width: 100%;
+  margin-bottom: 2rem;
+  background: #e8e8e8;
+
+  &__img {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.5);
+      display: block;
+    }
+
+    .c-page-visual__title {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 2.5rem;
+      line-height: calc(60/25);
+      font-weight: 700;
+      // text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      margin: 0;
+    }
+  }
+}
+
+.c-breadcrumb {
+  max-width: 940px;
+  margin-inline: auto;
+  padding-inline: 30px;
+  font-size: 1.6rem;
+  line-height: calc(33/16);
+
+  ol {
+    display: flex;
+    // gap: 2em;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    color: $black;
+
+    &:not(:last-child)::after {
+      content: '>';
+      margin: 0 1em;
+      color: $black;
+    }
+  }
+
+  a {
+    color: $black;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

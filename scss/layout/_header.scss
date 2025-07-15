@@ -1,3 +1,9 @@
+@charset "UTF-8";
+@use "../foundation/base" as *;
+@use "../foundation/variable" as *;
+@use "../foundation/mixin" as *;
+
+
 #header{
     position: fixed;
     top: -100px;
@@ -21,5 +27,9 @@
     height: 8rem;
    padding-inline: 3rem;
    margin: 0 auto;
-      
+     @include sp{
+        height: 5rem ;
+        padding-left:2rem;
+        padding-right: 0;
+     } 
 }
