@@ -1,6 +1,7 @@
 @charset "UTF-8";
-@use "./variable" as * ;
-@use "./mixin" as *;
+@use './reset' as*;
+@use './variable' as * ;
+@use './mixin' as *;
 
 :root {
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
@@ -40,6 +41,14 @@ body {
   box-sizing: border-box;
   font-size: 1.6rem;
 }
+
+main {
+  padding-top: 8rem; // headerの高さ分のpadding-topを追加
+  
+  @include sp {
+    padding-top: 5rem; // スマホではheaderの高さ(5rem)分
+  }
+}
 #container {
   width: 100%;
   overflow: hidden;
@@ -71,6 +80,10 @@ a {
 .section-bg{
   background-color: $red;
 }
+.gray-bg{
+  background-color: #E8E8E8;
+}
+
 
 /*---------レスポンシブル---------*/
 // 画面幅が 767px以下（PC） のときだけ非表示

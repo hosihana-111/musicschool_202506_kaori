@@ -8,29 +8,33 @@
     padding-bottom: 1rem;
 }
 
-.p-flow__container {
+// .p-flow__items {
+//     margin-top: 3.6rem;
+//     display: flex;
+//     max-width: 780px;
+//     margin-inline: auto;
+
+// }
+
+.p-top-flow__items {
     margin-top: 3.6rem;
     display: flex;
     max-width: 780px;
-    margin-inline: auto;
-
-}
-
-.p-flow__steps {
-    display: flex;
     flex-direction: column;
     align-items: flex-start;
     position: relative;
+    margin-inline: auto;
+   
 }
 
-.p-flow__step {
-    display: flex;
-    align-items: flex-start;
+.p-top-flow-item {
+    display: flex;   
     margin-bottom: 5.8rem;
     position: relative;
+    column-gap: 3rem;
 }
 
-.p-flow__icon {
+.p-top-flow-item__icon {
     width: 18px;
     height: 18px;
     background: $red;
@@ -38,6 +42,7 @@
     margin-right: 2.5rem;
     position: relative;
     flex-shrink: 0;
+    z-index: 10;
 
     &::after {
         content: "";
@@ -53,7 +58,7 @@
     }
 }
 
-.p-flow__icon--arrow {
+.p-top-flow-item__icon--arrow {
 
     margin-right: 2.5rem;
     position: relative;
@@ -90,16 +95,16 @@
     }
 }
 
-.p-flow__label {
+.p-top-flow-item__label {
     color: $red;
     font-weight: 700;
     font-size: 2.2rem;
     line-height: calc(33/22);
-    min-width: 155px;
+    width: 155px;
     margin-right: 2rem;
 }
 
-.p-flow__desc {
+.p-top-flow-item__desc {
     font-size: 1.8rem;    
     line-height: calc(30/18);
 

@@ -3,9 +3,14 @@
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
 
-.fv__inner{
+.fv{
     position: relative;
+    padding-top: 8rem;
 }
+
+// .fv__inner{
+//     position: relative;
+// }
 .fv__inner__text{
     width: 100%;
     height: 100%;

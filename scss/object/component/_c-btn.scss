@@ -30,7 +30,7 @@
   pointer-events: none;
   transition: opacity 0.3s;
   display: block;
-  background-color: #e60033;
+  background-color: $red;
   color: $white;
   font-weight: 700;
   padding: 1rem 8.4rem 1rem 8rem;
@@ -44,7 +44,7 @@
   }
  
 }
-.c-contact-button.is-show {
+.c-contact-button.is-change {
   opacity: 1;
   pointer-events: auto;
 }

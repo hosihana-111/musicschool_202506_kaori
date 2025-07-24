@@ -38,38 +38,3 @@
   }
 }
 
-.c-breadcrumb {
-  max-width: 940px;
-  margin-inline: auto;
-  padding-inline: 30px;
-  font-size: 1.6rem;
-  line-height: calc(33/16);
-
-  ol {
-    display: flex;
-    // gap: 2em;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  li {
-    color: $black;
-
-    &:not(:last-child)::after {
-      content: '>';
-      margin: 0 1em;
-      color: $black;
-    }
-  }
-
-  a {
-    color: $black;
-    text-decoration: none;
-    transition: all 0.3s ease;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}

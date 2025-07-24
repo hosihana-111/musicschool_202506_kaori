@@ -16,14 +16,15 @@
 </head>
 
 <body>
-  <header>
-    <div class="l-header p-header">
+  <header id="header" class="l-header p-header">
+    <div class="p-header__inner">
       <h1 class="p-header__logo">
-        <a href="index.html" class="p-header__logo__link">
+        <a href="index.html" >
           <div class="p-header__logo__img">
             <img src="./images/header/header-logo.svg" alt="きたむらミュージックスクール">
           </div>
-          <p class="p-header__logo__text">きたむら<br class="pc"><span class="p-header__logo__text__span">ミュージックスクール</span></p>
+          <p class="p-header__logo__text">きたむら<br class="pc"><span class="p-header__logo__text__span">ミュージックスクール</span>
+          </p>
         </a>
       </h1>
       <button class="p-header__hamburger sp">
@@ -34,9 +35,9 @@
       <div class="p-header__right">
         <nav class="p-header__nav">
           <ul class="p-header__nav__lists">
-            <li class="p-header__nav__list"><a href="#" >料金</a></li>
+            <li class="p-header__nav__list"><a href="#">料金</a></li>
             <li class="p-header__nav__list"><a href="#">ブログ</a></li>
-            <li class="p-header__nav__list"><a href="#" >卒業実績</a></li>
+            <li class="p-header__nav__list"><a href="#">卒業実績</a></li>
           </ul>
         </nav>
         <div class="c-btn pc">
@@ -47,7 +48,7 @@
   </header>
 
   <main>
-    <section id="fv">
+    <section id="fv" class="fv">
       <div class="fv__inner">
         <div class="fv__inner__img">
           <picture>
@@ -77,44 +78,41 @@
           <h2 class="p-vision__title">全人類、<br class="sp"> ミュージシャン計画。</h2>
           <p class="p-vision__subtitle">私たちは音楽を愛するすべての人が、音楽に熱狂できる世界を目指しています。</p>
         </div>
-        <div class="p-vision-diagram">
-          <!-- <div class="p-vision-diagram__arch">AIによる実装サポート -->
+        <div class="p-vision__diagram p-diagram ">
           <picture>
             <source srcset="./images/vision/semicircle.jpg" media="(min-width: 768px)" type="image/png">
             <img src="./images/vision/semicircle-sp.jpg" alt="vision" title="vision">
           </picture>
-
-
-          <div class="p-vision-diagram__arrow"></div>
-
-          <div class="p-vision-diagram__milestone">
-            <div class="p-vision-diagram__milestone__row">
-              <span class="p-vision-diagram__milestone__en">Enthusiasm</span>
-              <span class="p-vision-diagram__milestone__dot"></span>
-              <span class="p-vision-diagram__milestone__jp">熱狂し</span>
+          
+          <div class="p-diagram__arrow"></div>
+          <div class="p-diagram__contents">
+            <div class="p-diagram__row">
+              <span class="p-diagram__en">Enthusiasm</span>
+              <span class="p-diagram__dot"></span>
+              <span class="p-diagram__jp">熱狂し</span>
             </div>
-            <div class="p-vision-diagram__milestone__row">
-              <span class="p-vision-diagram__milestone__en">Envision</span>
-              <span class="p-vision-diagram__milestone__dot"></span>
-              <span class="p-vision-diagram__milestone__jp">想像し</span>
+            <div class="p-diagram__row">
+              <span class="p-diagram__en">Envision</span>
+              <span class="p-diagram__dot"></span>
+              <span class="p-diagram__jp">想像し</span>
             </div>
-            <div class="p-vision-diagram__milestone__row">
-              <span class="p-vision-diagram__milestone__en">Effulgent</span>
-              <span class="p-vision-diagram__milestone__dot"></span>
-              <span class="p-vision-diagram__milestone__jp">輝く存在へ</span>
+            <div class="p-diagram__row">
+              <span class="p-diagram__en">Effulgent</span>
+              <span class="p-diagram__dot"></span>
+              <span class="p-diagram__jp">輝く存在へ</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 広告バナー -->
-    <section id="ad-banner" class="p-ad-banner section-bg">
+    <!-- 広告-->
+    <section id="ad" class="p-ad section-bg">
       <div class="inner">
-        <div class="p-ad-banner__inner">
-          <h2 class="p-ad-banner__title">音楽業界初！<span class="span-br">収益化までサポートする</span><br><span
+        <div class="p-ad__inner">
+          <h2 class="p-ad__title">音楽業界初！<span class="span-br">収益化までサポートする</span><br><span
               class="span-br">ミュージックスクール</span></h2>
-          <p class="p-ad-banner__text">
+          <p class="p-ad__text">
             楽器や作詞作曲などの<span class="span-br">技術・知識はもちろんのこと</span><br>
             <span class="span-br">自分で稼ぎつづけるための</span><span class="span-br">ビジネス面もサポートします！</span>
           </p>
@@ -123,54 +121,54 @@
     </section>
 
     <!-- 選ばれる理由-->
-    <section id="reason" class="p-reason">
+    <section id="reason" class="p-top__reason p-top-reason">
       <div class="inner">
         <h2 class="c-section-title">きたむらミュージック<span class="span-br">スクールが選ばれる理由</span></h2>
-        <div class="p-reason__container">
-          <div class="p-reason__container__item reason-item">
-            <div class="reason-item__image">
+        <div class="p-top-reason__items">
+          <div class="p-top-reason__item p-top-reason-item">
+            <div class="p-top-reason-item__image">
               <picture>
                 <source srcset="./images/reason/reason01-pc.jpg" media="(min-width: 768px)" type="image/jpg">
                 <img src="./images/reason/reason01-sp.jpg" alt="ピアノを演奏する講師と犬" />
               </picture>
             </div>
-            <div class="reason-item__content">
-              <h3 class="reason-item__title">
+            <div class="p-top-reason-item__content">
+              <h3 class="p-top-reason-item__title">
                 技術面はプロによるマンツーマン授業！
               </h3>
-              <p class="reason-item__text">
+              <p class="p-top-reason-item__text">
                 第一線で活躍するプロによるマンツーマン授業で、きめ細かな技術指導が受けられます。
               </p>
             </div>
           </div>
-          <div class="p-reason__container__item reason-item">
-            <div class="reason-item__image">
+          <div class="p-top-reason__item p-top-reason-item">
+            <div class="p-top-reason-item__image">
               <picture>
                 <source srcset="./images/reason/reason02-pc.jpg" media="(min-width: 768px)" type="image/jpg">
                 <img src="./images/reason/reason02-sp.jpg" alt="丁寧に収益化の方法を説明する女性スタッフ" />
               </picture>
             </div>
-            <div class="reason-item__content">
-              <h3 class="reason-item__title">
+            <div class="p-top-reason-item__content">
+              <h3 class="p-top-reason-item__title">
                 収益化するためのビジネスサポート！
               </h3>
-              <p class="reason-item__text">
+              <p class="p-top-reason-item__text">
                 コンセプト設計や集客方法、マーケティングリサーチなど、音楽で稼ぎつづけるための方法やマインドセットをサポートするクラスをご用意。
               </p>
             </div>
           </div>
-          <div class="p-reason__container__item reason-item">
-            <div class="reason-item__image">
+          <div class="p-top-reason__item p-top-reason-item">
+            <div class="p-top-reason-item__image">
               <picture>
                 <source srcset="./images/reason/reason03-pc.jpg" media="(min-width: 768px)" type="image/jpg">
                 <img src="./images/reason/reason03-sp.jpg" alt="ギターと鍵盤を使った作曲練習" />
               </picture>
             </div>
-            <div class="reason-item__content">
-              <h3 class="reason-item__title">
+            <div class="p-top-reason-item__content">
+              <h3 class="p-top-reason-item__title">
                 24時間365日使える練習ROOMを完備！
               </h3>
-              <p class="reason-item__text">
+              <p class="p-top-reason-item__text">
                 一年中使える個室の練習ROOMを完備しているため、お仕事帰りや合間の時間も自由に練習が可能です。（アプリで予約が必要です）
               </p>
             </div>
@@ -179,49 +177,49 @@
       </div>
     </section>
 
-    <!-- 生徒さんたちの声 　AIによる実装サポート-->
-    <section id="voice" class="p-voice section-bg">
+    <!-- 生徒さんたちの声 -->
+    <section id="voice" class="p-top-voice section-bg">
       <div class="inner">
         <h2 class="c-section-title title-white">生徒さんたちの声</h2>
-        <div class="p-voice__container autoplay">
-          <div class="p-voice__container__item">
-            <div class="voice-card__image">
+        <div class="p-voice__items autoplay">
+          <div class="p-top-voice__item p-top-voice-item">
+            <div class="p-voice-item__card p-voice-card">
               <picture>
                 <source srcset="./images/voice/voice01-pc.jpg" media="(min-width: 768px)" type="image/jpg">
                 <img src="./images/voice/voice01-pc.jpg" alt="証券会社勤務　丸山さん" />
               </picture>
             </div>
-            <div class="voice-card__body">
-              <h3 class="voice-card__title">証券会社勤務　丸山さん</h3>
-              <p class="voice-card__desc">
+            <div class="p-top-voice-card__body">
+              <h3 class="p-top-voice-card__title">証券会社勤務　丸山さん</h3>
+              <p class="p-top-voice-card__desc">
                 昔やっていた音楽活動で、副収入が得られるようになったので、毎日充実するようになりました。
               </p>
             </div>
           </div>
-          <div class="p-voice__container__item">
-            <div class="voice-card__image">
+          <div class="p-top-voice__item p-top-voice-item">
+            <div class="p-top-voice-item__card p-top-voice-card">
               <picture>
                 <source srcset="./images/voice/voice02-pc.jpg" media="(min-width: 768px)" type="image/jpg">
                 <img src="./images/voice/voice02-pc.jpg" alt="IT会社勤務　S.Eさん" />
               </picture>
             </div>
-            <div class="voice-card__body">
-              <h3 class="voice-card__title">IT会社勤務　S.Eさん</h3>
-              <p class="voice-card__desc">
+            <div class="p-top-voice-card__body">
+              <h3 class="p-top-voice-card__title">IT会社勤務　S.Eさん</h3>
+              <p class="p-top-voice-card__desc">
                 プロの指導が受けられるので、技術が確実に上がるし、音楽への考え方とかも勉強できて最高です。
               </p>
             </div>
           </div>
-          <div class="p-voice__container__item">
-            <div class="voice-card__image">
+          <div class="p-top-voice__item p-top-voice-item">
+            <div class="p-top-voice-item__card p-top-voice-card">
               <picture>
                 <source srcset="./images/voice/voice03-pc.jpg" media="(min-width: 768px)" type="image/jpg">
                 <img src="./images/voice/voice03-pc.jpg" alt="都内大学生　田森さん" />
               </picture>
             </div>
-            <div class="voice-card__body">
-              <h3 class="voice-card__title">都内大学生　田森さん</h3>
-              <p class="voice-card__desc">
+            <div class="p-top-voice-card__body">
+              <h3 class="p-top-voice-card__title">都内大学生　田森さん</h3>
+              <p class="p-top-voice-card__desc">
                 就職する前にビジネスの事が学べるし、好きな音楽で稼げるようになったので選択肢が増えました。
               </p>
             </div>
@@ -233,86 +231,84 @@
 
     <!-- ご利用の流れ   AIによる実装サポート -->
 
-    <section id="flow" class="p-flow">
+    <section id="flow" class="p-top-flow">
       <div class="inner">
-        <h2 class="c-section-title">ご利用の流れ</h2>
-        <div class="p-flow__container">
-          <div class="p-flow__steps">
-            <div class="p-flow__step">
-              <div class="p-flow__icon"></div>
-              <div class="p-flow__label">お問い合わせ</div>
-              <div class="p-flow__desc">
+        <h2 class="c-section-title">ご利用の流れ</h2>       
+          <div class="p-top-flow__items p-top-flow-item">
+            <div class="p-top-flow-item">
+              <div class="p-top-flow-item__icon"></div>
+              <div class="p-top-flow-item__label">お問い合わせ</div>
+              <div class="p-top-flow-item__desc">
                 まずはフォームまたはメールでお問い合わせください。<br>
                 ヒアリングの日程を調整します。
               </div>
             </div>
-            <div class="p-flow__step">
-              <div class="p-flow__icon"></div>
-              <div class="p-flow__label">ヒアリング</div>
-              <div class="p-flow__desc">
+            <div class="p-top-flow-item">
+              <div class="p-top-flow-item__icon"></div>
+              <div class="p-top-flow-item__label">ヒアリング</div>
+              <div class="p-top-flow-item__desc">
                 現在の技術面や将来の目標をお伺いします。<br>
                 悩みや不安な事もお気軽にご相談ください。
               </div>
             </div>
-            <div class="p-flow__step">
-              <div class="p-flow__icon"></div>
-              <div class="p-flow__label">プランのご提案</div>
-              <div class="p-flow__desc">
+            <div class="p-top-flow-item">
+              <div class="p-top-flow-item__icon"></div>
+              <div class="p-top-flow-item__label">プランのご提案</div>
+              <div class="p-top-flow-item__desc">
                 ライフスタイルや目標によって最適なプランをご提案します。<br>
                 継続できるようサポートいたします。
               </div>
             </div>
-            <div class="p-flow__step">
-              <div class="p-flow__icon p-flow__icon--arrow"></div>
+            <div class="p-top-flow-item">
+              <div class="p-top-flow-item__icon p-top-flow-item__icon--arrow"></div>
 
-              <div class="p-flow__label">ご入学</div>
-              <div class="p-flow__desc">
+              <div class="p-top-flow-item__label">ご入学</div>
+              <div class="p-top-flow-item__desc">
                 お申し込み完了後、レッスンがスタートします。<br>
                 マンツーマン指導なので、いつからでもスタートが可能です。
               </div>
             </div>
-          </div>
-        </div>
+          </div>       
       </div>
     </section>
 
     <!-- よくあるご質問 -->
-    <section id="faq" class="p-faq">
+    <section id="faq" class="p-top-faq">
       <div class="inner">
         <h2 class="c-section-title">よくあるご質問</h2>
-        <div class="p-faq__container">
-          <div class="p-faq__container__accordion">
-            <div class="accordion__container">
-              <div class="accordion__details">
-                <summary class="accordion__title js-accordion-title">
-                  <span class="faq-q">Q</span>どのような生徒さんがどれぐらいの期間で稼いでいますか？
+        <div class="p-top-faq__container">
+          <div class="p-top-faq__container__accordion p-top-faq-accordion">
+            <div class="p-top-faq-accordion__items">
+              <div class="p-top-faq-accordion__details">
+                <summary class="p-top-faq-accordion__title js-accordion-title">
+                  <span class="p-top-faq-accordion-q">Q</span>どのような生徒さんがどれぐらいの期間で稼いでいますか？
                 </summary>
-                <div class="accordion__content">
-                  <p><span class="faq-a">A</span>コンテンツが入ります。</p>
+                <div class="p-top-faq-accordion__content">
+                  <p><span class="p-top-faq-accordion-a">A</span>コンテンツが入ります。</p>
                 </div>
               </div>
-              <div class="accordion__details">
-                <summary class="accordion__title js-accordion-title">
-                  <span class="faq-q">Q</span>途中でプランを変更することは可能ですか？
+              <div class="p-top-faq-accordion__details">
+                <summary class="p-top-faq-accordion__title js-accordion-title">
+                  <span class="p-top-faq-accordion-q">Q</span>途中でプランを変更することは可能ですか？
                 </summary>
-                <div class="accordion__content">
-                  <p><span class="faq-a">A</span>途中でプラン変更も可能です。毎月15日までに申請すれば翌月からプランが変更となります。</p>
+                <div class="p-top-faq-accordion__content">
+                  <p><span class="p-top-faq-accordion-a">A</span>途中でプラン変更も可能です。毎月15日までに申請すれば翌月からプランが変更となります。</p>
                 </div>
               </div>
-              <div class="accordion__details">
-                <summary class="accordion__title js-accordion-title">
-                  <span class="faq-q">Q</span>入学金などの分割払いはできますか？
+              <div class="p-top-faq-accordion__details">
+                <summary class="p-top-faq-accordion__title js-accordion-title">
+                  <span class="p-top-faq-accordion-q">Q</span>入学金などの分割払いはできますか？
                 </summary>
-                <div class="accordion__content">
-                  <p><span class="faq-a">A</span>コンテンツが入ります。</p>
+                <div class="p-top-faq-accordion__content">
+                  <p><span class="p-top-faq-accordion-a">A</span>コンテンツが入ります。</p>
                 </div>
               </div>
-              <div class="accordion__details">
-                <summary class="accordion__title js-accordion-title">
-                  <span class="faq-q">Q</span>休学することも可能ですか？
+              <div class="p-top-faq-accordion__details">
+                <summary class="p-top-faq-accordion__title js-accordion-title">
+                  <span class="p-top-faq-accordion-q">Q</span>休学することも可能ですか？
                 </summary>
-                <div class="accordion__content">
-                  <p><span class="faq-a">A</span>コンテンツが入ります。</p>
+                <div class="p-top-faq-accordion__content">
+                  <p><span class="p-top-faq-accordion-a">A</span>コンテンツが入ります。</p>
                 </div>
               </div>
             </div>
@@ -320,53 +316,62 @@
     </section>
 
     <!-- ブログ -->
-    <section id="blog" class="p-blog">
+    <section id="blog" class="p-top-blog">
       <div class="inner">
         <h2 class="c-section-title">ブログ</h2>
-        <div class="p-blog__container">
-          <div class="p-blog__card blog__card">
-            <div class="blog__card-label">
-              <p class="blog__card-label-text">SNS</p>
+        <div class="p-top-blog__items">
+          <div class="p-top-blog__item">
+            <div class="c-media-card">
+              <div class="c-media-card-label">
+                <p class="c-media-label-text">SNS</p>
+              </div>
+              <div class="c-media-img">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="./images/blog/blog01-pc.jpg">
+                  <img src="./images/blog/blog01-sp.jpg" alt="マイクで熱唱する女性">
+                </picture>
+              </div>
             </div>
-            <div class="blog__card-img">
-              <picture>
-                <source media="(min-width: 768px)" srcset="./images/blog/blog01-pc.jpg">
-                <img src="./images/blog/blog01-sp.jpg" alt="マイクで熱唱する女性">
-              </picture>
-            </div>
-            <div class="blog__card-body">
-              <h3 class="blog__title">フォロワーではなくファンを増やせとは？</h3>
-              <time datetime="0000-00-00" class="blog__date">0000.00</time>
-            </div>
-          </div>
-          <div class="p-blog__card blog__card">
-            <div class="blog__card-label">
-              <p class="blog__card-label-text">集客方法</p>
-            </div>
-            <div class="blog__card-img">
-              <picture>
-                <source media="(min-width: 768px)" srcset="./images/blog/blog02-pc.jpg">
-                <img src="./images/blog/blog02-sp.jpg" alt="悩み顔の男性が頭を抱える">
-              </picture>
-            </div>
-            <div class="blog__card-body">
-              <h3 class="blog__title">集客してる間は売れないという法則</h3>
-              <time datetime="0000-00-00" class="blog__date">0000.00</time>
+            
+            <div class="p-top-blog__body">
+              <h3 class="p-blog__title">フォロワーではなくファンを増やせとは？</h3>
+              <time datetime="0000-00-00" class="p-top-blog__date">0000.00</time>
             </div>
           </div>
-          <div class="p-blog__card blog__card">
-            <div class="blog__card-label">
-              <p class="blog__card-label-text">ギター</p>
+          <div class="p-top-blog__item">
+            <div class="c-media-card">
+              <div class="c-media-card-label">
+                <p class="c-media-label-text">集客方法</p>
+              </div>
+              <div class="c-media-img">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="./images/blog/blog02-pc.jpg">
+                  <img src="./images/blog/blog02-sp.jpg" alt="悩み顔の男性が頭を抱える">
+                </picture>
+              </div>
             </div>
-            <div class="blog__card-img">
-              <picture>
-                <source media="(min-width: 768px)" srcset="./images/blog/blog03-pc.jpg">
-                <img src="./images/blog/blog03-sp.jpg" alt="アコースティックギターを弾く人">
-              </picture>
+            
+            <div class="p-top-blog__body">
+              <h3 class="p-top-blog__title">集客してる間は売れないという法則</h3>
+              <time datetime="0000-00-00" class="p-top-blog__date">0000.00</time>
             </div>
-            <div class="blog__card-body">
-              <h3 class="blog__title">アルペジオが劇的に向上する3つの習慣</h3>
-              <time datetime="0000-00-00" class="blog__date">0000.00</time>
+          </div>
+          <div class="p-top-blog__item">
+            <div class="c-media-card">
+              <div class="c-media-card-label">
+                <p class="c-media-label-text">ギター</p>
+              </div>
+              <div class="c-media-img">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="./images/blog/blog03-pc.jpg">
+                  <img src="./images/blog/blog03-sp.jpg" alt="アコースティックギターを弾く人">
+                </picture>
+              </div>
+            </div>
+            
+            <div class="p-top-blog__body">
+              <h3 class="p-top-blog__title">アルペジオが劇的に向上する3つの習慣</h3>
+              <time datetime="0000-00-00" class="p-top-blog__date">0000.00</time>
             </div>
           </div>
 
@@ -380,8 +385,8 @@
 
   </main>
 
-  <footer>
-    <div class="l-footer p-footer">
+  <footer class="l-footer p-footer">
+    <div>
       <div class="p-footer__inner">
         <nav class="footer__nav footer-nav">
           <ul class="footer-nav__lists">
@@ -397,14 +402,15 @@
             <li class="footer-nav__list">
               <a href="#" class="footer-nav__link">卒業実績</a>
             </li>
-            
+
           </ul>
         </nav>
         <div class="footer-logo">
           <a href="#"><img src="./images/icon/logo-white.svg" alt="ロコ"></a>
         </div>
         <div>
-          <p class="footer__copyright">&copy;0000 KITAMURA music school Inc. All Rights　<span class="ib-span">kitamurakensetukogyo</span></p>
+          <p class="footer__copyright">&copy;0000 KITAMURA music school Inc. All Rights　<span
+              class="ib-span">kitamurakensetukogyo</span></p>
         </div>
 
         <div class="sns-btns">

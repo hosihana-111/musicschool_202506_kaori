@@ -66,12 +66,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const fvHeight = fv ? fv.offsetHeight : 0;
     if (window.scrollY > fvHeight) {
       header?.classList.add('is-change');
-      pageTop?.classList.add('is-show');
-      contactBtn?.classList.add('is-show');
+      pageTop?.classList.add('is-change');
+      contactBtn?.classList.add('is-change');
     } else {
       header?.classList.remove('is-change');
-      pageTop?.classList.remove('is-show');
-      contactBtn?.classList.remove('is-show');
+      pageTop?.classList.remove('is-change');
+      contactBtn?.classList.remove('is-change');
     }
 
     // --- ここから下端で止まる処理 ---
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
    // ボタンの高さ（
-   const gap = 30;
+   const gap = 100;
 
    if (stopY && (scrollY + windowHeight) > (stopY - 10)) {
      const overlap = (scrollY + windowHeight) - stopY;

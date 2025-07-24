@@ -3,14 +3,19 @@
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
 
-.p-voice{
+.p-top-voice{
     padding-top: 4.4rem;
     padding-bottom: 8rem;
 }
 
-.p-voice__container{
+.p-top-voice__items{
     margin-top: 3.6rem;
     position: relative;
+
+    @include sp{        
+            padding: 1.5rem;
+        
+    }
     
     // slickスライダーのスタイリング
     .slick-slide {
@@ -71,7 +76,7 @@
     }
 }
 
-.p-voice__container__item {
+.p-top-voice__item {
       
     text-align: center;
     transition: transform 0.3s ease;
@@ -81,51 +86,44 @@
     }
 }
 
-.voice-card__image{
+.p-top-voice-item__card{
     width: 100%;  
     margin: 0 auto 1.5rem;
     
  
 }
 
-.voice-card__body{
+.p-top-voice-card__body{
     color: $white;
 }
 
-.voice-card__title{
+.p-top-voice-card__title{
     font-size: 2.2rem;
     line-height: calc(33/22);
     font-weight: 700;
     text-align: center;
     margin-bottom: 1rem;
+    @include sp{
+        font-size: 1.8rem;
+    }
 }
 
-.voice-card__desc{
+.p-top-voice-card__desc{
     font-size: 1.8rem;
     line-height: calc(30/18);
     text-align: left;
+    @include sp{
+        font-size: 1.6rem;
+    }
 }
 
 // レスポンシブ対応
 @include sp {
-    .p-voice__container {
+    .p-top-voice__container {
         .slick-prev,
         .slick-next {
             display: none !important;
         }
         
-       
-    }
-    
-    .p-voice__container__item {
-        padding: 1.5rem;
-    }
-    
-    .voice-card__title {
-        font-size: 1.8rem;
-    }
-    
-    .voice-card__desc {
-        font-size: 1.6rem;
-    }
-}
+   
+}}

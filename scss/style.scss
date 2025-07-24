@@ -1,22 +1,18 @@
-/*
- * foundation
- */
-@use "foundation/_reset";
-@use "foundation/_base";
-@use "foundation/_mixin";
-@use "foundation/_variable";
+/******** foundation*******/
+@use "./foundation/reset";
+@use "./foundation/base";
+@use "./foundation/mixin";
+@use "./foundation/variable";
 
-/*
- * layout
- */
-@use "layout/_footer";
-@use "layout/_header";
+
+/******** layout*******/
+@use "./layout/l-footer";
+@use "./layout/l-header";
 // @use "layout/_main";
 // @use "layout/_sidebar";
 
-/*
- * object
- */
+
+/********* object*******/
 // Componentのindex.scssの読み込み
 @use "./object/component";
 

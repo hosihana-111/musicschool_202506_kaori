@@ -6,26 +6,42 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0 8px;
+    gap: 0 1rem;
     list-style-type: none;
     padding: 0;
 }
-.c-pagination a{
+.c-pagination li{
+    
+    a{
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 2em;
-    height: 2em;
-    border: 1px solid #000000;
-    border-radius: 1px;
+    width: 5rem;
+    height: 5rem;
+    font-size: 1.8rem;
+    line-height: calc(30/18);
+    font-weight: 700;
+    border: 1px solid #000000;   
     color: #000000;
-}
+    transition: all 0.3s ease;
 
-.pagination a:not(:hover) {
+  &:hover {
+    color: $white;
+    background-color: $black;
+  }
+
+
+}}
+
+.c-pagination a:not(:hover) {
     text-decoration: none;
 }
-.c-pagination a :nth-of-type(4){
+.c-pagination li:nth-of-type(4) a{
     border: none;
+    width: 3rem;
+    height: 3rem;
 }
+
+
 

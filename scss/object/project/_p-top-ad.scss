@@ -3,20 +3,21 @@
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
 
-.p-ad-banner{    
+.p-ad{    
     color: $white;
-    padding: 2rem 0;
+    padding-top: 6rem;
+    padding-bottom: 7rem;
     text-align: center;
 }
 
-.p-ad-banner__title{
+.p-ad__title{
     font-size: 2.4rem;
     line-height: calc(50/24);
     font-weight: 900;
     margin-bottom: 3rem;
 }
 
-.p-ad-banner__text{
+.p-ad__text{
     font-size: 1.8rem;
     line-height: calc(30/18);
 }

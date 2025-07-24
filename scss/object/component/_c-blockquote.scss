@@ -1,0 +1,27 @@
+@charset "UTF-8";
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+.c-blockquote{
+    position: relative;
+    padding: 1.8rem 3rem 1rem 6.7rem;
+    box-sizing: border-box;  
+    background: #E8E8E8;
+
+}
+.c-blockquote:before{
+    display: inline-block;
+    position: absolute;
+    top: 2rem;
+    left: 3rem;
+    content: "“";    
+    color: #A3A3A2;
+    font-size: 90px;
+    line-height: 1;
+}
+.c-blockquote p {
+    padding: 0;
+    margin: 10px 0;
+    font-weight: 1.8rem;
+    line-height: calc(30/18)
+}
