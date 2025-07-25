@@ -2652,4 +2652,63 @@ input[type=checkbox]:checked + span::after {
 .p-contact-send__form-submit:hover {
   color: #CB0000;
   background-color: #ffffff;
+}
+
+.p-404 {
+  padding-top: 6.7rem;
+  padding-bottom: 9rem;
+}
+@media (max-width: 767px) {
+  .p-404 {
+    padding-top: 52px;
+    padding-bottom: 50px;
+  }
+}
+
+.p-404__container-text {
+  text-align: center;
+  font-size: 1.8rem;
+  line-height: 1.6666666667;
+  margin: 0 auto;
+}
+
+/*****ボタン*****/
+.p-404__contact__button {
+  margin-top: 4rem;
+  margin-inline: auto;
+  width: 250px;
+}
+@media (max-width: 767px) {
+  .p-404__contact__button {
+    max-width: 335px;
+    width: 100%;
+    margin-top: 5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.p-404__form-submit {
+  width: 100%;
+  height: 50px;
+  background: #CB0000;
+  color: #ffffff;
+  border: 1px solid #CB0000;
+  font-size: 2.5rem;
+  line-height: 1.32;
+  font-weight: 600;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  text-decoration: none;
+}
+.p-404__form-submit:hover {
+  color: #CB0000;
+  background-color: #ffffff;
 }/*# sourceMappingURL=style.css.map */
