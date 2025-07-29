@@ -31,12 +31,13 @@
         align-items: center;
         color: $black;
         height: inherit;
+        margin-right:2rem ;
 
-        &:not(:last-child)::after {
-            content: '>';
-            margin: 0 1em;
-            color: $black;
-        }
+        // &:not(:last-child)::after {
+        //     content: '>';
+        //     margin: 0 1em;
+        //     color: $black;
+        // }
     }
 
     a {

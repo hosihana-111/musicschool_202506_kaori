@@ -3,10 +3,10 @@
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
 
-.c-media-card{
+.c-thumbnail{
     position: relative;
 }
-.c-media-card-label{
+.c-thumbnail__label{
     position: absolute;
     top: 0;
     left: 0;
@@ -16,7 +16,7 @@
     z-index: 1;
 }
 
-.c-media-label-text{
+.c-thumbnail__text{
     height: 2.5rem;
     color: $white;     
     padding-top: 1rem;
@@ -28,7 +28,7 @@
     margin: 0;
 }
 
-.c-media-img {
+.c-thumbnail-img {
     width: 100%;
     
     @include sp {       
@@ -36,7 +36,7 @@
     }
 }
 
-.c-media-img img{
+.c-thumbnail-img img{
     display: block;
     width: 100%;
     height: auto;

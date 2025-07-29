@@ -3,7 +3,7 @@
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
 
-.p-blog-details__container{
+.p-blog-details__inner{
     display: flex;
     justify-content: space-between;
     padding-top: 7rem; // 元の値に戻す

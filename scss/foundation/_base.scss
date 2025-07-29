@@ -39,7 +39,26 @@ body {
   font-style: normal;
   margin: 0;
   box-sizing: border-box;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
+}
+input,
+textarea {
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+
+
+p,
+span,
+a,
+li,
+dt,
+dd,
+label,
+h1, h2, h3, h4, h5, h6 {
+  line-height: inherit;
+  letter-spacing: inherit;
 }
 
 main {
@@ -64,15 +83,7 @@ a {
   text-decoration: none;
 }
 
-.inner {
-  max-width: 940px;
-  margin-inline: auto;
-  padding-inline: 30px;
-  @include sp{
-    padding-inline: 20px;
-  }
 
-}
 .span-br {
   display: inline-block;
 }

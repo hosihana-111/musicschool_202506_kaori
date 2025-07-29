@@ -1,0 +1,29 @@
+@charset "UTF-8";
+@use "../../foundation/base" as *;
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+
+
+.p-result-details-profile{
+display: flex;
+justify-content: space-between;
+gap: calc(40 /880 * 100%);
+}
+
+.p-result-details-profile__table{
+width: 40rem;
+border-collapse: collapse;
+
+}
+.p-result-details-profile__table-title{
+padding: 0;
+border: solid 1px #707070;
+}
+.p-result-details-profile__table-comment{
+    border: solid 1px #707070;
+}
+
+.p-result-details-profile__text{
+    flex: 1;
+}

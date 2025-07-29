@@ -3,12 +3,19 @@
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
 
-.p-blog-list{
-    padding-top: 5.6rem;
-    padding-bottom: 9rem;
+.p-search{
+    padding-top: 6.6rem;
+    padding-bottom: 22rem;
 }
 
-.p-blog-list__items{
+.p-search__header{  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.p-search__results{
     margin-top: 3.1rem;
     display: flex;
     flex-direction: column;
@@ -24,14 +31,12 @@
         align-items: center;
     }
 }
-.p-blog-list__item{
+.p-search__item{
     position: relative;
 }
 
-.p-blog-list__link {
-    display: flex;
-   
-    justify-content: center;
+.p-search-item__link{
+    display: flex; 
     gap: calc(50 / 940 *100%);
 
     @include sp{
@@ -40,28 +45,8 @@
         align-items: flex-start;
     }
 }
-.p-blog-list___label{
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: $red;
-    width: 8rem;
-    height: 3rem;
-    z-index: 1;
-}
-.p-blog-list__label-text{
-    height: 2.5rem;
-    color: $white;     
-    padding-top: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    line-height: calc(25/15);
-    margin: 0;
-}
 
-.p-blog-list__img-box{
+.p-search-item__link-img{
     width: 30%;
     flex-shrink: 0;
     display: flex;
@@ -81,19 +66,41 @@
         display: block;
     }
 }
+.p-search-item__link-label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $red;
+    width: 8rem;
+    height: 3rem;
+    z-index: 1;
+}
+.p-search-item__link-text{
+    height: 2.5rem;
+    color: $white;     
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    line-height: calc(25/15);
+    margin: 0;
+}
 
-.p-blog-list__body {
+
+
+.p-search-item__link-body {
     flex: 1;    
 }
 
-.p-blog-list__heading{
+.p-search-item__link-body-heading{
     font-size: 2rem;
     line-height: calc(25/20);
     font-weight: 700;
     margin-bottom:0.3rem ;
 }
 
-.p-blog-list__date{
+.p-search-item__link-body-date{
     display: block;
     font-size: 1.7rem;
     line-height: calc(30/17);
