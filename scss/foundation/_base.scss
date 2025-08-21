@@ -25,8 +25,8 @@ html {
   font-size: 62.5%;
     
     //768~inner
-    @media(min-width: 768px) and (max-width: 1160px){
-      font-size: calc(10 / 1160 * 100vw);
+    @media(min-width: 768px) and (max-width: 940px){
+      font-size: calc(10 / 940 * 100vw);
     }
     
     

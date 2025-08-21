@@ -11,11 +11,7 @@
 				  width: 100%;
 				  z-index: 777;
    
-     @include sp{
-        height: 5rem ;
-        padding-left:2rem;
-        padding-right: 0;
-     } 
+   
 }
 .l-header .scroll-nav{
   top: 0; // スクロール後：上に表示

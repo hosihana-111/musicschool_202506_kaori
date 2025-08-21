@@ -4,28 +4,42 @@
 @use "../../foundation/mixin" as *;
 
 .p-vision {
-  margin-block: 6.6rem;
-
+padding-top: 6.6rem;
+padding-bottom: 7.5rem;
+@include sp{
+  padding-top: 4.6rem;
+  padding-bottom: 4.9rem;
+}
 }
 
 .p-vision__content {
   margin-bottom: 3.5rem;
+  @include sp{
+    margin-bottom: 2rem;
+  }
 }
 
 .p-vision__title {
-  font-size: 3rem;
-  line-height: calc(50/30);
-  font-weight: 700;
-  margin-bottom: 3rem;
+  font-size: 3.5rem;
+  line-height: calc(50/35);
+  font-weight: 700;  
   text-align: center;
   color: $red;
+  margin-bottom: 1.7rem;
+  @include sp{
+    font-size:  2.5rem;
+    line-height: calc(40/25);
+    margin-bottom: 0.7rem;
+  }
 }
 
 .p-vision__subtitle {
   font-size: 1.8rem;
   line-height: calc(30/18);
   text-align: center;
-  margin-top: 1.7rem;
+ @include sp{
+   text-align: left;
+ }
 
 }
 
@@ -42,39 +56,46 @@
 .p-diagram__contents {
   position: absolute;
   left: 50%;
-  top: 45px;
+  top: 4rem;
   transform: translateX(-50%);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 4rem;
+  gap: 1.8rem;
   z-index: 1;
-  margin-top: 5rem;  
+  margin-top: 4.1rem;  
+  @include sp{
+    margin-top: 3.5rem;
+  }
 }
 
 .p-diagram__arrow {
   position: absolute;
   left: 50%;
-  top: 28px;
+  top: 0;
   transform: translateX(-50%);
-  width: 3px;
-  height: 190px;
+  width: 2px;
+  height: 19rem;
   background: $red;
   z-index: 10;
-  margin-top: 5rem;
- 
+  margin-top: 5.7rem;
+
+  @include sp{
+    margin-top: 4.7rem;
+  }
+
   &::before {
     content: '';
-    width: 1.5em;
-    height: 1.5em;
-    border: 0.3em solid $red;
+    width: 1.4em;
+    height: 1.4em;
+    border: 3px solid $red;
     border-left: 0;
     border-bottom: 0;
     transform: rotate(-45deg);
     transform-origin: top right;
-    position: absolute;
-    top: -0.05em;
+    position: absolute;   
+    top:0;
     right: 50%;
     box-sizing: border-box;
     
@@ -87,10 +108,15 @@
 }
 .p-diagram__en {
   color: $red;
-  font-weight: 900;
+  font-weight: 700;
   min-width: 145px;
   text-align: right;
   font-size: 2.5rem;
+  line-height: calc(50 / 25);
+  @include sp{
+    font-size: 2rem;
+    line-height: calc(50 / 20);
+  }
 }
 .p-diagram__dot {
   width: 24px;
@@ -106,4 +132,9 @@
   min-width: 145px;
   text-align: left;
   font-size: 2.3rem;
+  line-height: calc(50 / 23);
+  @include sp{
+    font-size: 2rem;
+    line-height: calc(50 / 20);
+  }
 }

@@ -3,127 +3,134 @@
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
 
-.p-top-voice{
+.p-top-voice {
     padding-top: 4.4rem;
     padding-bottom: 8rem;
+
+    @include sp {
+        padding-top: 4.4rem;
+        padding-bottom: 3rem;
+    }
 }
 
-.p-top-voice__items{
-    margin-top: 3.6rem;
+.p-top-voice__title {
+    color: $white ;
+}
+
+.p-top-voice__container {
     position: relative;
+    max-width: 880px;
+    margin-inline: auto;
+    margin-top: 3.6rem;
+    // overflow: visible;
 
-    @include sp{        
-            padding: 1.5rem;
-        
-    }
-    
-    // slickスライダーのスタイリング
-    .slick-slide {
-        margin: 0 1.75rem; // 3.5remのgapを実現するため、左右に1.75remずつ
-    }
-    
-    .slick-arrow {
-        font-size: 0 !important;
-        color: transparent !important;
-        text-indent: -9999px;
-        overflow: hidden;
-        position: absolute;
-        top: 40%;
-        transform: translateY(-50%);
-        z-index: 2;
-        width: 4.2rem;
-        height: 4.2rem;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0;
-        outline: none;
-    }
-    
-    .slick-prev {
-        left: -1.5rem;
-    }
-    
-    .slick-next {
-        right: -1.5rem;
-    }
-    
-    .slick-arrow:before {
-        content: '';
-        display: block;
-        width: 2.5rem;
-        height: 2.5rem;
-        border-left: 0.7rem solid #ffb3b3;
-        border-bottom: 0.7rem solid #ffb3b3;
-        border-radius: 0.2rem;
-        background: none;
-        position: relative;
-    }
-    
-    .slick-prev:before {
-        transform: rotate(45deg);
-        left: 0.2rem;
-        position: relative;
-    }
-    
-    .slick-next:before {
-        transform: rotate(-135deg);
-        left: -0.2rem;
-        position: relative;
+
+    @include sp {
+         margin-top: 2rem;
+        padding: 2rem;
     }
 }
+
+// .p-top-voice__swiper {
+//     max-width: 880px;
+// }
 
 .p-top-voice__item {
-      
     text-align: center;
     transition: transform 0.3s ease;
-    
+      display: flex !important;
+  flex-direction: column;
+  row-gap: 1.7rem;
+  @include sp {
+    row-gap: 2.5rem;
+  }
+  
+
     &:hover {
         transform: translateY(-0.5rem);
     }
 }
 
-.p-top-voice-item__card{
-    width: 100%;  
-    margin: 0 auto 1.5rem;
+.p-top-voice-item__card {
+    width: 100%;
+    margin: 0 auto ;
+    overflow: hidden;    
+    display: block;
+    @include sp {
+         aspect-ratio: 335 / 200;  
+    } 
     
- 
+}
+.p-top-voice-item__card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.p-top-voice-card__body{
+.p-top-voice-card__body {
     color: $white;
 }
 
-.p-top-voice-card__title{
+.p-top-voice-card__title {
     font-size: 2.2rem;
     line-height: calc(33/22);
     font-weight: 700;
     text-align: center;
     margin-bottom: 1rem;
-    @include sp{
-        font-size: 1.8rem;
+
+    @include sp {
+        
     }
 }
 
-.p-top-voice-card__desc{
+.p-top-voice-card__desc {
     font-size: 1.8rem;
     line-height: calc(30/18);
     text-align: left;
-    @include sp{
-        font-size: 1.6rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+
+    
+}
+
+.p-top-voice__swiper-nav-wrap {
+    position: relative;
+    width: 100%;
+    height: 0; // 高さ不要
+}
+
+.p-top-voice__swiper-button-prev,
+.p-top-voice__swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4rem;
+    height: 4rem;
+    z-index: 20;
+
+    cursor: pointer;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include sp {
+        display: none;
     }
 }
 
-// レスポンシブ対応
-@include sp {
-    .p-top-voice__container {
-        .slick-prev,
-        .slick-next {
-            display: none !important;
-        }
-        
+/* 矢印カスタマイズ */
+.swiper-button-prev {
+    left: calc(50% - 880px / 2 - 4.5rem); // スライダーの左外側に配置
+ 
+}
+
+.swiper-button-next {
+    right: calc(50% - 880px / 2 - 4.5rem); // スライダーの右外側に配置
    
-}}
+}
+
+.swiper-button-prev:after,.swiper-button-next:after{
+   color: rgba(255, 255, 255 ,0.5);
+}
+

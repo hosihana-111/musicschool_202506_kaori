@@ -3,109 +3,151 @@
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
 
-.p-flow {
-    padding-top: 4.4rem;
-    padding-bottom: 1rem;
+.p-top-flow {
+    padding-top: 3.6rem;
+    padding-bottom: 5.3rem;
+
+    @include sp {
+        padding-top: 4.6rem;
+    }
+
 }
 
-// .p-flow__items {
-//     margin-top: 3.6rem;
-//     display: flex;
-//     max-width: 780px;
-//     margin-inline: auto;
-
-// }
 
 .p-top-flow__items {
-    margin-top: 3.6rem;
-    display: flex;
+    margin-top: 5.3rem;
     max-width: 780px;
-    flex-direction: column;
-    align-items: flex-start;
-    position: relative;
     margin-inline: auto;
-   
+    list-style: none;
+    padding: 0;
+    position: relative;
+
+    @include sp {
+        max-width: 100%;
+        margin-top: 4.4rem;
+
+    }
+
+    // 縦の線
+    &::before {
+        content: "";
+        position: absolute;
+        top: 1rem; // 少し上から
+        bottom: -1.1rem; // 少し下まで
+        left: 1rem; // 丸の中心に合わせる        
+        width: 3px;
+        border-left: 3px solid $red;
+
+        @include sp {
+            left: 2rem;
+            bottom: 1rem;
+        }
+    }
+    &::after {
+    content: "";
+    position: absolute;
+    left: 1rem;
+    bottom: 0; /* レールの終端に合わせる（beforeのbottomと整合を） */
+    width: 24px;
+    height: 24px;
+    /* ボーダーで矢印（┘）を作る */
+    border-bottom: 3px solid $red;
+    border-right: 3px solid $red;
+    border-radius: 10%;
+    /* レール中心に合わせてY方向は少し外側へ */
+    transform: translate(-50%, 50%) rotate(45deg);
+     @include sp {
+            left: 2rem;           
+            bottom: 2.5rem;
+        
+        }
+  }
+
 }
 
 .p-top-flow-item {
-    display: flex;   
+    display: flex;
     margin-bottom: 5.8rem;
-    position: relative;
-    column-gap: 3rem;
-}
 
-.p-top-flow-item__icon {
-    width: 18px;
-    height: 18px;
-    background: $red;
-    border-radius: 50%;
-    margin-right: 2.5rem;
-    position: relative;
-    flex-shrink: 0;
-    z-index: 10;
-
-    &::after {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 18px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 3px;
-        height: 9.7rem;
-        background: $red;
-        z-index: 0;
-    }
-}
-
-.p-top-flow-item__icon--arrow {
-
-    margin-right: 2.5rem;
-    position: relative;
-
-    &::before {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 18px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 3px;
-        height: 3.7rem;
-        background: $red;
-        z-index: 0;
+    @include sp {
+        flex-direction: column;
+        row-gap: 0.9rem;
+        margin-bottom: 4.6rem;
     }
 
-    &::after {
-        content: '';
-        width: 1em;
-        height: 1em;
-        border: 0.2em solid $red;
-        border-top: 0;
-        border-right: 0;
-        transform: rotate(-45deg);
-        transform-origin: bottom left;
-        position: absolute;
-        top: 40px;
-        left: 50%;
-        bottom: -0.05em;
-        box-sizing: border-box;
-        background: none;
 
+    &:last-child {
+        margin-bottom: 0;
     }
+
 }
+
 
 .p-top-flow-item__label {
-    color: $red;
+    width: 26.2rem;
+    float: left;
+    padding-left: 7rem;
+    position: relative;
+    // border-left: 3px $red solid;
     font-weight: 700;
     font-size: 2.2rem;
     line-height: calc(33/22);
-    width: 155px;
-    margin-right: 2rem;
+    color: $red;
+
+
+    @include sp {
+        padding-left: 5rem;
+        line-height: 1;
+    }
+
+    // 丸
+    &::before {
+        content: '';
+        width: 2rem;
+        height: 2rem;
+        background: $red;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+
+        @include sp {
+            left: 10px;
+        }
+    }
 }
 
+// // 矢印
+// .p-top-flow-item:last-child .p-top-flow-item__label::after {
+//     content: "";
+//     position: absolute;
+//     bottom: -1rem; // 丸の下に表示
+//     left: 0;
+//     transform: translateX(-50%); 
+//     width: 24px;
+//     height: 24px;
+//     border-radius: 10%;
+//     border-bottom: 3px solid $red;
+//     border-right: 3px solid $red;
+//     transform: rotate(45deg);
+
+//     @include sp {
+//         left: 0.9rem;
+//         bottom: -12rem; 
+//     }
+// }
+
 .p-top-flow-item__desc {
-    font-size: 1.8rem;    
+    font-size: 1.8rem;
     line-height: calc(30/18);
+    margin: 0;
+    flex: 1;
+
+    @include sp {
+        font-size: 1.6rem;
+        line-height: calc(30/16);
+        padding-left: 5rem;
+    }
 
 }

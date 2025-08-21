@@ -99,22 +99,28 @@
 }
 .p-plan__section-table tr:first-child{
   border-bottom:solid 1px $black ;
-}
-
-.p-plan__section-table table th{
-  text-align: center;
-  padding: 3.2rem 0 2.8rem 0;  
-  width: 22rem; 
-}
-
-.p-plan__section-table table th:nth-child(2),
-.p-plan__section-table table th:nth-child(4){
+  font-size: 2rem; 
+line-height: calc(33/20);
   background-color: $black;
   color: $white;
 }
-.p-plan__section-table table th:nth-child(3){
-  background-color:$red;
+.p-plan__section-table tr:first-child th:first-child{
+  background-color: $white;
+}
+
+.p-plan__section-table th{
+  text-align: center;
+  padding: 3.2rem 0 2.8rem 0;  
+  width: 22rem; 
+
+}
+.p-plan__section-table th.is-recommend {
+  background-color: $red;
   color: $white;
+  font-size: 2rem;   
+  line-height: calc(33/20);
+  padding: 4rem 0 3.6rem 0; 
+  position: relative;
 }
 
 .p-plan__section-table td{

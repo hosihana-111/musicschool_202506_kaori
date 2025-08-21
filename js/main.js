@@ -1,35 +1,36 @@
 
 
 // スライダー
-$(function() {
-  $('.autoplay').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    dots: false,
-    arrows: true,
-    infinite: true,
-    speed: 500,
-    cssEase: 'ease-in-out',
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: false
-        }
-      }
-    ]
-  });
+const swiper = new Swiper(".swiper", {
+  loop: true, // ループ
+  speed: 2000, // 少しゆっくり(デフォルトは300)
+  slidesPerView: 3, // 一度に表示する枚数  
+  spaceBetween:35,
+  autoplay: { // 自動再生
+    delay: 2000, // 2秒後に次のスライド
+    disableOnInteraction: false, // 矢印をクリックしても自動再生を止めない
+  },
+  
+  // 前後の矢印
+  navigation: {
+    nextEl: ".p-top-voice__swiper-button-next",
+    prevEl: ".p-top-voice__swiper-button-prev",
+    
+  },
+
+  // 画面幅ごとの設定
+  breakpoints: {
+    // 767px以下（SP）の場合
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 20, // SP用の余白
+    },
+    // 768px以上（PC・タブレット）
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 35,
+    }
+  }
 });
 
 

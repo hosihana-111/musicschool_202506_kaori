@@ -6,15 +6,15 @@
 
 .p-header {
   height: 8rem;
-  
+  width: 100%;
    margin: 0 auto;
    display: flex;    
    justify-content: space-between; 
    transition:all .3s;
    background-color: $white;
-  @include sp{
-
-  }
+   @include sp{
+        height: 5rem ;       
+     } 
 }
 
 .p-header__inner{
@@ -25,11 +25,18 @@
   justify-content: space-between;
   align-items: center;  
   padding-inline: 3rem;
+  @include sp{
+       padding-left:2rem;       
+        padding-right: 0;
+  }
 }
 
 .p-header__logo {
   width: 19.2rem;
   height: inherit;
+    @include sp{
+       width:26rem;
+  }
 }
 
 .p-header__logo a {
@@ -39,28 +46,42 @@
 
 }
 
-.p-header__logo__img {
+.p-header__logo-img {
   width: 3.2rem;
-}
+  margin-right: 1rem;
 
-.p-header__logo__text {
-  font-size: 1.7rem;
-  font-weight: 700;
-  display: inline-block;
   @include sp{
-    font-size: 1.4rem;
-    line-height: calc(14/13);
+    width: 2rem;
+    margin-right: 0.8rem;
   }
 }
 
-.p-header__logo__text__span {
+.p-header__logo-text {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height:calc(23/20) ;
+  display: inline-block;
+ 
+  @include sp{
+    font-size: 1.3rem;
+    line-height: calc(14/13);
+  }
+
+}
+
+.p-header__logo-text span {
   font-size: 1.5rem;
+  line-height: calc(23 / 15);
+  @include sp{
+    font-size: 1.3rem;
+    line-height: calc(14/13);
+  }
 }
 
 .p-header__right {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 3.3rem;
 }
 
 .p-header__nav {
@@ -73,6 +94,7 @@
   display: flex;
   align-items: center;
   height: inherit;
+ column-gap: 3.3rem;
 
   @include sp {
     display: block;
@@ -121,11 +143,16 @@
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 2.5rem 1.5rem;
+ padding-top:2.55rem;
+ padding-bottom: 2.15rem;
   font-size: 1.7rem;
   font-weight: 700;
   line-height: calc(33/17);
-  transition: all 0.3s ease;
+   transition: all 0.3s ease-in-out;
+
+    &:hover {
+      opacity: 0.4;
+    }
 
   @include sp {
     font-size: 1.8rem;
@@ -175,8 +202,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 72px;
-  height: 50px;
+  width: 7.2rem;
+  height: 5rem;
   background-color: $red;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -196,8 +223,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 5px;
-  width: 32px;
-  height: 4px;
+  width: 3.2rem;
+  height: 0.4rem;
   background-color: $white;
   -webkit-transition: 0.4s;
 
