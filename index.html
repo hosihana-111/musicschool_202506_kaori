@@ -17,444 +17,456 @@
 </head>
 
 <body>
-  <header id="header" class="l-header p-header">
-    <div class="p-header__inner">
-      <div class="p-header__logo">
-        <a href="index.html">
-          <div class="p-header__logo-img">
-            <img src="./images/header/header-logo.svg" alt="きたむらミュージックスクール">
+  <div id="container">
+    <header id="header" class="l-header p-header">
+      <div class="p-header__inner">
+        <div class="p-header__logo">
+          <a href="index.html">
+            <div class="p-header__logo-img">
+              <img src="./images/header/header-logo.svg" alt="きたむらミュージックスクール">
+            </div>
+            <h1 class="p-header__logo-text">きたむら<br class="pc"><span>ミュージックスクール</span>
+            </h1>
+          </a>
+        </div>
+        <button class="p-header__hamburger sp">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="p-header__right">
+          <nav class="p-header__nav">
+            <ul class="p-header__nav__lists">
+              <li class="p-header__nav__list"><a href="plan.html">料金</a></li>
+              <li class="p-header__nav__list"><a href="blog_list.html">ブログ</a></li>
+              <li class="p-header__nav__list"><a href="result_list.html">卒業実績</a></li>
+            </ul>
+          </nav>
+          <div class="contact-button pc">
+            <a href="#" class="c-btn c-btn__link">お問い合わせ</a>
           </div>
-          <h1 class="p-header__logo-text">きたむら<br class="pc"><span>ミュージックスクール</span>
-          </h1>
-        </a>
-      </div>
-      <button class="p-header__hamburger sp">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <div class="p-header__right">
-        <nav class="p-header__nav">
-          <ul class="p-header__nav__lists">
-            <li class="p-header__nav__list"><a href="#">料金</a></li>
-            <li class="p-header__nav__list"><a href="#">ブログ</a></li>
-            <li class="p-header__nav__list"><a href="#">卒業実績</a></li>
-          </ul>
-        </nav>
-        <div class="contact-button pc">
-          <a href="#" class="c-btn c-btn__link">お問い合わせ</a>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <main>
-    <section id="fv" class="p-fv">
-      <div class="fv__inner">
-        <div class="fv__img">
-          <picture>
-            <source srcset="./images/fv/fv_pc.jpg" media="(min-width: 768px)" type="image/jpg">
-            <img src="./images/fv/fv_sp.jpg" alt="fv" title="fv">
-          </picture>
+    <main>
+      <section id="fv" class="p-fv">
+        <div class="fv__inner">
+          <div class="fv__img">
+            <picture>
+              <source srcset="./images/fv/fv_pc.jpg" media="(min-width: 768px)" type="image/jpg">
+              <img src="./images/fv/fv_sp.jpg" alt="fv" title="fv">
+            </picture>
+          </div>
+          <div class="p-fv__text">
+            <h2 class="p-fv__text-title">
+              「音楽で生きる」<br class="sp"> を叶える<br>ミュージックスクール
+            </h2>
+          </div>
         </div>
-        <div class="p-fv__text">
-          <h2 class="p-fv__text-title">
-            「音楽で生きる」<br class="sp"> を叶える<br>ミュージックスクール
+      </section>
+
+      <!-- TOPに戻るボタンのjsの修正をAIに依頼 -->
+
+      <div class="c-page-top">
+        <a href="#" class="c-goto-top"><img src="./images/icon/goto-top.svg" alt="トップへ戻る"></a>
+        <a href="#" class="c-btn__link c-contact-button">お問い合わせ</a>
+      </div>
+
+      <!-- ビジョン -->
+      <section id="vision" class="p-vision">
+        <div class="p-vision__inner l-inner">
+          <div class="p-vision__content">
+            <h2 class="p-vision__title">全人類、<br class="sp"> ミュージシャン計画。</h2>
+            <p class="p-vision__subtitle">私たちは音楽を愛するすべての人が、音楽に熱狂できる世界を目指しています。</p>
+          </div>
+          <div class="p-vision__diagram p-diagram ">
+            <picture>
+              <source srcset="./images/vision/semicircle.jpg" media="(min-width: 768px)" type="image/png">
+              <img src="./images/vision/semicircle-sp.jpg" alt="vision" title="vision">
+            </picture>
+
+            <div class="p-diagram__arrow"></div>
+            <div class="p-diagram__contents">
+              <div class="p-diagram__row">
+                <span class="p-diagram__en">Enthusiasm</span>
+                <span class="p-diagram__dot"></span>
+                <span class="p-diagram__jp">熱狂し</span>
+              </div>
+              <div class="p-diagram__row">
+                <span class="p-diagram__en">Envision</span>
+                <span class="p-diagram__dot"></span>
+                <span class="p-diagram__jp">想像し</span>
+              </div>
+              <div class="p-diagram__row">
+                <span class="p-diagram__en">Effulgent</span>
+                <span class="p-diagram__dot"></span>
+                <span class="p-diagram__jp">輝く存在へ</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 広告-->
+      <section id="ad" class="p-ad section-bg">
+        <div class="p-ad__inner l-inner">
+          <h2 class="p-ad__title">音楽業界初！<br><span class="span-br">収益化までサポートする</span>
+            <span class="span-br">ミュージックスクール</span>
           </h2>
+          <p class="p-ad__text">
+            楽器や作詞作曲などの<span class="span-br">技術・知識はもちろんのこと</span><br>
+            <span class="span-br">自分で稼ぎつづけるための</span><span class="span-br">ビジネス面もサポートします！</span>
+          </p>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- TOPに戻るボタンのjsの修正をAIに依頼 -->
-
-    <div class="c-page-top">
-      <a href="#" class="c-goto-top"><img src="./images/icon/goto-top.svg" alt="トップへ戻る"></a>
-      <a href="#" class="c-btn__link c-contact-button">お問い合わせ</a>
-    </div>
-
-    <!-- ビジョン -->
-    <section id="vision" class="p-vision">
-      <div class="p-vision__inner l-inner">
-        <div class="p-vision__content">
-          <h2 class="p-vision__title">全人類、<br class="sp"> ミュージシャン計画。</h2>
-          <p class="p-vision__subtitle">私たちは音楽を愛するすべての人が、音楽に熱狂できる世界を目指しています。</p>
-        </div>
-        <div class="p-vision__diagram p-diagram ">
-          <picture>
-            <source srcset="./images/vision/semicircle.jpg" media="(min-width: 768px)" type="image/png">
-            <img src="./images/vision/semicircle-sp.jpg" alt="vision" title="vision">
-          </picture>
-
-          <div class="p-diagram__arrow"></div>
-          <div class="p-diagram__contents">
-            <div class="p-diagram__row">
-              <span class="p-diagram__en">Enthusiasm</span>
-              <span class="p-diagram__dot"></span>
-              <span class="p-diagram__jp">熱狂し</span>
+      <!-- 選ばれる理由-->
+      <section id="reason" class="p-top__reason p-top-reason">
+        <div class="p-top-reason__inner l-inner">
+          <h2 class="c-section-title p-top-reason__title">きたむらミュージック<span class="span-br">スクールが選ばれる理由</span></h2>
+          <div class="p-top-reason__items">
+            <div class="p-top-reason__item p-top-reason-item">
+              <div class="p-top-reason-item__image">
+                <picture>
+                  <source srcset="./images/reason/reason01-pc.jpg" media="(min-width: 768px)" type="image/jpg">
+                  <img src="./images/reason/reason01-sp.jpg" alt="ピアノを演奏する講師と犬" />
+                </picture>
+              </div>
+              <div class="p-top-reason-item__content">
+                <h3 class="p-top-reason-item__title">
+                  技術面はプロによるマンツーマン授業！
+                </h3>
+                <p class="p-top-reason-item__text">
+                  第一線で活躍するプロによるマンツーマン授業で、きめ細かな技術指導が受けられます。
+                </p>
+              </div>
             </div>
-            <div class="p-diagram__row">
-              <span class="p-diagram__en">Envision</span>
-              <span class="p-diagram__dot"></span>
-              <span class="p-diagram__jp">想像し</span>
+            <div class="p-top-reason__item p-top-reason-item">
+              <div class="p-top-reason-item__image">
+                <picture>
+                  <source srcset="./images/reason/reason02-pc.jpg" media="(min-width: 768px)" type="image/jpg">
+                  <img src="./images/reason/reason02-sp.jpg" alt="丁寧に収益化の方法を説明する女性スタッフ" />
+                </picture>
+              </div>
+              <div class="p-top-reason-item__content">
+                <h3 class="p-top-reason-item__title">
+                  収益化するためのビジネスサポート！
+                </h3>
+                <p class="p-top-reason-item__text">
+                  コンセプト設計や集客方法、マーケティングリサーチなど、音楽で稼ぎつづけるための方法やマインドセットをサポートするクラスをご用意。
+                </p>
+              </div>
             </div>
-            <div class="p-diagram__row">
-              <span class="p-diagram__en">Effulgent</span>
-              <span class="p-diagram__dot"></span>
-              <span class="p-diagram__jp">輝く存在へ</span>
+            <div class="p-top-reason__item p-top-reason-item">
+              <div class="p-top-reason-item__image">
+                <picture>
+                  <source srcset="./images/reason/reason03-pc.jpg" media="(min-width: 768px)" type="image/jpg">
+                  <img src="./images/reason/reason03-sp.jpg" alt="ギターと鍵盤を使った作曲練習" />
+                </picture>
+              </div>
+              <div class="p-top-reason-item__content">
+                <h3 class="p-top-reason-item__title">
+                  24時間365日使える練習ROOMを完備！
+                </h3>
+                <p class="p-top-reason-item__text">
+                  一年中使える個室の練習ROOMを完備しているため、お仕事帰りや合間の時間も自由に練習が可能です。（アプリで予約が必要です）
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- 広告-->
-    <section id="ad" class="p-ad section-bg">
-      <div class="p-ad__inner l-inner">
-        <h2 class="p-ad__title">音楽業界初！<br><span class="span-br">収益化までサポートする</span>
-          <span class="span-br">ミュージックスクール</span>
-        </h2>
-        <p class="p-ad__text">
-          楽器や作詞作曲などの<span class="span-br">技術・知識はもちろんのこと</span><br>
-          <span class="span-br">自分で稼ぎつづけるための</span><span class="span-br">ビジネス面もサポートします！</span>
-        </p>
-      </div>
-    </section>
+      <!-- 生徒さんたちの声 -->
+      <section id="voice" class="p-top-voice p-voice section-bg">
+        <div class="p-voice__inner">
+          <h2 class="p-voice__title c-section-title">生徒さんたちの声</h2>
 
-    <!-- 選ばれる理由-->
-    <section id="reason" class="p-top__reason p-top-reason">
-      <div class="p-top-reason__inner l-inner">
-        <h2 class="c-section-title p-top-reason__title">きたむらミュージック<span class="span-br">スクールが選ばれる理由</span></h2>
-        <div class="p-top-reason__items">
-          <div class="p-top-reason__item p-top-reason-item">
-            <div class="p-top-reason-item__image">
-              <picture>
-                <source srcset="./images/reason/reason01-pc.jpg" media="(min-width: 768px)" type="image/jpg">
-                <img src="./images/reason/reason01-sp.jpg" alt="ピアノを演奏する講師と犬" />
-              </picture>
+          <div class="p-voice__container">
+            <div class="p-voice__swiper swiper">
+              <div class="p-voice__swiper-wrapper swiper-wrapper">
+                <div class="p-voice__item p-voice-item swiper-slide">
+                  <div class="p-voice-item__card p-voice-card">
+                    <picture>
+                      <source srcset="./images/voice/voice01-pc.jpg" media="(min-width: 768px)" type="image/jpg">
+                      <img src="./images/voice/voice01-sp.jpg" alt="証券会社勤務　丸山さん" />
+                    </picture>
+                  </div>
+                  <div class="p-voice-card__body">
+                    <h3 class="p-voice-card__title">証券会社勤務　丸山さん</h3>
+                    <p class="p-voice-card__desc">
+                      昔やっていた音楽活動で、副収入が得られるようになったので、毎日充実するようになりました。
+                    </p>
+                  </div>
+                </div>
+                <div class="p-voice__item p-voice-item swiper-slide">
+                  <div class="p-voice-item__card p-voice-card">
+                    <picture>
+                      <source srcset="./images/voice/voice02-pc.jpg" media="(min-width: 768px)" type="image/jpg">
+                      <img src="./images/voice/voice02-pc.jpg" alt="IT会社勤務　S.Eさん" />
+                    </picture>
+                  </div>
+                  <div class="p-voice-card__body">
+                    <h3 class="p-voice-card__title">IT会社勤務　S.Eさん</h3>
+                    <p class="p-voice-card__desc">
+                      プロの指導が受けられるので、技術が確実に上がるし、音楽への考え方とかも勉強できて最高です。
+                    </p>
+                  </div>
+                </div>
+                <div class="p-voice__item p-voice-item swiper-slide">
+                  <div class="p-voice-item__card p-voice-card">
+                    <picture>
+                      <source srcset="./images/voice/voice03-pc.jpg" media="(min-width: 768px)" type="image/jpg">
+                      <img src="./images/voice/voice03-pc.jpg" alt="都内大学生　田森さん" />
+                    </picture>
+                  </div>
+                  <div class="p-voice-card__body">
+                    <h3 class="p-voice-card__title">都内大学生　田森さん</h3>
+                    <p class="p-voice-card__desc">
+                      就職する前にビジネスの事が学べるし、好きな音楽で稼げるようになったので選択肢が増えました。
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="p-top-reason-item__content">
-              <h3 class="p-top-reason-item__title">
-                技術面はプロによるマンツーマン授業！
-              </h3>
-              <p class="p-top-reason-item__text">
-                第一線で活躍するプロによるマンツーマン授業で、きめ細かな技術指導が受けられます。
+            <div class="p-voice__swiper-button-prev">
+              <img src="./images/voice/arrow-left.svg" alt="矢印">
+            </div>
+            <div class="p-voice__swiper-button-next">
+              <img src="./images/voice/arrow-right.svg" alt="矢印">
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ご利用の流れ -->
+
+      <section id="flow" class="p-top-flow">
+        <div class="p-top-flow__inner l-inner">
+          <h2 class="c-section-title p-top-flow__title">ご利用の流れ</h2>
+          <ol class="p-top-flow__items p-top-flow-items">
+            <li class="p-top-flow-item">
+              <h3 class="p-top-flow-item__label">お問い合わせ</h3>
+              <p class="p-top-flow-item__desc">
+                まずはフォームまたはメールでお問い合わせください。<br>
+                ヒアリングの日程を調整します。
               </p>
-            </div>
-          </div>
-          <div class="p-top-reason__item p-top-reason-item">
-            <div class="p-top-reason-item__image">
-              <picture>
-                <source srcset="./images/reason/reason02-pc.jpg" media="(min-width: 768px)" type="image/jpg">
-                <img src="./images/reason/reason02-sp.jpg" alt="丁寧に収益化の方法を説明する女性スタッフ" />
-              </picture>
-            </div>
-            <div class="p-top-reason-item__content">
-              <h3 class="p-top-reason-item__title">
-                収益化するためのビジネスサポート！
-              </h3>
-              <p class="p-top-reason-item__text">
-                コンセプト設計や集客方法、マーケティングリサーチなど、音楽で稼ぎつづけるための方法やマインドセットをサポートするクラスをご用意。
+            </li>
+
+            <li class="p-top-flow-item">
+              <h3 class="p-top-flow-item__label">ヒアリング</h3>
+              <p class="p-top-flow-item__desc">
+                現在の技術面や将来の目標をお伺いします。<br>
+                悩みや不安な事もお気軽にご相談ください。
               </p>
-            </div>
-          </div>
-          <div class="p-top-reason__item p-top-reason-item">
-            <div class="p-top-reason-item__image">
-              <picture>
-                <source srcset="./images/reason/reason03-pc.jpg" media="(min-width: 768px)" type="image/jpg">
-                <img src="./images/reason/reason03-sp.jpg" alt="ギターと鍵盤を使った作曲練習" />
-              </picture>
-            </div>
-            <div class="p-top-reason-item__content">
-              <h3 class="p-top-reason-item__title">
-                24時間365日使える練習ROOMを完備！
-              </h3>
-              <p class="p-top-reason-item__text">
-                一年中使える個室の練習ROOMを完備しているため、お仕事帰りや合間の時間も自由に練習が可能です。（アプリで予約が必要です）
+            </li>
+
+            <li class="p-top-flow-item">
+              <h3 class="p-top-flow-item__label">プランのご提案</h3>
+              <p class="p-top-flow-item__desc">
+                ライフスタイルや目標によって最適なプランをご提案します。<br>
+                継続できるようサポートいたします。
               </p>
-            </div>
-          </div>
+            </li>
+
+            <li class="p-top-flow-item">
+              <h3 class="p-top-flow-item__label">ご入学</h3>
+              <p class="p-top-flow-item__desc">
+                お申し込み完了後、レッスンがスタートします。<br>
+                マンツーマン指導なので、いつからでもスタートが可能です。
+              </p>
+            </li>
+          </ol>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- 生徒さんたちの声 -->
-    <section id="voice" class="p-top-voice section-bg">
-      <div class="p-top-voice__inner ">
-        <h2 class="c-section-title p-top-voice__title">生徒さんたちの声</h2>
-        <!-- <div class="p-top-voice__swiper-nav-wrap">
-          <div class="p-top-voice__swiper-button-prev"></div>
-          <div class="p-top-voice__swiper-button-next"></div>
-        </div> -->
-        <div class="p-top-voice__container">
-          <div class="p-top-voice__swiper swiper">
-            <div class="p-top-voice__swiper-wrapper swiper-wrapper">
-              <div class="p-top-voice__item p-top-voice-item swiper-slide">
-                <div class="p-top-voice-item__card p-top-voice-card">
-                  <picture>
-                    <source srcset="./images/voice/voice01-pc.jpg" media="(min-width: 768px)" type="image/jpg">
-                    <img src="./images/voice/voice01-sp.jpg" alt="証券会社勤務　丸山さん" />
-                  </picture>
-                </div>
-                <div class="p-top-voice-card__body">
-                  <h3 class="p-top-voice-card__title">証券会社勤務　丸山さん</h3>
-                  <p class="p-top-voice-card__desc">
-                    昔やっていた音楽活動で、副収入が得られるようになったので、毎日充実するようになりました。
-                  </p>
-                </div>
-              </div>
-              <div class="p-top-voice__item p-top-voice-item swiper-slide">
-                <div class="p-top-voice-item__card p-top-voice-card">
-                  <picture>
-                    <source srcset="./images/voice/voice02-pc.jpg" media="(min-width: 768px)" type="image/jpg">
-                    <img src="./images/voice/voice02-pc.jpg" alt="IT会社勤務　S.Eさん" />
-                  </picture>
-                </div>
-                <div class="p-top-voice-card__body">
-                  <h3 class="p-top-voice-card__title">IT会社勤務　S.Eさん</h3>
-                  <p class="p-top-voice-card__desc">
-                    プロの指導が受けられるので、技術が確実に上がるし、音楽への考え方とかも勉強できて最高です。
-                  </p>
-                </div>
-              </div>
-              <div class="p-top-voice__item p-top-voice-item swiper-slide">
-                <div class="p-top-voice-item__card p-top-voice-card">
-                  <picture>
-                    <source srcset="./images/voice/voice03-pc.jpg" media="(min-width: 768px)" type="image/jpg">
-                    <img src="./images/voice/voice03-pc.jpg" alt="都内大学生　田森さん" />
-                  </picture>
-                </div>
-                <div class="p-top-voice-card__body">
-                  <h3 class="p-top-voice-card__title">都内大学生　田森さん</h3>
-                  <p class="p-top-voice-card__desc">
-                    就職する前にビジネスの事が学べるし、好きな音楽で稼げるようになったので選択肢が増えました。
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="p-top-voice__swiper-button-prev swiper-button-prev"></div>
-          <div class="p-top-voice__swiper-button-next swiper-button-next"></div>
-        </div>
+      <!-- よくあるご質問 -->
+      <section id="faq" class="p-top-faq p-faq">
+        <div class="p-faq__inner l-inner">
+          <h2 class="c-section-title">よくあるご質問</h2>
+          <div class="p-faq__container">
+            <div class="p-faq__container-accordion p-faq-accordion ">
+              <div class="p-faq-accordion__items">
+                <details class="p-faq-accordion__item p-faq__item">
+                  <summary class="p-faq__summary js-faq-summary">
+                    <span class="p-faq__summary-q-badge">Q</span>
+                    <P>どのような生徒さんがどれぐらいの期間で稼いでいますか？</P>
+                  </summary>
+                  <div class="p-faq__answer">
+                    <span class="p-faq__answer-a-badge">A</span>
+                    <p>コンテンツが入ります。</p>
+                  </div>
+                </details>
+                <details class="p-faq-accordion__item p-faq__item">
+                  <summary class="p-faq__summary js-faq-summary">
+                    <span class="p-faq__summary-q-badge">Q</span>
+                    <p>途中でプランを変更することは可能ですか？</p>
+                  </summary>
+                  <div class="p-faq__answer">
+                    <span class="p-faq__answer-a-badge">A</span>
+                    <p>途中でプラン変更も可能です。毎月15日までに申請すれば翌月からプランが変更となります。</p>
+                  </div>
 
-      </div>
-    </section>
-
-    <!-- ご利用の流れ -->
-
-    <section id="flow" class="p-top-flow">
-      <div class="p-top-flow__inner l-inner">
-        <h2 class="c-section-title p-top-flow__title">ご利用の流れ</h2>
-        <ol class="p-top-flow__items p-top-flow-items">
-          <li class="p-top-flow-item">           
-            <h3 class="p-top-flow-item__label">お問い合わせ</h3>
-            <p class="p-top-flow-item__desc">
-              まずはフォームまたはメールでお問い合わせください。<br>
-              ヒアリングの日程を調整します。
-            </p>
-          </li>
-
-          <li class="p-top-flow-item">            
-            <h3 class="p-top-flow-item__label">ヒアリング</h3>
-            <p class="p-top-flow-item__desc">
-              現在の技術面や将来の目標をお伺いします。<br>
-              悩みや不安な事もお気軽にご相談ください。
-            </p>
-          </li>
-
-          <li class="p-top-flow-item">           
-            <h3 class="p-top-flow-item__label">プランのご提案</h3>
-            <p class="p-top-flow-item__desc">
-              ライフスタイルや目標によって最適なプランをご提案します。<br>
-              継続できるようサポートいたします。
-            </p>
-          </li>
-
-          <li class="p-top-flow-item">           
-            <h3 class="p-top-flow-item__label">ご入学</h3>
-            <p class="p-top-flow-item__desc">
-              お申し込み完了後、レッスンがスタートします。<br>
-              マンツーマン指導なので、いつからでもスタートが可能です。
-            </p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- よくあるご質問 -->
-    <section id="faq" class="p-top-faq">
-      <div class="p-top-faq__inner l-inner">
-        <h2 class="c-section-title">よくあるご質問</h2>
-        <div class="p-top-faq__container">
-          <div class="p-top-faq__container__accordion p-top-faq-accordion">
-            <div class="p-top-faq-accordion__items">
-              <div class="p-top-faq-accordion__details">
-                <summary class="p-top-faq-accordion__title js-accordion-title">
-                  <span class="p-top-faq-accordion-q">Q</span>どのような生徒さんがどれぐらいの期間で稼いでいますか？
-                </summary>
-                <div class="p-top-faq-accordion__content">
-                  <p><span class="p-top-faq-accordion-a">A</span>コンテンツが入ります。</p>
-                </div>
-              </div>
-              <div class="p-top-faq-accordion__details">
-                <summary class="p-top-faq-accordion__title js-accordion-title">
-                  <span class="p-top-faq-accordion-q">Q</span>途中でプランを変更することは可能ですか？
-                </summary>
-                <div class="p-top-faq-accordion__content">
-                  <p><span class="p-top-faq-accordion-a">A</span>途中でプラン変更も可能です。毎月15日までに申請すれば翌月からプランが変更となります。</p>
-                </div>
-              </div>
-              <div class="p-top-faq-accordion__details">
-                <summary class="p-top-faq-accordion__title js-accordion-title">
-                  <span class="p-top-faq-accordion-q">Q</span>入学金などの分割払いはできますか？
-                </summary>
-                <div class="p-top-faq-accordion__content">
-                  <p><span class="p-top-faq-accordion-a">A</span>コンテンツが入ります。</p>
-                </div>
-              </div>
-              <div class="p-top-faq-accordion__details">
-                <summary class="p-top-faq-accordion__title js-accordion-title">
-                  <span class="p-top-faq-accordion-q">Q</span>休学することも可能ですか？
-                </summary>
-                <div class="p-top-faq-accordion__content">
-                  <p><span class="p-top-faq-accordion-a">A</span>コンテンツが入ります。</p>
-                </div>
+                </details>
+                <details class="p-faq-accordion__item p-faq__item">
+                  <summary class="p-faq__summary js-faq-summary">
+                    <span class="p-faq__summary-q-badge">Q</span>
+                    <p>入学金などの分割払いはできますか？</p>
+                  </summary>
+                  <div class="p-faq__answer">
+                    <span class="p-faq__answer-a-badge">A</span>
+                    <p>コンテンツが入ります。</p>
+                  </div>
+                </details>
+                <details class="p-faq-accordion__item p-faq__item">
+                  <summary class="p-faq__summary js-faq-summary">
+                    <span class="p-faq__summary-q-badge">Q</span>
+                    <p>休学することも可能ですか？</p>
+                  </summary>
+                  <div class="p-faq__answer">
+                    <span class="p-faq__answer-a-badge">A</span>
+                    <p>コンテンツが入ります。</p>
+                  </div>
+                </details>
               </div>
             </div>
+      </section>
+
+      <!-- ブログ -->
+      <section id="blog" class="p-top-blog">
+        <div class="p-top-blog__inner l-inner">
+          <h2 class="c-section-title">ブログ</h2>
+          <div class="p-top-blog__items">
+
+            <div class="p-top-blog__item">
+              <a href="blog_details.html" class="p-top-blog__item-link">
+                <div class="c-thumbnail">
+                  <div class="c-thumbnail__label">
+                    <p class="c-thumbnail__label-text">SNS</p>
+                  </div>
+                  <div class="c-thumbnail-img">
+                    <picture>
+                      <source media="(min-width: 768px)" srcset="./images/blog/blog01-pc.jpg">
+                      <img src="./images/blog/blog01-sp.jpg" alt="マイクで熱唱する女性">
+                    </picture>
+                  </div>
+                </div>
+
+                <div class="p-top-blog__body">
+                  <h3 class="p-top-blog__title">フォロワーではなくファンを増やせとは？</h3>
+                  <time datetime="0000-00-00" class="p-top-blog__date">0000.00.00</time>
+                </div>
+              </a>
+            </div>
+
+
+            <div class="p-top-blog__item">
+              <a href="blog_details.html" class="p-top-blog__item-link">
+                <div class="c-thumbnail">
+                  <div class="c-thumbnail__label">
+                    <p class="c-thumbnail__label-text">集客方法</p>
+                  </div>
+                  <div class="c-thumbnail-img">
+                    <picture>
+                      <source media="(min-width: 768px)" srcset="./images/blog/blog02-pc.jpg">
+                      <img src="./images/blog/blog02-sp.jpg" alt="悩み顔の男性が頭を抱える">
+                    </picture>
+                  </div>
+                </div>
+
+                <div class="p-top-blog__body">
+                  <h3 class="p-top-blog__title">集客してる間は売れないという法則</h3>
+                  <time datetime="0000-00-00" class="p-top-blog__date">0000.00.00</time>
+                </div>
+              </a>
+            </div>
+
+            <div class="p-top-blog__item">
+              <a href="blog_details.html" class="p-top-blog__item-link">
+                <div class="c-thumbnail">
+                  <div class="c-thumbnail__label">
+                    <p class="c-thumbnail__label-text">ギター</p>
+                  </div>
+                  <div class="c-thumbnail-img">
+                    <picture>
+                      <source media="(min-width: 768px)" srcset="./images/blog/blog03-pc.jpg">
+                      <img src="./images/blog/blog03-sp.jpg" alt="アコースティックギターを弾く人">
+                    </picture>
+                  </div>
+                </div>
+
+                <div class="p-top-blog__body">
+                  <h3 class="p-top-blog__title">アルペジオが劇的に向上する3つの習慣</h3>
+                  <time datetime="0000-00-00" class="p-top-blog__date">0000.00.00</time>
+                </div>
+              </a>
+            </div>
           </div>
-    </section>
-
-    <!-- ブログ -->
-    <section id="blog" class="p-top-blog">
-      <div class="p-top-blog__inner l-inner">
-        <h2 class="c-section-title">ブログ</h2>
-        <div class="p-top-blog__items">
-
-          <div class="p-top-blog__item">
-            <a href="blog_details.html" class="p-top-blog__item-link">
-              <div class="c-thumbnail">
-                <div class="c-thumbnail__label">
-                  <p class="c-thumbnail__text">SNS</p>
-                </div>
-                <div class="c-thumbnail-img">
-                  <picture>
-                    <source media="(min-width: 768px)" srcset="./images/blog/blog01-pc.jpg">
-                    <img src="./images/blog/blog01-sp.jpg" alt="マイクで熱唱する女性">
-                  </picture>
-                </div>
-              </div>
-
-              <div class="p-top-blog__body">
-                <h3 class="p-top-blog__title">フォロワーではなくファンを増やせとは？</h3>
-                <time datetime="0000-00-00" class="p-top-blog__date">0000.00.00</time>
-              </div>
-            </a>
-          </div>
-
-
-          <div class="p-top-blog__item">
-            <a href="blog_details.html" class="p-top-blog__item-link">
-              <div class="c-thumbnail">
-                <div class="c-thumbnail__label">
-                  <p class="c-thumbnail__text">集客方法</p>
-                </div>
-                <div class="c-thumbnail-img">
-                  <picture>
-                    <source media="(min-width: 768px)" srcset="./images/blog/blog02-pc.jpg">
-                    <img src="./images/blog/blog02-sp.jpg" alt="悩み顔の男性が頭を抱える">
-                  </picture>
-                </div>
-              </div>
-
-              <div class="p-top-blog__body">
-                <h3 class="p-top-blog__title">集客してる間は売れないという法則</h3>
-                <time datetime="0000-00-00" class="p-top-blog__date">0000.00.00</time>
-              </div>
-            </a>
-          </div>
-
-          <div class="p-top-blog__item">
-            <a href="blog_details.html" class="p-top-blog__item-link">
-              <div class="c-thumbnail">
-                <div class="c-thumbnail__label">
-                  <p class="c-thumbnail__text">ギター</p>
-                </div>
-                <div class="c-thumbnail-img">
-                  <picture>
-                    <source media="(min-width: 768px)" srcset="./images/blog/blog03-pc.jpg">
-                    <img src="./images/blog/blog03-sp.jpg" alt="アコースティックギターを弾く人">
-                  </picture>
-                </div>
-              </div>
-
-              <div class="p-top-blog__body">
-                <h3 class="p-top-blog__title">アルペジオが劇的に向上する3つの習慣</h3>
-                <time datetime="0000-00-00" class="p-top-blog__date">0000.00.00</time>
-              </div>
-            </a>
-          </div>
+          <div class="p-top-blog__more-link"><a href="#" class="p-top-blog__more">ブログ一覧へ</a></div>
         </div>
-        <div class="p-top-blog__more-link"><a href="#" class="p-top-blog__more">ブログ一覧へ</a></div>
-      </div>
-    </section>
+      </section>
+    </main>
+
+    <footer class="l-footer p-footer">
+      <div>
+        <div class="p-footer__inner">
+          <nav class="footer__nav footer-nav">
+            <ul class="footer-nav__lists">
+              <li class="footer-nav__list">
+                <a href="#" class="footer-nav__link">ホーム</a>
+              </li>
+              <li class="footer-nav__list">
+                <a href="#" class="footer-nav__link">料金</a>
+              </li>
+              <li class="footer-nav__list">
+                <a href="#blog" class="footer-nav__link">ブログ</a>
+              </li>
+              <li class="footer-nav__list">
+                <a href="#" class="footer-nav__link">卒業実績</a>
+              </li>
+
+            </ul>
+          </nav>
+          <a href="#" class="footer-logo"><img src="./images/icon/logo-white.svg" alt="ロコ"></a>
+
+          <p class="footer__copyright">Copyright&copy;0000 KITAMURA music school Inc. All Rights</p>
 
 
-  </main>
-
-  <footer class="l-footer p-footer">
-    <div>
-      <div class="p-footer__inner">
-        <nav class="footer__nav footer-nav">
-          <ul class="footer-nav__lists">
-            <li class="footer-nav__list">
-              <a href="#" class="footer-nav__link">ホーム</a>
-            </li>
-            <li class="footer-nav__list">
-              <a href="#" class="footer-nav__link">料金</a>
-            </li>
-            <li class="footer-nav__list">
-              <a href="#blog" class="footer-nav__link">ブログ</a>
-            </li>
-            <li class="footer-nav__list">
-              <a href="#" class="footer-nav__link">卒業実績</a>
-            </li>
-
-          </ul>
-        </nav>
-        <a href="#" class="footer-logo"><img src="./images/icon/logo-white.svg" alt="ロコ"></a>
-
-        <p class="footer__copyright">Copyright&copy;0000 KITAMURA music school Inc. All Rights</p>
-
-
-        <div class="sns-btns">
-          <ul class="footer__sns sns">
-            <li class="sns__list">
-              <a href="#" class="sns__link" target="_blank" rel="noopener noreferrer">
-                <img src="./images/icon/icon-twitter.svg" alt="twitter">
-              </a>
-            </li>
-            <li class="sns__list">
-              <a href="#" class="sns__link" target="_blank" rel="noopener noreferrer">
-                <img src="./images/icon/icon-facebook.svg" alt="facebook">
-              </a>
-            </li>
-            <li class="sns__list">
-              <a href="#" class="sns__link" target="_blank" rel="noopener noreferrer">
-                <img src="./images/icon/icon-youtube.svg" alt="youtube">
-              </a>
-            </li>
-            <li class="sns__list">
-              <a href="#" class="sns__link" target="_blank" rel="noopener noreferrer">
-                <img src="./images/icon/icon-instagram.svg" alt="instagram">
-              </a>
-            </li>
-          </ul>
+          <div class="sns-btns">
+            <ul class="footer__sns sns">
+              <li class="sns__list">
+                <a href="#" class="sns__link" target="_blank" rel="noopener noreferrer">
+                  <img src="./images/icon/icon-twitter.svg" alt="twitter">
+                </a>
+              </li>
+              <li class="sns__list">
+                <a href="#" class="sns__link" target="_blank" rel="noopener noreferrer">
+                  <img src="./images/icon/icon-facebook.svg" alt="facebook">
+                </a>
+              </li>
+              <li class="sns__list">
+                <a href="#" class="sns__link" target="_blank" rel="noopener noreferrer">
+                  <img src="./images/icon/icon-youtube.svg" alt="youtube">
+                </a>
+              </li>
+              <li class="sns__list">
+                <a href="#" class="sns__link" target="_blank" rel="noopener noreferrer">
+                  <img src="./images/icon/icon-instagram.svg" alt="instagram">
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
-  </footer>
+    </footer>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </div>
+</body>
 
 </html>

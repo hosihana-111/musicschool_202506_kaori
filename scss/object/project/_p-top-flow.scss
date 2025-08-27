@@ -9,6 +9,7 @@
 
     @include sp {
         padding-top: 4.6rem;
+          padding-bottom: 1.3rem;
     }
 
 }
@@ -24,7 +25,7 @@
 
     @include sp {
         max-width: 100%;
-        margin-top: 4.4rem;
+        margin-top: 4.3rem;
 
     }
 
@@ -39,10 +40,11 @@
         border-left: 3px solid $red;
 
         @include sp {
-            left: 2rem;
+            left: 1.8rem;
             bottom: 1rem;
         }
     }
+    // 矢印
     &::after {
     content: "";
     position: absolute;
@@ -71,8 +73,8 @@
 
     @include sp {
         flex-direction: column;
-        row-gap: 0.9rem;
-        margin-bottom: 4.6rem;
+        row-gap: 1.4rem;
+        margin-bottom: 4.2rem;
     }
 
 

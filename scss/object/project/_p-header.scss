@@ -98,7 +98,7 @@
 
   @include sp {
     display: block;
-    width: calc(300/375*100%);
+    width: calc(300 / 375 * 100%);
     position: fixed;
     top: 5rem;
     left: 120%;
@@ -226,7 +226,7 @@
   width: 3.2rem;
   height: 0.4rem;
   background-color: $white;
-  -webkit-transition: 0.4s;
+   transition: transform .5s;
 
 }
 

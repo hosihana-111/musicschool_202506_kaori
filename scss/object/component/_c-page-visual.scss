@@ -6,13 +6,12 @@
 .c-page-visual {
   position: relative;
   width: 100%;
-  margin-bottom: 2rem;
   background: #e8e8e8;
 
   &__img {
     position: relative;
     width: 100%;
-    height: 180px;
+    // height: 180px;
     overflow: hidden;
 
     img {

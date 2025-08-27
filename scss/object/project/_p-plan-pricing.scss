@@ -4,23 +4,47 @@
 @use "../../foundation/mixin" as *;
 
 
-.p-plan__pricing {
-  padding: 6rem 0;
-  
+.p-pricing {
+  padding-top: 7.2rem;
+
+  @include sp {
+    padding-top: 4.6rem;
+  }
 }
 
+.p-pricing__section-title {
+  font-size: 2.5rem;
+  line-height: 1;
+  font-weight: 700;
+  text-align: center;
 
-.p-plan__pricing-box {
+  @include sp {
+    line-height: calc(40/25);
+  }
+}
+
+.p-pricing__items {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1.6rem;
-  margin: 4rem 0 6rem 0;
+  gap: 3rem;
+  margin-block: 4.8rem;
+
+  @include sp {
+    flex-direction: column;
+    margin-top: 3.9rem;
+    margin-bottom: 4.4rem;
+    gap: 2rem;
+  }
 }
 
-.p-plan__pricing-item {
+.p-pricing__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: $red;
   color: $white;
+  width: 21rem;
   padding: 1.4rem 3rem;
   font-weight: 700;
   font-size: 2rem;
@@ -28,7 +52,7 @@
 
 }
 
-.p-plan__pricing-plus {
+.p-pricing__item-plus {
   position: relative;
   width: 18px;
   height: 18px;
@@ -58,84 +82,186 @@
   }
 }
 
-.p-plan__pricing-item-description {
+.p-pricing__description {
   font-size: 1.8rem;
   line-height: calc(30/18);
-  color: $black;
- 
-  margin: 0 auto;
-  text-align: left;
 
   @include sp {
-    font-size: 1.3rem;
-    padding: 0 1.5rem;
+    font-size: 1.6rem;
+    line-height: calc(30/16);
   }
 }
 
-
-
-// p-plan__section
-.p-plan__section{
-  padding-top: 3rem;
+// 料金表
+.p-plan__details {
+  padding-top: 6rem;
   padding-bottom: 22rem;
+
+  @include sp {
+    padding-top: 4rem;
+    padding-bottom: 19rem;
+  }
 }
 
-.p-plan__section-table {
-  border-collapse:  collapse; /* セルの線を重ねる */
+.p-plan__details-container {
+  margin: 5.4rem auto 0;
+
+  @include sp {
+    margin: 0 auto;
+  }
+
+}
+
+.p-plan__table-wrapper {
+  @include sp {
+    width: 100%;
+    overflow-x: auto;
+    /* 横方向にスクロール可 */
+    white-space: nowrap;
+    /* テキストの折り返しなし */
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    scrollbar-gutter: stable;
+    /* スクロールバー出現でのレイアウトズレ抑制 */
+
+  }
+
+  &::-webkit-scrollbar {
+    background: rgba(80, 80, 80, 0.14);
+    height: 2rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(80, 80, 80, 0.5);
+    min-width:2rem;
+
+  }
+
+  &::-webkit-scrollbar-track {
+    margin-inline: 10px;   
+  }
+}
+
+.p-plan-table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  /* セルの線を重ねる */
   text-align: center;
-  margin: 0 auto;
- 
+
+  @include sp {
+    min-width: 66.4rem;
+    /*colgroupの合計幅*/
+  }
 }
 
-.p-plan__section-table tr:nth-child(even) {
-  background-color:  rgba(112, 112, 112,0.15); 
-}
-
-.p-plan__section-table th,.p-plan__section-table td {
-  padding: 5px 10px;         
-}
-.p-plan__section-table tr:last-child{
-  border-bottom:solid 1px $black;
-}
-.p-plan__section-table tr:first-child{
-  border-bottom:solid 1px $black ;
-  font-size: 2rem; 
-line-height: calc(33/20);
-  background-color: $black;
-  color: $white;
-}
-.p-plan__section-table tr:first-child th:first-child{
-  background-color: $white;
-}
-
-.p-plan__section-table th{
-  text-align: center;
-  padding: 3.2rem 0 2.8rem 0;  
-  width: 22rem; 
-
-}
-.p-plan__section-table th.is-recommend {
-  background-color: $red;
-  color: $white;
-  font-size: 2rem;   
+// タイトル部分
+.p-plan-table__head {
+  border-bottom: solid 1px $black;
+  font-size: 2rem;
   line-height: calc(33/20);
-  padding: 4rem 0 3.6rem 0; 
+  color: $white;
+
+  @include sp {
+    line-height: calc(25/20);
+  }
+}
+
+.p-plan-table__th-bl {
+  border-bottom: solid 1px $black ;
+  background-color: $black;
+  padding: 1.1rem 0 0.6rem 0;
+}
+
+.is-recommend {
+  background-color: $red;
+  padding: 1.1rem 0 0.6rem 0;
   position: relative;
 }
 
-.p-plan__section-table td{
-  border-right:solid 1px $black;
-  border-left:solid 1px $black;
+.is-recommend span {
+  font-size: 1.7rem;
+  line-height: calc(33/17);
 }
 
-.p-plan__section-table td:last-child {
-  border-right: none;
+// 料金表本体
+.p-plan-table__body {
+  border-bottom: solid 1px $black;
 }
 
-.p-plan__section-table td span{
+.p-plan-table__body tr {
+  height: 8.5rem;
+}
+
+.p-plan-table__feature {
+  font-size: 1.7rem;
+  line-height: calc(25/17);
+  text-align: left;
+  padding: 1rem 0.5rem 1rem 2rem;
+  vertical-align: middle;
+  word-break: keep-all;
+
+  @include sp {
+    font-size: 1.6rem;
+    line-height: calc(30/16);
+    padding: 1rem 0.5rem 1rem 1rem;
+  }
+}
+
+.p-plan-table__body td {
+  // border-bottom:solid 1px $black;  
+  padding: 1rem 0.5rem;
+  vertical-align: middle;
+  word-break: keep-all;
+}
+
+// 一段とばしの背景色
+.p-plan-table__body tr:nth-child(even) {
+  background-color: rgba(112, 112, 112, 0.15);
+}
+
+// 料金表のbodyの行の高さ
+.p-plan-table__cell {
+  text-align: center;
+  width: 22rem;
+  vertical-align: middle;
+  word-break: keep-all;
+}
+
+// 料金表の全体の赤字
+.p-plan-table__cell .red {
   color: $red;
 }
 
-.p-plan__pricing-text{
-  margin-top:2.9rem ;
+// 料金表のハイフン
+.p-plan-table__cell .hyphens {
+  width: 3rem;
+  height: 0.1rem;
+  border: 0.1rem solid #707070;
+  display: inline-block;
+}
+// 料金表のbodyの縦の線
+.p-plan-table td {
+  border-right: solid 1px $black;
+  border-left: solid 1px $black;
+}
+
+.p-plan-table td:last-child {
+  border-right: none;
+}
+
+// 月額料金の太文字
+.p-plan-table__price {
+  font-weight: 700;
+}
+
+.p-plan-table__price .p-plan-table__cell {
+  font-size: 2.2rem;
+  line-height: calc(33/22);
+}
+.p-plan__pricing-text {
+  margin-top: 2.9rem;
+  font-size: 1.7rem;
+  line-height: calc(25/17);
 }
