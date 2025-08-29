@@ -3,66 +3,60 @@
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
 
-.p-top__reason {
+.p-top-reason {
     padding-top: 6.2rem;
     padding-bottom: 9rem;
-    @include sp{
+
+    @include sp {
         padding-top: 4.5rem;
         padding-bottom: 4.5rem;
     }
 }
 
-.p-top-reason__title{
+.p-top-reason__title {
     font-size: 3rem;
     font-weight: 700;
     line-height: calc(50/30);
-    @include sp{
+
+    @include sp {
         font-size: 2.5rem;
     }
 }
 
-.p-top-reason__items{
+.p-top-reason__items {
     margin-top: 3.1rem;
     display: flex;
-    justify-content: space-between;  
     flex-direction: column;
     gap: 5rem;
 
-    @include sp{
+    @include sp {
         position: static;
-        flex-direction: column;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         margin-top: 3.5rem;
         gap: 4rem;
+        align-items: stretch;
     }
 }
 
 .p-top-reason__item {
     display: flex;
-    
-    justify-content: center;
-    
+    // justify-content: center;
 
-    @include sp{
+
+    @include sp {
         flex-direction: column;
-        gap: 2.5rem;
-        align-items: flex-start;
+        gap: 2.5rem;        
+        width: 100%;
     }
 }
 
-.p-top-reason-item__image {
-    width: calc( 350 / 880 *100%);
+.p-top-reason__image {
+    width: calc(350 / 880 *100%);
     flex-shrink: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    overflow: hidden;
+    aspect-ratio: 350 / 247;
 
-    @include sp{
+    @include sp {
         width: 100%;
-        justify-content: center;
-        align-items: center;
     }
 
     img {
@@ -70,47 +64,56 @@
         height: auto;
         object-fit: cover;
         display: block;
+
+        @include sp {
+            width: 100%;
+            aspect-ratio: 335 / 200;
+        }
     }
 }
 
-.p-top-reason-item__content {
+.p-top-reason__content {
     flex: 1;
-    
+
 }
 
-.p-top-reason-item__title{
+.p-top-reason__title {
     font-size: 2.2rem;
     font-weight: 700;
     line-height: calc(33/22);
     text-align: left;
     padding-left: 5rem;
-    
+    padding-bottom: 0.5rem;
     border-bottom: 2px solid $red;
+    
 
-    @include sp{
+    @include sp {
         padding-left: 0;
         text-align: left;
         font-size: 2rem;
         line-height: calc(30/20);
     }
 }
+
 .p-top-reason__item:first-of-type {
     .p-top-reason-item__title {
-      padding-top: 0.5rem;
-      padding-bottom: 1.2rem;
+        padding-top: 0.5rem;
+        padding-bottom: 1.2rem;
     }
-  }
-  
-  .p-top-reason__item:not(:first-of-type) {
+}
+
+.p-top-reason__item:not(:first-of-type) {
     .p-top-reason-item__title {
-      padding-top: 0; // 2つ目以降はpadding-topなし
-      padding-bottom: 0.5rem;
-      @include sp{
-        padding-bottom: 1rem;
-      }
+        padding-top: 0; // 2つ目以降はpadding-topなし
+        padding-bottom: 0.5rem;
+
+        @include sp {
+            padding-bottom: 1rem;
+        }
     }
-  }
-.p-top-reason-item__text{
+}
+
+.p-top-reason__text {
     font-size: 1.8rem;
     line-height: calc(33/18);
     text-align: left;
@@ -118,11 +121,11 @@
     padding-top: 3.7rem;
     padding-left: 5rem;
 
-    @include sp{
+    @include sp {
         padding-left: 0;
         text-align: left;
-        font-size:1.6rem ;
+        font-size: 1.6rem;
         line-height: calc(30/16);
-         padding-top: 1.7rem;
+        padding-top: 1.7rem;
     }
 }

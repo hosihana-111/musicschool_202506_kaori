@@ -9,7 +9,7 @@
   color: $white;
 }
 
-.c-btn__link{
+.c-btn--primary{
   width: 150px;
   height: 45px;
   display: grid;
@@ -52,6 +52,7 @@
 .c-contact-button.is-change {
   opacity: 1;
   pointer-events: auto;
+ 
 }
 
 

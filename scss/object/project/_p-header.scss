@@ -5,74 +5,84 @@
 
 
 .p-header {
-  height: 8rem;
+  // height: 8rem;
+  height: hvw(80);
   width: 100%;
-   margin: 0 auto;
-   display: flex;    
-   justify-content: space-between; 
-   transition:all .3s;
-   background-color: $white;
-   @include sp{
-        height: 5rem ;       
-     } 
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  transition: all .3s;
+  background-color: $white;
+
+  @include sp {
+    height: 5rem;
+  }
 }
 
-.p-header__inner{
+.p-header__inner {
   max-width: 940px;
   width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;  
-  padding-inline: 3rem;
-  @include sp{
-       padding-left:2rem;       
-        padding-right: 0;
+  align-items: center;
+  // padding-inline: 3rem;
+  padding-inline: hvw(30);
+
+  @include sp {
+    padding-left: 2rem;
+    padding-right: 0;
   }
 }
 
 .p-header__logo {
   width: 19.2rem;
   height: inherit;
-    @include sp{
-       width:26rem;
+
+  @include sp {
+    width: 26rem;
   }
 }
 
 .p-header__logo a {
   display: flex;
   align-items: center;
-  height: inherit;
+  height: hvw(80);
+  transition: opacity 0.4s;
 
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .p-header__logo-img {
   width: 3.2rem;
   margin-right: 1rem;
 
-  @include sp{
+  @include sp {
     width: 2rem;
     margin-right: 0.8rem;
   }
 }
 
 .p-header__logo-text {
-  font-size: 2rem;
+  font-size: hvw(20);
   font-weight: 700;
-  line-height:calc(23/20) ;
+  line-height: calc(23/20);
   display: inline-block;
- 
-  @include sp{
+
+  @include sp {
     font-size: 1.3rem;
     line-height: calc(14/13);
   }
 
 }
 
-.p-header__logo-text span {
-  font-size: 1.5rem;
+.p-header__logo-text-small {
+  font-size: hvw(15);
   line-height: calc(23 / 15);
-  @include sp{
+
+  @include sp {
     font-size: 1.3rem;
     line-height: calc(14/13);
   }
@@ -90,11 +100,11 @@
   height: inherit;
 }
 
-.p-header__nav__lists {
+.p-header__lists {
   display: flex;
   align-items: center;
   height: inherit;
- column-gap: 3.3rem;
+  column-gap: hvw(33);
 
   @include sp {
     display: block;
@@ -104,7 +114,7 @@
     left: 120%;
     overflow: hidden;
     color: #fff;
-    background-color: $red; 
+    background-color: $red;
     margin: 0;
     text-align: left;
     list-style: none;
@@ -113,13 +123,13 @@
   }
 }
 
-.p-header__nav__lists.active {
+.p-header__lists.active {
   @include sp {
-    left: 20%
+    left: 20%;
   }
 }
 
-.p-header__nav__list {
+.p-header__list {
   height: inherit;
   display: flex;
   align-items: center;
@@ -132,27 +142,23 @@
     font-size: 1.8rem;
     font-weight: 600;
     transition: all 0.3s ease;
-    padding: 0 px;
+
   }
 }
 
 
 
-.p-header__nav__list a {
-  height: inherit;
-  display: flex;
+.p-header__link {
+  height: hvw(80);
+  position: relative; // 疑似要素の基準にする
+  display: inline-flex;
   align-items: center;
   text-decoration: none;
- padding-top:2.55rem;
- padding-bottom: 2.15rem;
   font-size: 1.7rem;
   font-weight: 700;
   line-height: calc(33/17);
-   transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 
-    &:hover {
-      opacity: 0.4;
-    }
 
   @include sp {
     font-size: 1.8rem;
@@ -162,40 +168,51 @@
     transition: all 0.3s ease;
     justify-content: flex-start;
     padding-inline: 2rem;
+  }
 
-    &::after {
-      display: none;
+  &::before {
+    @include pc {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: hvw(1);
+      background: $black;      
+      left: 0;
+      bottom: hvw(28);
+      transform: scaleX(0);
+      transition: all .4s;
+      transform-origin: left center;
+    }
+  }
+
+  &:hover {
+    @include pc {
+      opacity: 0.7;
     }
 
-    &:hover {
-      background-color: #000;
+    @include sp {
+      background: $white;
+      color: $red;
     }
 
-    // 黒背景に変更}
-    //  opacity: 1; // hover時の薄くなる効果を無効化
+    &::before {
+      transform: scaleX(1);
+    }
   }
 
 }
 
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: -1;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-
-  &.is-active {
-    opacity: 1;
-    visibility: visible;
+.p-header__link,
+.c-btn,
+.p-header__hamburger {
+  &:focus-visible {
+    outline: 2px solid #000;
+    outline-offset: 2px;
   }
 }
 
 .p-header__hamburger {
+ 
   position: absolute;
   top: 0px;
   right: 0;
@@ -209,7 +226,7 @@
   transition: all 0.3s ease;
 
   &:hover {
-   
+
     opacity: 0.7;
 
   }
@@ -226,7 +243,7 @@
   width: 3.2rem;
   height: 0.4rem;
   background-color: $white;
-   transition: transform .5s;
+  transition: transform .5s;
 
 }
 

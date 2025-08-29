@@ -4,8 +4,8 @@
 @use "../../foundation/mixin" as *;
 
 .p-vision {
-padding-top: 6.6rem;
-padding-bottom: 7.5rem;
+padding-top: vw(66, 1080);
+padding-bottom:  vw(75, 1080);
 @include sp{
   padding-top: 4.6rem;
   padding-bottom: 4.9rem;
@@ -13,7 +13,7 @@ padding-bottom: 7.5rem;
 }
 
 .p-vision__content {
-  margin-bottom: 3.5rem;
+  margin-bottom:  vw(35, 1080);
   @include sp{
     margin-bottom: 2rem;
   }
@@ -26,6 +26,9 @@ padding-bottom: 7.5rem;
   text-align: center;
   color: $red;
   margin-bottom: 1.7rem;
+  letter-spacing: -0.02em;
+  
+
   @include sp{
     font-size:  2.5rem;
     line-height: calc(40/25);
@@ -37,20 +40,21 @@ padding-bottom: 7.5rem;
   font-size: 1.8rem;
   line-height: calc(30/18);
   text-align: center;
+
  @include sp{
    text-align: left;
  }
-
 }
 
 
 .p-diagram {
   position: relative;
   margin: 0 auto;
-  min-height: 247px;
-  
-
-  
+  min-height: 247px;  
+}
+.p-vision__diagram picture{
+  display:block;
+  // aspect-ratio: 880 / 200; // 
 }
 
 .p-diagram__contents {
@@ -63,8 +67,9 @@ padding-bottom: 7.5rem;
   align-items: center;
   flex-direction: column;
   gap: 1.8rem;
-  z-index: 1;
+  z-index: 20;
   margin-top: 4.1rem;  
+
   @include sp{
     margin-top: 3.5rem;
   }
@@ -78,7 +83,7 @@ padding-bottom: 7.5rem;
   width: 2px;
   height: 19rem;
   background: $red;
-  z-index: 10;
+  z-index: 100;
   margin-top: 5.7rem;
 
   @include sp{
@@ -97,15 +102,16 @@ padding-bottom: 7.5rem;
     position: absolute;   
     top:0;
     right: 50%;
-    box-sizing: border-box;
-    
+    box-sizing: border-box;    
   }
 }
+
 .p-diagram__row {
   display: flex;
   align-items: center;
   gap: 3rem;
 }
+
 .p-diagram__en {
   color: $red;
   font-weight: 700;
@@ -113,26 +119,31 @@ padding-bottom: 7.5rem;
   text-align: right;
   font-size: 2.5rem;
   line-height: calc(50 / 25);
+  letter-spacing: -0.02em;
+
   @include sp{
     font-size: 2rem;
     line-height: calc(50 / 20);
   }
 }
+
 .p-diagram__dot {
   width: 24px;
   height: 24px;
   background: $red;
   border-radius: 50%;
   flex-shrink: 0;
-  z-index: 2;
+  z-index: 15;
   border: 3px solid #fff;
 }
+
 .p-diagram__jp {
   color: #000;
   min-width: 145px;
   text-align: left;
   font-size: 2.3rem;
   line-height: calc(50 / 23);
+
   @include sp{
     font-size: 2rem;
     line-height: calc(50 / 20);

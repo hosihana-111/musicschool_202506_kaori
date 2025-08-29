@@ -67,7 +67,7 @@
 
 }
 
-.p-top-flow-item {
+.p-flow__item{
     display: flex;
     margin-bottom: 5.8rem;
 
@@ -85,7 +85,7 @@
 }
 
 
-.p-top-flow-item__label {
+.p-flow-item__label {
     width: 26.2rem;
     float: left;
     padding-left: 7rem;
@@ -140,7 +140,7 @@
 //     }
 // }
 
-.p-top-flow-item__desc {
+.p-flow-item__desc {
     font-size: 1.8rem;
     line-height: calc(30/18);
     margin: 0;

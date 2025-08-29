@@ -3,39 +3,51 @@
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
 
-.p-fv{
+.p-fv {
     position: relative;
     // padding-top: 8rem;
 }
 
+.p-fv__img {
+    width: 100%;
+    overflow: hidden;
+}
 
-.p-fv__text{
+.p-fv__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.p-fv__contents {
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    background-color:rgba(80, 80, 80, 0.5);
+    background-color: rgba(80, 80, 80, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
 
-   
+
 }
 
-.p-fv__text-title{
+.p-fv__contents-text {
     font-size: 4rem;
     font-weight: 700;
     line-height: calc(60/40);
     color: $white;
     text-align: center;
-    padding-top: 2rem;
+   padding-top: vw(20, 1080);
     display: flex;
     align-items: center;
-    
-    @include sp{
-        font-size: 3rem ;
+    letter-spacing: -0.02em;
+
+    @include sp {
+        font-size: 3rem;
         line-height: calc(50 /30);
-        
+
     }
 }

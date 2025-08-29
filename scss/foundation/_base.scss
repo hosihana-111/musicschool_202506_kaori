@@ -62,7 +62,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 main {
-  padding-top: 8rem; // headerの高さ分のpadding-topを追加
+  padding-top: hvw(80); // headerの高さ8rem; // headerの高さ分のpadding-topを追加
   
   @include sp {
     padding-top: 5rem; // スマホではheaderの高さ(5rem)分
@@ -84,7 +84,7 @@ a {
 }
 
 
-.span-br {
+.u-br {
   display: inline-block;
 }
 
@@ -110,3 +110,4 @@ a {
     display: none !important;
   }
 }
+

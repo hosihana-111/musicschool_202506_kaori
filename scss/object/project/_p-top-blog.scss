@@ -7,9 +7,8 @@
 .p-top-blog{
     padding-top: 3.5rem;
     padding-bottom:21rem;
-    @include sp {
-       
-        padding-bottom: 4.5rem;
+    @include sp {       
+        padding-bottom: 19rem;
     }
 }
 .p-top-blog__items {
@@ -63,7 +62,7 @@ overflow: hidden;
 
     @include sp {
         line-height: calc(30/20);
-        text-align: center;
+       
     }
 }
 
@@ -75,14 +74,15 @@ overflow: hidden;
     margin-top: 1rem;
 
     @include sp {
-        font-size: 1.6rem;
-        line-height: calc(30/16);
-        text-align: center;
-        margin-top: 7px;
+           
+        margin-top: 0.7rem;
         margin-left: 0;
     }
 }
 .p-top-blog__more-link{
     margin-top: 3.8rem;
     text-align: right;
+    @include sp {
+       text-align: center;
+    }
 }

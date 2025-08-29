@@ -3,10 +3,11 @@
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
 
-.c-thumbnail{
+.c-thumbnail {
     position: relative;
 }
-.c-thumbnail__label{
+
+.c-thumbnail__label {
     position: absolute;
     top: 0;
     left: 0;
@@ -19,10 +20,10 @@
     justify-content: center;
 }
 
-.c-thumbnail__label-text{
+.c-thumbnail__label-text {
     height: 2.5rem;
-    color: $white;    
-    
+    color: $white;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,18 +34,13 @@
 
 .c-thumbnail-img {
     width: 100%;
-    
-    @include sp {       
-        width: 100%;
-    }
+
+   
 }
 
-.c-thumbnail-img img{
+.c-thumbnail-img img {
+    width: 100%;    
+    object-fit: cover;
     display: block;
-    width: 100%;
-    height: auto;
-    
-    @include sp{
-        width: 100%;
-    }
+
 }

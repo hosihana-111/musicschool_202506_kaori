@@ -152,20 +152,20 @@ document.addEventListener('DOMContentLoaded', function () {
 // =============================
 $('.p-header__hamburger').click(function () {
   $(this).toggleClass('active');
-  $('.p-header__nav__lists').toggleClass('active');
-  $('.overlay').toggleClass('is-active'); // ← 追加：オーバーレイ切り替え
+  $('.p-header__lists').toggleClass('active');
+  
 });
 
 // メニュー内リンクをクリックしたらメニューとオーバーレイを閉じる
-$('.p-header__nav__lists a').on('click', function () {
+$('.p-header__lists a').on('click', function () {
   $('.p-header__hamburger').removeClass('active');
-  $('.p-header__nav__lists').removeClass('active');
-  $('.overlay').removeClass('is-active'); // ← 追加
+  $('.p-header__lists').removeClass('active');
+  
 });
 
 // オーバーレイをクリックしたらメニューとオーバーレイを閉じる
 $('.overlay').on('click', function () {
   $('.p-header__hamburger').removeClass('active');
-  $('.p-header__nav__lists').removeClass('active');
+  $('.p-header__lists').removeClass('active');
   $(this).removeClass('is-active'); // 自分自身を非表示
 });

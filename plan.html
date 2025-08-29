@@ -35,14 +35,14 @@
         </button>
         <div class="p-header__right">
           <nav class="p-header__nav">
-            <ul class="p-header__nav__lists">
-              <li class="p-header__nav__list"><a href="plan.html">料金</a></li>
-              <li class="p-header__nav__list"><a href="blog_list.html">ブログ</a></li>
-              <li class="p-header__nav__list"><a href="result_list.html">卒業実績</a></li>
+            <ul class="p-header__lists">
+              <li class="p-header__list"><a href="plan.html">料金</a></li>
+              <li class="p-header__list"><a href="blog_list.html">ブログ</a></li>
+              <li class="p-header__list"><a href="result_list.html">卒業実績</a></li>
             </ul>
           </nav>
-          <div class="contact-button pc">
-            <a href="#" class="c-btn c-btn__link">お問い合わせ</a>
+          <div class="p-header__cta pc">
+            <a href="#" class="c-btn c-btn--primary">お問い合わせ</a>
           </div>
         </div>
       </div>
@@ -58,17 +58,17 @@
             <img src="./images/plan/plan-fv_sp.jpg" alt="プラン・料金">
           </picture>
 
-          <h2 class="c-page-visual__title">プラン・料金</h2>
+          <h1 class="c-page-visual__title">プラン・料金</h1>
         </div>
-        <nav class="c-breadcrumb">
+        <nav class="c-breadcrumb" aria-label="breadcrumb">
           <ol>
-            <li><a href="index.html">ホーム</a></li>
-            <li>&emsp;>&emsp;&nbsp;プラン・料金</li>
+            <li class="c-breadcrumb__item"><a href="index.html">ホーム</a></li>
+            <li class="c-breadcrumb__item" aria-current="page">>&emsp;プラン・料金</li>
           </ol>
         </nav>
       </section>
 
-      <div class=".c-page-top">
+      <div class="c-page-top">
         <a href="#" class="c-goto-top"><img src="./images/icon/goto-top.svg" alt="トップへ戻る"></a>
         <a href="#" class="c-btn__link c-contact-button">お問い合わせ</a>
       </div>
@@ -105,13 +105,14 @@
                   <tr class="p-plan-table__plans">
                     <th class="p-plan-table__th p-plan-table__th-blank"></th>
                     <th class="p-plan-table__th p-plan-table__th-blank"></th>
-                    <th class="p-plan-table__th is-recommend" rowspan="2"><span>おすすめ</span><br>スタンダード<br class="sp">プラン</th>
+                    <th scope="col" class= "p-plan-table__th is-recommend" rowspan="2"><span>おすすめ</span><br>スタンダード<br class="sp">プラン
+                    </th>
                     <th class="p-plan-table__th p-plan-table__th-blank"></th>
                   </tr>
                   <tr>
                     <th class="p-plan-table__th p-plan-table__th--blank"></th>
-                    <th class="p-plan-table__th-bl">ベーシック<br class="sp">プラン</th>
-                    <th class="p-plan-table__th-bl">プレミアム<br class="sp">プラン</th>
+                    <th scope="col" class="p-plan-table__th-bl">ベーシック<br class="sp">プラン</th>
+                    <th  scope="col" class="p-plan-table__th-bl">プレミアム<br class="sp">プラン</th>
                   </tr>
                 </thead>
 
@@ -161,52 +162,50 @@
       </div>
     </main>
 
-    <footer>
-      <div class="l-footer p-footer">
+    <footer class="l-footer p-footer">
+      <div>
         <div class="p-footer__inner">
-          <nav class="footer__nav footer-nav">
-            <ul class="footer-nav__lists">
-              <li class="footer-nav__list">
-                <a href="#" class="footer-nav__link">ホーム</a>
+          <nav class="p-footer__nav p-footer-nav" aria-label="フッターナビゲーション">
+            <ul class="p-footer-nav__lists">
+              <li class="p-footer-nav__list">
+                <a href="#">ホーム</a>
               </li>
-              <li class="footer-nav__list">
-                <a href="#" class="footer-nav__link">料金</a>
+              <li class="p-footer-nav__list">
+                <a href="#">料金</a>
               </li>
-              <li class="footer-nav__list">
-                <a href="#blog" class="footer-nav__link">ブログ</a>
+              <li class="p-footer-nav__list">
+                <a href="#blog" >ブログ</a>
               </li>
-              <li class="footer-nav__list">
-                <a href="#" class="footer-nav__link">卒業実績</a>
+              <li class="p-footer-nav__list">
+                <a href="#">卒業実績</a>
               </li>
 
             </ul>
           </nav>
-          <div class="footer-logo">
-            <a href="#"><img src="./images/icon/logo-white.svg" alt="ロコ"></a>
-          </div>
-          <div>
-            <p class="footer__copyright">Copyright &copy;0000 KITAMURA music school Inc. All Rights</p>
-          </div>
+          <a href="#" class="p-footer-logo"><img src="./images/icon/logo-white.svg" alt="きたむらミュージックスクール"></a>
 
-          <div class="sns-btns">
-            <ul class="footer__sns sns">
-              <li class="sns__list">
-                <a href="#" class="sns__link" target="_blank" rel="noopener noreferrer">
+          <p class="p-footer__copyright">Copyright&copy;0000 KITAMURA music school Inc. All Rights</p>
+
+
+          <div class="p-footer__sns">
+            <ul>
+              <li class="p-footer__sns-link">
+                <a href="#" target="_blank" rel="noopener noreferrer">
                   <img src="./images/icon/icon-twitter.svg" alt="twitter">
                 </a>
               </li>
-              <li class="sns__list">
-                <a href="#" class="sns__link" target="_blank" rel="noopener noreferrer">
+              <li class="p-footer__sns-link">
+                <a href="#"  target="_blank" rel="noopener noreferrer">
                   <img src="./images/icon/icon-facebook.svg" alt="facebook">
                 </a>
               </li>
-              <li class="sns__list">
-                <a href="#" class="sns__link" target="_blank" rel="noopener noreferrer">
+              <li class="p-footer__sns-link">
+                <a href="#"  target="_blank" rel="noopener noreferrer">
                   <img src="./images/icon/icon-youtube.svg" alt="youtube">
                 </a>
               </li>
-              <li class="sns__list">
-                <a href="#" class="sns__link" target="_blank" rel="noopener noreferrer">
+              <li class="p-footer__sns-link">
+                <a href="#" target="_blank" rel="noopener noreferrer">
                   <img src="./images/icon/icon-instagram.svg" alt="instagram">
                 </a>
               </li>
@@ -214,6 +213,7 @@
           </div>
         </div>
       </div>
+
     </footer>
   </div>
 </body>

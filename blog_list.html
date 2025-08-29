@@ -16,79 +16,80 @@
 </head>
 
 <body>
-  <header id="header" class="l-header p-header">
-    <div class="p-header__inner">
-      <h1 class="p-header__logo">
-        <a href="index.html" >
-          <div class="p-header__logo__img">
-            <img src="./images/header/header-logo.svg" alt="きたむらミュージックスクール">
+  <div id="container">
+    <header id="header" class="l-header p-header">
+      <div class="p-header__inner">
+        <div class="p-header__logo">
+          <a href="index.html">
+            <div class="p-header__logo-img">
+              <img src="./images/header/header-logo.svg" alt="きたむらミュージックスクール">
+            </div>
+            <h1 class="p-header__logo-text">きたむら<br class="pc"><span>ミュージックスクール</span>
+            </h1>
+          </a>
+        </div>
+        <button class="p-header__hamburger sp">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="p-header__right">
+          <nav class="p-header__nav">
+            <ul class="p-header__lists">
+              <li class="p-header__list"><a href="plan.html">料金</a></li>
+              <li class="p-header__list"><a href="blog_list.html">ブログ</a></li>
+              <li class="p-header__list"><a href="result_list.html">卒業実績</a></li>
+            </ul>
+          </nav>
+          <div class="p-header__cta pc">
+            <a href="#" class="c-btn c-btn--primary">お問い合わせ</a>
           </div>
-          <p class="p-header__logo__text">きたむら<br class="pc"><span class="p-header__logo__text__span">ミュージックスクール</span>
-          </p>
-        </a>
-      </h1>
-      <button class="p-header__hamburger sp">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <div class="p-header__right">
-        <nav class="p-header__nav">
-          <ul class="p-header__nav__lists">
-            <li class="p-header__nav__list"><a href="#">料金</a></li>
-            <li class="p-header__nav__list"><a href="#">ブログ</a></li>
-            <li class="p-header__nav__list"><a href="#">卒業実績</a></li>
-          </ul>
-        </nav>
-        <div class="c-btn pc">
-          <a href="#" class="c-btn__link">お問い合わせ</a>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
 
 
 
-  <main>
-    <section class="c-page-visual">
-      <div class="c-page-visual__img">
-        <img src="./images/blog_list/blog_fv.jpg" alt="ブログ">
-        <h2 class="c-page-visual__title">ブログ</h2>
+    <main>
+      <section class="c-page-visual">
+        <div class="c-page-visual__img">
+          <img src="./images/blog_list/blog_fv.jpg" alt="ブログ">
+          <h2 class="c-page-visual__title">ブログ</h2>
+        </div>
+        <nav class="c-breadcrumb">
+          <ol>
+            <li><a href="index.html">ホーム</a></li>
+            <li>></li>
+            <li>ブログ</li>
+          </ol>
+        </nav>
+      </section>
+
+      <div class=".c-page-top">
+        <a href="#" class="c-goto-top"><img src="./images/icon/goto-top.svg" alt="トップへ戻る"></a>
+        <a href="#" class="c-btn__link c-contact-button">お問い合わせ</a>
       </div>
-      <nav class="c-breadcrumb">
-        <ol>
-          <li><a href="index.html">ホーム</a></li>
-          <li>></li>
-          <li>ブログ</li>
-        </ol>
-      </nav>
-    </section>
-
-    <div class=".c-page-top">
-      <a href="#" class="c-goto-top"><img src="./images/icon/goto-top.svg" alt="トップへ戻る"></a>
-      <a href="#" class="c-btn__link c-contact-button">お問い合わせ</a>
-    </div>
 
 
 
-    <!-- ブログ一覧 -->
-    <section id="blog-list" class="p-blog-list">
-      <div class="p-blog-list__inner l-inner">
-        <h2 class="p-blog-list__title c-section-title">ブログ一覧</h2>
-        <ul class="p-blog-list__items">
-          <li class="p-blog-list__item">
-            <a href="#" class="p-blog-list__link">
-              <div class="c-thumbnail p-blog-list__img-box">
-                <div class="c-thumbnail__label">
-                  <p class="c-thumbnail__text">ギター</p>
+      <!-- ブログ一覧 -->
+      <section id="blog-list" class="p-blog-list">
+        <div class="p-blog-list__inner l-inner">
+          <h2 class="p-blog-list__title c-section-title">ブログ一覧</h2>
+          <ul class="p-blog-list__items">
+            <li class="p-blog-list__item">
+              <a href="#" class="p-blog-list__link">
+                <div class="c-thumbnail p-blog-list__img-box">
+                  <div class="c-thumbnail__label">
+                    <p class="c-thumbnail__text">ギター</p>
+                  </div>
+                  <div class="c-thumbnail-img">
+                    <picture>
+                      <source media="(min-width: 768px)" srcset="./images/blog/blog03-pc.jpg">
+                      <img src="./images/blog/blog03-sp.jpg" alt="アコースティックギターを弾く人">
+                    </picture>
+                  </div>
                 </div>
-                <div class="c-thumbnail-img">
-                  <picture>
-                    <source media="(min-width: 768px)" srcset="./images/blog/blog03-pc.jpg">
-                    <img src="./images/blog/blog03-sp.jpg" alt="アコースティックギターを弾く人">
-                  </picture>
-                </div>
-              </div>  
                 <div class="p-blog-list__body">
                   <h3 class="p-blog-list__heading">
                     技術面はプロによるマンツーマン授業！
@@ -97,127 +98,126 @@
                   <p class="p-blog-list__excerp">
                     本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
                 </div>
-            </a>
-          </li>
-          <li class="p-blog-list__item">
-            <a href="#" class="p-blog-list__link">
-              <div class="c-thumbnail p-blog-list__img-box">
-                <div class="c-thumbnail__label">
-                  <p class="c-thumbnail__text">ギター</p>
-                </div>
-                <div class="c-thumbnail-img">
-                  <picture>
-                    <source media="(min-width: 768px)" srcset="./images/blog/blog03-pc.jpg">
-                    <img src="./images/blog/blog03-sp.jpg" alt="アコースティックギターを弾く人">
-                  </picture>
-                </div>
-              </div>  
-              <div class="p-blog-list__body">
-                <h3 class="p-blog-list__heading">
-                  技術面はプロによるマンツーマン授業！
-                </h3>
-                <time class="p-blog-list__date" datetime="0000-00-00">2022.01.01</time>
-                <p class="p-blog-list__excerp">
-                  本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
-              </div>
-            </a>
-          </li>
-          <li class="p-blog-list__item">
-            <a href="#" class="p-blog-list__link">
-              <div class="c-thumbnail p-blog-list__img-box">
-                <div class="c-thumbnail__label">
-                  <p class="c-thumbnail__text">ギター</p>
-                </div>
-                <div class="c-thumbnail-img">
-                  <picture>
-                    <source media="(min-width: 768px)" srcset="./images/blog/blog03-pc.jpg">
-                    <img src="./images/blog/blog03-sp.jpg" alt="アコースティックギターを弾く人">
-                  </picture>
-                </div>
-              </div>  
-              <div class="p-blog-list__body">
-                <h3 class="p-blog-list__heading">
-                  技術面はプロによるマンツーマン授業！
-                </h3>
-                <time class="p-blog-list__date" datetime="0000-00-00">2022.01.01</time>
-                <p class="p-blog-list__excerp">
-                  本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
-              </div>
-            </a>
-          </li>
-        </ul>
-        <ol class="c-pagination">
-          <li><a href="">1</a></li>
-          <li><a href="">2</a></li>
-          <li><a href="">3</a></li>
-          <li><a href="">…</a></li>
-          <li><a href="">9</a></li>
-        </ol>
-
-    </section>
-
-
-
-  </main>
-
-  <footer>
-    <div class="l-footer p-footer">
-      <div class="p-footer__inner">
-        <nav class="footer__nav footer-nav">
-          <ul class="footer-nav__lists">
-            <li class="footer-nav__list">
-              <a href="#" class="footer-nav__link">ホーム</a>
-            </li>
-            <li class="footer-nav__list">
-              <a href="#" class="footer-nav__link">料金</a>
-            </li>
-            <li class="footer-nav__list">
-              <a href="#blog" class="footer-nav__link">ブログ</a>
-            </li>
-            <li class="footer-nav__list">
-              <a href="#" class="footer-nav__link">卒業実績</a>
-            </li>
-
-          </ul>
-        </nav>
-        <div class="footer-logo">
-          <a href="#"><img src="./images/icon/logo-white.svg" alt="ロコ"></a>
-        </div>
-        <div>
-          <p class="footer__copyright">&copy;0000 KITAMURA music school Inc. All Rights　<span
-              class="ib-span">kitamurakensetukogyo</span></p>
-        </div>
-
-        <div class="sns-btns">
-          <ul class="footer__sns sns">
-            <li class="sns__list">
-              <a href="#" class="sns__link" target="_blank" rel="noopener noreferrer">
-                <img src="./images/icon/icon-twitter.svg" alt="twitter">
               </a>
             </li>
-            <li class="sns__list">
-              <a href="#" class="sns__link" target="_blank" rel="noopener noreferrer">
-                <img src="./images/icon/icon-facebook.svg" alt="facebook">
+            <li class="p-blog-list__item">
+              <a href="#" class="p-blog-list__link">
+                <div class="c-thumbnail p-blog-list__img-box">
+                  <div class="c-thumbnail__label">
+                    <p class="c-thumbnail__text">ギター</p>
+                  </div>
+                  <div class="c-thumbnail-img">
+                    <picture>
+                      <source media="(min-width: 768px)" srcset="./images/blog/blog03-pc.jpg">
+                      <img src="./images/blog/blog03-sp.jpg" alt="アコースティックギターを弾く人">
+                    </picture>
+                  </div>
+                </div>
+                <div class="p-blog-list__body">
+                  <h3 class="p-blog-list__heading">
+                    技術面はプロによるマンツーマン授業！
+                  </h3>
+                  <time class="p-blog-list__date" datetime="0000-00-00">2022.01.01</time>
+                  <p class="p-blog-list__excerp">
+                    本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
+                </div>
               </a>
             </li>
-            <li class="sns__list">
-              <a href="#" class="sns__link" target="_blank" rel="noopener noreferrer">
-                <img src="./images/icon/icon-youtube.svg" alt="youtube">
-              </a>
-            </li>
-            <li class="sns__list">
-              <a href="#" class="sns__link" target="_blank" rel="noopener noreferrer">
-                <img src="./images/icon/icon-instagram.svg" alt="instagram">
+            <li class="p-blog-list__item">
+              <a href="#" class="p-blog-list__link">
+                <div class="c-thumbnail p-blog-list__img-box">
+                  <div class="c-thumbnail__label">
+                    <p class="c-thumbnail__text">ギター</p>
+                  </div>
+                  <div class="c-thumbnail-img">
+                    <picture>
+                      <source media="(min-width: 768px)" srcset="./images/blog/blog03-pc.jpg">
+                      <img src="./images/blog/blog03-sp.jpg" alt="アコースティックギターを弾く人">
+                    </picture>
+                  </div>
+                </div>
+                <div class="p-blog-list__body">
+                  <h3 class="p-blog-list__heading">
+                    技術面はプロによるマンツーマン授業！
+                  </h3>
+                  <time class="p-blog-list__date" datetime="0000-00-00">2022.01.01</time>
+                  <p class="p-blog-list__excerp">
+                    本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
+                </div>
               </a>
             </li>
           </ul>
+          <ol class="c-pagination">
+            <li><a href="">1</a></li>
+            <li><a href="">2</a></li>
+            <li><a href="">3</a></li>
+            <li><a href="">…</a></li>
+            <li><a href="">9</a></li>
+          </ol>
+
+      </section>
+
+
+
+    </main>
+
+    <footer class="l-footer p-footer">
+      <div>
+        <div class="p-footer__inner">
+          <nav class="p-footer__nav p-footer-nav">
+            <ul class="p-footer-nav__lists">
+              <li class="p-footer-nav__list">
+                <a href="#">ホーム</a>
+              </li>
+              <li class="p-footer-nav__list">
+                <a href="#">料金</a>
+              </li>
+              <li class="p-footer-nav__list">
+                <a href="#blog" >ブログ</a>
+              </li>
+              <li class="p-footer-nav__list">
+                <a href="#">卒業実績</a>
+              </li>
+
+            </ul>
+          </nav>
+          <a href="#" class="p-footer-logo"><img src="./images/icon/logo-white.svg" alt="ロコ"></a>
+
+          <p class="p-footer__copyright">Copyright&copy;0000 KITAMURA music school Inc. All Rights</p>
+
+
+          <div class="p-footer__sns">
+            <ul>
+              <li class="p-footer__sns-link">
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                  <img src="./images/icon/icon-twitter.svg" alt="twitter">
+                </a>
+              </li>
+              <li class="p-footer__sns-link">
+                <a href="#"  target="_blank" rel="noopener noreferrer">
+                  <img src="./images/icon/icon-facebook.svg" alt="facebook">
+                </a>
+              </li>
+              <li class="p-footer__sns-link">
+                <a href="#"  target="_blank" rel="noopener noreferrer">
+                  <img src="./images/icon/icon-youtube.svg" alt="youtube">
+                </a>
+              </li>
+              <li class="p-footer__sns-link">
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                  <img src="./images/icon/icon-instagram.svg" alt="instagram">
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
-  </footer>
-
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script src="js/main.js"></script>
+    </footer>
+  </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/main.js"></script>
 
 </html>
