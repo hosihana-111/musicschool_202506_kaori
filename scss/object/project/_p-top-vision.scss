@@ -4,17 +4,20 @@
 @use "../../foundation/mixin" as *;
 
 .p-vision {
-padding-top: vw(66, 1080);
-padding-bottom:  vw(75, 1080);
-@include sp{
-  padding-top: 4.6rem;
-  padding-bottom: 4.9rem;
-}
+  padding-top: vw(66, 1080);
+  padding-bottom: vw(75, 1080);
+
+  @include sp {
+    padding-top: 4.6rem;
+    padding-bottom: 4.9rem;
+  }
 }
 
-.p-vision__content {
-  margin-bottom:  vw(35, 1080);
-  @include sp{
+
+.p-vision__contents {
+  margin-bottom: vw(35, 1080);
+
+  @include sp {
     margin-bottom: 2rem;
   }
 }
@@ -22,15 +25,15 @@ padding-bottom:  vw(75, 1080);
 .p-vision__title {
   font-size: 3.5rem;
   line-height: calc(50/35);
-  font-weight: 700;  
+  font-weight: 700;
   text-align: center;
   color: $red;
-  margin-bottom: 1.7rem;
+  margin-bottom: vw(17, 1080);
   letter-spacing: -0.02em;
-  
 
-  @include sp{
-    font-size:  2.5rem;
+
+  @include sp {
+    font-size: 2.5rem;
     line-height: calc(40/25);
     margin-bottom: 0.7rem;
   }
@@ -41,55 +44,55 @@ padding-bottom:  vw(75, 1080);
   line-height: calc(30/18);
   text-align: center;
 
- @include sp{
-   text-align: left;
- }
+  @include sp {
+    text-align: left;
+  }
+}
+
+// * 可読性のため共通変数に */
+.p-diagram {
+  --dot: 2.4rem;
+  --line: 2px;
+  --arrowHead: 1.2rem;
 }
 
 
 .p-diagram {
   position: relative;
   margin: 0 auto;
-  min-height: 247px;  
+  min-height: 24.7rem;
 }
-.p-vision__diagram picture{
-  display:block;
+// .p-vision__diagram-img {
+//   margin-bottom:vw(40, 1080) ;
+// }
+.p-vision__diagram-img picture {
+  display: block;
   // aspect-ratio: 880 / 200; // 
 }
 
 .p-diagram__contents {
   position: absolute;
   left: 50%;
-  top: 4rem;
+  top: vw(40, 1080);
   transform: translateX(-50%);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 1.8rem;
+  gap: vw(18, 1080);
   z-index: 20;
-  margin-top: 4.1rem;  
+  padding-top: vw(24, 1080);
+  margin-top: vw(18, 1080);
 
-  @include sp{
-    margin-top: 3.5rem;
-  }
-}
 
-.p-diagram__arrow {
-  position: absolute;
-  left: 50%;
-  top: 0;
-  transform: translateX(-50%);
-  width: 2px;
-  height: 19rem;
-  background: $red;
-  z-index: 100;
-  margin-top: 5.7rem;
-
-  @include sp{
-    margin-top: 4.7rem;
+  @include sp {
+    gap: 1.9rem;
+    padding-top: 3.2rem;
+    margin-top: 3rem;
   }
 
+
+  /* 矢印 */
   &::before {
     content: '';
     width: 1.4em;
@@ -99,17 +102,37 @@ padding-bottom:  vw(75, 1080);
     border-bottom: 0;
     transform: rotate(-45deg);
     transform-origin: top right;
-    position: absolute;   
-    top:0;
+    position: absolute;
+    top: 0;
     right: 50%;
-    box-sizing: border-box;    
+    box-sizing: border-box;
+
   }
+
+  /* 縦線 */
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0.4rem;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 90%;
+    background: $red;
+    z-index: 100;
+  }
+
+
+
 }
 
 .p-diagram__row {
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: vw(30, 1080);
+  @include sp {
+    gap: 2.8rem;
+  }
 }
 
 .p-diagram__en {
@@ -121,15 +144,15 @@ padding-bottom:  vw(75, 1080);
   line-height: calc(50 / 25);
   letter-spacing: -0.02em;
 
-  @include sp{
+  @include sp {
     font-size: 2rem;
     line-height: calc(50 / 20);
   }
 }
 
 .p-diagram__dot {
-  width: 24px;
-  height: 24px;
+  width: 2.4rem;
+  height: 2.4rem;
   background: $red;
   border-radius: 50%;
   flex-shrink: 0;
@@ -144,8 +167,57 @@ padding-bottom:  vw(75, 1080);
   font-size: 2.3rem;
   line-height: calc(50 / 23);
 
-  @include sp{
+  @include sp {
     font-size: 2rem;
     line-height: calc(50 / 20);
   }
 }
+
+// .p-diagram__contents {
+//   position: absolute;
+//   left: 50%;
+//   transform: translateX(-50%);
+//   /* ...既存のflexはOK（gridにしなくても動く） */
+
+//   /* 縦線 */
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     /* ドット中心からドット中心まで伸ばす */
+//     top: calc(var(--dot) * -0.5);
+//     bottom: calc(var(--dot) * -0.5);
+//     width: var(--line);
+//     background: $red;
+//     z-index: 5;
+//   }
+
+//   /* 矢印（上端） */
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     left: 50%;
+//     transform: translate(-50%, -50%) rotate(-45deg);
+//     top: calc(var(--dot) * -0.5);
+//     width: var(--arrowHead);
+//     height: var(--arrowHead);
+//     border: 3px solid $red;
+//     border-left: 0;
+//     border-bottom: 0;
+//     box-sizing: border-box;
+//     z-index: 10;
+//   }
+// }
+
+// .p-diagram__dot {
+//   position: relative;
+//   z-index: 15;
+//   width: 2.4rem;
+//   height: 2.4rem;
+//   background: $red;
+//   border-radius: 50%;
+//   flex-shrink: 0;
+//   z-index: 15;
+//   border: 3px solid #fff;
+// }

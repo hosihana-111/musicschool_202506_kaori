@@ -126,21 +126,20 @@
     /* スクロールバー出現でのレイアウトズレ抑制 */
 
   }
-
+/* スクロールバー */
   &::-webkit-scrollbar {
-    background: rgba(80, 80, 80, 0.14);
-    height: 2rem;
+    background: rgba(80, 80, 80, 0.15);
+    height: 2.3rem;
   }
 
   &::-webkit-scrollbar-thumb {
-    background: rgba(80, 80, 80, 0.5);
-    min-width:2rem;
+    background: rgba(80, 80, 80, 0.25);
+    min-width: 2rem;
+scrollbar-width: thin;
 
   }
 
-  &::-webkit-scrollbar-track {
-    margin-inline: 10px;   
-  }
+  
 }
 
 .p-plan-table {
@@ -204,7 +203,7 @@
 
   @include sp {
     font-size: 1.6rem;
-    line-height: calc(30/16);
+    line-height: calc(25/16);
     padding: 1rem 0.5rem 1rem 1rem;
   }
 }
@@ -218,7 +217,7 @@
 
 // 一段とばしの背景色
 .p-plan-table__body tr:nth-child(even) {
-  background-color: rgba(112, 112, 112, 0.15);
+  background-color: rgba(80, 80, 80, 0.15);
 }
 
 // 料金表のbodyの行の高さ
@@ -264,4 +263,10 @@
   margin-top: 2.9rem;
   font-size: 1.7rem;
   line-height: calc(25/17);
+
+  @include sp {
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    line-height: calc(30/16);
+  }
 }

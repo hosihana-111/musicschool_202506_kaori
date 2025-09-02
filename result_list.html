@@ -7,46 +7,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>きたむらミュージックスクール</title>
   <meta name="description" content="「音楽で生きる」を叶えるミュージックスクール">
-  <link rel="icon" href="./images/favicon.svg" type="image/x-icon" sizes="32x32">
+  <link rel="icon" href="../images/icon/favicon.svg" type="image/x-icon" sizes="32x32">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
 
 <body>
-  <header id="header" class="l-header p-header">
-    <div class="p-header__inner">
-      <h1 class="p-header__logo">
-        <a href="index.html">
-          <div class="p-header__logo__img">
-            <img src="./images/header/header-logo.svg" alt="きたむらミュージックスクール">
+  <div id="container">
+    <header id="header" class="l-header p-header">
+      <div class="p-header__inner">
+        <div class="p-header__logo">         
+            <a href="index.html">
+              <span class="p-header__logo-img">
+                <img src="./images/header/header-logo.svg" alt="きたむらミュージックスクール">
+              </span>
+              <span class="p-header__logo-text">きたむら<br class="pc">
+                <span class="p-header__logo-text-small">ミュージックスクール</span>
+              </span>
+            </a>         
+        </div>
+        <button class="p-header__hamburger sp">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="p-header__right">
+          <nav class="p-header__nav" id="global-nav" aria-label="グローバルナビゲーション">
+            <ul class="p-header__lists">
+              <li class="p-header__list"><a href="plan.html" class="p-header__link">料金</a></li>
+              <li class="p-header__list"><a href="blog_list.html" class="p-header__link">ブログ</a></li>
+              <li class="p-header__list"><a href="result_list.html" class="p-header__link">卒業実績</a></li>
+            </ul>
+          </nav>
+          <div class="p-header__cta pc">
+            <a href="contact_form.html" class="c-btn c-btn--head">お問い合わせ</a>
           </div>
-          <p class="p-header__logo__text">きたむら<br class="pc"><span class="p-header__logo__text__span">ミュージックスクール</span>
-          </p>
-        </a>
-      </h1>
-      <button class="p-header__hamburger sp">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <div class="p-header__right">
-        <nav class="p-header__nav">
-          <ul class="p-header__nav__lists">
-            <li class="p-header__nav__list"><a href="#">料金</a></li>
-            <li class="p-header__nav__list"><a href="#">ブログ</a></li>
-            <li class="p-header__nav__list"><a href="#">卒業実績</a></li>
-          </ul>
-        </nav>
-        <div class="c-btn pc">
-          <a href="#" class="c-btn__link">お問い合わせ</a>
         </div>
       </div>
-    </div>
-  </header>
-
+    </header>
 
 
   <main>

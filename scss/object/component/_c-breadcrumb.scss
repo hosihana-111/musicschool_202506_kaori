@@ -3,6 +3,10 @@
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
 
+.c-breadcrumb__inner{
+    width: 100%;
+     background-color: #E8E8E8;
+}
 .c-breadcrumb {
       max-width: 940px;
     margin-inline: auto;
@@ -12,7 +16,7 @@
     height: 5rem;
     display: flex;
     align-items: center;
-    background-color: #E8E8E8;
+  
     
     @include sp {
         padding-inline: 2rem;
@@ -31,28 +35,6 @@
         }
     }
 
-    // li {
-    //     display: flex;
-    //     align-items: center;
-    //     color: $black;
-    //     height: inherit;
-
-    // }
-
-    // a {
-    //     display: flex; 
-    //     align-items: center; 
-    //     height: 100%; 
-        
-    //     color: $black;
-    //     text-decoration: none;
-    //     transition: all 0.3s ease;
-
-    //     &:hover {
-    //          background-color: rgba(0,0,0,0.05);
-    //         text-decoration: underline;
-    //     }
-    // }
 }
 .c-breadcrumb__item{
     position: relative;
@@ -69,17 +51,6 @@
         }
   }}
 
-//   .c-breadcrumb__item + .c-breadcrumb__item{
-//     padding-left: 3.2rem;
-//   }
-//   .c-breadcrumb__item + .c-breadcrumb__item::before{
-//     content: "›";
-//     position: absolute;
-//     width: 1.2rem;
-//     left: .2rem;
-//     top: 50%;
-//     transform: translateY(-50%);
-//     opacity: .6;
-//     aria-hidden: true; // 注: CSSでは書けないのでコメントとして
-//   }
+
+
 

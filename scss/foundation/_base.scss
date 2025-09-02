@@ -3,11 +3,6 @@
 @use './variable' as * ;
 @use './mixin' as *;
 
-:root {
-  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-  color: #000;
-}
-
   
 * {
   margin: 0;
@@ -22,19 +17,26 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 85px;
   word-break: break-all;
-  font-size: 62.5%;
-    
-    //768~inner
+
+    //375px~767px
+    font-size: 62.5%;
+      
+
+    //768~940（inner）
     @media(min-width: 768px) and (max-width: 940px){
       font-size: calc(10 / 940 * 100vw);
     }
     
-    
+    //940px~
+    @media (min-width: 940px) {
+      font-size: 10px;
+    }
     @media(max-width:375px) {
       font-size: calc(10 /375 * 100vw);
     }
 }
 body {
+   font-family: $font-serif;
   font-weight: 500;
   font-style: normal;
   margin: 0;

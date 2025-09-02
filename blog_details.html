@@ -7,335 +7,333 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>きたむらミュージックスクール</title>
   <meta name="description" content="「音楽で生きる」を叶えるミュージックスクール">
-  <link rel="icon" href="./images/favicon.svg" type="image/x-icon" sizes="32x32">
+  <link rel="icon" href="../images/icon/favicon.svg" type="image/x-icon" sizes="32x32">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
 
 <body>
-  <header id="header" class="l-header p-header">
-    <div class="p-header__inner">
-      <h1 class="p-header__logo">
-        <a href="index.html">
-          <div class="p-header__logo__img">
-            <img src="./images/header/header-logo.svg" alt="きたむらミュージックスクール">
+  <div id="container">
+    <header id="header" class="l-header p-header">
+      <div class="p-header__inner">
+        <div class="p-header__logo">
+          <a href="index.html">
+            <span class="p-header__logo-img">
+              <img src="./images/header/header-logo.svg" alt="きたむらミュージックスクール">
+            </span>
+            <span class="p-header__logo-text">きたむら<br class="pc">
+              <span class="p-header__logo-text-small">ミュージックスクール</span>
+            </span>
+          </a>
+        </div>
+        <button class="p-header__hamburger sp">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="p-header__right">
+          <nav class="p-header__nav" id="global-nav" aria-label="グローバルナビゲーション">
+            <ul class="p-header__lists">
+              <li class="p-header__list"><a href="plan.html" class="p-header__link">料金</a></li>
+              <li class="p-header__list"><a href="blog_list.html" class="p-header__link">ブログ</a></li>
+              <li class="p-header__list"><a href="result_list.html" class="p-header__link">卒業実績</a></li>
+            </ul>
+          </nav>
+          <div class="p-header__cta pc">
+            <a href="contact_form.html" class="c-btn c-btn--head">お問い合わせ</a>
           </div>
-          <p class="p-header__logo__text">きたむら<br class="pc"><span class="p-header__logo__text__span">ミュージックスクール</span>
-          </p>
-        </a>
-      </h1>
-      <button class="p-header__hamburger sp">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <div class="p-header__right">
-        <nav class="p-header__nav">
-          <ul class="p-header__nav__lists">
-            <li class="p-header__nav__list"><a href="#">料金</a></li>
-            <li class="p-header__nav__list"><a href="#">ブログ</a></li>
-            <li class="p-header__nav__list"><a href="#">卒業実績</a></li>
-          </ul>
-        </nav>
-        <div class="c-btn pc">
-          <a href="#" class="c-btn__link">お問い合わせ</a>
         </div>
       </div>
-    </div>
-  </header>
-
-
-
-  <main>
-    <!-- パンくずリスト -->
-    <nav class="c-breadcrumb gray-bg">
-      <ol>
-        <li><a href="index.html">ホーム</a></li>
-        <li>></li>
-        <li><a href="blog_list.html"></a>ブログ</li>
-        <li>></li>
-        <li><a href=""></a>ギター</li>
-        <li>></li>
-        <li>アルペジオが劇的に向上する３つの習慣</li>
-      </ol>
-    </nav>
-
-    <div class="p-blog-details__inner  l-inner">
-
-
-      <!-- 記事 -->
-      <article id="article_01" class="p-blog-details__article">
-        <div class="p-blog-details__tab_panels">
-          <div class="p-blog-details__tab_panel p-tab-panel">
-            <div class="c-thumbnail p-tab-panel__eyecatch">
-              <div class="c-thumbnail__label">
-                <p class="c-thumbnail__text">ギター</p>
-              </div>
-              <div class="c-thumbnail-img">
-                <img src="./images/blog/blog03-sp.jpg" alt="アコースティックギターを弾く人">
-              </div>
-            </div>
-            <div class="p-tab-panel__content01">
-              <h1 class="p-tab-panel__title">アルペジオが劇的に向上する３つの習慣</h1>
-              <time class="p-tab-panel__date" datetime="0000-00-00">2022.01.01</time>
-              <ul class="p-tab-panel__sns-box">
-                <li class="p-tab-panel__sns-btn"><a href="#"><img src="./images/blog_details/facebook_btn.svg"
-                      alt="facebook"></a></li>
-                <li class="p-tab-panel__sns-btn"><a href="#"><img src="./images/blog_details/twitter_btn.svg"
-                      alt="twitter"></a></li>
-                <li class="p-tab-panel__sns-btn"><a href="#"><img src="./images/blog_details/hatena_btn.svg"
-                      alt="hatena"></a></li>
-                <li class="p-tab-panel__sns-btn"><a href="#"><img src="./images/blog_details/line_btn.svg"
-                      alt="line"></a>
-                </li>
-                <li class="p-tab-panel__sns-btn"><a href="#"><img src="./images/blog_details/pocket_btn.svg"
-                      alt="pocket"></a></li>
-              </ul>
-              <p class="p-tab-panel__text">
-                本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
-            </div>
-            <div class="p-tab-panel__content02">
-              <h2 class="p-tab-panel__heading">H2見出しが入ります。H2見出しが入ります</h2>
-              <p class="p-tab-panel__text">
-                本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
-              <div class="c-thumbnail p-tab-panel___image">
+    </header>
+    <main>
+      <!-- パンくずリスト -->  
+      <div class="c-breadcrumb__inner">   
+        <nav class="c-breadcrumb p-blog-details__breadcrumb" aria-label="breadcrumb">
+          <ol>
+            <li class="c-breadcrumb__item"><a href="index.html">ホーム</a></li>
+            <li class="c-breadcrumb__item"><a href="blog_list.html">>&emsp;ブログ</a></li>
+            <li class="c-breadcrumb__item">>&emsp;ギター</li>
+            <li class="c-breadcrumb__item" aria-current="page">>&emsp;アルペジオが劇的に向上する３つの習慣</li>
+          </ol>
+        </nav>     
+      </div>
+      <div class="p-blog-details__inner  l-inner">
+        <!-- 記事 -->
+        <article id="article_01" class="p-blog-details__article">
+          <div class="p-blog-details__tab_panels">
+            <div class="p-blog-details__tab_panel p-tab-panel">
+              <div class="c-thumbnail p-tab-panel__eyecatch">
                 <div class="c-thumbnail__label">
-                  <p class="c-thumbnail__text">ギター</p>
+                  <p class="c-thumbnail__label-text">ギター</p>
                 </div>
-                <div class="c-thumbnail-img p-tab-panel___image-img">
-                  <img src="./images/blog_details/blog02.jpg" alt="ピアノを演奏する講師と犬">
+                <div class="c-thumbnail-img">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="./images/blog_details/blog01.jpg">
+                    <img src="./images/blog_details/blog01-sp.jpg" alt="アコースティックギターを弾く人">
+                  </picture>
                 </div>
               </div>
-              <ul class="p-tab-panel___lists">
-                <li>リストが入ります</li>
-                <li>リストが入ります</li>
-                <li>リストが入ります</li>
-              </ul>
+              <div class="p-tab-panel__content01">
+                <h1 class="p-tab-panel__title">アルペジオが劇的に向上する３つの習慣</h1>
+                <time class="p-tab-panel__date" datetime="0000-00-00">2022.01.01</time>
+                <ul class="p-tab-panel__sns-box">
+                  <li class="p-tab-panel__sns-btn"><a href="#"><img src="./images/blog_details/facebook_btn.svg"
+                        alt="facebook"></a></li>
+                  <li class="p-tab-panel__sns-btn"><a href="#"><img src="./images/blog_details/twitter_btn.svg"
+                        alt="twitter"></a></li>
+                  <li class="p-tab-panel__sns-btn"><a href="#"><img src="./images/blog_details/hatena_btn.svg"
+                        alt="hatena"></a></li>
+                  <li class="p-tab-panel__sns-btn"><a href="#"><img src="./images/blog_details/line_btn.svg"
+                        alt="line"></a>
+                  </li>
+                  <li class="p-tab-panel__sns-btn"><a href="#"><img src="./images/blog_details/pocket_btn.svg"
+                        alt="pocket"></a></li>
+                </ul>
+                <p class="p-tab-panel__text">
+                  本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
+              </div>
+              <div class="p-tab-panel__content02">
+                <h2 class="p-tab-panel__heading">H2見出しが入ります。H2見出しが入ります</h2>
+                <p class="p-tab-panel__text">
+                  本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
+                <div class="c-thumbnail p-tab-panel___image">
+                  <div class="c-thumbnail__label">
+                    <p class="c-thumbnail__text">ギター</p>
+                  </div>
+                  <div class="c-thumbnail-img p-tab-panel___image-img">
+                    <img src="./images/blog_details/blog02.jpg" alt="ピアノを演奏する講師と犬">
+                  </div>
+                </div>
+                <ul class="p-tab-panel___lists">
+                  <li>リストが入ります</li>
+                  <li>リストが入ります</li>
+                  <li>リストが入ります</li>
+                </ul>
+              </div>
+              <div class="p-tab-panel__content03">
+                <h3 class="p-tab-panel__subheading">H3見出しが入ります。H3見出しが入ります。</h3>
+
+                <!-- 引用ブロック -->
+                <blockquote class="c-blockquote">
+                  <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
+                </blockquote>
+                <a href="#">テキストリンク</a>
+              </div>
             </div>
-            <div class="p-tab-panel__content03">
-              <h3 class="p-tab-panel__subheading">H3見出しが入ります。H3見出しが入ります。</h3>
+          </div>
 
-              <!-- 引用ブロック -->
-              <blockquote class="c-blockquote">
-                <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
-              </blockquote>
-              <a href="#">テキストリンク</a>
+
+          <!-- 前後記事ナビ -->
+          <div class="p-blog-details__article-nav p-article-nav">
+            <div class="p-article-nav__item-prev">
+              <a href="#" class="c-btn c-btn--prev">
+                <div class="p-article-nav__heading">
+                  <span class="c-btn__icon">◀</span>
+                  <p>前の記事</p>
+                </div>
+                <div class="p-article-nav__box">
+                  <div class="p-article-nav__box-img">
+                    <img src="./images/blog_details/blog03.jpg" alt="アコースティックギターを弾く人">
+                  </div>
+                  <p class="p-article-nav__box-text">
+                    タイトルが入ります。タイトルが入ります。タイトルが入ります。
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="p-article-nav__item-next">
+              <a href="#" class="c-btn c-btn--next">
+                <div class="p-article-nav__heading">
+                  <p>次の記事</p>
+                  <span class="c-btn__icon">▶</span>
+                </div>
+                <div class="p-article-nav__box">
+                  <div class="p-article-nav__box-img">
+                    <img src="./images/blog_details/blog03.jpg" alt="アコースティックギターを弾く人">
+                  </div>
+                  <p class="p-article-nav__box-text">
+                    タイトルが入ります。タイトルが入ります。タイトルが入ります。
+                  </p>
+                </div>
+              </a>
             </div>
           </div>
-        </div>
 
 
-        <!-- 前後記事ナビ -->
-        <div class="p-blog-details__article-nav p-article-nav">
-          <div class="p-article-nav__item-prev">
-            <a href="#" class="c-btn c-btn--prev">
-              <div class="p-article-nav__heading">
-                <span class="c-btn__icon">◀</span>
-                <p>前の記事</p>
-              </div>
-              <div class="p-article-nav__box">
-                <div class="p-article-nav__box-img">
-                  <img src="./images/blog_details/blog03.jpg" alt="アコースティックギターを弾く人">
-                </div>
-                <p class="p-article-nav__box-text">
-                  タイトルが入ります。タイトルが入ります。タイトルが入ります。
-                </p>
-              </div>
-            </a>
+          <!-- 関連記事 -->
+          <div class="p-blog-details__related-posts p-related-posts">
+            <h3 class="p-related-posts__title">関連記事</h3>
+            <ul class="p-related-posts__list">
+              <li class="p-related-posts__item">
+                <a href="#" class="p-related-posts__item-link">
+                  <div class="c-thumbnail">
+                    <div class="c-thumbnail__label">
+                      <p class="c-thumbnail__text">ギター</p>
+                    </div>
+                    <div class="c-thumbnail-img">
+                      <img src="./images/blog_details/blog03.jpg" alt="アコースティックギターを弾く人">
+                    </div>
+                  </div>
+                  <div class="p-related-posts__body">
+                    <p class="p-related-posts__text">タイトルが入ります。タイトルが入ります。</p>
+                    <time class="p-related-posts__date" datetime="0000-00-00">0000.00.00</time>
+                  </div>
+                </a>
+              </li>
+              <li class="p-related-posts__item">
+                <a href="#" class="p-related-posts__item-link">
+                  <div class="c-thumbnail">
+                    <div class="c-thumbnail__label">
+                      <p class="c-thumbnail__text">ギター</p>
+                    </div>
+                    <div class="c-thumbnail-img">
+                      <img src="./images/blog_details/blog03.jpg" alt="アコースティックギターを弾く人">
+                    </div>
+                  </div>
+                  <div class="p-related-posts__body">
+                    <p class="p-related-posts__text">タイトルが入ります。タイトルが入ります。</p>
+                    <time class="p-related-posts__date" datetime="0000-00-00">0000.00.00</time>
+                  </div>
+                </a>
+              </li>
+              <li class="p-related-posts__item">
+                <a href="#" class="p-related-posts__item-link">
+                  <div class="c-thumbnail">
+                    <div class="c-thumbnail__label">
+                      <p class="c-thumbnail__text">ギター</p>
+                    </div>
+                    <div class="c-thumbnail-img">
+                      <img src="./images/blog_details/blog03.jpg" alt="アコースティックギターを弾く人">
+                    </div>
+                  </div>
+                  <div class="p-related-posts__body">
+                    <p class="p-related-posts__text">タイトルが入ります。タイトルが入ります。</p>
+                    <time class="p-related-posts__date" datetime="0000-00-00">0000.00.00</time>
+                  </div>
+                </a>
+              </li>
+            </ul>
           </div>
-          <div class="p-article-nav__item-next">
-            <a href="#" class="c-btn c-btn--next">
-              <div class="p-article-nav__heading">
-                <p>次の記事</p>
-                <span class="c-btn__icon">▶</span>
-              </div>
-              <div class="p-article-nav__box">
-                <div class="p-article-nav__box-img">
-                  <img src="./images/blog_details/blog03.jpg" alt="アコースティックギターを弾く人">
-                </div>
-                <p class="p-article-nav__box-text">
-                  タイトルが入ります。タイトルが入ります。タイトルが入ります。
-                </p>
-              </div>
-            </a>
-          </div>
-        </div>
+        </article>
 
 
-        <!-- 関連記事 -->
-        <div class="p-blog-details__related-posts p-related-posts">
-          <h3 class="p-related-posts__title">関連記事</h3>
-          <ul class="p-related-posts__list">
-            <li class="p-related-posts__item">
-              <a href="#" class="p-related-posts__item-link">
-                <div class="c-thumbnail">
-                  <div class="c-thumbnail__label">
-                    <p class="c-thumbnail__text">ギター</p>
-                  </div>
-                  <div class="c-thumbnail-img">
-                    <img src="./images/blog_details/blog03.jpg" alt="アコースティックギターを弾く人">
-                  </div>
-                </div>
-                <div class="p-related-posts__body">                  
-                  <p class="p-related-posts__text">タイトルが入ります。タイトルが入ります。</p>
-                  <time class="p-related-posts__date" datetime="0000-00-00">0000.00.00</time>
-                </div>
-              </a>
-            </li>
-            <li class="p-related-posts__item">
-              <a href="#" class="p-related-posts__item-link">
-                <div class="c-thumbnail">
-                  <div class="c-thumbnail__label">
-                    <p class="c-thumbnail__text">ギター</p>
-                  </div>
-                  <div class="c-thumbnail-img">
-                    <img src="./images/blog_details/blog03.jpg" alt="アコースティックギターを弾く人">
-                  </div>
-                </div>
-                <div class="p-related-posts__body">                  
-                  <p class="p-related-posts__text">タイトルが入ります。タイトルが入ります。</p>
-                  <time class="p-related-posts__date" datetime="0000-00-00">0000.00.00</time>
-                </div>
-              </a>
-            </li>
-            <li class="p-related-posts__item">
-              <a href="#" class="p-related-posts__item-link">
-                <div class="c-thumbnail">
-                  <div class="c-thumbnail__label">
-                    <p class="c-thumbnail__text">ギター</p>
-                  </div>
-                  <div class="c-thumbnail-img">
-                    <img src="./images/blog_details/blog03.jpg" alt="アコースティックギターを弾く人">
-                  </div>
-                </div>
-                <div class="p-related-posts__body">                  
-                  <p class="p-related-posts__text">タイトルが入ります。タイトルが入ります。</p>
-                  <time class="p-related-posts__date" datetime="0000-00-00">0000.00.00</time>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </article>
+        <aside class="c-aside p-blog-details__aside">
+          <!-- 無料メールマガジン -->
+          <section class=" p-blog-details__widget p-sidebar-widget">
+            <h2 class="p-sidebar-widget__title">無料メールマガジン</h2>
+            <div class="p-sidebar-widget__magazine">
+              <p class="p-sidebar-widget__image">バナー画像</p>
+            </div>
+          </section>
 
+          <!-- ブログ内を検索 -->
+          <section class="p-sidebar-widget">
+            <h2 class="p-sidebar-widget__title">ブログ内を検索</h2>
+            <div class="p-sidebar-widget__search-box">
+              <form class="p-sidebar-widget__form">
+                <input type="text">
+                <button type="submit"><img src="./images/blog_details/icon-search.svg" alt="検索"></button>
+              </form>
+            </div>
 
-      <aside class="c-aside p-blog-details__aside">
-        <!-- 無料メールマガジン -->
-        <section class=" p-blog-details__widget p-sidebar-widget">
-          <h2 class="p-sidebar-widget__title">無料メールマガジン</h2>
-          <div class="p-sidebar-widget__magazine">
-            <p class="p-sidebar-widget__image">バナー画像</p>
-          </div>
-        </section>
+          </section>
 
-         <!-- ブログ内を検索 -->
-        <section class="p-sidebar-widget">
-          <h2 class="p-sidebar-widget__title">ブログ内を検索</h2>
-          <div class="p-sidebar-widget__search-box">
-            <form class="p-sidebar-widget__form">
-              <input type="text" >
-              <button type="submit"><img src="./images/blog_details/icon-search.svg" alt="検索"></button>
-            </form>
-          </div>
-          
-        </section>
+          <!-- 人気の投稿 -->
+          <section class="p-sidebar-widget">
+            <h2 class="p-sidebar-widget__title">おすすめの記事</h2>
+            <ul class="p-sidebar-widget__popular">
+              <li>
+                <div class="p-sidebar-widget__popular-thumb"></div>
+                <div class="p-sidebar-widget__popular-text">タイトルが入りますタイトルが入ります</div>
+              </li>
+              <li>
+                <div class="p-sidebar-widget__popular-thumb"></div>
+                <div class="p-sidebar-widget__popular-text">タイトルが入りますタイトルが入ります</div>
+              </li>
+              <li>
+                <div class="p-sidebar-widget__popular-thumb"></div>
+                <div class="p-sidebar-widget__popular-text">タイトルが入りますタイトルが入ります</div>
+              </li>
+            </ul>
+          </section>
 
-         <!-- 人気の投稿 -->
-        <section class="p-sidebar-widget">
-          <h2 class="p-sidebar-widget__title">おすすめの記事</h2>
-          <ul class="p-sidebar-widget__popular">
-            <li>
-              <div class="p-sidebar-widget__popular-thumb"></div>
-              <div class="p-sidebar-widget__popular-text">タイトルが入りますタイトルが入ります</div>
-            </li>
-            <li>
-              <div class="p-sidebar-widget__popular-thumb"></div>
-              <div class="p-sidebar-widget__popular-text">タイトルが入りますタイトルが入ります</div>
-            </li>
-            <li>
-              <div class="p-sidebar-widget__popular-thumb"></div>
-              <div class="p-sidebar-widget__popular-text">タイトルが入りますタイトルが入ります</div>
-            </li>
-          </ul>
-        </section>
-
-        <!-- カテゴリ -->
-        <section class="p-sidebar-widget">
-          <h2 class="p-sidebar-widget__title">カテゴリ</h2>
-          <ul class="p-sidebar-widget__category">
-            <li>カテゴリー</li>
-            <li>カテゴリー</li>
-            <li>カテゴリー</li>
-            <li>カテゴリー</li>
-          </ul>
-        </section>
-      </aside>
-    </div>
-
-
-  </main>
-
-  <footer>
-    <div class="l-footer p-footer">
-      <div class="p-footer__inner">
-        <nav class="footer__nav footer-nav">
-          <ul class="footer-nav__lists">
-            <li class="footer-nav__list">
-              <a href="#" class="footer-nav__link">ホーム</a>
-            </li>
-            <li class="footer-nav__list">
-              <a href="#" class="footer-nav__link">料金</a>
-            </li>
-            <li class="footer-nav__list">
-              <a href="#blog" class="footer-nav__link">ブログ</a>
-            </li>
-            <li class="footer-nav__list">
-              <a href="#" class="footer-nav__link">卒業実績</a>
-            </li>
-
-          </ul>
-        </nav>
-        <div class="footer-logo">
-          <a href="#"><img src="./images/icon/logo-white.svg" alt="ロコ"></a>
-        </div>
-        <div>
-          <p class="footer__copyright">&copy;0000 KITAMURA music school Inc. All Rights　<span
-              class="ib-span">kitamurakensetukogyo</span></p>
-        </div>
-
-        <div class="sns-btns">
-          <ul class="footer__sns sns">
-            <li class="sns__list">
-              <a href="#" class="sns__link" target="_blank" rel="noopener noreferrer">
-                <img src="./images/icon/icon-twitter.svg" alt="twitter">
-              </a>
-            </li>
-            <li class="sns__list">
-              <a href="#" class="sns__link" target="_blank" rel="noopener noreferrer">
-                <img src="./images/icon/icon-facebook.svg" alt="facebook">
-              </a>
-            </li>
-            <li class="sns__list">
-              <a href="#" class="sns__link" target="_blank" rel="noopener noreferrer">
-                <img src="./images/icon/icon-youtube.svg" alt="youtube">
-              </a>
-            </li>
-            <li class="sns__list">
-              <a href="#" class="sns__link" target="_blank" rel="noopener noreferrer">
-                <img src="./images/icon/icon-instagram.svg" alt="instagram">
-              </a>
-            </li>
-          </ul>
-        </div>
+          <!-- カテゴリ -->
+          <section class="p-sidebar-widget">
+            <h2 class="p-sidebar-widget__title">カテゴリ</h2>
+            <ul class="p-sidebar-widget__category">
+              <li>カテゴリー</li>
+              <li>カテゴリー</li>
+              <li>カテゴリー</li>
+              <li>カテゴリー</li>
+            </ul>
+          </section>
+        </aside>
       </div>
 
-  </footer>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script src="js/main.js"></script>
+    </main>
+
+    <footer>
+      <div class="l-footer p-footer">
+        <div class="p-footer__inner">
+          <nav class="footer__nav footer-nav">
+            <ul class="footer-nav__lists">
+              <li class="footer-nav__list">
+                <a href="#" class="footer-nav__link">ホーム</a>
+              </li>
+              <li class="footer-nav__list">
+                <a href="#" class="footer-nav__link">料金</a>
+              </li>
+              <li class="footer-nav__list">
+                <a href="#blog" class="footer-nav__link">ブログ</a>
+              </li>
+              <li class="footer-nav__list">
+                <a href="#" class="footer-nav__link">卒業実績</a>
+              </li>
+
+            </ul>
+          </nav>
+          <div class="footer-logo">
+            <a href="#"><img src="./images/icon/logo-white.svg" alt="ロコ"></a>
+          </div>
+          <div>
+            <p class="footer__copyright">&copy;0000 KITAMURA music school Inc. All Rights</p>
+          </div>
+
+          <div class="sns-btns">
+            <ul class="footer__sns sns">
+              <li class="sns__list">
+                <a href="#" class="sns__link" target="_blank" rel="noopener noreferrer">
+                  <img src="./images/icon/icon-twitter.svg" alt="twitter">
+                </a>
+              </li>
+              <li class="sns__list">
+                <a href="#" class="sns__link" target="_blank" rel="noopener noreferrer">
+                  <img src="./images/icon/icon-facebook.svg" alt="facebook">
+                </a>
+              </li>
+              <li class="sns__list">
+                <a href="#" class="sns__link" target="_blank" rel="noopener noreferrer">
+                  <img src="./images/icon/icon-youtube.svg" alt="youtube">
+                </a>
+              </li>
+              <li class="sns__list">
+                <a href="#" class="sns__link" target="_blank" rel="noopener noreferrer">
+                  <img src="./images/icon/icon-instagram.svg" alt="instagram">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/main.js"></script>
 
 </html>

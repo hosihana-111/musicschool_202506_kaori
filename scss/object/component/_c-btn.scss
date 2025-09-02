@@ -9,12 +9,11 @@
   color: $white;
 }
 
-.c-btn--primary{
+.c-btn--head{
   width: 150px;
   height: 45px;
   display: grid;
   place-content: center;
-
   background-color:$red;
   border: 0.1rem solid $red;
   color: $white;
@@ -22,6 +21,10 @@
   line-height: calc(33/15);
   font-weight: 700;
   transition: all .4s;
+  &:hover{
+    background-color: $white;
+    color: $red;
+  }
 }
 
 
@@ -45,6 +48,7 @@
    line-height: calc(33/20);
    letter-spacing: 0.2rem;
   @include sp{
+    display: flex;
 
   }
  

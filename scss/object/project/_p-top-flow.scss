@@ -110,7 +110,7 @@
         background: $red;
         border-radius: 50%;
         position: absolute;
-        top: 0;
+        top: 0.5rem;
         left: 0;
 
 
@@ -119,26 +119,6 @@
         }
     }
 }
-
-// // 矢印
-// .p-top-flow-item:last-child .p-top-flow-item__label::after {
-//     content: "";
-//     position: absolute;
-//     bottom: -1rem; // 丸の下に表示
-//     left: 0;
-//     transform: translateX(-50%); 
-//     width: 24px;
-//     height: 24px;
-//     border-radius: 10%;
-//     border-bottom: 3px solid $red;
-//     border-right: 3px solid $red;
-//     transform: rotate(45deg);
-
-//     @include sp {
-//         left: 0.9rem;
-//         bottom: -12rem; 
-//     }
-// }
 
 .p-flow-item__desc {
     font-size: 1.8rem;

@@ -148,24 +148,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // =============================
-// ハンバーガーメニュー操作
-// =============================
-$('.p-header__hamburger').click(function () {
-  $(this).toggleClass('active');
-  $('.p-header__lists').toggleClass('active');
-  
-});
+  // ハンバーガーメニュー操作
+  // =============================
+  $('.p-header__hamburger').click(function () {
+    $(this).toggleClass('active');
+    $('.p-header__lists').toggleClass('active');
+    
+     $('.page-top').toggleClass('hide-while-modal', $(this).hasClass('active'));
+  });
 
-// メニュー内リンクをクリックしたらメニューとオーバーレイを閉じる
-$('.p-header__lists a').on('click', function () {
-  $('.p-header__hamburger').removeClass('active');
-  $('.p-header__lists').removeClass('active');
-  
-});
+  // メニュー内リンクをクリックしたらメニューとオーバーレイを閉じる
+  $('.p-header__link').on('click', function () {
+    $('.p-header__hamburger').removeClass('active');
+    $('.p-header__lists').removeClass('active');
+    
+    $('.page-top').removeClass('hide-while-modal');
+  });
 
-// オーバーレイをクリックしたらメニューとオーバーレイを閉じる
-$('.overlay').on('click', function () {
-  $('.p-header__hamburger').removeClass('active');
-  $('.p-header__lists').removeClass('active');
-  $(this).removeClass('is-active'); // 自分自身を非表示
-});
+
+

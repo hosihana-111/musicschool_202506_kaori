@@ -3,6 +3,15 @@
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
 
+
+.p-blog-details__breadcrumb{
+margin-top: 8rem;
+
+    @include sp {
+        padding-top:0;
+    }
+}
+
 .p-blog-details__inner{
     display: flex;
     justify-content: space-between;

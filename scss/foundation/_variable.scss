@@ -1,3 +1,7 @@
+// font
+$font-serif: "YuGothic", "Yu Gothic", "Noto Sans JP", "Hiragino Kaku Gothic ProN", sans-serif;
+
+
 // colors
 $white:  #ffffff;
 $black:  #000000;
@@ -11,9 +15,9 @@ $red:    #CB0000;
   @return calc($pixelSize / $baseWidth * 100vw);
 }
 
-@function hvw($pixelSize) {
-  @return min(calc($pixelSize / 1080 * 100vw), $pixelSize * 1px);
-}
+// @function hvw($pixelSize) {
+//   @return min(calc($pixelSize / 1080 * 100vw), $pixelSize * 1px);
+// }
 
 
 // font

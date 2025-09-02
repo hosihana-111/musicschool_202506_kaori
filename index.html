@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>きたむらミュージックスクール</title>
   <meta name="description" content="「音楽で生きる」を叶えるミュージックスクール">
-  <link rel="icon" href="./images/favicon.svg" type="image/x-icon" sizes="32x32">
+  <link rel="icon" href="../images/icon/favicon.svg" type="image/x-icon" sizes="32x32">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,20 +38,20 @@
           <span></span>
         </button>
         <div class="p-header__right">
-          <nav class="p-header__nav pc" id="global-nav" aria-label="グローバルナビゲーション">
+          <nav class="p-header__nav" id="global-nav" aria-label="グローバルナビゲーション">
             <ul class="p-header__lists">
               <li class="p-header__list"><a href="plan.html" class="p-header__link">料金</a></li>
               <li class="p-header__list"><a href="blog_list.html" class="p-header__link">ブログ</a></li>
-              <li class="p-header__list"><a href="result_list.html"  class="p-header__link">卒業実績</a></li>
+              <li class="p-header__list"><a href="result_list.html" class="p-header__link">卒業実績</a></li>
             </ul>
           </nav>
           <div class="p-header__cta pc">
-            <a href="#" class="c-btn c-btn--primary">お問い合わせ</a>
+            <a href="contact_form.html" class="c-btn c-btn--head">お問い合わせ</a>
           </div>
         </div>
       </div>
     </header>
-  
+
 
     <main>
       <section id="fv" class="p-fv">
@@ -82,17 +82,18 @@
       <!-- ビジョン -->
       <section id="vision" class="p-top-vision p-vision">
         <div class="p-vision__inner l-inner">
-          <div class="p-vision__content">
+          <div class="p-vision__contents">
             <h2 class="p-vision__title">全人類、<br class="sp"> ミュージシャン計画。</h2>
             <p class="p-vision__subtitle">私たちは音楽を愛するすべての人が、音楽に熱狂できる世界を目指しています。</p>
           </div>
           <div class="p-vision__diagram p-diagram">
-            <picture>
-              <source srcset="./images/vision/semicircle.jpg" media="(min-width: 768px)" type="image/jpeg">
-              <img src="./images/vision/semicircle-sp.jpg" alt="半円の図に『Enthusiasm・Envision・Effulgent』の3語が並ぶビジョン図">
-            </picture>
+            <div class="p-vision__diagram-img">
+              <picture>
+                <source srcset="./images/vision/semicircle.jpg" media="(min-width: 768px)" type="image/jpeg">
+                <img src="./images/vision/semicircle-sp.jpg" alt="半円の図に『Enthusiasm・Envision・Effulgent』の3語が並ぶビジョン図">
+              </picture>
+            </div>
 
-            <div class="p-diagram__arrow" aria-hidden="true"></div>
             <div class="p-diagram__contents">
               <div class="p-diagram__row">
                 <span class="p-diagram__en">Enthusiasm</span>
@@ -338,6 +339,8 @@
                 </details>
               </div>
             </div>
+          </div>
+        </div>
       </section>
 
       <!-- ブログ -->
