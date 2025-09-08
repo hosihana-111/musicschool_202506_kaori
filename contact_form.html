@@ -20,15 +20,15 @@
   <div id="container">
     <header id="header" class="l-header p-header">
       <div class="p-header__inner">
-        <div class="p-header__logo">         
-            <a href="index.html">
-              <span class="p-header__logo-img">
-                <img src="./images/header/header-logo.svg" alt="きたむらミュージックスクール">
-              </span>
-              <span class="p-header__logo-text">きたむら<br class="pc">
-                <span class="p-header__logo-text-small">ミュージックスクール</span>
-              </span>
-            </a>        
+        <div class="p-header__logo">
+          <a href="index.html">
+            <span class="p-header__logo-img">
+              <img src="./images/header/header-logo.svg" alt="きたむらミュージックスクール">
+            </span>
+            <span class="p-header__logo-text">きたむら<br class="pc">
+              <span class="p-header__logo-text-small">ミュージックスクール</span>
+            </span>
+          </a>
         </div>
         <button class="p-header__hamburger sp">
           <span></span>
@@ -51,181 +51,170 @@
     </header>
 
 
-  <main>
-    <section class="c-page-visual">
-      <div class="c-page-visual__img">
-        <img src="./images/contact/contact_fv.jpg" alt="お問い合わせ">
-        <h2 class="c-page-visual__title">お問い合わせ</h2>
+    <main>
+      <section class="c-page-visual">
+        <div class="c-page-visual__img">
+          <picture>
+            <source media="(min-width: 768px)" srcset="./images/contact/contact_fv.jpg">
+            <img src="./images/contact/contact_fv-sp.jpg" alt="お問い合わせ">
+          </picture>
+          
+          <h1 class="c-page-visual__title">お問い合わせ</h1>
+        </div>
+
+        <div class="c-breadcrumb__inner">
+          <nav class="c-breadcrumb" aria-label="パンくずリスト">
+            <ol class="c-breadcrumb__items">
+              <li class="c-breadcrumb__item"><a href="index.html">ホーム</a></li>
+              <li class="c-breadcrumb__item" aria-current="page">>&emsp;お問い合わせ</li>
+            </ol>
+          </nav>
+        </div>
+      </section>
+
+      <div class=".c-page-top">
+        <a href="#" class="c-goto-top"><img src="./images/icon/goto-top.svg" alt="トップへ戻る"></a>
       </div>
-      <nav class="c-breadcrumb">
-        <ol>
-          <li><a href="index.html">ホーム</a></li>
-          <li>送信完了</li>
-        </ol>
-      </nav>
-    </section>
-
-    <div class=".c-page-top">
-      <a href="#" class="c-goto-top"><img src="./images/icon/goto-top.svg" alt="トップへ戻る"></a>
-    </div>
 
 
- <!-- コンタクトフォーム -->
-    <!--Contact--> 
-    <section id="contact" class="p-contact">
-      <div class="p-contact__inner l-inner">
-        <div class="p-contact__container">
-          <p class="p-contact__container-text">当校に関するご質問・ご相談・資料請求は下記のフォームからお気軽にお問い合わせください。<br>
-            通常３営業日以内にメールにてご連絡させていただきます。</p>
-          <div class="p-contact__container-form p-contact-form">
-            <form action="">
-              <div class="p-contact-form__box">
-                <dl class="p-contact-form__area">
-                  <dt>
-                    <label for="p-contact-form__company-name">会社名<span class="contact-span">*</span></label>
-                  </dt>
-                  <dd>
-                    <input type="p-contact-form__text" name="p-contact-form__company-name" id="your-name"
-                      placeholder="きたむらミュージックスクール" class="p-contact-form__conpany-name">
-                  </dd>
-                </dl>
-                <dl class="p-contact-form__area">
-                  <dt>
-                    <label for="p-contact-form__your-name">お名前<span class="contact-span">*</span></label>
-                  </dt>
-                  <dd>
-                    <input type="p-contact-form__text" name="p-contact-form__your-name" id="your-name"
-                      placeholder="北村太郎" class="form-control">
-                  </dd>
-                </dl>
+      <!-- コンタクトフォーム -->
+      <!--Contact-->
+      <section id="contact" class="p-contact">
+        <div class="p-contact__inner l-inner">
+          <div class="p-contact__container">
+            <p class="p-contact__container-text">当校に関するご質問・ご相談・資料請求は下記のフォームからお気軽にお問い合わせください。<br>
+              通常３営業日以内にメールにてご連絡させていただきます。</p>
+            <div class="p-contact__container-form p-contact-form">
+              <form action="">
+                <div class="p-contact-form__box">
+                  <dl class="p-contact-form__area">
+                    <dt><label for="company-name">会社名</label></dt>
+                    <dd>
+                      <input type="text" id="company-name" name="company_name" placeholder="きたむらミュージックスクール"
+                        class="p-contact-form__form-control" >
+                    </dd>
+                  </dl>
+                  <dl class="p-contact-form__area">
+                    <dt><label for="your-name">お名前</label></dt>
+                    <dd>
+                      <input type="text" id="your-name" name="your_name" placeholder="北村太郎" class="p-contact-form__form-control">
+                    </dd>
+                  </dl>
 
-                <dl class="p-contact-form__area p-form-area__email">
-                  <dt>
-                    <label for="p-contact-form__your-email">メールアドレス<span class="contact-span">*</span></label>
-                  </dt>
-                  <dd>
-                    <input type="p-form-area__email" name="p-form-area__your-email" id="your-email"
-                      placeholder="例：info@kitamura.musicschool.jp" class="p-contact-form__form-control">
-                  </dd>
-                </dl>
+                  <dl class="p-contact-form__area p-form-area__email">
+                    <dt><label for="your-email">メールアドレス</label></dt>
+                    <dd>
+                      <input type="email" id="your-email" name="your_email" placeholder="info@kitamura.musicschool.jp"
+                        class="p-contact-form__form-control">
+                    </dd>
+                  </dl>
 
-                <dl class="p-contact-form__checkbox p-form-checkbox">
-                  <dt>
-                    <label class="p-form-checkbox__label" for="source-internet">
-                      目的 <br>(複数選択可) <span class="contact-span">*</span>
-                    </label>
-                  </dt>
-                  <dd>
-                    <div class="p-form-checkbox__checkbox-group">
-                      <div class="p-form-checkbox__checkbox">
-                        <label class="p-form-checkbox__checkbox-label custom-checkbox" for="source-contact">
+                  <dl class="p-contact-form__area p-form-area__tel">
+                    <dt><label for="your-tel">電話番号</label></dt>
+                    <dd>
+                      <input type="tel" id="your-tel" name="your_tel" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
+                        placeholder="090-1234-5678" class="p-contact-form__form-control">
+                    </dd>
+                  </dl>
+
+                  <dl class="p-contact-form__checkbox p-form-checkbox">
+                    <dt> <label class="p-form-checkbox__label" for="source-internet">目&emsp;的 <br class="pc">(複数選択可) </label></dt>
+                    <dd>
+                      <div class="p-form-checkbox__checkbox-group">
+                        <label class="p-form-checkbox__checkbox custom-checkbox" for="source-contact">
                           <input type="checkbox" id="source-contact" name="source" value="contact">
                           <span>プランについてのお問い合わせ</span>
                         </label>
-                      </div>
-
-                      <div class="p-form-checkbox__checkbox">
-                        <label class="p-form-checkbox__checkbox-label custom-checkbox" for="source-hearing">
+                        <label class="p-form-checkbox__checkbox custom-checkbox" for="source-hearing">
                           <input type="checkbox" id="source-hearing" name="source" value="hearing">
                           <span>ヒアリングのご予約</span>
                         </label>
-                      </div>
-                      <div class="p-form-checkbox__checkbox">
-                        <label class="p-form-checkbox__checkbox-label custom-checkbox"
-                          for="source-request-for-information">
+                        <label class="p-form-checkbox__checkbox custom-checkbox" for="source-request-for-information">
                           <input type="checkbox" id="source-request-for-information" name="source"
                             value="request-for-information">
                           <span>資料請求</span>
                         </label>
-                      </div>
-                      <div class="p-form-checkbox__checkbox">
-                        <label class="p-form-checkbox__checkbox-label custom-checkbox" for="source-others">
-                          <input type="checkbox" id="source-others" name="source" value="others">
-                          <span>その他</span>
+                        <label class="p-form-checkbox__checkbox custom-checkbox" for="source-others">
+                          <input type="checkbox" id="source-others" name="source" value="others"> <span>その他</span>
                         </label>
                       </div>
-                    </div>
-                  </dd>
-                </dl>
-                <dl class="p-contact-form__area form-area-message">
-                  <dt>
-                    <label for="p-contact-form__your-message">内容<span class="contact-span">*</span></label>
-                  </dt>
-                  <dd>
-                    <textarea name="p-contact-form__your-message" id="your-message"
-                      class="p-contact-form__form-control form-textarea" cols="30" rows="10"></textarea>
-                  </dd>
-                </dl>
-              </div>
-              <div class="p-contact-form__contact__button">
-                <input type="submit" class="p-contact-form__form-submit" value="内容に同意して送信">
-              </div>
-            </form>
-          </div><!-- contact-form -->
-        </div><!-- contact__container -->
-      </div><!-- inner -->
-    </section>
+                    </dd>
+                  </dl>
+                  <dl class="p-contact-form__area form-area-message">
+                    <dt> <label for="p-contact-form__your-message">内&emsp;容</label> </dt>
+                    <dd> <textarea name="p-contact-form__your-message" id="your-message"
+                        class="p-contact-form__form-control form-textarea" cols="30" rows="10" placeholder="内容に関する詳細や備考等をご入力ください。"></textarea>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="p-contact-form__contact__button">
+                  <input type="submit" class="p-contact-form__form-submit" value="送 信">
+                </div>
+              </form>
+            </div><!-- contact-form -->
+          </div><!-- contact__container -->
+        </div><!-- inner -->
+      </section>
 
-  </main>
+    </main>
 
-  <footer>
-    <div class="l-footer p-footer">
-      <div class="p-footer__inner">
-        <nav class="footer__nav footer-nav">
-          <ul class="footer-nav__lists">
-            <li class="footer-nav__list">
-              <a href="#" class="footer-nav__link">ホーム</a>
-            </li>
-            <li class="footer-nav__list">
-              <a href="#" class="footer-nav__link">料金</a>
-            </li>
-            <li class="footer-nav__list">
-              <a href="#blog" class="footer-nav__link">ブログ</a>
-            </li>
-            <li class="footer-nav__list">
-              <a href="#" class="footer-nav__link">卒業実績</a>
-            </li>
+    <footer class="l-footer p-footer">
+      <div>
+        <div class="p-footer__inner">
+          <nav class="p-footer__nav p-footer-nav">
+            <ul class="p-footer-nav__lists">
+              <li class="p-footer-nav__list">
+                <a href="#">ホーム</a>
+              </li>
+              <li class="p-footer-nav__list">
+                <a href="#">料金</a>
+              </li>
+              <li class="p-footer-nav__list">
+                <a href="#blog">ブログ</a>
+              </li>
+              <li class="p-footer-nav__list">
+                <a href="#">卒業実績</a>
+              </li>
 
-          </ul>
-        </nav>
-        <div class="footer-logo">
-          <a href="#"><img src="./images/icon/logo-white.svg" alt="ロコ"></a>
-        </div>
-        <div>
-          <p class="footer__copyright">&copy;0000 KITAMURA music school Inc. All Rights　<span
-              class="ib-span">kitamurakensetukogyo</span></p>
-        </div>
+            </ul>
+          </nav>
+          <a href="#" class="p-footer-logo"><img src="./images/icon/logo-white.svg" alt="きたむらミュージックスクール ロゴ"></a>
 
-        <div class="sns-btns">
-          <ul class="footer__sns sns">
-            <li class="sns__list">
-              <a href="#" class="sns__link" target="_blank" rel="noopener noreferrer">
-                <img src="./images/icon/icon-twitter.svg" alt="twitter">
-              </a>
-            </li>
-            <li class="sns__list">
-              <a href="#" class="sns__link" target="_blank" rel="noopener noreferrer">
-                <img src="./images/icon/icon-facebook.svg" alt="facebook">
-              </a>
-            </li>
-            <li class="sns__list">
-              <a href="#" class="sns__link" target="_blank" rel="noopener noreferrer">
-                <img src="./images/icon/icon-youtube.svg" alt="youtube">
-              </a>
-            </li>
-            <li class="sns__list">
-              <a href="#" class="sns__link" target="_blank" rel="noopener noreferrer">
-                <img src="./images/icon/icon-instagram.svg" alt="instagram">
-              </a>
-            </li>
-          </ul>
+          <p class="p-footer__copyright">Copyright&copy;0000 KITAMURA music school Inc. All Rights</p>
+
+
+          <div class="p-footer__sns">
+            <ul>
+              <li class="p-footer__sns-link">
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                  <img src="./images/icon/icon-twitter.svg" alt="twitter">
+                </a>
+              </li>
+              <li class="p-footer__sns-link">
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                  <img src="./images/icon/icon-facebook.svg" alt="facebook">
+                </a>
+              </li>
+              <li class="p-footer__sns-link">
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                  <img src="./images/icon/icon-youtube.svg" alt="youtube">
+                </a>
+              </li>
+              <li class="p-footer__sns-link">
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                  <img src="./images/icon/icon-instagram.svg" alt="instagram">
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
-  </footer>
-
+    </footer>
+  </div>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="js/main.js"></script>
+</body>
 
 </html>

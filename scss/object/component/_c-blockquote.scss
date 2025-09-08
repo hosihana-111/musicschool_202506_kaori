@@ -4,7 +4,7 @@
 
 .c-blockquote{
     position: relative;
-    padding: 1.8rem 3rem 1rem 6.7rem;
+    padding: 0.8rem 3rem 0.2rem 6.7rem;
     box-sizing: border-box;  
     background: #E8E8E8;
 
@@ -12,16 +12,33 @@
 .c-blockquote:before{
     display: inline-block;
     position: absolute;
-    top: 2rem;
-    left: 3rem;
+    top: 1rem;
+    left: 2.5rem;
     content: "“";    
     color: #A3A3A2;
     font-size: 90px;
     line-height: 1;
+
+    @include sp {
+        font-size: 100px;
+        left: 2rem;
+    }
 }
 .c-blockquote p {
     padding: 0;
-    margin: 10px 0;
+    margin: 1rem 0;
     font-weight: 1.8rem;
-    line-height: calc(30/18)
+    line-height: calc(30/18);
+    // display: -webkit-box;
+    // -webkit-box-orient: vertical;
+    // -webkit-line-clamp: 3; // 最大3行
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+    //  max-height: calc(1.8em * 3);
+
+    @include sp {
+        margin: 0.9rem 0;
+        font-size: 1.6rem;
+        line-height: calc(30/16);
+    }
 }

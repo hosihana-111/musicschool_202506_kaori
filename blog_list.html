@@ -53,7 +53,6 @@
     <main>
       <section class="c-page-visual">
         <div class="c-page-visual__img">
-
           <picture>
             <source media="(min-width: 768px)" srcset="./images/blog_list/blog_fv.jpg">
             <img src="./images/blog_list/blog_fv-sp.jpg" alt="ブログ">
@@ -61,8 +60,8 @@
           <h1 class="c-page-visual__title">ブログ</h1>
         </div>
         <div class="c-breadcrumb__inner">
-          <nav class="c-breadcrumb" aria-label="breadcrumb">
-            <ol>
+          <nav class="c-breadcrumb" aria-label="パンくずリスト">
+            <ol class="c-breadcrumb__items">
               <li class="c-breadcrumb__item"><a href="index.html">ホーム</a></li>
               <li class="c-breadcrumb__item" aria-current="page">>&emsp;ブログ</li>
             </ol>
@@ -313,16 +312,16 @@
               </a>
             </li>
           </ul>
-          <ol class="c-pagination">
-            <li><a href="">1</a></li>
-            <li><a href="">2</a></li>
-            <li><a href="">3</a></li>
-            <li><a href="" class="c-pagination__dot">…</a></li>
-            <li><a href="">9</a></li>
-          </ol>
+        </div>
 
       </section>
-
+      <ol class="c-pagination">
+        <li><a href="">1</a></li>
+        <li><a href="">2</a></li>
+        <li><a href="">3</a></li>
+        <li><a href="" class="c-pagination__dot">…</a></li>
+        <li><a href="">9</a></li>
+      </ol>
 
 
     </main>
@@ -347,7 +346,7 @@
 
             </ul>
           </nav>
-          <a href="#" class="p-footer-logo"><img src="./images/icon/logo-white.svg" alt="ロコ"></a>
+          <a href="#" class="p-footer-logo"><img src="./images/icon/logo-white.svg" alt="きたむらミュージックスクール ロゴ"></a>
 
           <p class="p-footer__copyright">Copyright&copy;0000 KITAMURA music school Inc. All Rights</p>
 
