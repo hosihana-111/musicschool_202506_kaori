@@ -1,25 +1,30 @@
 // projectのエントリーポイント
 
-@use './p-top-ad';
-@use './p-top-blog';
-@use './p-top-faq';
-@use './p-top-flow';
-@use './p-top-fv';
+
 @use './p-header';
-@use './p-top-reason';
-@use './p-blog-list';
-@use './p-plan-pricing';
-@use './p-blog-details';
+@use './p-article-nav';
+@use './p-related-posts';
 @use './p-aside';
+@use './p-footer';
+@use './p-top-fv';
 @use './p-top-vision';
+@use './p-top-ad';
+@use './p-top-reason';
 @use './p-top-voice';
+@use './p-top-flow';
+@use './p-top-faq';
+@use './p-top-blog';
+@use './p-plan-pricing';
+@use './p-blog-list';
+@use './p-blog-details';
 @use './p-contact-form';
 @use './p-contact-send';
 @use './p-404';
 @use './p-search';
 @use './p-result-list';
 @use './p-result-details';
-@use './p-footer';
+
+
 
 
 

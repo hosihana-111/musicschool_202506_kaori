@@ -3,79 +3,96 @@
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
 
+// パンくずリスト
 
 .p-blog-details__breadcrumb-inner {
-    width: 100%;
+ width: 100%;
     background-color: #E8E8E8;
+    margin-top: 8rem;
+
+    @include sp {
+        margin-top: 0;
+    }
+
 }
 
-.p-blog-details__breadcrumb {
-    margin-top: 8rem;
+.p-blog-details__breadcrumb {  
     max-width: 940px;
     margin-inline: auto;
     padding-inline: 3rem;
     font-size: 1.6rem;
     line-height: calc(33/16);
     display: block;
+    height: 5rem;
 
 
     @include sp {
-        padding-inline: 2rem;
-        margin-top: 0;
+           padding-inline: 2rem;
         padding-block: 0;
+        height: 3.6rem;
     }
 }
 
 .p-blog-details__breadcrumb-items {
     display: flex;
     align-items: center;
-    // flex-wrap:wrap;
+    overflow-x: auto; // ★
+    overflow-y: hidden; // ★
+    white-space: nowrap; // ★ 折り返さない
+    -webkit-overflow-scrolling: touch; // iOS慣性
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
     gap: 2.3rem;
     list-style: none;
     margin: 0;
     padding: 0;
+    height: 100%;
 
-    @include sp {
-        flex-wrap: wrap;
-        column-gap: 2rem;
-        row-gap: 0;
-        padding-inline: 0;
-    }
+}
+.p-result-details__breadcrumb-items::-webkit-scrollbar {
+    display: none;
 }
 
 .p-blog-details__breadcrumb-item {
-    position: relative;
-    display: flex;
+     display: flex;
     align-items: center;
-    white-space: nowrap; // 文字を折り返さない
+    white-space: nowrap;
+    height: 100%;
+
 
     a {
-        display: block; // ← 行高いっぱいのクリック領域
-        padding-block: 0.85rem; // 高さに応じて調整
+         display: flex; // 行高いっぱいのクリック領域
+        max-width: 100%;
+        padding-block: 0;
         text-decoration: none;
-        transition: all 0.3s ease;
         font-size: 1.6rem;
         line-height: calc(33/16);
+        transition: all 0.3s ease;
+        white-space: nowrap;
+        height: 100%;
+        align-items: center;
 
         &:hover {
             opacity: 0.5;
         }
 
-        @include sp {
-            padding-block: 0.5rem;
-            line-height: 1;
+        @include sp {          
+            line-height: calc(20/16);
         }
     }
 
     span {
+        flex: 0 0 auto;
+
+
         @include sp {
-            line-height: 1;
+            line-height: calc(20/16);
 
         }
     }
 }
 
-
+// メイン記事
 .p-blog-details__inner {
     display: flex;
     justify-content: space-between;
@@ -196,7 +213,7 @@
 
 .p-tab-panel__image {
     margin-top: 1.6rem;
-    margin-bottom: 2.9rem;
+    margin-bottom: 2.8rem;
     width: calc(335 /600 *100%);
 
     @include sp {
@@ -265,8 +282,7 @@
     color: $red;
     text-decoration-line: underline;
     text-decoration-color: $red;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 0.2em;
+    text-decoration-thickness: 1px;    
     transition: opacity 0.3s ease-in-out;
 
     &:hover {
@@ -274,134 +290,15 @@
     }
 }
 
-
-// 前後記事ナビ
-.p-article-nav {
-    margin-top: 5.2rem;
-    display: flex;
-    justify-content: space-between;
-    column-gap: 7.9rem;
-
-    @include sp {
-        margin-top: 4.4rem;
-        column-gap: 2.2rem;
-    }
+// 前後記事ナビ 
+.p-blog-details__box-img {
+    width: calc(98 / 260 * 100%);    
+   
 }
-
-.p-article-nav__heading-prev,
-.p-article-nav__heading-next {
-    color: $white;
-    background-color: $black;
-    display: flex;
-    align-items: center;
-    padding: 0.4rem 2rem;
-
-}
-
-.p-article-nav__heading-next {
-    justify-content: flex-end;
-}
-
-.p-article-nav__box {
-    display: flex;
-    justify-content: space-between;
-    column-gap: 1.6rem;
-    margin-top: 1.6rem;
-
-}
-
-.p-article-nav__box-img {
-    flex-shrink: 0; // 縮まないように
-    overflow: hidden;
-    width: calc(98 / 260 * 100%);
-    height: auto;
-
-    @include sp {
-        display: none;
-    }
-
-    img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        display: block;
-    }
-}
-
-.p-article-nav__box-text {
-    flex: 1;
-    text-align: left;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3; // 最大3行
-    overflow: hidden;
-    // text-overflow: ellipsis;
-    font-size: 1.6rem;
-    line-height: calc(25 / 16);
-    // max-height: calc(25 / 16 * 3); // line-height × 行数
-    color: $black;
-
-    @supports not (-webkit-line-clamp: 3) {
-        white-space: nowrap;
-        text-overflow: ellipsis;
-    }
-}
-
-
 
 // 関連記事
-.p-related-posts {
-    margin-top: 9.5rem;
 
-    @include sp {
-        margin-top: 6.2rem;
-        margin-bottom: 3rem;
-    }
-}
-
-.p-related-posts__title {
-    font-size: 1.8rem;
-    font-weight: 700;
-    line-height: calc(33/18);
-    background-color: $black;
-    color: $white;
-    padding: 0.8rem 3rem;
-
-    @include sp {
-        padding: 0.9rem 2rem;
-        text-align: center;
-    }
-}
-
-.p-related-posts__items {
-    margin-top: 3rem;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    row-gap: 3rem;
-
-    @include sp {
-        margin-top: 2rem;
-        row-gap: 2rem;
-    }
-
-}
-
-.p-related-posts__item {
-    display: flex;
-    justify-content: space-between;
-    column-gap: 3rem;
-
-    @include sp {
-        column-gap: 2rem;
-    }
-}
-
-.p-related-posts__item:hover {
-    opacity: 0.7;
-}
-
-.p-related-posts__thumbnail {
+.p-blog-details__thumbnail {
     position: relative;
     flex-shrink: 0; // 縮まないように
     width: calc(200 / 600 * 100%);
@@ -409,66 +306,4 @@
     @include sp {
         width: calc(160 / 335 * 100%);
     }
-}
-
-.p-related-posts__thumbnail-label {
-
-    @include sp {
-        min-width: 8rem;
-    }
-}
-
-.p-related-posts__eyecatch {
-    aspect-ratio: 20/ 14;
-    overflow: hidden;
-    width: 100%;
-    height: auto;
-
-    @include sp {
-        aspect-ratio: 16 / 11;
-    }
-
-    img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        display: block;
-    }
-}
-
-.p-related-posts__body {
-    flex: 1;
-
-    @include sp {
-        display: flex;
-        flex-direction: column;
-        // justify-content: center;
-        margin-top: 1rem;
-    }
-}
-
-.p-related-posts__text {
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: calc(25/20);
-    margin-bottom: 1rem;
-
-    @include sp {
-        font-size: 1.7rem;
-        line-height: calc(28/17);
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2; // 最大3行
-        overflow: hidden;
-        text-overflow: ellipsis;
-        max-height: calc(28/17 * 2);
-         margin-bottom:0.3rem;
-
-    }
-}
-
-.p-related-posts__date {
-    font-size: 1.7rem;
-    line-height: calc(30/17);
-    margin-left: 0.2rem;
 }

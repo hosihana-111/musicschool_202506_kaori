@@ -1,0 +1,95 @@
+@charset "UTF-8";
+@use "../../foundation/base" as *;
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+
+// 前後記事ナビ
+.p-article-nav {
+    margin-top: 5.2rem;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 7.9rem;
+
+    @include sp {
+        margin-top: 4.4rem;
+        column-gap: 2.2rem;
+    }
+}
+
+.p-article-nav__heading-prev,
+.p-article-nav__heading-next {
+    color: $white;
+    background-color: $black;
+    display: flex;
+    align-items: center;
+    padding: 0.4rem 2rem;
+
+}
+
+.p-article-nav__heading-next {
+    justify-content: flex-end;
+}
+
+.p-article-nav__heading-prev p,
+.p-article-nav__heading-next p {
+    font-size: 1.7rem;
+    line-height: calc(30/17);    
+}
+.p-article-nav__heading-prev p {
+    padding-left: 0.4rem;   
+}
+
+.p-article-nav__heading-next p {
+     padding-right: 0.4rem;   
+}
+
+.p-article-nav__box {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1.6rem;
+    margin-top: 1.6rem;
+
+}
+
+.p-article-nav__box-img {
+    box-sizing: border-box;   /* padding/border を高さ計算に含める安全策 */
+  padding: 0 !important;    /* 他クラスからの余白を打ち消す */
+  border: 0 !important;
+
+  /* リキッド + 比率固定 */
+  aspect-ratio: 98 / 68;             /* 画像枠の比率を固定 */
+  width: calc(98 / 340 * 100%);      /* デザイン基準(親340px想定)の比率で可変 */
+  flex-shrink: 0;
+  overflow: hidden;
+
+    @include sp {
+        display: none;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+}
+
+.p-article-nav__box-text {
+    flex: 1;
+    text-align: left;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; // 最大行
+    overflow: hidden;    
+    font-size: 1.6rem;
+    line-height: calc(25 / 16);   
+    color: $black;
+
+    @supports not (-webkit-line-clamp: 3) {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    
+
+}
