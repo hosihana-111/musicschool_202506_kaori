@@ -8,7 +8,7 @@
     padding-bottom: 22rem;
     @include sp{
         padding-top: 4rem;
-         padding-bottom: 20rem;
+         padding-bottom: 0;
     }
 }
 
@@ -21,18 +21,18 @@
 
 .p-search__title{
     font-size: 1.8rem;
-    line-height: calc(30/18);
+    line-height: calc(30 / 18);
     
 }
 .p-search__keyword{
     font-weight: 700;
      font-size: 1.8rem;
-    line-height: calc(30/18);
+    line-height: calc(30 / 18);
 }
 
 .p-search__count{
      font-size: 1.8rem;
-    line-height: calc(30/18);
+    line-height: calc(30 / 18);
 }
 
 .p-search__items {
@@ -118,12 +118,12 @@
 
 .p-search__heading {
     font-size: 2rem;
-    line-height: calc(25/20);
+    line-height: calc(25 / 20);
     font-weight: 700;
     margin-bottom: 0.5rem;
 
     @include sp {
-        line-height: calc(30/20);
+        line-height: calc(30 / 20);
         margin-bottom: 1rem;
     }
 }
@@ -142,11 +142,11 @@
 
 .p-search__excerpt {
     font-size: 1.8rem;
-    line-height: calc(30/18);
+    line-height: calc(30 / 18);
 
     @include sp {
         font-size: 1.6rem;
-        line-height: calc(30/16);
+        line-height: calc(30 / 16);
         text-align: left;
     }
 }

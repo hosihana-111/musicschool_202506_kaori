@@ -34,14 +34,15 @@
 .p-article-nav__heading-prev p,
 .p-article-nav__heading-next p {
     font-size: 1.7rem;
-    line-height: calc(30/17);    
+    line-height: calc(30 / 17);
 }
+
 .p-article-nav__heading-prev p {
-    padding-left: 0.4rem;   
+    padding-left: 0.4rem;
 }
 
 .p-article-nav__heading-next p {
-     padding-right: 0.4rem;   
+    padding-right: 0.4rem;
 }
 
 .p-article-nav__box {
@@ -53,15 +54,19 @@
 }
 
 .p-article-nav__box-img {
-    box-sizing: border-box;   /* padding/border を高さ計算に含める安全策 */
-  padding: 0 !important;    /* 他クラスからの余白を打ち消す */
-  border: 0 !important;
+    box-sizing: border-box;
+    /* padding/border を高さ計算に含める安全策 */
+    padding: 0 !important;
+    /* 他クラスからの余白を打ち消す */
+    border: 0 !important;
+    position: relative;
+    overflow: hidden;
+    inline-size: 98px;
+    /* = width */
+    block-size: 68px;
+    /* = height */
+    flex-shrink: 0;
 
-  /* リキッド + 比率固定 */
-  aspect-ratio: 98 / 68;             /* 画像枠の比率を固定 */
-  width: calc(98 / 340 * 100%);      /* デザイン基準(親340px想定)の比率で可変 */
-  flex-shrink: 0;
-  overflow: hidden;
 
     @include sp {
         display: none;
@@ -81,15 +86,20 @@
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3; // 最大行
-    overflow: hidden;    
+    overflow: hidden;
     font-size: 1.6rem;
-    line-height: calc(25 / 16);   
+    line-height: calc(25 / 16);
     color: $black;
+    height: calc((25 / 16) * 1em * 3);
+    /* 高さ固定 */
 
     @supports not (-webkit-line-clamp: 3) {
+        display: block;
         white-space: nowrap;
         text-overflow: ellipsis;
+        overflow: hidden;
+        height: auto;
     }
-    
+
 
 }

@@ -19,7 +19,7 @@
 .p-related-posts__title {
     font-size: 1.8rem;
     font-weight: 700;
-    line-height: calc(33/18);
+    line-height: calc(33 / 18);
     background-color: $black;
     color: $white;
     padding: 0.8rem 3rem;
@@ -46,7 +46,7 @@
 
 .p-related-posts__item {
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
     column-gap: 3rem;
 
     @include sp {
@@ -61,15 +61,13 @@
 
 
 .p-related-posts__thumbnail-label {
-    min-width: 10rem;
+    min-width: 8rem;
 
-    @include sp {
-        min-width: 8rem;
-    }
+ 
 }
 
 .p-related-posts__eye-catch {
-    aspect-ratio: 20/ 14;
+    aspect-ratio: 20 / 14;
     overflow: hidden;
     width: 100%;
     height: auto;
@@ -96,26 +94,25 @@
     @include sp {
         display: flex;
         flex-direction: column;
-        // justify-content: center;
-        margin-top: 1rem;
+        
     }
 }
 
 .p-related-posts__text {
     font-size: 2rem;
     font-weight: 700;
-    line-height: calc(25/20);
+    line-height: calc(25 / 20);
     margin-bottom: 1rem;
 
     @include sp {
         font-size: 1.7rem;
-        line-height: calc(28/17);
+        line-height: calc(28 / 17);
         display: -webkit-box;
         -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2; // 最大3行
+        -webkit-line-clamp: 2; // 最大2行
         overflow: hidden;
         text-overflow: ellipsis;
-        max-height: calc(28/17 * 2);
+        max-height: calc(28 / 17 * 2);
         margin-bottom: 0.3rem;
 
     }
@@ -123,6 +120,6 @@
 
 .p-related-posts__date {
     font-size: 1.7rem;
-    line-height: calc(30/17);
+    line-height: calc(30 / 17);
     margin-left: 0.2rem;
 }

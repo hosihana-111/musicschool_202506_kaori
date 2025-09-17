@@ -21,14 +21,16 @@
     <header id="header" class="l-header p-header">
       <div class="p-header__inner">
         <div class="p-header__logo">
-          <a href="index.html">
-            <span class="p-header__logo-img">
-              <img src="./images/header/header-logo.svg" alt="きたむらミュージックスクール">
-            </span>
-            <span class="p-header__logo-text">きたむら<br class="pc">
-              <span class="p-header__logo-text-small">ミュージックスクール</span>
-            </span>
-          </a>
+          <div>
+            <a href="index.html">
+              <span class="p-header__logo-img">
+                <img src="./images/header/header-logo.svg" alt="きたむらミュージックスクール">
+              </span>
+              <span class="p-header__logo-text">きたむら<br class="pc">
+                <span class="p-header__logo-text-small">ミュージックスクール</span>
+              </span>
+            </a>
+          </div>
         </div>
         <button class="p-header__hamburger sp">
           <span></span>
@@ -37,10 +39,10 @@
         </button>
         <div class="p-header__right">
           <nav class="p-header__nav" id="global-nav" aria-label="グローバルナビゲーション">
-            <ul class="p-header__lists">
-              <li class="p-header__list"><a href="plan.html" class="p-header__link">料金</a></li>
-              <li class="p-header__list"><a href="blog_list.html" class="p-header__link">ブログ</a></li>
-              <li class="p-header__list"><a href="result_list.html" class="p-header__link">卒業実績</a></li>
+            <ul class="p-header__items">
+              <li class="p-header__item"><a href="plan.html" class="p-header__link">料金</a></li>
+              <li class="p-header__item"><a href="blog_list.html" class="p-header__link">ブログ</a></li>
+              <li class="p-header__item"><a href="result_list.html" class="p-header__link">卒業実績</a></li>
             </ul>
           </nav>
           <div class="p-header__cta pc">
@@ -71,13 +73,8 @@
         </nav>
       </div>
 
-
-      <!-- トップページへ戻る -->
-      <div class="c-page-top">
-        <a href="#" class="c-goto-top"><img src="./images/icon/goto-top.svg" alt="トップへ戻る"></a>
-      </div>
-
       <!-- メイン記事 -->
+
       <div class="p-result-details__inner  l-inner">
         <article class="p-result-details__article">
           <div class="p-result-details__card p-result-details-card">
@@ -87,7 +84,7 @@
               </div>
               <div class="c-thumbnail-img p-details-card__thumbnail-img">
                 <picture>
-                  <source media="(min-width: 768px)" srcset="./images/result_details/result01.jpg">
+                  <source media="(min-width: 768px)" srcset="./images/result_details/result01.jpg" >
                   <img src="./images/result_details/result01-sp.jpg" alt="マイクを持って歌う男性の写真">
                 </picture>
               </div>
@@ -123,9 +120,9 @@
               </tr>
 
             </table>
-            <p class="p-result-profile__text">
+            <h2 class="p-result-profile__text">
               昔やっていた音楽活動で、副収入が得られるようになったので、毎日充実するようになりました。
-            </p>
+            </h2>
           </div>
 
 
@@ -141,7 +138,7 @@
                 </div>
                 <div class="p-article-nav__box">
                   <div class="p-article-nav__box-img">
-                    <img src="./images/blog_details/blog03.jpg" alt="マイクで熱唱する女性">
+                    <img src="./images/blog_details/article.jpg"  alt="マイクで熱唱する女性">
                   </div>
                   <p class="p-article-nav__box-text">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
                 </div>
@@ -155,7 +152,7 @@
                 </div>
                 <div class="p-article-nav__box">
                   <div class="p-article-nav__box-img">
-                    <img src="./images/blog_details/blog03.jpg" alt="マイクを持って楽しそうに歌う男性">
+                    <img src="./images/blog_details/article.jpg"  alt="マイクを持って楽しそうに歌う男性">
                   </div>
                   <p class="p-article-nav__box-text">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
                 </div>
@@ -167,16 +164,16 @@
 
           <!-- 関連記事 -->
           <div class="p-result-details__related-posts p-related-posts">
-            <h3 class="p-related-posts__title">関連記事</h3>
+            <div class="p-related-posts__title">関連記事</div>
             <div class="p-related-posts__items">
               <a href="#" class="p-related-posts__item">
                 <div class=" p-result-details__thumbnail c-thumbnail">
-                  <div class="p-related-posts__thumbnail-label   c-thumbnail__label">
+                  <div class="p-related-posts__thumbnail-label2   c-thumbnail__label">
                     <p class="c-thumbnail__label-text">ロック</p>
                   </div>
                   <div class="p-result-details__eye-catch p-related-posts__eye-catch c-thumbnail-img">
                     <picture>
-                      <source media="(min-width: 768px)" srcset="./images/result_details/result_details01-pc.jpg">
+                      <source media="(min-width: 768px)" srcset="./images/result_details/result_details01-pc.jpg" >
                       <img src="./images/result_details/result_details01-sp.jpg" alt="ピアノの前で子犬を抱く女性">
                     </picture>
                   </div>
@@ -189,12 +186,12 @@
 
               <a href="#" class="p-related-posts__item">
                 <div class=" p-result-details__thumbnail  c-thumbnail">
-                  <div class="p-related-posts__thumbnail-label  c-thumbnail__label">
+                  <div class="p-related-posts__thumbnail-label2  c-thumbnail__label">
                     <p class="c-thumbnail__label-text">ジャズ</p>
                   </div>
                   <div class="p-related-posts__eye-catch c-thumbnail-img">
                     <picture>
-                      <source media="(min-width: 768px)" srcset="./images/result_details/result_details02-pc.jpg">
+                      <source media="(min-width: 768px)" srcset="./images/result_details/result_details02-pc.jpg" >
                       <img src="./images/result_details/result_details02-sp.jpg" alt="アコースティックギターを弾く男性">
                     </picture>
                   </div>
@@ -207,17 +204,17 @@
 
               <a href="#" class="p-related-posts__item">
                 <div class="p-result-details__thumbnail  c-thumbnail">
-                  <div class="p-related-posts__thumbnail-label  c-thumbnail__label">
+                  <div class="p-related-posts__thumbnail-label2  c-thumbnail__label">
                     <p class="c-thumbnail__label-text">ラテン</p>
                   </div>
                   <div class="p-related-posts__eye-catch c-thumbnail-img">
                     <picture>
-                      <source media="(min-width: 768px)" srcset="./images/result_details/result_details03-pc.jpg">
-                      <img src="./images/result_details/result_details03-sp.jpg" alt="アコースティックギターを演奏する女性">
+                      <source media="(min-width: 768px)" srcset="./images/result_details/result_details03-pc.jpg" >
+                      <img src="./images/result_details/result_details03-sp.jpg" alt="アコースティックギターを構える女性の写真">
                     </picture>
                   </div>
                 </div>
-                <div class="p-related-posts__body">
+                <div class="p-result-details__body p-related-posts__body">
                   <p class="p-result-details__text p-related-posts__text">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
                   <time class="p-result-details__date p-related-posts__date" datetime="0000-00-00">0000.00.00</time>
                 </div>
@@ -227,62 +224,70 @@
         </article>
       </div>
     </main>
-  </div>
 
-  <footer class="l-footer p-footer">
-    <div>
+
+    <footer class="l-footer p-footer">
       <div class="p-footer__inner">
-        <nav class="p-footer__nav p-footer-nav">
+        <nav class="p-footer__nav p-footer-nav" aria-label="フッターナビゲーション">
           <ul class="p-footer-nav__lists">
             <li class="p-footer-nav__list">
               <a href="#">ホーム</a>
             </li>
             <li class="p-footer-nav__list">
-              <a href="#">料金</a>
+              <a href="plan.html">料金</a>
             </li>
             <li class="p-footer-nav__list">
-              <a href="#blog">ブログ</a>
+              <a href="blog_list.html">ブログ</a>
             </li>
             <li class="p-footer-nav__list">
-              <a href="#">卒業実績</a>
+              <a href="result_list.html">卒業実績</a>
             </li>
-
           </ul>
         </nav>
-        <a href="#" class="p-footer-logo"><img src="./images/icon/logo-white.svg" alt="きたむらミュージックスクール ロゴ"></a>
-
+        <a href="index.html" class="p-footer-logo"><img src="./images/icon/logo-white.svg" alt="きたむらミュージックスクール"></a>
         <p class="p-footer__copyright">Copyright&copy;0000 KITAMURA music school Inc. All Rights</p>
 
-
         <div class="p-footer__sns">
-          <ul>
-            <li class="p-footer__sns-link">
+          <ul class="p-footer__sns-items">
+            <li class="p-footer__sns-item">
               <a href="#" target="_blank" rel="noopener noreferrer">
-                <img src="./images/icon/icon-twitter.svg" alt="Twitterでシェア">
+                <img src="./images/icon/icon-twitter.svg" alt="twitterを開く">
               </a>
             </li>
-            <li class="p-footer__sns-link">
+            <li class="p-footer__sns-item">
               <a href="#" target="_blank" rel="noopener noreferrer">
-                <img src="./images/icon/icon-facebook.svg" alt="Facebookでシェア">
+                <img src="./images/icon/icon-facebook.svg" alt="facebookを開く">
               </a>
             </li>
-            <li class="p-footer__sns-link">
+            <li class="p-footer__sns-item">
               <a href="#" target="_blank" rel="noopener noreferrer">
-                <img src="./images/icon/icon-youtube.svg" alt="Youtube">
+                <img src="./images/icon/icon-youtube.svg" alt="youtubeを開く">
               </a>
             </li>
-            <li class="p-footer__sns-link">
+            <li class="p-footer__sns-item">
               <a href="#" target="_blank" rel="noopener noreferrer">
-                <img src="./images/icon/icon-instagram.svg" alt="Instagramでシェア">
+                <img src="./images/icon/icon-instagram.svg" alt="instagramを開く">
               </a>
             </li>
           </ul>
         </div>
       </div>
+    </footer>
+
+    <!-- TOPに戻るボタンのjsの修正をAIに依頼 -->
+
+    <div class="p-top-btn c-fab">
+      <a href="contact_form.html" class="c-btn p-top-btn__contact">お問い合わせ</a>
+      <a href="#" class="p-top-btn__arrow " aria-label="ページ上部へ">
+        <img src="./images/icon/goto-top.svg" alt="トップへ戻る">
+      </a>
+
     </div>
-  </footer>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="js/main.js"></script>
 
 </html>

@@ -5,10 +5,7 @@
 
 .p-fv {
     position: relative;
-    padding-top: 8rem;
-    @include sp {
-        padding-top:0;
-    }
+    width: 100%;
 }
 .p-fv::before {
     content: "";
@@ -18,10 +15,7 @@
     width: 100%;
     height: 100%;
     background-color: rgba(80, 80, 80, 0.5);
-    z-index: 1;
-
-
-    
+    z-index: 1;    
 }
 
 .p-fv__img {
@@ -36,8 +30,6 @@
     
 }
 
-
-
 .p-fv__contents-text {
     position: absolute;
    top: 59%;
@@ -45,7 +37,7 @@
   transform: translate(-50%, -50%);   
     font-size: 4rem;
     font-weight: 700;
-    line-height: calc(60/40);
+    line-height: calc(60 / 40);
     color: $white;
     text-align: center;   
     letter-spacing: -0.02em;
@@ -55,7 +47,7 @@
          top: 51.7%;
         width: 100%;
         font-size: 3rem;
-        line-height: calc(50 /30);
+        line-height: calc(50 / 30);
 
     }
 }

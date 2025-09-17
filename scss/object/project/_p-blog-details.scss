@@ -6,29 +6,26 @@
 // パンくずリスト
 
 .p-blog-details__breadcrumb-inner {
- width: 100%;
+    width: 100%;
     background-color: #E8E8E8;
-    margin-top: 8rem;
-
-    @include sp {
-        margin-top: 0;
-    }
+    
 
 }
 
-.p-blog-details__breadcrumb {  
+.p-blog-details__breadcrumb {
     max-width: 940px;
     margin-inline: auto;
     padding-inline: 3rem;
     font-size: 1.6rem;
-    line-height: calc(33/16);
+    line-height: calc(33 / 16);
     display: block;
     height: 5rem;
 
 
     @include sp {
-           padding-inline: 2rem;
-        padding-block: 0;
+        padding-inline: 2rem;
+        // padding-block: 0;
+        align-items: center;
         height: 3.6rem;
     }
 }
@@ -49,24 +46,25 @@
     height: 100%;
 
 }
-.p-result-details__breadcrumb-items::-webkit-scrollbar {
+
+.p-blog-details__breadcrumb-items::-webkit-scrollbar {
     display: none;
 }
 
 .p-blog-details__breadcrumb-item {
-     display: flex;
+    display: flex;
     align-items: center;
     white-space: nowrap;
     height: 100%;
 
 
     a {
-         display: flex; // 行高いっぱいのクリック領域
+        display: flex; // 行高いっぱいのクリック領域
         max-width: 100%;
         padding-block: 0;
         text-decoration: none;
         font-size: 1.6rem;
-        line-height: calc(33/16);
+        line-height: calc(33 / 16);
         transition: all 0.3s ease;
         white-space: nowrap;
         height: 100%;
@@ -76,8 +74,8 @@
             opacity: 0.5;
         }
 
-        @include sp {          
-            line-height: calc(20/16);
+        @include sp {
+            line-height: calc(20 / 16);
         }
     }
 
@@ -86,19 +84,19 @@
 
 
         @include sp {
-            line-height: calc(20/16);
+            line-height: calc(20 / 16);
 
         }
     }
 }
 
 // メイン記事
-.p-blog-details__inner {
+.p-blog-details__wrapper {
     display: flex;
     justify-content: space-between;
     padding-top: 7rem; // 元の値に戻す
     padding-bottom: 18.5rem;
-    gap: calc(30/940 *100%);
+    gap: calc(30 / 880 *100%);
     margin: 0 auto;
 
     @include sp {
@@ -113,7 +111,7 @@
 
 // サイドバー
 .p-blog-details__aside {
-    width: calc(250 /880 *100%);
+    width: calc(250 / 880 *100%);
 
     @include sp {
         width: 100%;
@@ -121,20 +119,27 @@
 }
 
 // メイン記事
-.p-tab-panel__content01 {
+// .p-blog-details__tabs {
+//     margin-bottom: 3.3rem;
+
+//     @include sp {
+//         margin-bottom: 4rem;
+//     }
+// }
+
+.p-blog-details__content01 {
     margin-bottom: 3.3rem;
 
     @include sp {
         margin-bottom: 4rem;
     }
 }
-
 .p-tab-panel__title {
     margin-top: 4.6rem;
     margin-bottom: 0.5rem;
     font-size: 2.5rem;
     font-weight: 700;
-    line-height: calc(40/25);
+    line-height: calc(40 / 25);
 
     @include sp {
         margin-top: 2.7rem;
@@ -181,16 +186,16 @@
 
 .p-tab-panel__text {
     font-size: 1.8rem;
-    line-height: calc(30/18);
+    line-height: calc(30 / 18);
 
     @include sp {
         font-size: 1.6rem;
-        line-height: calc(30/16);
+        line-height: calc(30 / 16);
     }
 }
 
-// 記事本文
-.p-tab-panel__content02 {
+// 記事02
+.p-blog-details__content02 {
     padding-bottom: 3.9rem;
     border-bottom: 0.5px solid $black;
 
@@ -203,18 +208,18 @@
 .p-tab-panel__heading {
     font-size: 2rem;
     font-weight: 700;
-    line-height: calc(40/20);
+    line-height: calc(40 / 20);
     margin-bottom: 1.7rem;
 
     @include sp {
-        line-height: calc(30/20);
+        line-height: calc(30 / 20);
     }
 }
 
 .p-tab-panel__image {
     margin-top: 1.6rem;
     margin-bottom: 2.8rem;
-    width: calc(335 /600 *100%);
+    width: calc(335 / 600 *100%);
 
     @include sp {
         margin-top: 3.9rem;
@@ -230,17 +235,17 @@
 
     li {
         font-size: 1.8rem;
-        line-height: calc(30/18);
+        line-height: calc(30 / 18);
 
         @include sp {
             font-size: 1.6rem;
-            line-height: calc(30/16);
+            line-height: calc(30 / 16);
         }
     }
 }
 
-// サブ記事
-.p-tab-panel__content03 {
+// 記事03
+.p-blog-details__content03 {
     margin-top: 5.3rem;
 
     @include sp {
@@ -252,13 +257,13 @@
     font-size: 2rem;
     font-weight: 700;
     line-height: 1;
-    // padding: 0.25em 0.5em;/*上下 左右の余白*/  
+
     background: transparent;
     border-left: 3px solid $black;
     padding-left: 1rem;
 
     @include sp {
-        line-height: calc(30/20);
+        line-height: calc(30 / 20);
         margin-bottom: 2rem;
     }
 }
@@ -278,26 +283,25 @@
 .p-tab-panel__link {
     font-size: 2rem;
     font-weight: 700;
-    line-height: calc(33/20);
+    line-height: calc(33 / 20);
     color: $red;
     text-decoration-line: underline;
     text-decoration-color: $red;
-    text-decoration-thickness: 1px;    
-    transition: opacity 0.3s ease-in-out;
+    text-decoration-thickness: 1px;
+   transition: all .3s ease;
 
-    &:hover {
-        opacity: 0.7;
-    }
+     &:hover {
+      background: $red;
+      color: $white;
+     }
 }
 
-// 前後記事ナビ 
-.p-blog-details__box-img {
-    width: calc(98 / 260 * 100%);    
-   
-}
+ 
 
 // 関連記事
-
+.p-blog-details__related-posts {
+    margin-top: 9rem;
+}
 .p-blog-details__thumbnail {
     position: relative;
     flex-shrink: 0; // 縮まないように
@@ -306,4 +310,8 @@
     @include sp {
         width: calc(160 / 335 * 100%);
     }
+}
+
+.p-blog-details__related-text{
+    margin-bottom: 1.5rem;
 }

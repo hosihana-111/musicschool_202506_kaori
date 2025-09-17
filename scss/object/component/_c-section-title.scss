@@ -2,6 +2,18 @@
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
 
+.c-top-title {
+  font-size: 3rem; 
+  font-weight: 700;
+  text-align: center;
+  line-height: calc(50 / 30);
+  @include sp{
+    font-size: 2.5rem;
+    line-height: calc(40 / 25);
+  }
+ 
+}
+
 .c-section-title {
   font-size: 2.5rem;
   line-height:1;
@@ -9,8 +21,9 @@
   text-align: center;
   @include sp{
     font-size: 2.5rem;
-    line-height: calc(40/25);
+    line-height: calc(40 / 25);
   }
  
 }
+
 

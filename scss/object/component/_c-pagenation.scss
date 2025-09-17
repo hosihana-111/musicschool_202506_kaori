@@ -8,7 +8,7 @@
     justify-content: center;
     gap: 0 1rem;
     list-style-type: none;
-    padding: 0;
+     padding-bottom: 21rem;
     @include sp{
       gap: 0 0.5rem;
       padding-bottom: 20rem;
@@ -24,7 +24,7 @@
     width: 5rem;
     height: 5rem;
     font-size: 1.8rem;
-    line-height: calc(30/18);
+    line-height: calc(30 / 18);
     font-weight: 700;
     border: 1px solid #000000;   
     color: #000000;

@@ -34,15 +34,15 @@
   color: $black;
   cursor: pointer;
   font-size: 1.7rem;
-  line-height: calc(30/17);
-  padding: 1.5rem 2rem ;
+  line-height: calc(30 / 17);
+  padding: 1.45rem 2rem ;
   position: relative;
 
 
   @include sp {
     font-size: 1.6rem;
     line-height: calc(30/16);
-    padding: 1.3rem 2rem 1.3rem 0;
+    padding: 1.3rem 4rem 1.3rem 0;
     column-gap: 1.5rem;
   }
   
@@ -65,7 +65,7 @@
     }
   }
 }
-
+// JS制御用
 .p-faq__summary.open::after {
   top: 45%;
   transform: rotate(-45deg);
@@ -117,8 +117,6 @@
   
 }
 
-
-
 .p-faq__answer-a-badge {
   display: inline-flex;
   align-items: center;
@@ -137,11 +135,11 @@
 .p-faq__answer p{
   color: $red;
   font-size: 1.7rem;
-  line-height: calc(30/17);
+  line-height: calc(30 / 17);
   font-weight: 700;
   @include sp {
     font-size: 1.6rem;
-    line-height: calc(30/16);   
+    line-height: calc(30 / 16);   
   }
 
 }

@@ -26,9 +26,9 @@
 }
 .c-blockquote p {
     padding: 0;
-    margin: 1rem 0;
-    font-weight: 1.8rem;
-    line-height: calc(30/18);
+    margin: 1.2rem 0;
+    font-size: 1.8rem;
+    line-height: calc(30 / 18);
     // display: -webkit-box;
     // -webkit-box-orient: vertical;
     // -webkit-line-clamp: 3; // 最大3行
@@ -39,6 +39,6 @@
     @include sp {
         margin: 0.9rem 0;
         font-size: 1.6rem;
-        line-height: calc(30/16);
+        line-height: calc(30 / 16);
     }
 }

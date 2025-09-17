@@ -19,7 +19,7 @@
   text-align: center;
 
   @include sp {
-    line-height: calc(40/25);
+    line-height: calc(40 / 25);
   }
 }
 
@@ -48,7 +48,7 @@
   padding: 1.4rem 3rem;
   font-weight: 700;
   font-size: 2rem;
-  line-height: calc(33/20);
+  line-height: calc(33 / 20);
 
 }
 
@@ -84,11 +84,11 @@
 
 .p-pricing__description {
   font-size: 1.8rem;
-  line-height: calc(30/18);
+  line-height: calc(30 / 18);
 
   @include sp {
     font-size: 1.6rem;
-    line-height: calc(30/16);
+    line-height: calc(30 / 16);
   }
 }
 
@@ -159,11 +159,11 @@ scrollbar-width: thin;
 .p-plan-table__head {
   border-bottom: solid 1px $black;
   font-size: 2rem;
-  line-height: calc(33/20);
+  line-height: calc(33 / 20);
   color: $white;
 
   @include sp {
-    line-height: calc(25/20);
+    line-height: calc(25 / 20);
   }
 }
 
@@ -181,7 +181,7 @@ scrollbar-width: thin;
 
 .is-recommend span {
   font-size: 1.7rem;
-  line-height: calc(33/17);
+  line-height: calc(33 / 17);
 }
 
 // 料金表本体
@@ -195,7 +195,7 @@ scrollbar-width: thin;
 
 .p-plan-table__feature {
   font-size: 1.7rem;
-  line-height: calc(25/17);
+  line-height: calc(25 / 17);
   text-align: left;
   padding: 1rem 0.5rem 1rem 2rem;
   vertical-align: middle;
@@ -203,13 +203,12 @@ scrollbar-width: thin;
 
   @include sp {
     font-size: 1.6rem;
-    line-height: calc(25/16);
+    line-height: calc(25 / 16);
     padding: 1rem 0.5rem 1rem 1rem;
   }
 }
 
-.p-plan-table__body td {
-  // border-bottom:solid 1px $black;  
+.p-plan-table__body td {  
   padding: 1rem 0.5rem;
   vertical-align: middle;
   word-break: keep-all;
@@ -217,7 +216,7 @@ scrollbar-width: thin;
 
 // 一段とばしの背景色
 .p-plan-table__body tr:nth-child(even) {
-  background-color: rgba(80, 80, 80, 0.15);
+  background-color: #50505026;
 }
 
 // 料金表のbodyの行の高さ
@@ -225,12 +224,13 @@ scrollbar-width: thin;
   text-align: center;
   width: 22rem;
   vertical-align: middle;
-  word-break: keep-all;
+  word-break: auto-phrase;
 }
 
 // 料金表の全体の赤字
 .p-plan-table__cell .red {
   color: $red;
+  white-space:nowrap;
 }
 
 // 料金表のハイフン
@@ -253,20 +253,23 @@ scrollbar-width: thin;
 // 月額料金の太文字
 .p-plan-table__price {
   font-weight: 700;
+  
 }
 
 .p-plan-table__price .p-plan-table__cell {
   font-size: 2.2rem;
-  line-height: calc(33/22);
+  line-height: calc(33 / 22);
+  white-space:nowrap;
 }
 .p-plan__pricing-text {
   margin-top: 2.9rem;
   font-size: 1.7rem;
-  line-height: calc(25/17);
+  // font-size:clamp(1rem, 0.974rem + 0.13vw, 1.063rem);
+  line-height: calc(25 / 17);
 
   @include sp {
     margin-top: 2rem;
     font-size: 1.6rem;
-    line-height: calc(30/16);
+    line-height: calc(30 / 16);
   }
 }

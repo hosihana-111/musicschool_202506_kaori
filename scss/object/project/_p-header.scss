@@ -5,7 +5,8 @@
 
 
 .p-header {
-  --header-h: 8rem; height: var(--header-h);
+  --header-h: 8rem;
+  height: var(--header-h);
   top: 0;
   left: 0;
   width: 100%;
@@ -29,7 +30,7 @@
   justify-content: space-between;
   align-items: center;
   padding-inline: 3rem;
- box-sizing: border-box;
+  box-sizing: border-box;
   position: relative;
 
   @include sp {
@@ -39,7 +40,7 @@
 }
 
 .p-header__logo {
- height: var(--header-h);
+  height: var(--header-h);
 
   @include sp {
     width: 26rem;
@@ -70,12 +71,12 @@
 .p-header__logo-text {
   font-size: 2rem;
   font-weight: 700;
-  line-height: calc(23/20);
+  line-height: calc(23 / 20);
   display: inline-block;
 
   @include sp {
     font-size: 1.3rem;
-    line-height: calc(14/13);
+    line-height: calc(14 / 13);
   }
 
 }
@@ -86,7 +87,7 @@
 
   @include sp {
     font-size: 1.3rem;
-    line-height: calc(14/13);
+    line-height: calc(14 / 13);
     letter-spacing: 0.01em;
   }
 }
@@ -105,13 +106,13 @@
   height: var(--header-h);
 }
 
-.p-header__lists {
+.p-header__items {
   list-style: none;
   display: flex;
   align-items: center;
   height: var(--header-h);
   margin: 0;
-  padding: 0;  
+  padding: 0;
   cursor: pointer;
   column-gap: 3.3rem;
   font-size: 1.8rem;
@@ -122,8 +123,9 @@
     display: block;
     position: fixed;
     width: calc(300 / 375 * 100%);
-    // height: 100vh;
-    top: 5rem;
+    // height: calc(100vh - var(--header-h));
+    height: (5rem * 3);
+    top: var(--header-h);
     left: 120%;
     overflow: hidden;
     color: #fff;
@@ -131,24 +133,29 @@
     margin: 0;
     text-align: left;
     list-style: none;
-    z-index: 1;
+    z-index: 1000; // ←スタッキング強化
     transition: all 0.4s;
+    overflow-y: auto; // ←縦はスクロール
+    overflow-x: hidden; // ←横は隠す   
+    -webkit-overflow-scrolling: touch;
+
   }
 }
 
-.p-header__lists.active {
+.p-header__items.active {
   @include sp {
     left: 20%;
   }
 }
 
-.p-header__list {
- height: var(--header-h);
+.p-header__item {
+  height: var(--header-h);
   display: flex;
   align-items: center;
+  position: relative;
 
   @include sp {
-    height: 5.8rem;
+    height: 5rem;
     display: flex;
     align-items: center;
     margin: 0;
@@ -156,36 +163,7 @@
     font-size: 1.8rem;
     font-weight: 600;
     transition: all 0.3s ease;
-   
 
-  }
-}
-
-
-
-.p-header__link {
-  position: relative;
-  height: var(--header-h);
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  display: inline-flex;
-  align-items: center;
-  font-size: 1.7rem;
-  font-weight: 700;
-  line-height: calc(33/17);
-  transition: all 0.3s ease-in-out;
-
-
-  @include sp {
-    font-size: 1.8rem;
-    padding: 0;
-    width: 100%;
-    height: var(--header-h);
-    
-    transition: all 0.3s ease;
-    justify-content: flex-start;
-    padding-inline: 2rem;
   }
 
   &::before {
@@ -196,39 +174,61 @@
       height: 1px;
       background: $black;
       left: 0;
-      bottom:2.8rem;
+      bottom: 2.8rem;
       transform: scaleX(0);
       transition: all .4s;
       transform-origin: left center;
     }
   }
 
-  &:hover {
-    @include pc {
-      opacity: 0.7;
-    }
-
-    @include sp {
-      background: $white;
-      color: $red;
-    }
-
+  &:hover{
     &::before {
       transform: scaleX(1);
        height: 2px;
     }
   }
-
 }
 
-.p-header__link,
-.c-btn,
-.p-header__hamburger {
-  &:focus-visible {
-    outline: 2px solid #000;
-    outline-offset: 2px;
+
+
+.p-header__link {
+  height: var(--header-h);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: calc(33 / 17);
+  transition: all 0.3s ease-in-out;
+
+
+  @include sp {
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+    justify-content: flex-start;
+    padding-inline: 2rem;
   }
-}
+
+
+
+
+&:hover {
+  @include pc {
+    opacity: 0.7;
+  }
+
+  @include sp {
+    background: $black;
+    color: $white;
+  }
+
+  &::before {
+    transform: scaleX(1);
+    height: 2px;
+  }
+}}
+
 
 // ハンバーガーメニュー
 .p-header__hamburger {
@@ -294,20 +294,22 @@
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-// .overlay {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   background-color: rgba(0, 0, 0, 0.5);
-//   z-index: 1000;
-//   opacity: 0;
-//   visibility: hidden;
-//   transition: opacity 0.3s ease, visibility 0.3s ease;
+/* メニューオープン時のスクロール抑制 */
+body.is-menu-open {
+  overflow: hidden;
+}
 
-//   &.is-active {
-//     opacity: 1;
-//     visibility: visible;
-//   }
-// }
+/* メニューオープン中は「ページトップ」ボタンを触れないようにしたい場合 */
+body.is-menu-open .c-page-top {
+  opacity: .0;
+  pointer-events: none;
+}
+
+// .p-header { position: sticky; top: 0; z-index: 1000; }
+.p-header__hamburger {
+  z-index: 1001;
+}
+
+.p-header__items {
+  z-index: 1000;
+}

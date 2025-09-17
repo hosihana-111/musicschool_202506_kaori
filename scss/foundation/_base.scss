@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 main {
-  padding-top: hvw(80); // headerの高さ8rem; // headerの高さ分のpadding-topを追加
+  padding-top: 8rem; // headerの高さ8rem; // headerの高さ分のpadding-topを追加
   
   @include sp {
     padding-top: 5rem; // スマホではheaderの高さ(5rem)分
@@ -83,7 +83,16 @@ img {
 
 a {
   text-decoration: none;
+  outline: none; /* すべて消す */
+  -webkit-tap-highlight-color: transparent;
 }
+a:focus:not(:focus-visible) {
+  outline: none;
+  a:active {
+  background-color: transparent; /* 押下時の色変化を打ち消す */
+} /* マウスクリック時は消す */
+}
+a, button, [role="button"] { -webkit-tap-highlight-color: transparent; }
 
 
 .u-br {

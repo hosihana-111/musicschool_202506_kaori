@@ -7,6 +7,12 @@
   text-align: center;
    background-color: $red;
   color: $white;
+ 
+     &:hover{
+    background-color: $white;
+    color: $red;
+  }
+  
 }
 
 .c-btn--head{
@@ -18,7 +24,7 @@
   border: 0.1rem solid $red;
   color: $white;
   font-size: 1.5rem;
-  line-height: calc(33/15);
+  line-height: calc(33 / 15);
   font-weight: 700;
   transition: all .4s;
   &:hover{
@@ -29,35 +35,6 @@
 
 
 
-.c-contact-button {
-  position: fixed;
-  bottom: 20px;
-  right: 0;
-  z-index: 1000;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s;
-  display: inline-block;
- 
-  font-weight: 700;
-  padding: 1rem 8.4rem 1rem 8rem;
-  width: 30rem;
-  height: 6rem;
-  text-decoration: none;
-  font-size: 2rem;
-   line-height: calc(33/20);
-   letter-spacing: 0.2rem;
-  @include sp{
-    display: flex;
-
-  }
- 
-}
-.c-contact-button.is-change {
-  opacity: 1;
-  pointer-events: auto;
- 
-}
 
 
 

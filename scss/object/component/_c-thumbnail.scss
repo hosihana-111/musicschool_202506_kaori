@@ -18,8 +18,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    @include sp{
-         min-width: 9rem;
+
+    @include sp {
+        min-width: 9rem;
     }
 }
 
@@ -31,19 +32,21 @@
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
-    line-height: calc(25/15);
+    line-height: calc(25 / 15);
     margin: 0;
 }
 
-// .c-thumbnail-img {
-//     width: 100%;
+.c-thumbnail-img {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
 
-   
-// }
 
-// .c-thumbnail-img img {
-//     width: 100%;    
-//     object-fit: cover;
-//     display: block;
+}
 
-// }
+.c-thumbnail-img img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+
+}

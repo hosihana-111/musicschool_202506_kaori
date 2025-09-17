@@ -24,7 +24,7 @@
 
 .p-vision__title {
   font-size: 3.5rem;
-  line-height: calc(50/35);
+  line-height: calc(50 / 35);
   font-weight: 700;
   text-align: center;
   color: $red;
@@ -34,14 +34,14 @@
 
   @include sp {
     font-size: 2.5rem;
-    line-height: calc(40/25);
+    line-height: calc(40 / 25);
     margin-bottom: 0.7rem;
   }
 }
 
 .p-vision__subtitle {
   font-size: 1.8rem;
-  line-height: calc(30/18);
+  line-height: calc(30 / 18);
   text-align: center;
 
   @include sp {
@@ -121,9 +121,6 @@
     background: $red;
     z-index: 100;
   }
-
-
-
 }
 
 .p-diagram__row {
@@ -172,52 +169,3 @@
     line-height: calc(50 / 20);
   }
 }
-
-// .p-diagram__contents {
-//   position: absolute;
-//   left: 50%;
-//   transform: translateX(-50%);
-//   /* ...既存のflexはOK（gridにしなくても動く） */
-
-//   /* 縦線 */
-//   &::before {
-//     content: "";
-//     position: absolute;
-//     left: 50%;
-//     transform: translateX(-50%);
-//     /* ドット中心からドット中心まで伸ばす */
-//     top: calc(var(--dot) * -0.5);
-//     bottom: calc(var(--dot) * -0.5);
-//     width: var(--line);
-//     background: $red;
-//     z-index: 5;
-//   }
-
-//   /* 矢印（上端） */
-//   &::after {
-//     content: "";
-//     position: absolute;
-//     left: 50%;
-//     transform: translate(-50%, -50%) rotate(-45deg);
-//     top: calc(var(--dot) * -0.5);
-//     width: var(--arrowHead);
-//     height: var(--arrowHead);
-//     border: 3px solid $red;
-//     border-left: 0;
-//     border-bottom: 0;
-//     box-sizing: border-box;
-//     z-index: 10;
-//   }
-// }
-
-// .p-diagram__dot {
-//   position: relative;
-//   z-index: 15;
-//   width: 2.4rem;
-//   height: 2.4rem;
-//   background: $red;
-//   border-radius: 50%;
-//   flex-shrink: 0;
-//   z-index: 15;
-//   border: 3px solid #fff;
-// }

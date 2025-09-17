@@ -16,7 +16,7 @@
 .p-top-reason__title {
     font-size: 3rem;
     font-weight: 700;
-    line-height: calc(50/30);
+    line-height: calc(50 / 30);
 
     @include sp {
         font-size: 2.5rem;
@@ -83,7 +83,7 @@
 .p-top-reason__title {
     font-size: 2.2rem;
     font-weight: 700;
-    line-height: calc(33/22);
+    line-height: calc(33 / 22);
     text-align: left;
     padding-left: 5rem;
     padding-bottom: 0.5rem;
@@ -95,7 +95,7 @@
         padding-bottom: 0.7rem;
         text-align: left;
         font-size: 2rem;
-        line-height: calc(30/20);
+        line-height: calc(30 / 20);
     }
 }
 
@@ -103,7 +103,7 @@
 
 .p-top-reason__text {
     font-size: 1.8rem;
-    line-height: calc(33/18);
+    line-height: calc(33 / 18);
     text-align: left;
     display: block;
     padding-top: 3.7rem;
@@ -113,7 +113,7 @@
         padding-left: 0;
         text-align: left;
         font-size: 1.6rem;
-        line-height: calc(30/16);
+        line-height: calc(30 / 16);
         padding-top: 1.7rem;
     }
 }

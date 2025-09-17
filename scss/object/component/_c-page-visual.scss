@@ -8,12 +8,13 @@
   overflow: hidden;
   width: 100%;
   background: #e8e8e8;
-  padding-top: 8rem;
-  @include sp {
-    padding-top:0;
-  }
+  
+  
+ 
+}
 
-  &__img {
+
+.c-page-visual__img {
     position: relative;
     width: 100%;
     // height: 180px;
@@ -27,22 +28,33 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      filter: brightness(0.5);
+      // filter: brightness(0.5);
       display: block;
     }
 
-    .c-page-visual__title {
+    
+  }
+.c-page-visual__img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(80, 80, 80, 0.5);
+    z-index: 1;    
+}
+
+.c-page-visual__title {
       position: absolute;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
       color: #fff;
       font-size: 2.5rem;
-      line-height: calc(60/25);
+      line-height: calc(60 / 25);
       font-weight: 700;
       // text-shadow: 0 2px 8px rgba(0,0,0,0.3);
       margin: 0;
+       z-index: 10;
     }
-  }
-}
-
