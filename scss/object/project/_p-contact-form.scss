@@ -168,7 +168,8 @@ height: 3.3rem;
 .p-form-checkbox__item {
   display: inline-flex;
   align-items: center;
-  cursor: pointer;
+  width: max-content;             /* 中身の幅だけ */
+  cursor: pointer;  
   user-select: none;
   gap: 0;
 }
@@ -181,6 +182,7 @@ height: 3.3rem;
   padding-left: 4rem;
   font-size: 1.8rem;
   line-height: 1;
+
 
   @include sp {
     font-size: 1.6rem;
