@@ -2797,7 +2797,7 @@ body.is-menu-open .c-page-top {
   background-color: #CB0000;
   color: #ffffff;
   width: 21rem;
-  padding: 1.4rem 3rem;
+  padding-block: 1.4rem;
   font-weight: 700;
   font-size: 2rem;
   line-height: 1.65;
