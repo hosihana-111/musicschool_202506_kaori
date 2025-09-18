@@ -55,7 +55,7 @@
   place-content: center;
   pointer-events: auto;
 
-  transition: opacity 0.3s;
+  transition: opacity 0.3s ease-in-out;
 
   img {
     display: block;
@@ -78,9 +78,11 @@
 .p-top-btn__contact {
   bottom: 0;
   right: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  display: grid;
+  place-content: center;
   border: 0.1rem solid $red;
   font-weight: 700;
   width: 30rem;
@@ -104,17 +106,19 @@
 
 /* contact ページ専用：矢印だけをきれいに配置 */
 .c-fab--contact {
-  right: 1rem;           /* 必要なら微調整 */
-  gap: 0;                /* 矢印だけなので隙間不要なら 0 に */
+  right: 1rem;
+  /* 必要なら微調整 */
+  gap: 0;
+  /* 矢印だけなので隙間不要なら 0 に */
 }
 
 .c-fab--contact .p-top-btn__contact {
-   display: none !important;
-   }
+  display: none !important;
+}
 
-   .p-top-btn__arrow--contact {
+.p-top-btn__arrow--contact {
   @include sp {
-    right: 2.8rem; 
+    right: 2.8rem;
     bottom: 2rem; // コンテナの下端に合わせる
 
   }

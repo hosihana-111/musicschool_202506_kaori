@@ -244,7 +244,7 @@ a, button, [role=button] {
 footer {
   background-color: #CB0000;
   text-align: center;
-  padding-top: 4.4rem;
+  padding-top: 4.5rem;
   padding-bottom: 5rem;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -286,6 +286,8 @@ footer {
   text-align: center;
   background-color: #CB0000;
   color: #ffffff;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 .c-btn:hover {
   background-color: #ffffff;
@@ -303,8 +305,8 @@ footer {
   font-size: 1.5rem;
   line-height: 2.2;
   font-weight: 700;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 .c-btn--head:hover {
   background-color: #ffffff;
@@ -716,8 +718,8 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   height: var(--header-h);
-  -webkit-transition: opacity 0.4s;
-  transition: opacity 0.4s;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
 }
 .p-header__logo a:hover {
   opacity: 0.7;
@@ -868,8 +870,8 @@ footer {
     bottom: 2.8rem;
     -webkit-transform: scaleX(0);
             transform: scaleX(0);
-    -webkit-transition: all 0.4s;
-    transition: all 0.4s;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
     -webkit-transform-origin: left center;
             transform-origin: left center;
   }
@@ -1497,9 +1499,9 @@ body.is-menu-open .c-page-top {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0 auto 2rem;
-  -webkit-column-gap: 2.6rem;
-     -moz-column-gap: 2.6rem;
-          column-gap: 2.6rem;
+  -webkit-column-gap: 2.3rem;
+     -moz-column-gap: 2.3rem;
+          column-gap: 2.3rem;
   width: 100%;
   color: #ffffff;
 }
@@ -1535,7 +1537,7 @@ body.is-menu-open .c-page-top {
 }
 
 .p-footer-logo {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.8rem;
   width: auto;
   height: auto;
   padding: 0.5rem;
@@ -1567,6 +1569,7 @@ body.is-menu-open .c-page-top {
   display: block;
   text-align: center;
   margin-bottom: 0.5rem;
+  letter-spacing: 0.01em;
 }
 @media (max-width: 767px) {
   .p-footer__copyright {
@@ -1680,8 +1683,8 @@ body.is-menu-open .c-page-top {
   display: grid;
   place-content: center;
   pointer-events: auto;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 .p-top-btn__arrow img {
   display: block;
@@ -1702,15 +1705,8 @@ body.is-menu-open .c-page-top {
 .p-top-btn__contact {
   bottom: 0;
   right: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: grid;
+  place-content: center;
   border: 0.1rem solid #CB0000;
   font-weight: 700;
   width: 30rem;
@@ -1733,8 +1729,10 @@ body.is-menu-open .c-page-top {
 
 /* contact ページ専用：矢印だけをきれいに配置 */
 .c-fab--contact {
-  right: 1rem; /* 必要なら微調整 */
-  gap: 0; /* 矢印だけなので隙間不要なら 0 に */
+  right: 1rem;
+  /* 必要なら微調整 */
+  gap: 0;
+  /* 矢印だけなので隙間不要なら 0 に */
 }
 
 .c-fab--contact .p-top-btn__contact {
@@ -1778,7 +1776,7 @@ body.is-menu-open .c-page-top {
 
 .p-fv__contents-text {
   position: absolute;
-  top: 59%;
+  top: 52%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -2008,6 +2006,10 @@ body.is-menu-open .c-page-top {
     line-height: 1.6;
     margin-bottom: 1.4rem;
   }
+}
+
+.p-ad__title span {
+  letter-spacing: -0.01em;
 }
 
 .p-ad__text {
@@ -2873,7 +2875,7 @@ body.is-menu-open .c-page-top {
     white-space: nowrap;
     /* テキストの折り返しなし */
     -webkit-overflow-scrolling: touch;
-    padding-bottom: 2rem;
+    padding-bottom: 1.8rem;
     scrollbar-gutter: stable;
     /* スクロールバー出現でのレイアウトズレ抑制 */
   }
@@ -3290,6 +3292,7 @@ body.is-menu-open .c-page-top {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding-bottom: 16.5rem;
   }
 }
 
@@ -3484,6 +3487,11 @@ body.is-menu-open .c-page-top {
 
 .p-blog-details__related-posts {
   margin-top: 9rem;
+}
+@media (max-width: 767px) {
+  .p-blog-details__related-posts {
+    margin-top: 6.2rem;
+  }
 }
 
 .p-blog-details__thumbnail {
@@ -3783,21 +3791,23 @@ input[type=checkbox]:checked + span::after {
 }
 .form-area-message dd {
   margin-top: 0.3rem;
-  display: block;
   padding: 0;
   border: 0;
 }
 
 .form-textarea {
   width: 100%;
-  height: 30rem;
+  min-height: 30rem;
   border: 0.5px solid #000000;
-  padding: 1.3rem 2rem;
+  padding: 2rem;
   display: block;
+  resize: vertical;
+  line-height: 1;
 }
 @media (max-width: 767px) {
   .form-textarea {
-    height: 19rem;
+    padding: 1.5rem 2rem;
+    min-height: 19rem;
   }
 }
 
@@ -4178,6 +4188,10 @@ input[type=checkbox]:checked + span::after {
 .p-search__excerpt {
   font-size: 1.8rem;
   line-height: 1.6666666667;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }
 @media (max-width: 767px) {
   .p-search__excerpt {

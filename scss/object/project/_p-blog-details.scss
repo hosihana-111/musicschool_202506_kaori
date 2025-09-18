@@ -102,6 +102,7 @@
     @include sp {
         padding-top: 5rem;
         flex-direction: column;
+        padding-bottom: 16.5rem;
     }
 }
 
@@ -301,6 +302,9 @@
 // 関連記事
 .p-blog-details__related-posts {
     margin-top: 9rem;
+    @include sp {
+        margin-top: 6.2rem;
+    }
 }
 .p-blog-details__thumbnail {
     position: relative;

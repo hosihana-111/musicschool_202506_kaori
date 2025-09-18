@@ -3,38 +3,34 @@
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
 
-.c-btn{
+.c-btn {
   text-align: center;
-   background-color: $red;
+  background-color: $red;
   color: $white;
- 
-     &:hover{
+  transition: all .4s ease-in-out;
+
+  &:hover {
     background-color: $white;
     color: $red;
   }
-  
+
 }
 
-.c-btn--head{
+.c-btn--head {
   width: 150px;
   height: 45px;
   display: grid;
   place-content: center;
-  background-color:$red;
+  background-color: $red;
   border: 0.1rem solid $red;
   color: $white;
   font-size: 1.5rem;
   line-height: calc(33 / 15);
   font-weight: 700;
-  transition: all .4s;
-  &:hover{
+  transition: all .4s ease-in-out;
+
+  &:hover {
     background-color: $white;
     color: $red;
   }
 }
-
-
-
-
-
-

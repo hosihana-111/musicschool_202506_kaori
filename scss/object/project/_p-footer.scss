@@ -10,7 +10,7 @@
   display: flex;
   justify-content: center;
   margin: 0 auto 2rem;
-  column-gap: 2.6rem;
+  column-gap: 2.3rem;
   width: 100%;
   color: $white;
 
@@ -43,7 +43,7 @@
 }
 
 .p-footer-logo {
-  margin-bottom: 1.5rem; 
+  margin-bottom: 1.8rem; 
   width: auto;
   height: auto;
   padding: 0.5rem;
@@ -74,6 +74,7 @@
   display: block;
   text-align: center;
   margin-bottom: 0.5rem;
+  letter-spacing: 0.01em;
 
   @include sp {
 
