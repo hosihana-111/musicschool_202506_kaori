@@ -5,8 +5,8 @@
 
 
 .p-result-list{
-  padding-top: 6.7rem;
-  padding-bottom: 31rem;
+  padding-top: 7.5rem;
+  padding-bottom: 35.6rem;
 
  @include sp {
         padding-top: 4.5rem;
@@ -15,12 +15,12 @@
 }
 
 .p-result-list__grid{
-  margin-top: 4rem;
+  margin-top: 4.3rem;
     display: grid;
     grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
     justify-content: center;
     column-gap: calc(106 / 880 * 100%);
-    row-gap: calc(30 / 880 * 100%);
+    row-gap: calc(33 / 880 * 100%);
 
     @include sp{
       // row-gap: calc(5 / 335 * 100%);

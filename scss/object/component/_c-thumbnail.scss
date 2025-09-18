@@ -23,6 +23,22 @@
         min-width: 9rem;
     }
 }
+.c-thumbnail__label-large {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $red;
+    min-width: 10rem;
+    height: 3rem;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include sp {
+        min-width: 9rem;
+    }
+}
 
 .c-thumbnail__label-text {
     height: 2.5rem;

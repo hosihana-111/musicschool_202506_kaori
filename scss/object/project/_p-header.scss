@@ -82,13 +82,15 @@
 }
 
 .p-header__logo-text-small {
+   font-weight: 700;
   font-size: 1.5rem;
   line-height: calc(23 / 15);
 
   @include sp {
     font-size: 1.3rem;
     line-height: calc(14 / 13);
-    letter-spacing: 0.01em;
+    letter-spacing: -0.02em;
+   margin-left: -0.4rem;
   }
 }
 
