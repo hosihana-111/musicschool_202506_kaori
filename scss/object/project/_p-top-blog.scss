@@ -16,7 +16,8 @@
 
 .p-top-blog__items {
     margin-top: 3.3rem;
-    display: flex;
+      display: grid;
+  grid-template-columns: repeat(3, 1fr);
     // justify-content: space-between;    
     width: 100%;
     gap: calc(50 / 880 * 100%);
@@ -31,7 +32,7 @@
 
 .p-top-blog__item {
     position: relative;
-    width: calc(260 / 880*100%);
+    width: 100%;
     cursor: pointer;
 
     @include sp {

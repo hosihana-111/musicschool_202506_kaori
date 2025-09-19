@@ -100,6 +100,10 @@
   font-family: inherit;
   flex-shrink: 0;
 }
+.p-faq__panel {
+  display: none;        /* jQuery slideUp/Down と相性◎ */
+  overflow: hidden;     /* margin折り畳みやチラつき防止 */
+}
 
 .p-faq__answer {
   background-color: rgba(203, 0, 0, 0.1);
@@ -107,7 +111,7 @@
   align-items: center;
    padding: 2rem 2rem 1rem 2rem;
 
-  transition: max-height 0.5s ease;
+  // transition: max-height 0.5s ease;
 
 
    @include sp {    

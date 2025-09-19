@@ -150,7 +150,7 @@ html {
 }
 
 body {
-  font-family: "YuGothic", "Yu Gothic", "Noto Sans JP", "Hiragino Kaku Gothic ProN", sans-serif;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "Noto Sans JP", "ヒラギノ角ゴ Pro W3", sans-serif;
   font-weight: 500;
   font-style: normal;
   margin: 0;
@@ -1760,6 +1760,7 @@ body.is-menu-open .c-page-top {
   height: 100%;
   background-color: rgba(80, 80, 80, 0.5);
   z-index: 1;
+  mix-blend-mode: multiply;
 }
 
 .p-fv__img {
@@ -2565,6 +2566,11 @@ body.is-menu-open .c-page-top {
       flex-shrink: 0;
 }
 
+.p-faq__panel {
+  display: none; /* jQuery slideUp/Down と相性◎ */
+  overflow: hidden; /* margin折り畳みやチラつき防止 */
+}
+
 .p-faq__answer {
   background-color: rgba(203, 0, 0, 0.1);
   display: -webkit-box;
@@ -2574,8 +2580,6 @@ body.is-menu-open .c-page-top {
       -ms-flex-align: center;
           align-items: center;
   padding: 2rem 2rem 1rem 2rem;
-  -webkit-transition: max-height 0.5s ease;
-  transition: max-height 0.5s ease;
 }
 @media (max-width: 767px) {
   .p-faq__answer {
@@ -2634,9 +2638,8 @@ body.is-menu-open .c-page-top {
 
 .p-top-blog__items {
   margin-top: 3.3rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   width: 100%;
   gap: 5.6818181818%;
 }
@@ -2656,7 +2659,7 @@ body.is-menu-open .c-page-top {
 
 .p-top-blog__item {
   position: relative;
-  width: 29.5454545455%;
+  width: 100%;
   cursor: pointer;
 }
 @media (max-width: 767px) {

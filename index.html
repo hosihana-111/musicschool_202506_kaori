@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>きたむらミュージックスクール</title>
   <meta name="description" content="「音楽で生きる」を叶えるミュージックスクール">
-  <link rel="icon" href="images/icon/favicon.svg" type="image/x-icon" sizes="32x32">
+  <link rel="icon" href="images/icon/favicon.svg" id="favicon" type="image/x-icon" sizes="32x32">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -58,7 +58,7 @@
         <div class="p-fv__inner">
           <div class="p-fv__img">
             <picture>
-              <source srcset="./images/fv/fv_pc.jpg" media="(min-width: 768px)" type="image/jpeg" >
+              <source srcset="./images/fv/fv_pc.jpg" media="(min-width: 768px)" type="image/jpeg">
               <img src="./images/fv/fv_sp.jpg" alt="「音楽で生きる」を叶えるミュージックスクール">
             </picture>
           </div>
@@ -69,7 +69,7 @@
           </div>
 
         </div>
-      </section>      
+      </section>
 
       <!-- ビジョン -->
       <section id="vision" class="p-top-vision p-vision">
@@ -269,8 +269,8 @@
                     </p>
                   </div>
                 </a>
-                
-                
+
+
               </div>
             </div>
             <button class="p-voice__swiper-button-prev">
@@ -337,9 +337,11 @@
                     <span class="p-faq__summary-q-badge" aria-hidden="true">Q</span>
                     <span class="p-faq__question">どのような生徒さんがどれぐらいの期間で稼いでいますか？</span>
                   </summary>
-                  <div class="p-faq__answer">
-                    <span class="p-faq__answer-a-badge" aria-hidden="true">A</span>
-                    <p>コンテンツが入ります。</p>
+                  <div class="p-faq__panel js-faq-panel">
+                    <div class="p-faq__answer">
+                      <span class="p-faq__answer-a-badge" aria-hidden="true">A</span>
+                      <p>コンテンツが入ります。</p>
+                    </div>
                   </div>
                 </details>
                 <details class="p-faq-accordion__item p-faq__item">
@@ -347,9 +349,11 @@
                     <span class="p-faq__summary-q-badge" aria-hidden="true">Q</span>
                     <span class="p-faq__question">途中でプランを変更することは可能ですか？</span>
                   </summary>
-                  <div class="p-faq__answer">
-                    <span class="p-faq__answer-a-badge" aria-hidden="true">A</span>
-                    <p>途中でプラン変更も可能です。毎月15日までに申請すれば翌月からプランが変更となります。</p>
+                  <div class="p-faq__panel js-faq-panel">
+                    <div class="p-faq__answer">
+                      <span class="p-faq__answer-a-badge" aria-hidden="true">A</span>
+                      <p>途中でプラン変更も可能です。毎月15日までに申請すれば翌月からプランが変更となります。</p>
+                    </div>
                   </div>
 
                 </details>
@@ -358,9 +362,11 @@
                     <span class="p-faq__summary-q-badge" aria-hidden="true">Q</span>
                     <span class="p-faq__question">入学金などの分割払いはできますか？</span>
                   </summary>
-                  <div class="p-faq__answer">
-                    <span class="p-faq__answer-a-badge" aria-hidden="true">A</span>
-                    <p>コンテンツが入ります。</p>
+                  <div class="p-faq__panel js-faq-panel">
+                    <div class="p-faq__answer">
+                      <span class="p-faq__answer-a-badge" aria-hidden="true">A</span>
+                      <p>コンテンツが入ります。</p>
+                    </div>
                   </div>
                 </details>
                 <details class="p-faq-accordion__item p-faq__item">
@@ -368,9 +374,11 @@
                     <span class="p-faq__summary-q-badge" aria-hidden="true">Q</span>
                     <span class="p-faq__question">休学することも可能ですか？</span>
                   </summary>
-                  <div class="p-faq__answer">
-                    <span class="p-faq__answer-a-badge" aria-hidden="true">A</span>
-                    <p>コンテンツが入ります。</p>
+                  <div class="p-faq__panel js-faq-panel">
+                    <div class="p-faq__answer">
+                      <span class="p-faq__answer-a-badge" aria-hidden="true">A</span>
+                      <p>コンテンツが入ります。</p>
+                    </div>
                   </div>
                 </details>
               </div>
@@ -405,7 +413,6 @@
                 </div>
               </a>
             </div>
-
 
             <div class="p-top-blog__item">
               <a href="blog_details.html" class="p-top-blog__item-link">
@@ -505,16 +512,16 @@
         </div>
       </div>
     </footer>
-    
+
     <!-- TOPに戻るボタンのjsの修正をAIに依頼 -->
 
-      <div class="p-top-btn c-fab">
-         <a href="contact_form.html" class="c-btn p-top-btn__contact">お問い合わせ</a>
-        <a href="#" class="p-top-btn__arrow " aria-label="ページ上部へ">
-          <img src="./images/icon/goto-top.svg" alt="トップへ戻る">
-        </a>
-       
-      </div>
+    <div class="p-top-btn c-fab">
+      <a href="contact_form.html" class="c-btn p-top-btn__contact">お問い合わせ</a>
+      <a href="#" class="p-top-btn__arrow " aria-label="ページ上部へ">
+        <img src="./images/icon/goto-top.svg" alt="トップへ戻る">
+      </a>
+
+    </div>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

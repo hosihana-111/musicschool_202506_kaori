@@ -53,25 +53,26 @@ function init() {
 
       const $summary = $(this);
       const $details = $summary.closest('details');
-      const $panel = $summary.next();
+      const $panel = $summary.next('.js-faq-panel');
       const willOpen = !$details.prop('open');
 
       // 他を閉じる
-      $('.js-faq-summary').not($summary).removeClass('open')
-        .next().stop(true).slideUp(SPEED)
-        .closest('details').prop('open', false);
+      $('.js-faq-summary').not($summary).each(function () {
+        const $d = $(this).closest('details');
+        const $p = $(this).next('.js-faq-panel');
+        $p.stop(true, true).slideUp(SPEED);
+        $d.prop('open', false).removeClass('is-open');
+      });
 
       if (willOpen) {
-        $details.prop('open', true);
-        $summary.addClass('open');
-        $panel.stop(true).slideDown(SPEED, function () {
-          $(this).css('display', 'flex'); // 横並び維持
-        });
-      } else {
-        $summary.removeClass('open');
-        $panel.stop(true).slideUp(SPEED, () => $details.prop('open', false));
-      }
+    $details.prop('open', true).addClass('is-open');
+    $panel.stop(true, true).slideDown(SPEED);
+  } else {
+    $panel.stop(true, true).slideUp(SPEED, () => {
+      $details.prop('open', false).removeClass('is-open');
     });
+  }
+});
   });
 }
 
