@@ -2,6 +2,7 @@
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
 
+// 共通見出し
 .c-top-title {
   font-size: 3rem; 
   font-weight: 700;
@@ -13,7 +14,7 @@
   }
  
 }
-
+// 下層ページ共通見出し
 .c-section-title {
   font-size: 2.5rem;
   line-height:1;
