@@ -30,66 +30,6 @@
     }
 }
 
-// .p-blog-details__breadcrumb-items {
-//     display: flex;
-//     align-items: center;
-//     overflow-x: auto; // ★
-//     overflow-y: hidden; // ★
-//     white-space: nowrap; // ★ 折り返さない
-//     -webkit-overflow-scrolling: touch; // iOS慣性
-//     scroll-snap-type: x proximity;
-//     scrollbar-width: none;
-//     gap: 2.3rem;
-//     list-style: none;
-//     margin: 0;
-//     padding: 0;
-//     height: 100%;
-
-// }
-
-// .p-blog-details__breadcrumb-items::-webkit-scrollbar {
-//     display: none;
-// }
-
-// .p-blog-details__breadcrumb-item {
-//     display: flex;
-//     align-items: center;
-//     white-space: nowrap;
-//     height: 100%;
-
-
-//     a {
-//         display: flex; // 行高いっぱいのクリック領域
-//         max-width: 100%;
-//         padding-block: 0;
-//         text-decoration: none;
-//         font-size: 1.6rem;
-//         line-height: calc(33 / 16);
-//         transition: all 0.3s ease;
-//         white-space: nowrap;
-//         height: 100%;
-//         align-items: center;
-
-//         &:hover {
-//             opacity: 0.5;
-//         }
-
-//         @include sp {
-//             line-height: calc(20 / 16);
-//         }
-//     }
-
-//     span {
-//         flex: 0 0 auto;
-
-
-//         @include sp {
-//             line-height: calc(20 / 16);
-
-//         }
-//     }
-// }
-
 // メイン記事
 .p-blog-details__wrapper {
     display: flex;

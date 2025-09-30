@@ -14,9 +14,9 @@
       padding-bottom: 20rem;
     }
 }
-.c-pagination li{
+.c-pagination__item{
     
-    a{
+ 
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -30,7 +30,13 @@
     color: #000000;
     transition: all 0.3s ease;
 
+   &.current {
+      color: #fff;
+      background: #000;
+    }
+
   &:hover {
+    opacity: 1;
     color: $white;
     background-color: $black;
   }
@@ -40,7 +46,7 @@
     height: 4.4rem;
   }
 
-}}
+}
 
 .c-pagination a:not(:hover) {
     text-decoration: none;
@@ -52,7 +58,7 @@
 }
 .c-pagination__dot{
      
-    padding-inline: 2rem;
+    padding-inline: 1rem;
     @include sp{
       padding-inline:0;
     }

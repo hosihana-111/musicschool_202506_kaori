@@ -42,13 +42,20 @@ body {
   margin: 0;
   box-sizing: border-box;
   font-size: 1.8rem;
+ 
+ 
 }
+ 
+
 input,
 textarea {
   line-height: 1;
   letter-spacing: 0;
 }
 
+main{
+  position: relative;
+}
 
 
 p,
@@ -95,6 +102,14 @@ a:focus:not(:focus-visible) {
 a, button, [role="button"] { -webkit-tap-highlight-color: transparent; }
 
 
+a,
+button {
+  transition: opacity 0.4s;
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
 .u-br {
   display: inline-block;
 }
@@ -104,6 +119,9 @@ a, button, [role="button"] { -webkit-tap-highlight-color: transparent; }
 }
 .gray-bg{
   background-color: #E8E8E8;
+}
+.u-flex {
+  display: flex !important;
 }
 
 

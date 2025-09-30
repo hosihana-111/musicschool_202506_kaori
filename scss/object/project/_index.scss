@@ -1,11 +1,17 @@
 // projectのエントリーポイント
 
 
-@use './p-header';
+// 前後記事ナビ
 @use './p-article-nav';
+
+// 関連記事
 @use './p-related-posts';
+
+// サイドバー
 @use './p-aside';
-@use './p-footer';
+
+// top
+
 @use './p-top-btn';
 @use './p-top-fv';
 @use './p-top-vision';
@@ -15,17 +21,24 @@
 @use './p-top-flow';
 @use './p-top-faq';
 @use './p-top-blog';
+
+// plan
 @use './p-plan-pricing';
+
+// blog
 @use './p-blog-list';
 @use './p-blog-details';
+
+// contact
 @use './p-contact-form';
 @use './p-contact-send';
+
+// 404
 @use './p-404';
+
+// search
 @use './p-search';
+
+// result
 @use './p-result-list';
 @use './p-result-details';
-
-
-
-
-

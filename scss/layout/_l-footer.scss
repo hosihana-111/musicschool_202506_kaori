@@ -4,15 +4,117 @@
 @use "../foundation/mixin" as *;
 
 
-footer {
+.l-footer {
     background-color: $red;
+    color: $white;
     text-align: center;
     padding-top: 4.5rem;
     padding-bottom: 5rem;    
-  transition: all 0.3s ease;
+    width: 100%;
     @include sp {
       padding-top: 2.5rem;
      
     }
   }
+  .l-footer-nav__lists {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 2rem;
+  column-gap: 2.3rem;
+ 
+
+  @include sp {
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    padding-top: 2.2rem;
+  }
+}
+
+.l-footer-nav__list {
+  list-style: none;
+ 
+}
+
+.l-footer-nav__list a {
+  color: $white;
+  font-size: 1.7rem;
+  line-height: 1;  
+  text-transform: capitalize;
+  height: inherit;
+  padding: 0.5rem;
+  text-transform: none; 
+ 
+}
+
+.l-footer-logo {
+  margin-bottom: 1.8rem; 
+  width: auto;
+  height: auto;
+  padding: 0.5rem;
+  display: inline-block;
+  text-align: center;
+
+
+  @include sp {
+    margin-bottom: 1rem;
+  }
+
+}
+
+.l-footer-logo img {
+  width: 3.2rem;
+  height: auto;
+  display: block;
+}
+
+.l-footer__copyright {
+  background-color: $red;
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1;
+  display: block;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.01em;
+
+  @include sp {
+
+    padding-inline: 2rem;
+    line-height: calc(20 / 15);
+    margin-bottom: 1rem;
+
+  }
+
+  @media screen and (max-width:374px) {
+    font-size: 1.4rem;
+
+  }
+}
+
+
+.l-footer__sns-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: .2rem;
+  padding: 0;
+  margin: 0;
+
+  @include sp {
+    margin-top: 1rem;
+  }
+}
+
+
+.l-footer__sns-item a {
+  // display: block;
+  list-style: none;
+  line-height: 1;
+  padding: .5rem;  
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+margin-top: auto;
   
+}

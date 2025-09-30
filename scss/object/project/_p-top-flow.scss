@@ -9,128 +9,106 @@
 
     @include sp {
         padding-top: 4.6rem;
-          padding-bottom: 1.3rem;
+        padding-bottom: 1.3rem;
     }
 
 }
 
 
 .p-top-flow__items {
-    margin-top: 5.3rem;
-    max-width: 780px;
-    margin-inline: auto;
-    list-style: none;
-    padding: 0;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5.9rem;
 
     @include sp {
-        max-width: 100%;
-        margin-top: 4.3rem;
+        row-gap: 4rem;
+    }
+}
 
+.p-flow__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include sp {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        row-gap: 1.3rem;
     }
 
-    // 縦の線
-    &::before {
-        content: "";
+}
+
+.p-flow-item__dot { 
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    border-radius: 50%;
+    background-color: $red;
+    margin: 0 5rem;
+
+    @include sp {
+        margin: 0 2rem 0 0.8rem;
+    }
+
+    span {
+        display: block;
+        height: 40.9rem;
+        width: 0.3rem;
         position: absolute;
-        top: 1rem; // 少し上から
-        bottom: -1.1rem; // 少し下まで
-        left: 1rem; // 丸の中心に合わせる        
-        width: 3px;
-        border-left: 3px solid $red;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background: $red;
 
         @include sp {
-            left: 1.8rem;
-            bottom: 1rem;
+            height: 67.4rem;
         }
     }
-    // 矢印
-    &::after {
+}
+
+.p-flow-item__dot span::after {
     content: "";
+    width: 2.2rem;
+    height: 2.2rem;
     position: absolute;
-    left: 1rem;
-    bottom: 0; /* レールの終端に合わせる（beforeのbottomと整合を） */
-    width: 24px;
-    height: 24px;
-    /* ボーダーで矢印（┘）を作る */
-    border-bottom: 3px solid $red;
-    border-right: 3px solid $red;
-    border-radius: 10%;
-    /* レール中心に合わせてY方向は少し外側へ */
-    transform: translate(-50%, 50%) rotate(45deg);
-     @include sp {
-            left: 2rem;           
-            bottom: 2.5rem;
-        
-        }
-  }
-
+    bottom: -0.15rem;
+    left: 0.15rem;
+    border: 0.3rem solid;
+    border-color: transparent transparent $red $red;
+    transform: rotate(-45deg);
+    transform-origin: left bottom;
 }
-
-.p-flow__item{
-    display: flex;
-    margin-bottom: 5.8rem;
-
-    @include sp {
-        flex-direction: column;
-        row-gap: 1.4rem;
-        margin-bottom: 4.2rem;
-    }
-
-
-    &:last-child {
-        margin-bottom: 0;
-    }
-
-}
-
 
 .p-flow-item__label {
-    width: 26.2rem;
-    float: left;
-    padding-left: 7rem;
-    position: relative;
-    // border-left: 3px $red solid;
-    font-weight: 700;
-    font-size: 2.2rem;
-    line-height: calc(33 / 22);
-    color: $red;
+    width: 19.2rem;
 
-
-    @include sp {
-        padding-left: 5rem;
-        line-height: 1;
-    }
-
-    // 丸
-    &::before {
-        content: '';
-        width: 2rem;
-        height: 2rem;
-        background: $red;
-        border-radius: 50%;
-        position: absolute;
-        top: 0.5rem;
-        left: 0;
-
-
-        @include sp {
-            top: 0;
-            left: 10px;
-        }
+    h3 {
+        font-size: 2.2rem;
+        font-weight: bold;
+        color: $red;
     }
 }
 
-.p-flow-item__desc {
-    font-size: 1.8rem;
-    line-height: calc(30 / 18);
-    margin: 0;
-    flex: 1;
 
-    @include sp {
-        font-size: 1.6rem;
-        line-height: calc(30 / 16);
-        padding-left: 5rem;
+
+.p-flow-item__desc {
+    @include pc {
+        flex: 1;
     }
 
+    @include sp {
+        width: 100%;
+        margin-left: 4.8rem;
+    }
+
+    p {
+        font-size: 1.8rem;
+        line-height: 1.6;
+
+        @include sp {
+            font-size: 1.6rem;
+            line-height: calc(30 / 16);
+        }
+    }
 }

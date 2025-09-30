@@ -102,14 +102,7 @@
     text-decoration-thickness: 1px;
     color: $black;
     font-size: 1.8rem;
-    line-height: calc(30 / 18);
-     
-    transition: all .3s ease;
-
-    &:hover {
-        text-decoration: none;
-        background: $red;
-        color: $white;
-    }
+    line-height: calc(30 / 18);   
+   
 
 }

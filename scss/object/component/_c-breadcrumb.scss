@@ -52,31 +52,7 @@
 }
 
 .c-breadcrumb__item {
-    // position: relative;
-    // display: flex;
-    // align-items: center;
-    // white-space: nowrap; // 文字を折り返さない
-
-    // a {
-    //     display: block; // ← 行高いっぱいのクリック領域
-    //     padding-block: 0.85rem; // 高さに応じて調整
-    //     text-decoration: none;
-    //     transition: all 0.3s ease;
-    //     font-size: 1.6rem;
-    //     line-height: calc(33 / 16);
-
-
-    //     &:hover {
-
-    //         opacity: 0.5;
-    //     }
-
-    //     @include sp {
-    //         padding-block: 1rem;
-    //         line-height: 1;
-    //     }
-    // }
-
+   
     display: flex;
     align-items: center;
     white-space: nowrap;
@@ -89,16 +65,12 @@
         padding-block: 0;
         text-decoration: none;
         font-size: 1.6rem;
-        line-height: calc(33 / 16);
-        transition: all 0.3s ease;
+        line-height: calc(33 / 16);        
         white-space: nowrap;
         height: 100%;
         align-items: center;
-          padding-block: 0.85rem; // 高さに応じて調整
-        
-        &:hover {
-            opacity: 0.5;
-        }
+          padding-block: 0.85rem; // 高さに応じて調整       
+       
 
         @include sp {
             line-height: calc(20 / 16);

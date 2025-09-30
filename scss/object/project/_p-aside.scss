@@ -75,8 +75,6 @@
 }
 
 .p-sidebar-widget__form input {
-  // max-width: 18rem;
-  // padding: 0.5rem;
   box-sizing: border-box;
   width: 100%;
   height: 100%;
@@ -100,7 +98,7 @@
   display: grid;
   place-items: center;
   background: $black;
-  border: 0; 
+  border: 0;
   cursor: pointer;
 
   @include sp {
@@ -108,10 +106,6 @@
     height: 5.4rem;
   }
 }
-
-
-
-
 
 // おすすめの記事投稿
 .p-sidebar-widget__popular {
@@ -137,17 +131,29 @@
 }
 
 .p-sidebar-widget__popular-thumb {
-  width: calc(95 / 250 * 100%);
-  height: 7.5rem;
-  background: #e8e8e8;
+  // width: calc(95 / 250 * 100%);
+  // height: 7.5rem;
+  // background: #e8e8e8;
 
-  @include sp {
-    width: calc(160 / 335 * 100%);
-    height: 11rem;
+  // @include sp {
+  //   width: calc(160 / 335 * 100%);
+  //   height: 11rem;
 
-  }
-
+  // }
+ width: 9.5rem;
+      @include sp {
+        width: 16rem;
+      }
+      img {
+        aspect-ratio: 95 / 75;
+        object-fit: cover;
+        @include sp {
+          aspect-ratio: 160 / 110;
+        }
+      }
 }
+
+
 
 .p-sidebar-widget__popular-text {
   flex: 1;
@@ -184,21 +190,17 @@
 }
 
 .p-sidebar-widget__category li {
-border-bottom: 1px solid $black;
-padding: 0.73rem 0;    
+  border-bottom: 1px solid $black;
+
+  // padding: 0.73rem 0;    
   a {
     display: inline-flex;
-    align-items: center;    
+    align-items: center;
     font-size: 1.7rem;
     line-height: calc(28 / 17);
     color: #222;
-     text-decoration: none;
-     padding: .2rem ;    
-     transition: all .2s ease;
+    text-decoration: none;
+    height: 4.6rem;
 
-     &:hover {
-      background: $red;
-      color: $white;
-     }
   }
 }

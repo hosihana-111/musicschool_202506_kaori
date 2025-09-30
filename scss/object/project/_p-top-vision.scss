@@ -49,14 +49,6 @@
   }
 }
 
-// * 可読性のため共通変数に */
-.p-diagram {
-  --dot: 2.4rem;
-  --line: 2px;
-  --arrowHead: 1.2rem;
-}
-
-
 .p-diagram {
   position: relative;
   margin: 0 auto;
@@ -65,66 +57,36 @@
 
 .p-diagram-img picture {
   display: block;
-  // aspect-ratio: 880 / 200; // 
+   
 }
 
 .p-diagram__contents {
   position: absolute;
   left: 50%;
-  top: vw(40, 1080);
+  top:4rem;
   transform: translateX(-50%);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: vw(18, 1080);
+  gap: 1.8rem;
   z-index: 20;
-  padding-top: vw(24, 1080);
-  margin-top: vw(18, 1080);
+  padding-top:2.4rem;
+  margin-top: 1.8rem;
 
 
   @include sp {
     gap: 1.9rem;
     padding-top: 3.2rem;
     margin-top: 3rem;
-  }
-
-
-  /* 矢印 */
-  &::before {
-    content: '';
-    width: 1.4em;
-    height: 1.4em;
-    border: 3px solid $red;
-    border-left: 0;
-    border-bottom: 0;
-    transform: rotate(-45deg);
-    transform-origin: top right;
-    position: absolute;
-    top: 0;
-    right: 50%;
-    box-sizing: border-box;
-
-  }
-
-  /* 縦線 */
-  &::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 0.4rem;
-    transform: translateX(-50%);
-    width: 2px;
-    height: 90%;
-    background: $red;
-    z-index: 100;
-  }
+  } 
 }
 
 .p-diagram__row {
   display: flex;
   align-items: center;
-  gap: vw(30, 1080);
+  column-gap: 3rem;
+
   @include sp {
     gap: 2.8rem;
   }
@@ -133,7 +95,7 @@
 .p-diagram__en {
   color: $red;
   font-weight: 700;
-  min-width: 145px;
+  min-width: 14.5rem;
   text-align: right;
   font-size: 2.5rem;
   line-height: calc(50 / 25);
@@ -146,18 +108,41 @@
 }
 
 .p-diagram__dot {
-  width: 2.4rem;
-  height: 2.4rem;
+ width: 2rem;
+      height: 2rem;
+      position: relative;
+      border-radius: 50%;
+      background-color: $red;
+
+}
+
+.p-diagram__dot span {
+  display: block;
+  width: 0.3rem;
+  height: 19rem;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
   background: $red;
-  border-radius: 50%;
-  flex-shrink: 0;
-  z-index: 15;
-  border: 3px solid #fff;
+
+  &::after {
+    content: "";
+    width: 2.2rem;
+    height: 2.2rem;
+    position: absolute;
+    top: -0.2rem;
+    left: 0.15rem;
+    border: 0.3rem solid;
+    border-color: $red transparent transparent $red;
+    transform-origin: left top;
+    transform: rotate(45deg);
+  }
 }
 
 .p-diagram__jp {
   color: #000;
-  min-width: 145px;
+  min-width: 14.5rem;
   text-align: left;
   font-size: 2.3rem;
   line-height: calc(50 / 23);
