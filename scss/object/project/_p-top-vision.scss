@@ -4,18 +4,18 @@
 @use "../../foundation/mixin" as *;
 
 .p-vision {
-  padding-top: vw(66, 1080);
-  padding-bottom: vw(75, 1080);
+  padding-top: 6.6rem;
+  padding-bottom: 7.5rem;
 
   @include sp {
     padding-top: 4.6rem;
-    padding-bottom: 4.9rem;
+    padding-bottom: 2.9rem;
   }
 }
 
 
 .p-vision__contents {
-  margin-bottom: vw(35, 1080);
+  margin-bottom: 3.5rem;
 
   @include sp {
     margin-bottom: 2rem;
@@ -28,7 +28,7 @@
   font-weight: 700;
   text-align: center;
   color: $red;
-  margin-bottom: vw(17, 1080);
+  margin-bottom: 1.7rem;
   letter-spacing: -0.02em;
 
 
@@ -50,7 +50,7 @@
 }
 
 .p-diagram {
-  position: relative;
+  
   margin: 0 auto;
   min-height: 24.7rem;
 }
@@ -60,36 +60,28 @@
    
 }
 
-.p-diagram__contents {
-  position: absolute;
-  left: 50%;
-  top:4rem;
-  transform: translateX(-50%);
+.p-diagram__items {  
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 1.8rem;
-  z-index: 20;
-  padding-top:2.4rem;
-  margin-top: 1.8rem;
+  gap: 1.7rem;
+  z-index: 20;  
+  margin-top: 2.5rem;
 
-
+  
   @include sp {
-    gap: 1.9rem;
-    padding-top: 3.2rem;
-    margin-top: 3rem;
+      margin-top: 3.9rem;
+    
   } 
 }
 
-.p-diagram__row {
+.p-diagram__item {
   display: flex;
+  justify-content: center;
   align-items: center;
   column-gap: 3rem;
-
-  @include sp {
-    gap: 2.8rem;
-  }
+ 
 }
 
 .p-diagram__en {
@@ -99,7 +91,7 @@
   text-align: right;
   font-size: 2.5rem;
   line-height: calc(50 / 25);
-  letter-spacing: -0.02em;
+ text-transform: capitalize;
 
   @include sp {
     font-size: 2rem;

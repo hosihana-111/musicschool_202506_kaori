@@ -6,26 +6,29 @@
 
 // 固定ボタンエリア
 
-// #page-top {
-//   bottom: 0;
-//   position: fixed;
-//   right: 0;
-//   z-index: 100;
-//   display: none;
-// }
+
 .p-top-btn {
-  width: 30rem;
-  height: 100%;
-  position: absolute;
-  //  position: fixed; 
-  z-index: 100;
-  display: none;
-  pointer-events:auto;
-  top: 0;
+  // width: 30rem;
+  // height: 100%;
+  // position: absolute;  
+  // z-index: 100;
+  // display: none;
+  // pointer-events: none;
+  // top: 0;
+  // right: 0;
+  position: fixed;
   right: 0;
+  bottom: 0;         /* 基本位置 */
+  width: 30rem;
+  height: auto;         /* 100%をやめる */
+  z-index: 1000;
+  display: none;        /* 表示/非表示は既存のjQueryで */
+  pointer-events: auto; /* クリック無効をやめる */
+  top: auto;  
 
   @include sp {
-    width: 33.5rem;
+    // width: 33.5rem;
+    width: 100%;
     right: initial;
     left: 50%;
     transform: translateX(-50%);
@@ -63,6 +66,9 @@
   place-content: center;
   pointer-events: auto;
 
+  @include sp {
+   margin-right: 2rem;
+  }
   img {
     width: 2.3rem;
   }

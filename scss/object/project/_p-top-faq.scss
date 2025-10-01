@@ -4,11 +4,11 @@
 @use "../../foundation/mixin" as *;
 
 .p-top-faq {
-  padding-top: 5.5rem;
+  padding-top: 6rem;
   padding-bottom: 3.5rem;
 
   @include sp {
-    padding-top: 4rem;
+    padding-top: 4.3rem;
     padding-bottom: 1rem;
   }
 }

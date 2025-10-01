@@ -53,11 +53,6 @@ textarea {
   letter-spacing: 0;
 }
 
-main{
-  position: relative;
-}
-
-
 p,
 span,
 a,
@@ -72,7 +67,7 @@ h1, h2, h3, h4, h5, h6 {
 
 main {
   padding-top: 8rem; // headerの高さ8rem; // headerの高さ分のpadding-topを追加
-  
+   position: relative;
   @include sp {
     padding-top: 5rem; // スマホではheaderの高さ(5rem)分
   }

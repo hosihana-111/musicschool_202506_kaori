@@ -5,12 +5,12 @@
 
 
 .p-top-blog {
-    padding-top: 3.5rem;
+    padding-top: 3rem;
     padding-bottom: 20.2rem;
 
     @include sp {
-         padding-top: 3rem;
-        padding-bottom: 19rem;
+         padding-top: 3.8rem;
+        padding-bottom: 18.8rem;
     }
 }
 
@@ -91,6 +91,7 @@
     
 
     @include sp {
+        margin-top: 3.8rem;
         text-align: center;
     }
 }
@@ -104,5 +105,4 @@
     font-size: 1.8rem;
     line-height: calc(30 / 18);   
    
-
 }

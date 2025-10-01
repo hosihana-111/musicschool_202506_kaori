@@ -119,6 +119,7 @@
   display: flex;
   align-items: center;
   height: var(--header-h);
+ 
 }
 
 .l-header__items {
@@ -141,7 +142,7 @@
     // height: calc(100vh - var(--header-h));
     height: (5rem * 3);
     top: var(--header-h);
-    left: 120%;
+    right: -100%;
     overflow: hidden;
     color: #fff;
     background-color: $red;
@@ -153,15 +154,19 @@
     overflow-y: auto; // ←縦はスクロール
     overflow-x: hidden; // ←横は隠す   
     -webkit-overflow-scrolling: touch;
+    transition: right 0.4s;
+     &.open {
+        right: 0;
+      }
 
   }
 }
 
-.l-header__items.active {
-  @include sp {
-    left: 20%;
-  }
-}
+// .l-header__items.open {
+//   @include sp {
+//     left: 20%;
+//   }
+// }
 
 .l-header__item {
   height: var(--header-h);

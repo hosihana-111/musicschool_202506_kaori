@@ -1,5 +1,5 @@
 "use strict";
-jQuery(function ($) {
+$(document).ready(function () {
 
 
   // function init() {
@@ -28,9 +28,9 @@ jQuery(function ($) {
         prevEl: ".p-voice__swiper-button-prev",
       },
 
-      // スライド内の<a>をクリックできるように
-      preventClicks: true,
-      preventClicksPropagation: true,
+      // クリックを防がない（行自体を消してもOK）
+      preventClicks: false,
+      preventClicksPropagation: false,
 
       // 画面幅ごとの設定
       breakpoints: {
@@ -53,11 +53,11 @@ jQuery(function ($) {
   // =============================
 
   // $(function () {
-    $(".p-faq__answer").hide();
-    $(".p-faq__item").on("click", function () {
-      $(this).find(".p-faq-item__img").toggleClass("is-active");
-      $(this).find(".p-faq__answer").slideToggle(400).toggleClass("u-flex");
-    });
+  $(".p-faq__answer").hide();
+  $(".p-faq__item").on("click", function () {
+    $(this).find(".p-faq-item__img").toggleClass("is-active");
+    $(this).find(".p-faq__answer").slideToggle(400).toggleClass("u-flex");
+  });
 
   // });
 
@@ -65,71 +65,64 @@ jQuery(function ($) {
 
   // =============================
   // topに戻るボタン
-  // =============================
-  // $(function () {
-  // const fixArea = $(".p-top-btn");
-  // $(window).on("scroll", function () {
-  //   if ($(this).scrollTop() > 100) {
-  //     fixArea.fadeIn();
-  //   } else {
-  //     fixArea.fadeOut();
-  //   }
-  // });
-   const $fab = $(".p-top-btn");
+  // ============================= 
+  const fixArea = $(".p-top-btn");
+  fixArea.hide();
   $(window).on("scroll", function () {
-    $fab.toggle($(this).scrollTop() > 100);
-  });
-  $(".p-top-btn__arrow").on("click", function (e) {
-    e.preventDefault();
-    // 好みでanimateでもOK
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    if ($(this).scrollTop() > 100) {
+      fixArea.fadeIn();
+    } else {
+      fixArea.fadeOut();
+    }
   });
 
-  // 画面の高さまで表示領域を広げる
+  fixArea.click(function () {
+    $("body,html").animate(
+      {
+        scrollTop: 0,
+      },
+      500 // 500ミリ秒かけてページトップに戻る
+    );
+    return false;
+  });
+
+  
+// フッター上に停止する挙動
+  const $fab = $(".p-top-btn").hide();
   const $footer = $(".l-footer");
-  if (window.innerHeight > $footer.offset().top + $footer.outerHeight()) {
-    console.log($footer.offset().top);
-    $footer.attr({
-      style:
-        "position:fixed; width:100%; top:" +
-        (window.innerHeight - $footer.outerHeight()) +
-        "px;",
-    });
+  const BASE = 0; // ふだんの下余白(px)
+
+  function update() {
+    const st = window.pageYOffset || document.documentElement.scrollTop;
+    const vh = window.innerHeight;
+    const ftTop = $footer[0].getBoundingClientRect().top; // フッターの画面上端
+    const overlap = Math.max(0, vh - ftTop);              // かぶり量（マイナスは0に）
+    $fab.css("bottom", BASE + overlap).toggle(st > 100);
   }
 
+  $(window).on("scroll resize", () => requestAnimationFrame(update));
+  $(".p-top-btn").on("click", ".p-top-btn__arrow", function (e) {
+    e.preventDefault();
+    $("html, body").animate({ scrollTop: 0 }, 500);
+  });
 
-
-
-
-
+  update(); // 初期実行
 
   // =============================
   // ハンバーガーメニュー操作
   // =============================
-  {
-    const $btn = $('.l-header__hamburger');
-    const $menu = $('.l-header__items');           // ← HTML/CSSと同じクラスに
-    const $links = $('.l-header__link');
+  $('.l-header__hamburger').on("click", function () {
+    if ($(this).hasClass("active")) {
+      $(this).removeClass("active");
+      $('.l-header__items').removeClass("open");
+    } else {
+      $(this).addClass("active");
+      $('.l-header__items').addClass("open");
+    }
 
-    // 初期A11y属性（任意）
-    $btn.attr({ 'aria-controls': 'global-nav', 'aria-expanded': 'false' });
+  });
 
-    $btn.on('click', function (e) {
-      e.preventDefault();
-      const open = $(this).toggleClass('active').hasClass('active');
-      $menu.toggleClass('active', open);
-      $('body').toggleClass('is-menu-open', open);
-      $btn.attr('aria-expanded', open);
-    });
-
-    // メニュー内のリンククリックで閉じる
-    $links.on('click', function () {
-      $btn.removeClass('active').attr('aria-expanded', 'false');
-      $menu.removeClass('active');
-      $('body').removeClass('is-menu-open');
-    });
-  }
-})
+});
 
 // $(init);
 
