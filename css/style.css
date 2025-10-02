@@ -768,6 +768,7 @@ body.is-menu-open .c-page-top {
 .c-btn:hover {
   background-color: #ffffff;
   color: #CB0000;
+  opacity: 1;
 }
 
 .c-btn--head {
@@ -787,6 +788,7 @@ body.is-menu-open .c-page-top {
 .c-btn--head:hover {
   background-color: #ffffff;
   color: #CB0000;
+  opacity: 1;
 }
 
 .c-thumbnail {
@@ -1192,12 +1194,6 @@ body.is-menu-open .c-page-top {
       -ms-flex-align: center;
           align-items: center;
   padding: 0.4rem 2rem;
-}
-
-.p-article-nav__heading-next {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
 }
 
 .p-article-nav__heading-prev p,
@@ -2170,10 +2166,6 @@ body.is-menu-open .c-page-top {
   .p-voice__item {
     row-gap: 2.5rem;
   }
-}
-.p-voice__item:hover {
-  -webkit-transform: translateY(-0.5rem);
-          transform: translateY(-0.5rem);
 }
 
 /* 画像枠の比率固定：PC と SP で切り替え */
@@ -3349,12 +3341,6 @@ body.is-menu-open .c-page-top {
   text-decoration-line: underline;
   text-decoration-color: #CB0000;
   text-decoration-thickness: 1px;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-.p-tab-panel__link:hover {
-  background: #CB0000;
-  color: #ffffff;
 }
 
 .p-blog-details__related-posts {
@@ -3721,6 +3707,7 @@ input[type=checkbox]:checked + span::after {
 .p-contact-form__form-submit:hover {
   color: #CB0000;
   background-color: #fff;
+  opacity: 1;
 }
 @media (max-width: 767px) {
   .p-contact-form__form-submit {
@@ -3793,6 +3780,7 @@ input[type=checkbox]:checked + span::after {
 .p-contact-send__btn:hover {
   color: #CB0000;
   background-color: #ffffff;
+  opacity: 1;
 }
 @media (max-width: 767px) {
   .p-contact-send__btn {
@@ -3865,6 +3853,7 @@ input[type=checkbox]:checked + span::after {
 .p-404__btn:hover {
   color: #CB0000;
   background-color: #ffffff;
+  opacity: 1;
 }
 @media (max-width: 767px) {
   .p-404__btn {

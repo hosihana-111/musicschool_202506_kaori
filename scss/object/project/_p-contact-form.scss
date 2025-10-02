@@ -291,7 +291,7 @@ input[type="checkbox"]:checked+span::after {
   &:hover {
     color: $red;
     background-color: #fff;
-
+    opacity: 1;
   }
 
   @include sp {
