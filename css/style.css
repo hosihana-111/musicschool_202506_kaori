@@ -1784,7 +1784,7 @@ body.is-menu-open .c-page-top {
 
 .p-vision {
   padding-top: 6.6rem;
-  padding-bottom: 7.5rem;
+  padding-bottom: 5rem;
 }
 @media (max-width: 767px) {
   .p-vision {
