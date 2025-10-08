@@ -21,6 +21,9 @@
 // Projectのindex.scssの読み込み
 @use "./object/project";
 
+// utilityのindex.scssの読み込み
+
+@use "./object/utility";
 
 // Utility
 // @use "object/utility/_align";

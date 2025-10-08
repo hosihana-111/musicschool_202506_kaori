@@ -3,7 +3,7 @@
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
 
-.c-page-visual {
+.p-child-fv {
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -14,7 +14,7 @@
 }
 
 
-.c-page-visual__img {
+.p-child-fv__img {
     position: relative;
     width: 100%;
     // height: 180px;
@@ -34,7 +34,7 @@
 
     
   }
-.c-page-visual__img::before {
+.p-child-fv__img::before {
     content: "";
     position: absolute;
     top: 0;
@@ -45,7 +45,7 @@
     z-index: 1;    
 }
 
-.c-page-visual__title {
+.p-child-fv__title {
       position: absolute;
       left: 50%;
       top: 50%;

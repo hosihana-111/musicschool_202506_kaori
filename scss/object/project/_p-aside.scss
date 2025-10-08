@@ -3,10 +3,16 @@
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
 
-
+.p-aside {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+  @include sp {
+      margin-top: 3rem;
+  }
+}
 .p-sidebar-widget {
   background: $white;
-  margin-bottom: 3rem;
 
 
 }

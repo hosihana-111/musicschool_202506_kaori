@@ -10,8 +10,10 @@
 // サイドバー
 @use './p-aside';
 
-// top
+// ヘッダー
+@use './p-header';
 
+// top
 @use './p-top-btn';
 @use './p-top-fv';
 @use './p-top-vision';
@@ -21,6 +23,9 @@
 @use './p-top-flow';
 @use './p-top-faq';
 @use './p-top-blog';
+
+// 下層ページFV
+@use './p-child-fv';
 
 // plan
 @use './p-plan-pricing';

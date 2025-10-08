@@ -27,6 +27,13 @@
        @include sp { grid-template-columns: 1fr; gap: 3.8rem; }
     }
   }
+  .p-result-list__item{
+    position: relative;
+    width: 100%;
+    @include sp{
+      width: 100%;
+    }
+  }
 
   .p-result-item-card{
     width: 100%;

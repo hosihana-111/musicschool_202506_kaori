@@ -103,14 +103,4 @@
         width: 100%;
         margin-left: 4.8rem;
     }
-
-    p {
-        font-size: 1.8rem;
-        line-height: 1.6;
-
-        @include sp {
-            font-size: 1.6rem;
-            line-height: calc(30 / 16);
-        }
-    }
 }

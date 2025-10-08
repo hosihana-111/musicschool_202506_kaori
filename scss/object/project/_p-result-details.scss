@@ -20,7 +20,7 @@
     width: 100%;
     text-align: center;
     display: block;
-
+    position: relative;
     @include sp {
 
         width: 100%;
@@ -188,7 +188,7 @@
 
     @include sp {
         margin-top: 6.2rem;
-        margin-bottom: 3rem;
+      
     }
 }
 
@@ -213,20 +213,8 @@
     }
 }
 
-.p-result-details__text{
-    margin-bottom: 1.2rem;
- 
-    @include sp {
-        margin-bottom: 0.3rem;
-    }
-}
-.p-result-details__date{
-    margin-left: 0.3rem;
 
-    @include sp {
-       
-    }
-}
+
 .p-related-posts__thumbnail-label2{
    min-width: 10rem;
 

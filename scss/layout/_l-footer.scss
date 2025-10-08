@@ -20,7 +20,7 @@
   .l-footer-nav__lists {
   display: flex;
   justify-content: center;
-  margin: 0 auto 2rem;
+  margin: 0 auto ;
   column-gap: 2.3rem;
  
 
@@ -48,7 +48,8 @@
 }
 
 .l-footer-logo {
-  margin-bottom: 1.8rem; 
+  margin-top: 2rem;
+  
   width: auto;
   height: auto;
   padding: 0.5rem;
@@ -56,10 +57,7 @@
   text-align: center;
 
 
-  @include sp {
-    margin-bottom: 1rem;
-  }
-
+  
 }
 
 .l-footer-logo img {
@@ -75,14 +73,15 @@
   line-height: 1;
   display: block;
   text-align: center;
-  margin-bottom: 0.5rem;
+  margin-top: 1.8rem; 
+  
   letter-spacing: 0.01em;
 
   @include sp {
-
+    margin-top: 1rem;
     padding-inline: 2rem;
     line-height: calc(20 / 15);
-    margin-bottom: 1rem;
+   
 
   }
 
@@ -99,7 +98,8 @@
   align-items: center;
   column-gap: .2rem;
   padding: 0;
-  margin: 0;
+
+  margin:0.5rem 0 0;
 
   @include sp {
     margin-top: 1rem;

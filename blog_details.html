@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>きたむらミュージックスクール</title>
   <meta name="description" content="「音楽で生きる」を叶えるミュージックスクール">
-  <link rel="icon" href="../images/icon/favicon.svg" type="image/x-icon" sizes="32x32">
+  <link rel="icon" href="./images/icon/favicon.svg" type="image/x-icon" sizes="32x32">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,53 +19,52 @@
 <body>
   <div id="container">
     <!-- ヘッダー -->
-    <header id="header" class="l-header">
-      <div class="l-header__inner">
-        <div class="l-header__logo">
+    <header id="header" class="p-header l-header">
+      <div class="p-header__inner">
+        <div class="p-header__logo">
           <div>
-            <a href="./index.html">
-              <span class="l-header__logo-img">
+            <a href="./index.html" class="u-opacity">
+              <span class="p-header__logo-img">
                 <img src="./images/header/header-logo.svg" alt="きたむらミュージックスクール">
               </span>
-              <span class="l-header__logo-text">きたむら<br class="pc">
-                <span class="l-header__logo-text-small">ミュージックスクール</span>
+              <span class="p-header__logo-text">きたむら<br class="pc">
+                <span class="p-header__logo-text-small">ミュージックスクール</span>
               </span>
             </a>
           </div>
         </div>
-        <button class="l-header__hamburger sp">
+        <button class="p-header__hamburger sp">
           <span></span>
           <span></span>
           <span></span>
         </button>
-        <div class="l-header__right">
-          <nav class="l-header__nav" id="global-nav" aria-label="グローバルナビゲーション">
-            <ul class="l-header__items">
-              <li class="l-header__item"><a href="./plan.html" class="l-header__link">料金</a></li>
-              <li class="l-header__item"><a href="./blog_list.html" class="l-header__link">ブログ</a></li>
-              <li class="l-header__item"><a href="./result_list.html" class="l-header__link">卒業実績</a></li>
+        <div class="p-header__right">
+          <nav class="p-header__nav" id="global-nav" aria-label="グローバルナビゲーション">
+            <ul class="p-header__items">
+              <li class="p-header__item"><a href="./plan.html" class="p-header__link u-opacity">料金</a></li>
+              <li class="p-header__item"><a href="./blog_list.html" class="p-header__link u-opacity">ブログ</a></li>
+              <li class="p-header__item"><a href="./result_list.html" class="p-header__link u-opacity">卒業実績</a></li>
             </ul>
           </nav>
-          <div class="l-header__cta pc">
+          <div class="p-header__cta pc">
             <a href="./contact_form.html" class="c-btn c-btn--head">お問い合わせ</a>
           </div>
         </div>
       </div>
     </header>
-
     <main>
       <!-- パンくずリスト -->
       <div class="c-breadcrumb__inner">
         <nav class="c-breadcrumb" aria-label="パンくずリスト">
           <ol class="c-breadcrumb__items">
             <li class="c-breadcrumb__item">
-              <a href="index.html">ホーム</a>
+              <a href="index.html" class="u-opacity">ホーム</a>
             </li>
             <li class="c-breadcrumb__item"><span>>&emsp;</span>
-              <a href="blog_list.html">ブログ</a>
+              <a href="blog_list.html" class="u-opacity">ブログ</a>
             </li>
             <li class="c-breadcrumb__item"><span>>&emsp;</span>
-              <a href="blog_list.html">ギター</a>
+              <a href="blog_list.html" class="u-opacity">ギター</a>
             </li>
             <li class="c-breadcrumb__item" aria-current="page">
               <span>>&emsp;</span>アルペジオが劇的に向上する３つの習慣
@@ -79,11 +78,13 @@
         <div class="p-blog-details__wrapper">
           <article id="article" class="p-blog-details__article">
             <div class="p-blog-details__tabs">
+
+              <!-- 記事01 -->
               <section class="p-blog-details__content01">
                 <div class="p-blog-details__tab_panel p-tab-panel">
                   <div class="c-thumbnail p-tab-panel__eyecatch">
                     <div class="c-thumbnail__label">
-                      <p class="c-thumbnail__label-text">ギター</p>
+                      <p class="c-label">ギター</p>
                     </div>
                     <div class="c-thumbnail-img">
                       <picture>
@@ -93,15 +94,13 @@
                     </div>
                   </div>
 
-                  <!-- 記事 -->
-
                   <h1 class="p-tab-panel__title">アルペジオが劇的に向上する３つの習慣</h1>
                   <time class="p-tab-panel__date" datetime="0000-00-00">0000.00.00</time>
 
                   <!--  SNSボタン -->
                   <ul class="p-tab-panel__sns-box">
                     <li class="p-tab-panel__sns-btn">
-                      <a href="">
+                      <a href="" target="_blank" rel="noopener noreferrer" class="u-opacity">
                         <picture>
                           <source media="(min-width: 768px)" srcset="./images/blog_details/facebook_btn.svg">
                           <img src="./images/blog_details/facebook_btn-sp.svg" alt="facebook">
@@ -109,7 +108,7 @@
                       </a>
                     </li>
                     <li class="p-tab-panel__sns-btn">
-                      <a href="">
+                      <a href="" target="_blank" rel="noopener noreferrer" class="u-opacity">
                         <picture>
                           <source media="(min-width: 768px)" srcset="./images/blog_details/twitter_btn.svg">
                           <img src="./images/blog_details/twitter_btn-sp.svg" alt="twitter">
@@ -117,7 +116,7 @@
                       </a>
                     </li>
                     <li class="p-tab-panel__sns-btn">
-                      <a href="">
+                      <a href="" target="_blank" rel="noopener noreferrer" class="u-opacity">
                         <picture>
                           <source media="(min-width: 768px)" srcset="./images/blog_details/hatena_btn.svg">
                           <img src="./images/blog_details/hatena_btn-sp.svg" alt="hatena">
@@ -125,7 +124,7 @@
                       </a>
                     </li>
                     <li class="p-tab-panel__sns-btn">
-                      <a href="">
+                      <a href="" target="_blank" rel="noopener noreferrer" class="u-opacity">
                         <picture>
                           <source media="(min-width: 768px)" srcset="./images/blog_details/line_btn.svg">
                           <img src="./images/blog_details/line_btn-sp.svg" alt="line">
@@ -133,7 +132,7 @@
                       </a>
                     </li>
                     <li class="p-tab-panel__sns-btn">
-                      <a href="">
+                      <a href="" target="_blank" rel="noopener noreferrer" class="u-opacity">
                         <picture>
                           <source media="(min-width: 768px)" srcset="./images/blog_details/pocket_btn.svg">
                           <img src="./images/blog_details/pocket_btn-sp.svg" alt="pocket">
@@ -141,7 +140,7 @@
                       </a>
                     </li>
                   </ul>
-                  <p class="p-tab-panel__text">
+                  <p class="p-tab-panel__text c-text">
                     本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
                 </div>
               </section>
@@ -158,28 +157,29 @@
                     <img src="./images/blog_details/panel___image-sp.jpg" alt="ピアノを演奏する講師と犬">
                   </picture>
                 </div>
-                <ul class="p-tab-panel___lists">
+                <ul class="p-tab-panel___lists c-text">
                   <li>リストが入ります</li>
                   <li>リストが入ります</li>
                   <li>リストが入ります</li>
                 </ul>
               </section>
+              <hr>
 
-              <!-- 記事 -->
+              <!-- 記事03 -->
               <section class="p-blog-details__content03">
                 <h3 class="p-tab-panel__subheading">H3見出しが入ります。H3見出しが入ります。</h3>
                 <!-- 引用ブロック -->
                 <blockquote class="p-tab-panel__blockquote c-blockquote">
                   <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
                 </blockquote>
-                <a class="p-tab-panel__link" href="">テキストリンク</a>
+                <a href="" class="p-tab-panel__link u-opacity">テキストリンク</a>
               </section>
             </div>
 
             <!-- 前後記事ナビ -->
             <section class="p-blog-details__article-nav p-article-nav">
               <div class="p-article-nav__item-prev">
-                <a href="" >
+                <a href="" class="u-opacity">
                   <div class="p-article-nav__heading-prev">
                     <span>◀</span>
                     <p>前の記事</p>
@@ -193,7 +193,7 @@
                 </a>
               </div>
               <div class="p-article-nav__item-next">
-                <a href="" >
+                <a href="" class="u-opacity">
                   <div class="p-article-nav__heading-next">
                     <p>次の記事</p>
                     <span>▶</span>
@@ -212,10 +212,10 @@
             <section class="p-blog-details__related-posts p-related-posts">
               <h3 class="p-related-posts__title">関連記事</h3>
               <div class="p-related-posts__items">
-                <a href="./blog_details.html" class="p-related-posts__item">
+                <a href="./blog_details.html" class="p-related-posts__item u-opacity">
                   <div class="c-thumbnail p-blog-details__thumbnail p-related-posts__thumbnail">
-                    <div class="p-related-posts__thumbnail-label   c-thumbnail__label">
-                      <p class="c-thumbnail__label-text">ギター</p>
+                    <div class="  c-thumbnail__label">
+                      <p class="c-label">ギター</p>
                     </div>
                     <div class="p-related-posts__eye-catch c-thumbnail-img">
                       <picture>
@@ -230,10 +230,10 @@
                   </div>
                 </a>
 
-                <a href="./blog_details.html" class="p-related-posts__item">
+                <a href="./blog_details.html" class="p-related-posts__item u-opacity">
                   <div class="c-thumbnail p-blog-details__thumbnail p-related-posts__thumbnail">
-                    <div class="p-related-posts__thumbnail-label  c-thumbnail__label">
-                      <p class="c-thumbnail__label-text">ギター</p>
+                    <div class=" c-thumbnail__label">
+                      <p class="c-label">ギター</p>
                     </div>
                     <div class="p-related-posts__eye-catch c-thumbnail-img">
                       <picture>
@@ -248,10 +248,10 @@
                   </div>
                 </a>
 
-                <a href="./blog_details.html" class="p-related-posts__item">
+                <a href="./blog_details.html" class="p-related-posts__item u-opacity">
                   <div class="c-thumbnail p-blog-details__thumbnail p-related-posts__thumbnail">
-                    <div class="p-related-posts__thumbnail-label  c-thumbnail__label">
-                      <p class="c-thumbnail__label-text">ギター</p>
+                    <div class=" c-thumbnail__label">
+                      <p class="c-label">ギター</p>
                     </div>
                     <div class="p-related-posts__eye-catch c-thumbnail-img">
                       <picture>
@@ -295,21 +295,21 @@
               <h2 class="p-sidebar-widget__title">おすすめの記事</h2>
               <ul class="p-sidebar-widget__popular">
                 <li>
-                  <a href="./blog_details.html">
+                  <a href="./blog_details.html" class="u-opacity">
                     <div class="p-sidebar-widget__popular-thumb"><img src="./images/blog_details/blog01.jpg"
                         alt="アコースティックギターを弾く人"></div>
                     <p class="p-sidebar-widget__popular-text">アルペジオが劇的に向上する3つの習慣</p>
                   </a>
                 </li>
                 <li>
-                  <a href="./blog_details.html">
+                  <a href="./blog_details.html" class="u-opacity">
                     <div class="p-sidebar-widget__popular-thumb"><img src="./images/blog_details/blog01.jpg"
                         alt="アコースティックギターを弾く人"></div>
                     <p class="p-sidebar-widget__popular-text">アルペジオが劇的に向上する3つの習慣</p>
                   </a>
                 </li>
                 <li>
-                  <a href="./blog_details.html">
+                  <a href="./blog_details.html" class="u-opacity">
                     <div class="p-sidebar-widget__popular-thumb"><img src="./images/blog_details/blog01.jpg"
                         alt="アコースティックギターを弾く人"></div>
                     <p class="p-sidebar-widget__popular-text">アルペジオが劇的に向上する3つの習慣</p>
@@ -322,27 +322,29 @@
             <section class="p-sidebar-widget">
               <h2 class="p-sidebar-widget__title">カテゴリー</h2>
               <ul class="p-sidebar-widget__category">
-                <li><a href="">カテゴリー</a></li>
-                <li><a href="">カテゴリー</a></li>
-                <li><a href="">カテゴリー</a></li>
-                <li><a href="">カテゴリー</a></li>
-                <li><a href="">カテゴリー</a></li>
+                <li><a href="" class="u-opacity">カテゴリー</a></li>
+                <li><a href="" class="u-opacity">カテゴリー</a></li>
+                <li><a href="" class="u-opacity">カテゴリー</a></li>
+                <li><a href="" class="u-opacity">カテゴリー</a></li>
+                <li><a href="" class="u-opacity">カテゴリー</a></li>
               </ul>
             </section>
           </aside>
         </div>
       </div>
+
+      <!-- TOPに戻るボタンのjsの修正をAIに依頼 -->
+      <div class="p-top-btn">
+        <div class="p-top-btn__bg">
+          <a href="#" class="p-top-btn__arrow u-opacity " aria-label="ページ上部へ">
+            <img src="./images/icon/goto-top.svg" alt="トップへ戻る">
+          </a>
+          <a href="./contact_form.html" class="c-btn p-top-btn__contact u-opacity">お問い合わせ</a>
+        </div>
+      </div>
     </main>
 
-    <!-- TOPに戻るボタンのjsの修正をAIに依頼 -->
-    <div class="p-top-btn">
-      <div class="p-top-btn__bg">
-        <a href="#" class="p-top-btn__arrow " aria-label="ページ上部へ">
-          <img src="./images/icon/goto-top.svg" alt="トップへ戻る">
-        </a>
-        <a href="./contact_form.html" class="c-btn p-top-btn__contact">お問い合わせ</a>
-      </div>
-    </div>
+
 
     <!-- フッター -->
     <footer class="l-footer">
@@ -350,40 +352,41 @@
         <nav class="l-footer__nav l-footer-nav" aria-label="フッターナビゲーション">
           <ul class="l-footer-nav__lists">
             <li class="l-footer-nav__list">
-              <a href="./index.html">ホーム</a>
+              <a href="./index.html" class="u-opacity">ホーム</a>
             </li>
             <li class="l-footer-nav__list">
-              <a href="./plan.html">料金</a>
+              <a href="./plan.html" class="u-opacity">料金</a>
             </li>
             <li class="l-footer-nav__list">
-              <a href="./blog_list.html">ブログ</a>
+              <a href="./blog_list.html" class="u-opacity">ブログ</a>
             </li>
             <li class="l-footer-nav__list">
-              <a href="./result_list.html">卒業実績</a>
+              <a href="./result_list.html" class="u-opacity">卒業実績</a>
             </li>
           </ul>
         </nav>
-        <a href="./index.html" class="l-footer-logo"><img src="./images/icon/logo-white.svg" alt="きたむらミュージックスクール"></a>
+        <a href="./index.html" class="l-footer-logo u-opacity"><img src="./images/icon/logo-white.svg"
+            alt="きたむらミュージックスクール"></a>
         <p class="l-footer__copyright">Copyright&copy;0000 KITAMURA music school Inc. All Rights</p>
         <div class="l-footer__sns">
           <ul class="l-footer__sns-items">
             <li class="l-footer__sns-item">
-              <a href="" target="_blank" rel="noopener noreferrer">
+              <a href="" target="_blank" rel="noopener noreferrer" class="u-opacity">
                 <img src="./images/icon/icon-twitter.svg" alt="twitterを開く">
               </a>
             </li>
             <li class="l-footer__sns-item">
-              <a href="" target="_blank" rel="noopener noreferrer">
+              <a href="" target="_blank" rel="noopener noreferrer" class="u-opacity">
                 <img src="./images/icon/icon-facebook.svg" alt="facebookを開く">
               </a>
             </li>
             <li class="l-footer__sns-item">
-              <a href="" target="_blank" rel="noopener noreferrer">
+              <a href="" target="_blank" rel="noopener noreferrer" class="u-opacity">
                 <img src="./images/icon/icon-youtube.svg" alt="youtubeを開く">
               </a>
             </li>
             <li class="l-footer__sns-item">
-              <a href="" target="_blank" rel="noopener noreferrer">
+              <a href="" target="_blank" rel="noopener noreferrer" class="u-opacity">
                 <img src="./images/icon/icon-instagram.svg" alt="instagramを開く">
               </a>
             </li>
@@ -391,12 +394,11 @@
         </div>
       </div>
     </footer>
-
   </div>
+
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="js/main.js"></script>
 </body>
-
 
 </html>

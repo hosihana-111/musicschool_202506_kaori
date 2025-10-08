@@ -8,7 +8,7 @@
 .p-blog-details__breadcrumb-inner {
     width: 100%;
     background-color: #E8E8E8;
-    
+
 
 }
 
@@ -59,25 +59,16 @@
     }
 }
 
-// メイン記事
-// .p-blog-details__tabs {
-//     margin-bottom: 3.3rem;
-
-//     @include sp {
-//         margin-bottom: 4rem;
-//     }
-// }
-
-.p-blog-details__content01 {
-    margin-bottom: 3.3rem;
-
-    @include sp {
-        margin-bottom: 4rem;
-    }
+// 記事01
+.p-tab-panel__eyecatch {
+    width: 100%;
+    position: relative;
 }
+
+
 .p-tab-panel__title {
     margin-top: 4.6rem;
-    margin-bottom: 0.5rem;
+
     font-size: 2.5rem;
     font-weight: 700;
     line-height: calc(40 / 25);
@@ -90,22 +81,22 @@
 
 .p-tab-panel__date {
     display: block;
-    margin-bottom: 2.1rem;
     letter-spacing: -0.02em;
+    margin-top: 0.5rem;
 
-    @include sp {
-        margin-bottom: 2.2rem;
-    }
+    @include sp {}
 }
 
 // SNSボタン
 .p-tab-panel__sns-box {
     display: flex;
     gap: 4px;
-    margin-bottom: 4rem;
+    margin-top: 2.1rem;
+
 
     @include sp {
-        margin-bottom: 2rem;
+        margin-top: 2.2rem;
+
     }
 }
 
@@ -126,21 +117,21 @@
 }
 
 .p-tab-panel__text {
-    font-size: 1.8rem;
-    line-height: calc(30 / 18);
+       margin-top: 4rem;
 
     @include sp {
-        font-size: 1.6rem;
-        line-height: calc(30 / 16);
+        margin-top: 2rem;
     }
 }
 
 // 記事02
 .p-blog-details__content02 {
-    padding-bottom: 3.9rem;
-    border-bottom: 0.5px solid $black;
+    // padding-bottom: 3.9rem;
+    // border-bottom: 0.5px solid $black;
+    margin-top: 3.3rem;
 
     @include sp {
+        margin-top: 4rem;
         padding-bottom: 3.5rem;
     }
 
@@ -150,7 +141,7 @@
     font-size: 2rem;
     font-weight: 700;
     line-height: calc(40 / 20);
-    margin-bottom: 1.7rem;
+   
 
     @include sp {
         line-height: calc(30 / 20);
@@ -159,12 +150,10 @@
 
 .p-tab-panel__image {
     margin-top: 1.6rem;
-    margin-bottom: 2.8rem;
     width: calc(335 / 600 *100%);
 
     @include sp {
         margin-top: 3.9rem;
-        margin-bottom: 2.7rem;
         width: 100%;
 
     }
@@ -173,26 +162,19 @@
 .p-tab-panel___lists {
     list-style: disc;
     margin-left: 2rem;
+    margin-top: 2.8rem;
 
-    li {
-        font-size: 1.8rem;
-        line-height: calc(30 / 18);
+    @include sp {
+        margin-top: 2.7rem;
+    }   
+}
 
-        @include sp {
-            font-size: 1.6rem;
-            line-height: calc(30 / 16);
-        }
-    }
+.p-blog-details__tabs hr{
+    margin-block:4.1rem ;
 }
 
 // 記事03
-.p-blog-details__content03 {
-    margin-top: 5.3rem;
 
-    @include sp {
-        margin-top: 5.1rem;
-    }
-}
 
 .p-tab-panel__subheading {
     font-size: 2rem;
@@ -205,7 +187,8 @@
 
     @include sp {
         line-height: calc(30 / 20);
-        margin-bottom: 2rem;
+       
+        
     }
 }
 
@@ -229,18 +212,20 @@
     text-decoration-line: underline;
     text-decoration-color: $red;
     text-decoration-thickness: 1px;
-   
+
 }
 
- 
+
 
 // 関連記事
 .p-blog-details__related-posts {
     margin-top: 9rem;
+
     @include sp {
         margin-top: 6.2rem;
     }
 }
+
 .p-blog-details__thumbnail {
     position: relative;
     flex-shrink: 0; // 縮まないように
@@ -251,6 +236,3 @@
     }
 }
 
-.p-blog-details__related-text{
-    margin-bottom: 1.5rem;
-}

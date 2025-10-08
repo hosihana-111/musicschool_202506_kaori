@@ -17,14 +17,10 @@
 
 
 .p-404__container-text {
-  text-align: center;
-  font-size: 1.8rem;
-  line-height: calc(30 / 18);
+  text-align: center; 
   margin: 0 auto;
 
   @include sp {
-    font-size: 1.6rem;
-    line-height: calc(30 / 16);
     text-align: left;
   }
 
@@ -50,24 +46,14 @@
   place-items: center;
   width: 100%;
   height: 5rem;
-  background: $red;
-  color: $white;
+ 
   border: 1px solid $red;
   font-size: 2.5rem;
   line-height: calc(33 / 25);
   font-weight: 700;
   cursor: pointer;
   text-decoration: none;
-  transition: all 0.3s ease-in-out;
 
-
-
-  &:hover {
-    color: $red;
-    background-color: $white;
-    opacity: 1;
-
-  }
  
   @include sp {
     font-size: 2rem;

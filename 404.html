@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>きたむらミュージックスクール</title>
   <meta name="description" content="「音楽で生きる」を叶えるミュージックスクール">
-  <link rel="icon" href="../images/icon/favicon.svg" type="image/x-icon" sizes="32x32">
+  <link rel="icon" href="./images/icon/favicon.svg" type="image/x-icon" sizes="32x32">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,34 +19,34 @@
 <body>
   <div id="container">
     <!-- ヘッダー -->
-    <header id="header" class="l-header">
-      <div class="l-header__inner">
-        <div class="l-header__logo">
+    <header id="header" class="p-header l-header">
+      <div class="p-header__inner">
+        <div class="p-header__logo">
           <div>
-            <a href="./index.html">
-              <span class="l-header__logo-img">
+            <a href="./index.html" class="u-opacity">
+              <span class="p-header__logo-img">
                 <img src="./images/header/header-logo.svg" alt="きたむらミュージックスクール">
               </span>
-              <span class="l-header__logo-text">きたむら<br class="pc">
-                <span class="l-header__logo-text-small">ミュージックスクール</span>
+              <span class="p-header__logo-text">きたむら<br class="pc">
+                <span class="p-header__logo-text-small">ミュージックスクール</span>
               </span>
             </a>
           </div>
         </div>
-        <button class="l-header__hamburger sp">
+        <button class="p-header__hamburger sp">
           <span></span>
           <span></span>
           <span></span>
         </button>
-        <div class="l-header__right">
-          <nav class="l-header__nav" id="global-nav" aria-label="グローバルナビゲーション">
-            <ul class="l-header__items">
-              <li class="l-header__item"><a href="./plan.html" class="l-header__link">料金</a></li>
-              <li class="l-header__item"><a href="./blog_list.html" class="l-header__link">ブログ</a></li>
-              <li class="l-header__item"><a href="./result_list.html" class="l-header__link">卒業実績</a></li>
+        <div class="p-header__right">
+          <nav class="p-header__nav" id="global-nav" aria-label="グローバルナビゲーション">
+            <ul class="p-header__items">
+              <li class="p-header__item"><a href="./plan.html" class="p-header__link u-opacity">料金</a></li>
+              <li class="p-header__item"><a href="./blog_list.html" class="p-header__link u-opacity">ブログ</a></li>
+              <li class="p-header__item"><a href="./result_list.html" class="p-header__link u-opacity">卒業実績</a></li>
             </ul>
           </nav>
-          <div class="l-header__cta pc">
+          <div class="p-header__cta pc">
             <a href="./contact_form.html" class="c-btn c-btn--head">お問い合わせ</a>
           </div>
         </div>
@@ -55,15 +55,16 @@
 
 
     <main>
-      <section class="c-page-visual">
-        <div class="c-page-visual__img">
+      <!-- FV -->
+      <div class="p-child-fv">
+        <div class="p-child-fv__img">
           <picture>
             <source media="(min-width: 768px)" srcset="./images/404/404_fv.jpg">
             <img src="./images/404/404_fv-sp.jpg" alt="404ページ">
           </picture>
-          <h1 class="c-page-visual__title">404 not fonud</h1>
+          <h1 class="p-child-fv__title">404 not fonud</h1>
         </div>
-      </section>
+      </div>
 
 
 
@@ -71,11 +72,11 @@
       <section id="404" class="p-404">
         <div class="p-404__inner l-inner">
           <div class="p-404__container">
-            <p class="p-404__container-text">
+            <p class="p-404__container-text c-text">
               申し訳ございませんが、お探しのページが見つかりませんでした。<br>お探しのページは一時的に表示ができない状態にあるか、移動または削除された可能性があります。
             </p>
             <div class="p-404__btn-container">
-              <a href="index.html" class="p-404__btn" aria-label="ホームへ戻る">ホームへ戻る</a>
+              <a href="index.html" class="p-404__btn c-btn" aria-label="ホームへ戻る">ホームへ戻る</a>
             </div>
           </div><!-- contact-send__container -->
         </div><!-- inner -->
@@ -89,41 +90,41 @@
         <nav class="l-footer__nav l-footer-nav" aria-label="フッターナビゲーション">
           <ul class="l-footer-nav__lists">
             <li class="l-footer-nav__list">
-              <a href="./index.html">ホーム</a>
+              <a href="./index.html" class="u-opacity">ホーム</a>
             </li>
             <li class="l-footer-nav__list">
-              <a href="./plan.html">料金</a>
+              <a href="./plan.html" class="u-opacity">料金</a>
             </li>
             <li class="l-footer-nav__list">
-              <a href="./blog_list.html">ブログ</a>
+              <a href="./blog_list.html" class="u-opacity">ブログ</a>
             </li>
             <li class="l-footer-nav__list">
-              <a href="./result_list.html">卒業実績</a>
+              <a href="./result_list.html" class="u-opacity">卒業実績</a>
             </li>
           </ul>
         </nav>
-        <a href="./index.html" class="l-footer-logo"><img src="./images/icon/logo-white.svg" alt="きたむらミュージックスクール"></a>
-
+        <a href="./index.html" class="l-footer-logo u-opacity"><img src="./images/icon/logo-white.svg"
+            alt="きたむらミュージックスクール"></a>
         <p class="l-footer__copyright">Copyright&copy;0000 KITAMURA music school Inc. All Rights</p>
         <div class="l-footer__sns">
           <ul class="l-footer__sns-items">
             <li class="l-footer__sns-item">
-              <a href="" target="_blank" rel="noopener noreferrer">
+              <a href="" target="_blank" rel="noopener noreferrer" class="u-opacity">
                 <img src="./images/icon/icon-twitter.svg" alt="twitterを開く">
               </a>
             </li>
             <li class="l-footer__sns-item">
-              <a href="" target="_blank" rel="noopener noreferrer">
+              <a href="" target="_blank" rel="noopener noreferrer" class="u-opacity">
                 <img src="./images/icon/icon-facebook.svg" alt="facebookを開く">
               </a>
             </li>
             <li class="l-footer__sns-item">
-              <a href="" target="_blank" rel="noopener noreferrer">
+              <a href="" target="_blank" rel="noopener noreferrer" class="u-opacity">
                 <img src="./images/icon/icon-youtube.svg" alt="youtubeを開く">
               </a>
             </li>
             <li class="l-footer__sns-item">
-              <a href="" target="_blank" rel="noopener noreferrer">
+              <a href="" target="_blank" rel="noopener noreferrer" class="u-opacity">
                 <img src="./images/icon/icon-instagram.svg" alt="instagramを開く">
               </a>
             </li>

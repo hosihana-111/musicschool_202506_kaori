@@ -7,12 +7,13 @@
   text-align: center;
   background-color: $red;
   color: $white;
+   border: 1px solid $red;
   transition: all .4s ease-in-out;
 
   &:hover {
     background-color: $white;
     color: $red;
-    opacity: 1;
+   
   }
 
 }
@@ -33,6 +34,6 @@
   &:hover {
     background-color: $white;
     color: $red;
-    opacity: 1;
+  
   }
 }

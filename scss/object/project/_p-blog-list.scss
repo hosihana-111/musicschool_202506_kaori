@@ -89,11 +89,11 @@
     font-size: 2rem;
     line-height: calc(25 / 20);
     font-weight: 700;
-    margin-bottom:0.2rem;
+    
 
     @include sp {
         line-height: calc(30 / 20);
-        margin-bottom: 0.5rem;
+       
     }
 }
 
@@ -101,25 +101,27 @@
     display: block;
     font-size: 1.7rem;
     line-height: calc(30 / 17);
-    margin-bottom: 1.2rem;
+    margin-top:0.2rem;
+   
 
     @include sp {
         text-align: right;
-        margin-bottom: 1rem;
+         margin-top: 0.5rem;
+        
     }
 }
 
 .p-blog-list__excerpt {
-    font-size: 1.8rem;
-    line-height: calc(30 / 18);
+   
     display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   overflow: hidden;
+   margin-top: 1.2rem;
 
     @include sp {
-        font-size: 1.6rem;
-        line-height: calc(30 / 16);
+       
         text-align: left;
+        margin-top: 1rem;
     }
 }

@@ -1,14 +1,20 @@
 @charset "UTF-8";
 @use './reset' as*;
-@use './variable' as * ;
+@use './variable' as *;
 @use './mixin' as *;
 
-  
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+}
 
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 0;
 }
 
 html {
@@ -18,34 +24,39 @@ html {
   scroll-padding-top: 85px;
   word-break: break-all;
 
-    //375px~767px
-    font-size: 62.5%;
-      
+  //375px~767px
+  font-size: 62.5%;
 
-    //768~940（inner）
-    @media(min-width: 768px) and (max-width: 940px){
-      font-size: calc(10 / 940 * 100vw);
-    }
-    
-    //940px~
-    @media (min-width: 940px) {
-      font-size: 10px;
-    }
-    @media(max-width:375px) {
-      font-size: calc(10 /375 * 100vw);
-    }
+
+  //768~940（inner）
+  @media(min-width: 768px) and (max-width: 940px) {
+    font-size: calc(10 / 940 * 100vw);
+  }
+
+  //940px~
+  @media (min-width: 940px) {
+    font-size: 10px;
+  }
+
+  @media(max-width:375px) {
+    font-size: calc(10 /375 * 100vw);
+  }
 }
+
 body {
-   font-family: $font-serif;
+  font-family: $font-gothic;
   font-weight: 500;
   font-style: normal;
   margin: 0;
   box-sizing: border-box;
   font-size: 1.8rem;
- 
- 
+  margin-top: 8rem;
+@include sp {
+  margin-top: 5rem;
 }
- 
+
+}
+
 
 input,
 textarea {
@@ -60,21 +71,23 @@ li,
 dt,
 dd,
 label,
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: inherit;
   letter-spacing: inherit;
 }
 
 main {
-  padding-top: 8rem; // headerの高さ8rem; // headerの高さ分のpadding-topを追加
-   position: relative;
-  @include sp {
-    padding-top: 5rem; // スマホではheaderの高さ(5rem)分
-  }
+  position: relative;  
 }
+
 #container {
   width: 100%;
-  overflow: hidden;
+  
 }
 
 img {
@@ -85,36 +98,51 @@ img {
 
 a {
   text-decoration: none;
-  outline: none; /* すべて消す */
+  outline: none;
+  /* すべて消す */
   -webkit-tap-highlight-color: transparent;
 }
+
 a:focus:not(:focus-visible) {
   outline: none;
-  a:active {
-  background-color: transparent; /* 押下時の色変化を打ち消す */
-} /* マウスクリック時は消す */
-}
-a, button, [role="button"] { -webkit-tap-highlight-color: transparent; }
 
+  a:active {
+    background-color: transparent;
+    /* 押下時の色変化を打ち消す */
+  }
+
+  /* マウスクリック時は消す */
+}
 
 a,
-button {
-  transition: opacity 0.4s;
-  &:hover {
-    opacity: 0.6;
-  }
+button,
+[role="button"] {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+  border-top-width: 1px;
+  margin: 0;
+  clear: both;
+  color: inherit;
 }
 
 .u-br {
   display: inline-block;
 }
 
-.section-bg{
+.section-bg {
   background-color: $red;
 }
-.gray-bg{
+
+.gray-bg {
   background-color: #E8E8E8;
 }
+
 .u-flex {
   display: flex !important;
 }

@@ -8,27 +8,26 @@
 
 
 .p-top-btn {
-  // width: 30rem;
-  // height: 100%;
-  // position: absolute;  
-  // z-index: 100;
-  // display: none;
-  // pointer-events: none;
-  // top: 0;
-  // right: 0;
-  position: fixed;
-  right: 0;
-  bottom: 0;         /* 基本位置 */
   width: 30rem;
-  height: auto;         /* 100%をやめる */
-  z-index: 1000;
+  height: 100%;
+  position: absolute;  
+  display: none;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  // position: fixed;
+  // right: 0;
+  // bottom: 0;         /* 基本位置 */
+  // width: 30rem;
+  // height: auto;         /* 100%をやめる */
+  // z-index: 1000;
   display: none;        /* 表示/非表示は既存のjQueryで */
   pointer-events: auto; /* クリック無効をやめる */
-  top: auto;  
+
 
   @include sp {
-    // width: 33.5rem;
-    width: 100%;
+    width: 33.5rem;
+    // width: 100%;
     right: initial;
     left: 50%;
     transform: translateX(-50%);
@@ -75,6 +74,7 @@
 }
 
 .p-top-btn__contact {
+ 
   display: grid;
   place-content: center;
   border: 0.1rem solid $red;
@@ -85,14 +85,25 @@
   font-size: 2rem;
   line-height: calc(33 / 20);
   letter-spacing: 0.2rem;
-  pointer-events: auto;
+  pointer-events: all;
   cursor: pointer;
+
+  background-color: $red;
+  color: $white;
+  
+  transition: all .4s ease-in-out;
 
   @include sp {
     width: 33.5rem;
     margin: 0 auto;
   }
 
+  
+  &:hover {
+    background-color: $white;
+    color: $red;
+   
+  }
 }
 
 

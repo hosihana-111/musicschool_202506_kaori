@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>きたむらミュージックスクール</title>
   <meta name="description" content="「音楽で生きる」を叶えるミュージックスクール">
-  <link rel="icon" href="../images/icon/favicon.svg" type="image/x-icon" sizes="32x32">
+  <link rel="icon" href="./images/icon/favicon.svg" type="image/x-icon" sizes="32x32">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,34 +18,35 @@
 
 <body>
   <div id="container">
-    <header id="header" class="l-header">
-      <div class="l-header__inner">
-        <div class="l-header__logo">
+    <!-- ヘッダー -->
+    <header id="header" class="p-header l-header">
+      <div class="p-header__inner">
+        <div class="p-header__logo">
           <div>
-            <a href="./index.html">
-              <span class="l-header__logo-img">
+            <a href="./index.html" class="u-opacity">
+              <span class="p-header__logo-img">
                 <img src="./images/header/header-logo.svg" alt="きたむらミュージックスクール">
               </span>
-              <span class="l-header__logo-text">きたむら<br class="pc">
-                <span class="l-header__logo-text-small">ミュージックスクール</span>
+              <span class="p-header__logo-text">きたむら<br class="pc">
+                <span class="p-header__logo-text-small">ミュージックスクール</span>
               </span>
             </a>
           </div>
         </div>
-        <button class="l-header__hamburger sp">
+        <button class="p-header__hamburger sp">
           <span></span>
           <span></span>
           <span></span>
         </button>
-        <div class="l-header__right">
-          <nav class="l-header__nav" id="global-nav" aria-label="グローバルナビゲーション">
-            <ul class="l-header__items">
-              <li class="l-header__item"><a href="./plan.html" class="l-header__link">料金</a></li>
-              <li class="l-header__item"><a href="./blog_list.html" class="l-header__link">ブログ</a></li>
-              <li class="l-header__item"><a href="./result_list.html" class="l-header__link">卒業実績</a></li>
+        <div class="p-header__right">
+          <nav class="p-header__nav" id="global-nav" aria-label="グローバルナビゲーション">
+            <ul class="p-header__items">
+              <li class="p-header__item"><a href="./plan.html" class="p-header__link u-opacity">料金</a></li>
+              <li class="p-header__item"><a href="./blog_list.html" class="p-header__link u-opacity">ブログ</a></li>
+              <li class="p-header__item"><a href="./result_list.html" class="p-header__link u-opacity">卒業実績</a></li>
             </ul>
           </nav>
-          <div class="l-header__cta pc">
+          <div class="p-header__cta pc">
             <a href="./contact_form.html" class="c-btn c-btn--head">お問い合わせ</a>
           </div>
         </div>
@@ -58,13 +59,13 @@
         <nav class="c-breadcrumb" aria-label="パンくずリスト">
           <ol class="c-breadcrumb__items">
             <li class="c-breadcrumb__item">
-              <a href="./index.html">ホーム</a>
+              <a href="./index.html" class="u-opacity">ホーム</a>
             </li>
             <li class="c-breadcrumb__item"><span>>&emsp;</span>
-              <a href="./result_list.html">卒業実績</a>
+              <a href="./result_list.html" class="u-opacity">卒業実績</a>
             </li>
             <li class="c-breadcrumb__item"><span>>&emsp;</span>
-              <a href="./result_list.html">ポップス</a>
+              <a href="./result_list.html" class="u-opacity">ポップス</a>
             </li>
             <li class="c-breadcrumb__item" aria-current="page">
               <span>>&emsp;</span>タイトルが入ります。タイトルが入ります。タイトルが入ります。
@@ -80,7 +81,7 @@
           <div class="p-result-details__card p-result-details-card">
             <div class="c-thumbnail p-result-details-card__thumbnail">
               <div class="c-thumbnail__label">
-                <p class="c-thumbnail__label-text p-details-card__thumbnail-label">ポップス</p>
+                <p class="c-label p-details-card__thumbnail-label">ポップス</p>
               </div>
               <div class="c-thumbnail-img p-details-card__thumbnail-img">
                 <picture>
@@ -131,7 +132,7 @@
           <!-- 前後記事ナビ -->
           <div class="p-result-details__article-nav p-article-nav">
             <div class="p-article-nav__item-prev">
-              <a href="">
+              <a href="" class="u-opacity">
                 <div class="p-article-nav__heading-prev">
                   <span>◀</span>
                   <p>前の記事</p>
@@ -145,10 +146,10 @@
               </a>
             </div>
             <div class="p-article-nav__item-next">
-              <a href="">
+              <a href="" class="u-opacity">
                 <div class="p-article-nav__heading-next">
                   <p>次の記事</p>
-                  <span >▶</span>
+                  <span>▶</span>
                 </div>
                 <div class="p-article-nav__box">
                   <div class="p-article-nav__box-img">
@@ -166,10 +167,10 @@
           <div class="p-result-details__related-posts p-related-posts">
             <div class="p-related-posts__title">関連記事</div>
             <div class="p-related-posts__items">
-              <a href="./blog_details.html" class="p-related-posts__item">
+              <a href="./blog_details.html" class="p-related-posts__item u-opacity">
                 <div class=" p-result-details__thumbnail c-thumbnail">
                   <div class="p-related-posts__thumbnail-label2   c-thumbnail__label">
-                    <p class="c-thumbnail__label-text">ロック</p>
+                    <p class="c-label">ロック</p>
                   </div>
                   <div class="p-result-details__eye-catch p-related-posts__eye-catch c-thumbnail-img">
                     <picture>
@@ -184,10 +185,10 @@
                 </div>
               </a>
 
-              <a href="./blog_details.html" class="p-related-posts__item">
+              <a href="./blog_details.html" class="p-related-posts__item u-opacity">
                 <div class=" p-result-details__thumbnail  c-thumbnail">
                   <div class="p-related-posts__thumbnail-label2  c-thumbnail__label">
-                    <p class="c-thumbnail__label-text">ジャズ</p>
+                    <p class="c-label">ジャズ</p>
                   </div>
                   <div class="p-related-posts__eye-catch c-thumbnail-img">
                     <picture>
@@ -202,10 +203,10 @@
                 </div>
               </a>
 
-              <a href="./blog_details.html" class="p-related-posts__item">
+              <a href="./blog_details.html" class="p-related-posts__item  u-opacity">
                 <div class="p-result-details__thumbnail  c-thumbnail">
                   <div class="p-related-posts__thumbnail-label2  c-thumbnail__label">
-                    <p class="c-thumbnail__label-text">ラテン</p>
+                    <p class="c-label">ラテン</p>
                   </div>
                   <div class="p-related-posts__eye-catch c-thumbnail-img">
                     <picture>
@@ -223,17 +224,18 @@
           </div>
         </article>
       </div>
+
+      <!-- TOPに戻るボタンのjsの修正をAIに依頼 -->
+      <div class="p-top-btn">
+        <div class="p-top-btn__bg">
+          <a href="#" class="p-top-btn__arrow u-opacity " aria-label="ページ上部へ">
+            <img src="./images/icon/goto-top.svg" alt="トップへ戻る">
+          </a>
+          <a href="./contact_form.html" class="c-btn p-top-btn__contact u-opacity">お問い合わせ</a>
+        </div>
+      </div>
     </main>
 
- <!-- TOPに戻るボタンのjsの修正をAIに依頼 -->
-    <div class="p-top-btn">
-      <div class="p-top-btn__bg">
-        <a href="#" class="p-top-btn__arrow " aria-label="ページ上部へ">
-          <img src="./images/icon/goto-top.svg" alt="トップへ戻る">
-        </a>
-        <a href="./contact_form.html" class="c-btn p-top-btn__contact">お問い合わせ</a>
-      </div>
-    </div>
 
     <!-- フッター -->
     <footer class="l-footer">
@@ -241,40 +243,41 @@
         <nav class="l-footer__nav l-footer-nav" aria-label="フッターナビゲーション">
           <ul class="l-footer-nav__lists">
             <li class="l-footer-nav__list">
-              <a href="./index.html">ホーム</a>
+              <a href="./index.html" class="u-opacity">ホーム</a>
             </li>
             <li class="l-footer-nav__list">
-              <a href="./plan.html">料金</a>
+              <a href="./plan.html" class="u-opacity">料金</a>
             </li>
             <li class="l-footer-nav__list">
-              <a href="./blog_list.html">ブログ</a>
+              <a href="./blog_list.html" class="u-opacity">ブログ</a>
             </li>
             <li class="l-footer-nav__list">
-              <a href="./result_list.html">卒業実績</a>
+              <a href="./result_list.html" class="u-opacity">卒業実績</a>
             </li>
           </ul>
         </nav>
-        <a href="./index.html" class="l-footer-logo"><img src="./images/icon/logo-white.svg" alt="きたむらミュージックスクール"></a>
+        <a href="./index.html" class="l-footer-logo u-opacity"><img src="./images/icon/logo-white.svg"
+            alt="きたむらミュージックスクール"></a>
         <p class="l-footer__copyright">Copyright&copy;0000 KITAMURA music school Inc. All Rights</p>
         <div class="l-footer__sns">
           <ul class="l-footer__sns-items">
             <li class="l-footer__sns-item">
-              <a href="" target="_blank" rel="noopener noreferrer">
+              <a href="" target="_blank" rel="noopener noreferrer" class="u-opacity">
                 <img src="./images/icon/icon-twitter.svg" alt="twitterを開く">
               </a>
             </li>
             <li class="l-footer__sns-item">
-              <a href="" target="_blank" rel="noopener noreferrer">
+              <a href="" target="_blank" rel="noopener noreferrer" class="u-opacity">
                 <img src="./images/icon/icon-facebook.svg" alt="facebookを開く">
               </a>
             </li>
             <li class="l-footer__sns-item">
-              <a href="" target="_blank" rel="noopener noreferrer">
+              <a href="" target="_blank" rel="noopener noreferrer" class="u-opacity">
                 <img src="./images/icon/icon-youtube.svg" alt="youtubeを開く">
               </a>
             </li>
             <li class="l-footer__sns-item">
-              <a href="" target="_blank" rel="noopener noreferrer">
+              <a href="" target="_blank" rel="noopener noreferrer" class="u-opacity">
                 <img src="./images/icon/icon-instagram.svg" alt="instagramを開く">
               </a>
             </li>

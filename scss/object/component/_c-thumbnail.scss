@@ -3,56 +3,47 @@
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
 
-.c-thumbnail {
-    position: relative;
-}
+// .c-thumbnail {
+//     position: relative;
+// }
 
-.c-thumbnail__label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: $red;
-    min-width: 8rem;
-    height: 3rem;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
+// .c-thumbnail__label {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     background-color: $red;
+//     min-width: 8rem;
+//     height: 3rem;
+//     z-index: 1;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     font-weight: 700;
 
-    @include sp {
-        min-width: 9rem;
-    }
-}
-.c-thumbnail__label-large {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: $red;
-    min-width: 10rem;
-    height: 3rem;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
+//     @include sp {
+//         min-width: 9rem;
+//     }
+// }
 
-    @include sp {
-        min-width: 9rem;
-    }
-}
 
-.c-thumbnail__label-text {
-    height: 2.5rem;
-    color: $white;
+// .c-thumbnail__label-large {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     background-color: $red;
+//     min-width: 10rem;
+//     height: 3rem;
+//     z-index: 1;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     font-weight: 700;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    line-height: calc(25 / 15);
-    margin: 0;
-}
+//     @include sp {
+//         min-width: 9rem;
+//     }
+// }
+
 
 .c-thumbnail-img {
     width: 100%;

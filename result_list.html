@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>きたむらミュージックスクール</title>
   <meta name="description" content="「音楽で生きる」を叶えるミュージックスクール">
-  <link rel="icon" href="../images/icon/favicon.svg" type="image/x-icon" sizes="32x32">
+  <link rel="icon" href="./images/icon/favicon.svg" type="image/x-icon" sizes="32x32">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,34 +18,35 @@
 
 <body>
   <div id="container">
-    <header id="header" class="l-header">
-      <div class="l-header__inner">
-        <div class="l-header__logo">
+    <!-- ヘッダー -->
+    <header id="header" class="p-header l-header">
+      <div class="p-header__inner">
+        <div class="p-header__logo">
           <div>
-            <a href="./index.html">
-              <span class="l-header__logo-img">
+            <a href="./index.html" class="u-opacity">
+              <span class="p-header__logo-img">
                 <img src="./images/header/header-logo.svg" alt="きたむらミュージックスクール">
               </span>
-              <span class="l-header__logo-text">きたむら<br class="pc">
-                <span class="l-header__logo-text-small">ミュージックスクール</span>
+              <span class="p-header__logo-text">きたむら<br class="pc">
+                <span class="p-header__logo-text-small">ミュージックスクール</span>
               </span>
             </a>
           </div>
         </div>
-        <button class="l-header__hamburger sp">
+        <button class="p-header__hamburger sp">
           <span></span>
           <span></span>
           <span></span>
         </button>
-        <div class="l-header__right">
-          <nav class="l-header__nav" id="global-nav" aria-label="グローバルナビゲーション">
-            <ul class="l-header__items">
-              <li class="l-header__item"><a href="./plan.html" class="l-header__link">料金</a></li>
-              <li class="l-header__item"><a href="./blog_list.html" class="l-header__link">ブログ</a></li>
-              <li class="l-header__item"><a href="./result_list.html" class="l-header__link">卒業実績</a></li>
+        <div class="p-header__right">
+          <nav class="p-header__nav" id="global-nav" aria-label="グローバルナビゲーション">
+            <ul class="p-header__items">
+              <li class="p-header__item"><a href="./plan.html" class="p-header__link u-opacity">料金</a></li>
+              <li class="p-header__item"><a href="./blog_list.html" class="p-header__link u-opacity">ブログ</a></li>
+              <li class="p-header__item"><a href="./result_list.html" class="p-header__link u-opacity">卒業実績</a></li>
             </ul>
           </nav>
-          <div class="l-header__cta pc">
+          <div class="p-header__cta pc">
             <a href="./contact_form.html" class="c-btn c-btn--head">お問い合わせ</a>
           </div>
         </div>
@@ -53,34 +54,38 @@
     </header>
 
     <main>
-      <section class="c-page-visual">
-        <div class="c-page-visual__img">
+      <!-- FV -->
+      <div class="p-child-fv">
+        <div class="p-child-fv__img">
           <picture>
             <source media="(min-width: 768px)" srcset="./images/result_list/result-list_fv.jpg">
             <img src="./images/result_list/result-list_fv.jpg" alt="卒業実績">
           </picture>
-          <h1 class="c-page-visual__title">卒業実績</h1>
+          <h1 class="p-child-fv__title">卒業実績</h1>
         </div>
-        <div class="c-breadcrumb__inner">
-          <nav class="c-breadcrumb" aria-label="パンくずリスト">
-            <ol class="c-breadcrumb__items">
-              <li class="c-breadcrumb__item"><a href="./index.html">ホーム</a></li>
-              <li class="c-breadcrumb__item" aria-current="page">>&emsp;卒業実績</li>
-            </ol>
-          </nav>
-        </div>
-      </section>
+      </div>
+
+      <!-- パンくずリスト -->
+      <div class="c-breadcrumb__inner">
+        <nav class="c-breadcrumb" aria-label="パンくずリスト">
+          <ol class="c-breadcrumb__items">
+            <li class="c-breadcrumb__item"><a href="./index.html" class="u-opacity">ホーム</a></li>
+            <li class="c-breadcrumb__item" aria-current="page">>&emsp;卒業実績</li>
+          </ol>
+        </nav>
+      </div>
+
 
       <!-- 卒業実績-->
       <section id="result-list" class="p-result-list">
         <div class="p-result-list__inner l-inner">
           <h2 class="p-result-list__title c-section-title">卒業実績一覧</h2>
           <div class="p-result-list__grid">
-            <a href="./result_details.html" class="p-result-list__item">
+            <a href="./result_details.html" class="p-result-list__item u-opacity">
               <div class="p-result-list__item-card p-result-item-card">
                 <div class="c-thumbnail p-result-item-card__thumbnail">
-                  <div class="c-thumbnail__label-large">
-                    <p class="c-thumbnail__label-text">ポップス</p>
+                  <div class="c-thumbnail__label">
+                    <p class="c-label">ポップス</p>
                   </div>
                   <div class="c-thumbnail-img p-result-item-card__thumbnail-img">
                     <picture>
@@ -95,11 +100,11 @@
                 </div>
               </div>
             </a>
-            <a href="./result_details.html" class="p-result-list__item">
+            <a href="./result_details.html" class="p-result-list__item u-opacity">
               <div class="p-result-list__item-card p-result-item-card">
                 <div class="c-thumbnail p-result-item-card__thumbnail">
-                  <div class="c-thumbnail__label-large">
-                    <p class="c-thumbnail__label-text ">ロック</p>
+                  <div class="c-thumbnail__label">
+                    <p class="c-label ">ロック</p>
                   </div>
                   <div class="c-thumbnail-img p-result-item-card__thumbnail-img">
                     <picture>
@@ -114,11 +119,11 @@
                 </div>
               </div>
             </a>
-            <a href="./result_details.html" class="p-result-list__item">
+            <a href="./result_details.html" class="p-result-list__item u-opacity">
               <div class="p-result-list__item-card p-result-item-card">
                 <div class="c-thumbnail p-result-item-card__thumbnail">
-                  <div class="c-thumbnail__label-large">
-                    <p class="c-thumbnail__label-text ">ジャズ</p>
+                  <div class="c-thumbnail__label">
+                    <p class="c-label ">ジャズ</p>
                   </div>
                   <div class="c-thumbnail-img p-result-item-card__thumbnail-img">
                     <picture>
@@ -133,11 +138,11 @@
                 </div>
               </div>
             </a>
-            <a href="./result_details.html" class="p-result-list__item">
+            <a href="./result_details.html" class="p-result-list__item u-opacity">
               <div class="p-result-list__item-card p-result-item-card">
                 <div class="c-thumbnail p-result-item-card__thumbnail">
-                  <div class="c-thumbnail__label-large">
-                    <p class="c-thumbnail__label-text ">ラテン</p>
+                  <div class="c-thumbnail__label">
+                    <p class="c-label ">ラテン</p>
                   </div>
                   <div class="c-thumbnail-img p-result-item-card__thumbnail-img">
                     <picture>
@@ -152,11 +157,11 @@
                 </div>
               </div>
             </a>
-            <a href="./result_details.html" class="p-result-list__item">
+            <a href="./result_details.html" class="p-result-list__item u-opacity">
               <div class="p-result-list__item-card p-result-item-card">
                 <div class="c-thumbnail p-result-item-card__thumbnail">
-                  <div class="c-thumbnail__label-large">
-                    <p class="c-thumbnail__label-text ">クラシック</p>
+                  <div class="c-thumbnail__label">
+                    <p class="c-label ">クラシック</p>
                   </div>
                   <div class="c-thumbnail-img p-result-item-card__thumbnail-img">
                     <picture>
@@ -171,11 +176,11 @@
                 </div>
               </div>
             </a>
-            <a href="./result_details.html" class="p-result-list__item">
+            <a href="./result_details.html" class="p-result-list__item u-opacity">
               <div class="p-result-list__item-card p-result-item-card">
                 <div class="c-thumbnail p-result-item-card__thumbnail">
-                  <div class="c-thumbnail__label-large">
-                    <p class="c-thumbnail__label-text ">ポップス</p>
+                  <div class="c-thumbnail__label">
+                    <p class="c-label ">ポップス</p>
                   </div>
                   <div class="c-thumbnail-img p-result-item-card__thumbnail-img">
                     <picture>
@@ -190,11 +195,11 @@
                 </div>
               </div>
             </a>
-            <a href="./result_details.html" class="p-result-list__item">
+            <a href="./result_details.html" class="p-result-list__item u-opacity">
               <div class="p-result-list__item-card p-result-item-card">
                 <div class="c-thumbnail p-result-item-card__thumbnail">
-                  <div class="c-thumbnail__label-large">
-                    <p class="c-thumbnail__label-text ">ロック</p>
+                  <div class="c-thumbnail__label">
+                    <p class="c-label ">ロック</p>
                   </div>
                   <div class="c-thumbnail-img p-result-item-card__thumbnail-img">
                     <picture>
@@ -209,11 +214,11 @@
                 </div>
               </div>
             </a>
-            <a href="./result_details.html" class="p-result-list__item">
+            <a href="./result_details.html" class="p-result-list__item u-opacity">
               <div class="p-result-list__item-card p-result-item-card">
                 <div class="c-thumbnail p-result-item-card__thumbnail">
-                  <div class="c-thumbnail__label-large">
-                    <p class="c-thumbnail__label-text ">ジャズ</p>
+                  <div class="c-thumbnail__label">
+                    <p class="c-label ">ジャズ</p>
                   </div>
                   <div class="c-thumbnail-img p-result-item-card__thumbnail-img">
                     <picture>
@@ -228,11 +233,11 @@
                 </div>
               </div>
             </a>
-            <a href="./result_details.html" class="p-result-list__item">
+            <a href="./result_details.html" class="p-result-list__item u-opacity">
               <div class="p-result-list__item-card p-result-item-card">
                 <div class="c-thumbnail p-result-item-card__thumbnail">
-                  <div class="c-thumbnail__label-large">
-                    <p class="c-thumbnail__label-text ">ラテン</p>
+                  <div class="c-thumbnail__label">
+                    <p class="c-label ">ラテン</p>
                   </div>
                   <div class="c-thumbnail-img p-result-item-card__thumbnail-img">
                     <picture>
@@ -247,11 +252,11 @@
                 </div>
               </div>
             </a>
-            <a href="./result_details.html" class="p-result-list__item">
+            <a href="./result_details.html" class="p-result-list__item u-opacity">
               <div class="p-result-list__item-card p-result-item-card">
                 <div class="c-thumbnail p-result-item-card__thumbnail">
-                  <div class="c-thumbnail__label-large">
-                    <p class="c-thumbnail__label-text">クラシック</p>
+                  <div class="c-thumbnail__label">
+                    <p class="c-label">クラシック</p>
                   </div>
                   <div class="c-thumbnail-img p-result-item-card__thumbnail-img">
                     <picture>
@@ -274,20 +279,20 @@
         <li><span class="c-pagination__item current">1</span></li>
         <li><a href="" class="c-pagination__item">2</a></li>
         <li><a href="" class="c-pagination__item">3</a></li>
-        <li><a href="" class="c-pagination__dot">…</a></li>
+        <li><span href="" class="c-pagination__dot">…</span></li>
         <li><a href="" class="c-pagination__item">9</a></li>
       </ol>
-    </main>
 
-    <!-- TOPに戻るボタンのjsの修正をAIに依頼 -->
-    <div class="p-top-btn">
-      <div class="p-top-btn__bg">
-        <a href="#" class="p-top-btn__arrow " aria-label="ページ上部へ">
-          <img src="./images/icon/goto-top.svg" alt="トップへ戻る">
-        </a>
-        <a href="./contact_form.html" class="c-btn p-top-btn__contact">お問い合わせ</a>
+      <!-- TOPに戻るボタンのjsの修正をAIに依頼 -->
+      <div class="p-top-btn">
+        <div class="p-top-btn__bg">
+          <a href="#" class="p-top-btn__arrow u-opacity " aria-label="ページ上部へ">
+            <img src="./images/icon/goto-top.svg" alt="トップへ戻る">
+          </a>
+          <a href="./contact_form.html" class="c-btn p-top-btn__contact u-opacity">お問い合わせ</a>
+        </div>
       </div>
-    </div>
+    </main>
 
     <!-- フッター -->
     <footer class="l-footer">
@@ -295,40 +300,41 @@
         <nav class="l-footer__nav l-footer-nav" aria-label="フッターナビゲーション">
           <ul class="l-footer-nav__lists">
             <li class="l-footer-nav__list">
-              <a href="./index.html">ホーム</a>
+              <a href="./index.html" class="u-opacity">ホーム</a>
             </li>
             <li class="l-footer-nav__list">
-              <a href="./plan.html">料金</a>
+              <a href="./plan.html" class="u-opacity">料金</a>
             </li>
             <li class="l-footer-nav__list">
-              <a href="./blog_list.html">ブログ</a>
+              <a href="./blog_list.html" class="u-opacity">ブログ</a>
             </li>
             <li class="l-footer-nav__list">
-              <a href="./result_list.html">卒業実績</a>
+              <a href="./result_list.html" class="u-opacity">卒業実績</a>
             </li>
           </ul>
         </nav>
-        <a href="./index.html" class="l-footer-logo"><img src="./images/icon/logo-white.svg" alt="きたむらミュージックスクール"></a>
+        <a href="./index.html" class="l-footer-logo u-opacity"><img src="./images/icon/logo-white.svg"
+            alt="きたむらミュージックスクール"></a>
         <p class="l-footer__copyright">Copyright&copy;0000 KITAMURA music school Inc. All Rights</p>
         <div class="l-footer__sns">
           <ul class="l-footer__sns-items">
             <li class="l-footer__sns-item">
-              <a href="" target="_blank" rel="noopener noreferrer">
+              <a href="" target="_blank" rel="noopener noreferrer" class="u-opacity">
                 <img src="./images/icon/icon-twitter.svg" alt="twitterを開く">
               </a>
             </li>
             <li class="l-footer__sns-item">
-              <a href="" target="_blank" rel="noopener noreferrer">
+              <a href="" target="_blank" rel="noopener noreferrer" class="u-opacity">
                 <img src="./images/icon/icon-facebook.svg" alt="facebookを開く">
               </a>
             </li>
             <li class="l-footer__sns-item">
-              <a href="" target="_blank" rel="noopener noreferrer">
+              <a href="" target="_blank" rel="noopener noreferrer" class="u-opacity">
                 <img src="./images/icon/icon-youtube.svg" alt="youtubeを開く">
               </a>
             </li>
             <li class="l-footer__sns-item">
-              <a href="" target="_blank" rel="noopener noreferrer">
+              <a href="" target="_blank" rel="noopener noreferrer" class="u-opacity">
                 <img src="./images/icon/icon-instagram.svg" alt="instagramを開く">
               </a>
             </li>

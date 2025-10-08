@@ -76,48 +76,60 @@ $(document).ready(function () {
     }
   });
 
-  fixArea.click(function () {
-    $("body,html").animate(
-      {
-        scrollTop: 0,
-      },
-      500 // 500ミリ秒かけてページトップに戻る
-    );
-    return false;
-  });
-
-  
-// フッター上に停止する挙動
-  const $fab = $(".p-top-btn").hide();
+  //画面の高さまで表示領域を広げる
   const $footer = $(".l-footer");
-  const BASE = 0; // ふだんの下余白(px)
-
-  function update() {
-    const st = window.pageYOffset || document.documentElement.scrollTop;
-    const vh = window.innerHeight;
-    const ftTop = $footer[0].getBoundingClientRect().top; // フッターの画面上端
-    const overlap = Math.max(0, vh - ftTop);              // かぶり量（マイナスは0に）
-    $fab.css("bottom", BASE + overlap).toggle(st > 100);
+  if (window.innerHeight > $footer.offset().top + $footer.outerHeight()) {
+    console.log($footer.offset().top);
+    $footer.attr({
+      style:
+        "position:fixed; width:100%; top:" +
+        (window.innerHeight - $footer.outerHeight()) +
+        "px;",
+    });
   }
 
-  $(window).on("scroll resize", () => requestAnimationFrame(update));
-  $(".p-top-btn").on("click", ".p-top-btn__arrow", function (e) {
-    e.preventDefault();
-    $("html, body").animate({ scrollTop: 0 }, 500);
-  });
+  // fixArea.click(function () {
+  //   $("body,html").animate(
+  //     {
+  //       scrollTop: 0,
+  //     },
+  //     500 // 500ミリ秒かけてページトップに戻る
+  //   );
+  //   return false;
+  // });
 
-  update(); // 初期実行
+
+  // // フッター上に停止する挙動
+  // const $fab = $(".p-top-btn").hide();
+  // const $footer = $(".l-footer");
+  // const BASE = 0; // ふだんの下余白(px)
+
+  // function update() {
+  //   const st = window.pageYOffset || document.documentElement.scrollTop;
+  //   const vh = window.innerHeight;
+  //   const ftTop = $footer[0].getBoundingClientRect().top; // フッターの画面上端
+  //   const overlap = Math.max(0, vh - ftTop);              // かぶり量（マイナスは0に）
+  //   $fab.css("bottom", BASE + overlap).toggle(st > 100);
+  // }
+
+  // $(window).on("scroll resize", () => requestAnimationFrame(update));
+  // $(".p-top-btn").on("click", ".p-top-btn__arrow", function (e) {
+  //   e.preventDefault();
+  //   $("html, body").animate({ scrollTop: 0 }, 500);
+  // });
+
+  // update(); // 初期実行
 
   // =============================
   // ハンバーガーメニュー操作
   // =============================
-  $('.l-header__hamburger').on("click", function () {
+  $('.p-header__hamburger').on("click", function () {
     if ($(this).hasClass("active")) {
       $(this).removeClass("active");
-      $('.l-header__items').removeClass("open");
+      $('.p-header__items').removeClass("open");
     } else {
       $(this).addClass("active");
-      $('.l-header__items').addClass("open");
+      $('.p-header__items').addClass("open");
     }
 
   });
