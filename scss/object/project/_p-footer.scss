@@ -1,28 +1,29 @@
-@charset "UTF-8";
-@use "../foundation/base" as *;
-@use "../foundation/variable" as *;
-@use "../foundation/mixin" as *;
+
+@use "../../foundation/base" as *;
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
 
 
-.l-footer {
-    background-color: $red;
-    color: $white;
-    text-align: center;
-    padding-top: 4.5rem;
-    padding-bottom: 5rem;    
-    width: 100%;
-  
-    @include sp {
-      padding-top: 2.5rem;
-     
-    }
+.p-footer {
+  background-color: $red;
+  color: $white;
+  text-align: center;
+  padding-top: 4.5rem;
+  padding-bottom: 5rem;
+  width: 100%;
+
+  @include sp {
+    padding-top: 2.5rem;
+
   }
-  .l-footer-nav__lists {
+}
+
+.p-footer-nav__lists {
   display: flex;
   justify-content: center;
-  margin: 0 auto ;
+  margin: 0 auto;
   column-gap: 2.3rem;
- 
+
 
   @include sp {
     flex-wrap: wrap;
@@ -31,25 +32,26 @@
   }
 }
 
-.l-footer-nav__list {
+.p-footer-nav__list {
   list-style: none;
- 
+
 }
 
-.l-footer-nav__list a {
+.p-footer-nav__list a {
   color: $white;
   font-size: 1.7rem;
-  line-height: 1;  
+  font-weight: 700;
+  line-height: 1;
   text-transform: capitalize;
   height: inherit;
   padding: 0.5rem;
-  text-transform: none; 
- 
+  text-transform: none;
+
 }
 
-.l-footer-logo {
+.p-footer-logo {
   margin-top: 2rem;
-  
+
   width: auto;
   height: auto;
   padding: 0.5rem;
@@ -57,31 +59,31 @@
   text-align: center;
 
 
-  
+
 }
 
-.l-footer-logo img {
+.p-footer-logo img {
   width: 3.2rem;
   height: auto;
   display: block;
 }
 
-.l-footer__copyright {
+.p-footer__copyright {
   background-color: $red;
   color: #fff;
   font-size: 1.5rem;
   line-height: 1;
   display: block;
   text-align: center;
-  margin-top: 1.8rem; 
-  
+  margin-top: 1.8rem;
+
   letter-spacing: 0.01em;
 
   @include sp {
     margin-top: 1rem;
     padding-inline: 2rem;
     line-height: calc(20 / 15);
-   
+
 
   }
 
@@ -92,30 +94,30 @@
 }
 
 
-.l-footer__sns-items {
+.p-footer__sns-items {
   display: flex;
   justify-content: center;
   align-items: center;
   column-gap: .2rem;
   padding: 0;
 
-  margin:0.5rem 0 0;
+  margin: 0.5rem 0 0;
 
   @include sp {
-    margin-top: 1rem;
+    margin-top: 1.4rem;
   }
 }
 
 
-.l-footer__sns-item a {
+.p-footer__sns-item a {
   // display: block;
   list-style: none;
   line-height: 1;
-  padding: .5rem;  
+  padding: .5rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
-margin-top: auto;
-  
+  margin-top: auto;
+
 }

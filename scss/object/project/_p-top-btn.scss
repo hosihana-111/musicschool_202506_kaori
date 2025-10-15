@@ -1,4 +1,4 @@
-@charset "UTF-8";
+
 @use "../../foundation/base" as *;
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
@@ -22,7 +22,7 @@
   // height: auto;         /* 100%をやめる */
   // z-index: 1000;
   display: none;        /* 表示/非表示は既存のjQueryで */
-  pointer-events: auto; /* クリック無効をやめる */
+pointer-events: none;
 
 
   @include sp {
@@ -65,9 +65,7 @@
   place-content: center;
   pointer-events: auto;
 
-  @include sp {
-   margin-right: 2rem;
-  }
+ 
   img {
     width: 2.3rem;
   }

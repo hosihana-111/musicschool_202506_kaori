@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @use "../../foundation/base" as *;
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
@@ -117,137 +116,105 @@
   align-items: center;
   height: inherit;
 
-}
-
-.p-header__items {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  height: inherit;
-  margin: 0;
-  padding: 0;
-  cursor: pointer;
-  column-gap: 3.3rem;
-  font-size: 1.8rem;
-  line-height: calc(33 / 17);
-  letter-spacing: normal;
-
   @include sp {
-    display: block;
+    width: 30rem;
+    height: auto;
     position: fixed;
-    width: calc(300 / 375 * 100%);
-    // height: calc(100vh - inherit);
-    height: (5rem * 3);
-    top: inherit;
+    top: 5rem;
     right: -100%;
-    overflow: hidden;
-    color: #fff;
-    background-color: $red;
-    margin: 0;
-    text-align: left;
-    list-style: none;
-    z-index: 1000; // ←スタッキング強化
-
-    overflow-y: auto; // ←縦はスクロール
-    overflow-x: hidden; // ←横は隠す   
-    -webkit-overflow-scrolling: touch;
+    z-index: 9997;
     transition: right 0.4s;
 
     &.open {
       right: 0;
     }
-
   }
+
 }
 
-// .p-header__items.open {
-//   @include sp {
-//     left: 20%;
-//   }
-// }
-
-.p-header__item {
-  height: inherit;
+.p-header__items {
   display: flex;
+  height: 8rem;
+  list-style: none;
   align-items: center;
-  position: relative;
+  column-gap: 3.3rem;
 
   @include sp {
-    height: 5rem;
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    font-size: 1.8rem;
-    font-weight: 600;
-
-
+    display: block;
+    height: auto;
+    width: 100%;
   }
 
-  &::before {
-    @include pc {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 1px;
-      background: $black;
-      left: 0;
-      bottom: 2.8rem;
-      transform: scaleX(0);
-      transition: all .4s ease-in-out;
-      transform-origin: left center;
-    }
-  }
-
-  &:hover {
-    &::before {
-      transform: scaleX(1);
-      height: 2px;
-    }
-  }
 }
+
 
 
 
 .p-header__link {
-  height: inherit;
-  width: 100%;
+  height: 8rem;
   display: flex;
-  justify-content: center;
   align-items: center;
   font-size: 1.7rem;
-  font-weight: 700;
-  line-height: calc(33 / 17);
-
+  font-weight: bold;
+  color: #000;
+  position: relative;
+  transition: all 0.4s;
 
 
   @include sp {
+    height: 5.8rem;
+    background: $red;
+    color: #fff;
     font-size: 1.8rem;
-
-    justify-content: flex-start;
     padding-inline: 2rem;
   }
 
-
-
-
-  &:hover {
-    @include sp {
+  &::after {
+    @include pc {
+      content: "";
+      width: 100%;
+      height: 0.2rem;
+      background: #000;
+      border-radius: 0.1rem;
+      position: absolute;
+      left: 0;
+      bottom: 2.4rem;
+      clip-path: inset(0 100% 0 0);
+      transition: all 0.4s;
       opacity: 1;
     }
 
     @include sp {
-      background: $black;
-      color: $white;
+      display: none;
     }
 
-    &::before {
-      transform: scaleX(1);
-      height: 2px;
+  }
+
+  &:hover {   
+
+    &::after {
+      clip-path: inset(0 0 0 0);
+
     }
+
   }
 }
+.p-header__link span:hover {
+  @include pc {
+      opacity: 0.5;
 
+    }
+
+    @include sp {
+      opacity: 1;
+      background: #000;
+    }
+}
+
+
+.p-header__link::after:hover {
+  opacity: 1;
+}
 
 // ハンバーガーメニュー
 .p-header__hamburger {
@@ -260,12 +227,9 @@
   background-color: $red;
   cursor: pointer;
 
-
-
-
   @include sp {
     display: flex;
-    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
   }

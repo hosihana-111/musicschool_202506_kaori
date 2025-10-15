@@ -13,11 +13,14 @@
 // ヘッダー
 @use './p-header';
 
+// フッター
+@use './p-footer';
+
 // top
 @use './p-top-btn';
 @use './p-top-fv';
 @use './p-top-vision';
-@use './p-top-ad';
+@use './p-top-message';
 @use './p-top-reason';
 @use './p-top-voice';
 @use './p-top-flow';

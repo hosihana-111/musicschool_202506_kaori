@@ -1,4 +1,4 @@
-@charset "UTF-8";
+
 @use "../../foundation/base" as *;
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
@@ -27,9 +27,9 @@
 
 }
 
-// .p-article-nav__heading-next {
-//     justify-content: flex-end;
-// }
+.p-article-nav__heading-next {
+    justify-content: flex-end;
+}
 
 .p-article-nav__heading-prev p,
 .p-article-nav__heading-next p {

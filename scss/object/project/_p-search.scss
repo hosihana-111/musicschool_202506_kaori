@@ -1,14 +1,14 @@
-@charset "UTF-8";
+
 @use "../../foundation/base" as *;
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
 
 .p-search{
     padding-top: 6.6rem;
-    padding-bottom: 0;
+    padding-bottom: 21rem;
     @include sp{
-        padding-top: 4rem;
-         padding-bottom: 0;
+        padding-top:  3.4rem;
+         padding-bottom: 20.3rem;
     }
 }
 
@@ -40,7 +40,7 @@
     display: flex;
     flex-direction: column;
     gap: 6.7rem;
-    padding-bottom: 6.9rem;
+
 
     @include sp {
         position: static;
@@ -48,7 +48,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 4rem;
+        margin-top: 4.3rem;
         gap: 4rem;
          padding-bottom: 5.8rem;
     }
@@ -152,5 +152,12 @@
     @include sp {      
         text-align: left;
         margin-top: 1.6rem;
+    }
+}
+
+.p-search__pagination{
+    margin-top: 7rem;
+    @include sp{
+        margin-top: 3rem;
     }
 }

@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
 </head>
 
@@ -33,7 +33,7 @@
             </a>
           </div>
         </div>
-        <button class="p-header__hamburger sp">
+        <button class="p-header__hamburger sp" aria-controls="global-nav" aria-expanded="false" aria-label="メニューを開閉">
           <span></span>
           <span></span>
           <span></span>
@@ -41,9 +41,9 @@
         <div class="p-header__right">
           <nav class="p-header__nav" id="global-nav" aria-label="グローバルナビゲーション">
             <ul class="p-header__items">
-              <li class="p-header__item"><a href="./plan.html" class="p-header__link u-opacity">料金</a></li>
-              <li class="p-header__item"><a href="./blog_list.html" class="p-header__link u-opacity">ブログ</a></li>
-              <li class="p-header__item"><a href="./result_list.html" class="p-header__link u-opacity">卒業実績</a></li>
+              <li class="p-header__item"><a href="./plan.html" class="p-header__link "><span>料金</span></a></li>
+              <li class="p-header__item"><a href="./blog_list.html" class="p-header__link "><span>ブログ</span></a></li>
+              <li class="p-header__item"><a href="./result_list.html" class="p-header__link "><span>卒業実績</span></a></li>
             </ul>
           </nav>
           <div class="p-header__cta pc">
@@ -52,6 +52,7 @@
         </div>
       </div>
     </header>
+
     <main>
       <!-- パンくずリスト -->
       <div class="c-breadcrumb__inner">
@@ -80,7 +81,7 @@
             <div class="p-blog-details__tabs">
 
               <!-- 記事01 -->
-              <section class="p-blog-details__content01">
+              <div class="p-blog-details__content01">
                 <div class="p-blog-details__tab_panel p-tab-panel">
                   <div class="c-thumbnail p-tab-panel__eyecatch">
                     <div class="c-thumbnail__label">
@@ -140,16 +141,22 @@
                       </a>
                     </li>
                   </ul>
-                  <p class="p-tab-panel__text c-text">
-                    本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
+                  <div class="p-tab-panel__text-box01">
+                    <p class="c-text">
+                      本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+                    </p>
+                  </div>
+
                 </div>
-              </section>
+              </div>
 
               <!-- 記事02 -->
-              <section class="p-blog-details__content02">
+              <div class="p-blog-details__content02">
                 <h2 class="p-tab-panel__heading">H2見出しが入ります。H2見出しが入ります</h2>
-                <p class="p-tab-panel__text">
-                  本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
+                <div class="p-tab-panel__text-box02">
+                  <p class="c-text">
+                    本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
+                </div>
                 <div class="c-thumbnail p-tab-panel__image">
                   <picture>
                     <source srcset="./images/blog_details/panel___image-sp.jpg" media="(min-width: 768px)"
@@ -162,22 +169,27 @@
                   <li>リストが入ります</li>
                   <li>リストが入ります</li>
                 </ul>
-              </section>
+              </div>
               <hr>
 
               <!-- 記事03 -->
-              <section class="p-blog-details__content03">
+              <div class="p-blog-details__content03">
                 <h3 class="p-tab-panel__subheading">H3見出しが入ります。H3見出しが入ります。</h3>
                 <!-- 引用ブロック -->
-                <blockquote class="p-tab-panel__blockquote c-blockquote">
-                  <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
-                </blockquote>
-                <a href="" class="p-tab-panel__link u-opacity">テキストリンク</a>
-              </section>
+                <div class="p-tab-panel__blockquote">
+                  <blockquote class="c-blockquote">
+                    <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
+                  </blockquote>
+                </div>
+                <div class="p-tab-panel__link u-opacity">
+                  <a href="" >テキストリンク</a>
+                </div>
+                
+              </div>
             </div>
 
             <!-- 前後記事ナビ -->
-            <section class="p-blog-details__article-nav p-article-nav">
+            <div class="p-blog-details__article-nav p-article-nav">
               <div class="p-article-nav__item-prev">
                 <a href="" class="u-opacity">
                   <div class="p-article-nav__heading-prev">
@@ -206,10 +218,10 @@
                   </div>
                 </a>
               </div>
-            </section>
+            </div>
 
             <!-- 関連記事 -->
-            <section class="p-blog-details__related-posts p-related-posts">
+            <div class="p-blog-details__related-posts p-related-posts">
               <h3 class="p-related-posts__title">関連記事</h3>
               <div class="p-related-posts__items">
                 <a href="./blog_details.html" class="p-related-posts__item u-opacity">
@@ -266,61 +278,69 @@
                   </div>
                 </a>
               </div>
-            </section>
+            </div>
           </article>
 
           <!-- サイドバー -->
           <aside class="p-aside p-blog-details__aside">
             <!-- 無料メールマガジン -->
-            <section class="p-blog-details__widget p-sidebar-widget">
-              <h2 class="p-sidebar-widget__title">無料メールマガジン</h2>
+            <div class="p-blog-details__widget p-sidebar-widget">
+              <p class="p-sidebar-widget__title">無料メールマガジン</p>
               <div class="p-sidebar-widget__magazine">
-                <p class="p-sidebar-widget__image">バナー広告</p>
+                <a href="">
+                  <p class="p-sidebar-widget__ad u-opacity">バナー広告</p>
+                </a>
               </div>
-            </section>
+            </div>
 
             <!-- ブログ内を検索 -->
-            <section class="p-sidebar-widget">
-              <h2 class="p-sidebar-widget__title">ブログ内を検索</h2>
+            <div class="p-sidebar-widget">
+              <p class="p-sidebar-widget__title">ブログ内を検索</p>
               <div class="p-sidebar-widget__search-box">
                 <form class="p-sidebar-widget__form">
-                  <input type="text" aria-label="ブログ内検索">
-                  <button type="submit"><img src="./images/blog_details/icon-search.svg" alt="検索"></button>
+                  <input type="text" aria-label="ブログ内検索"  name="s" placeholder="検索ワード">
+                  <button type="submit" class="u-opacity">
+                    <span >
+                      <img src="./images/blog_details/icon-search.svg" alt="検索">
+                    </span>
+                  </button>
                 </form>
               </div>
-            </section>
+            </div>
 
             <!-- おすすめの記事投稿 -->
-            <section class="p-sidebar-widget">
-              <h2 class="p-sidebar-widget__title">おすすめの記事</h2>
-              <ul class="p-sidebar-widget__popular">
-                <li>
-                  <a href="./blog_details.html" class="u-opacity">
-                    <div class="p-sidebar-widget__popular-thumb"><img src="./images/blog_details/blog01.jpg"
-                        alt="アコースティックギターを弾く人"></div>
-                    <p class="p-sidebar-widget__popular-text">アルペジオが劇的に向上する3つの習慣</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="./blog_details.html" class="u-opacity">
-                    <div class="p-sidebar-widget__popular-thumb"><img src="./images/blog_details/blog01.jpg"
-                        alt="アコースティックギターを弾く人"></div>
-                    <p class="p-sidebar-widget__popular-text">アルペジオが劇的に向上する3つの習慣</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="./blog_details.html" class="u-opacity">
-                    <div class="p-sidebar-widget__popular-thumb"><img src="./images/blog_details/blog01.jpg"
-                        alt="アコースティックギターを弾く人"></div>
-                    <p class="p-sidebar-widget__popular-text">アルペジオが劇的に向上する3つの習慣</p>
-                  </a>
-                </li>
-              </ul>
-            </section>
+            <div class="p-sidebar-widget">
+              <p class="p-sidebar-widget__title">おすすめの記事</p>
+              <div class="p-sidebar-widget__popular-box">
+                <ul class="p-sidebar-widget__popular">
+                  <li>
+                    <a href="./blog_details.html" class="u-opacity">
+                      <div class="p-sidebar-widget__popular-thumb"><img src="./images/blog_details/blog01.jpg"
+                          alt="アコースティックギターを弾く人"></div>
+                      <p class="p-sidebar-widget__popular-text">アルペジオが劇的に向上する3つの習慣</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./blog_details.html" class="u-opacity">
+                      <div class="p-sidebar-widget__popular-thumb"><img src="./images/blog_details/blog01.jpg"
+                          alt="アコースティックギターを弾く人"></div>
+                      <p class="p-sidebar-widget__popular-text">アルペジオが劇的に向上する3つの習慣</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./blog_details.html" class="u-opacity">
+                      <div class="p-sidebar-widget__popular-thumb"><img src="./images/blog_details/blog01.jpg"
+                          alt="アコースティックギターを弾く人"></div>
+                      <p class="p-sidebar-widget__popular-text">アルペジオが劇的に向上する3つの習慣</p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
 
             <!-- カテゴリ -->
-            <section class="p-sidebar-widget">
-              <h2 class="p-sidebar-widget__title">カテゴリー</h2>
+            <div class="p-sidebar-widget">
+              <p class="p-sidebar-widget__title">カテゴリー</p>
               <ul class="p-sidebar-widget__category">
                 <li><a href="" class="u-opacity">カテゴリー</a></li>
                 <li><a href="" class="u-opacity">カテゴリー</a></li>
@@ -328,7 +348,7 @@
                 <li><a href="" class="u-opacity">カテゴリー</a></li>
                 <li><a href="" class="u-opacity">カテゴリー</a></li>
               </ul>
-            </section>
+            </div>
           </aside>
         </div>
       </div>
@@ -347,45 +367,45 @@
 
 
     <!-- フッター -->
-    <footer class="l-footer">
-      <div class="l-footer__inner">
-        <nav class="l-footer__nav l-footer-nav" aria-label="フッターナビゲーション">
-          <ul class="l-footer-nav__lists">
-            <li class="l-footer-nav__list">
+    <footer class="p-footer">
+      <div class="p-footer__inner">
+        <nav class="p-footer__nav p-footer-nav" aria-label="フッターナビゲーション">
+          <ul class="p-footer-nav__lists">
+            <li class="p-footer-nav__list">
               <a href="./index.html" class="u-opacity">ホーム</a>
             </li>
-            <li class="l-footer-nav__list">
+            <li class="p-footer-nav__list">
               <a href="./plan.html" class="u-opacity">料金</a>
             </li>
-            <li class="l-footer-nav__list">
+            <li class="p-footer-nav__list">
               <a href="./blog_list.html" class="u-opacity">ブログ</a>
             </li>
-            <li class="l-footer-nav__list">
+            <li class="p-footer-nav__list">
               <a href="./result_list.html" class="u-opacity">卒業実績</a>
             </li>
           </ul>
         </nav>
-        <a href="./index.html" class="l-footer-logo u-opacity"><img src="./images/icon/logo-white.svg"
+        <a href="./index.html" class="p-footer-logo u-opacity"><img src="./images/icon/logo-white.svg"
             alt="きたむらミュージックスクール"></a>
-        <p class="l-footer__copyright">Copyright&copy;0000 KITAMURA music school Inc. All Rights</p>
-        <div class="l-footer__sns">
-          <ul class="l-footer__sns-items">
-            <li class="l-footer__sns-item">
+        <p class="p-footer__copyright">Copyright&copy;0000 KITAMURA music school Inc. All Rights</p>
+        <div class="p-footer__sns">
+          <ul class="p-footer__sns-items">
+            <li class="p-footer__sns-item">
               <a href="" target="_blank" rel="noopener noreferrer" class="u-opacity">
                 <img src="./images/icon/icon-twitter.svg" alt="twitterを開く">
               </a>
             </li>
-            <li class="l-footer__sns-item">
+            <li class="p-footer__sns-item">
               <a href="" target="_blank" rel="noopener noreferrer" class="u-opacity">
                 <img src="./images/icon/icon-facebook.svg" alt="facebookを開く">
               </a>
             </li>
-            <li class="l-footer__sns-item">
+            <li class="p-footer__sns-item">
               <a href="" target="_blank" rel="noopener noreferrer" class="u-opacity">
                 <img src="./images/icon/icon-youtube.svg" alt="youtubeを開く">
               </a>
             </li>
-            <li class="l-footer__sns-item">
+            <li class="p-footer__sns-item">
               <a href="" target="_blank" rel="noopener noreferrer" class="u-opacity">
                 <img src="./images/icon/icon-instagram.svg" alt="instagramを開く">
               </a>

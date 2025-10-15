@@ -53,10 +53,10 @@ $(document).ready(function () {
   // =============================
 
   // $(function () {
-  $(".p-faq__answer").hide();
+  $(".p-faq__answer-bg").hide();
   $(".p-faq__item").on("click", function () {
     $(this).find(".p-faq-item__img").toggleClass("is-active");
-    $(this).find(".p-faq__answer").slideToggle(400).toggleClass("u-flex");
+    $(this).find(".p-faq__answer-bg").slideToggle(400).toggleClass("u-flex");
   });
 
   // });
@@ -77,7 +77,7 @@ $(document).ready(function () {
   });
 
   //画面の高さまで表示領域を広げる
-  const $footer = $(".l-footer");
+  const $footer = $(".p-footer");
   if (window.innerHeight > $footer.offset().top + $footer.outerHeight()) {
     console.log($footer.offset().top);
     $footer.attr({
@@ -88,37 +88,7 @@ $(document).ready(function () {
     });
   }
 
-  // fixArea.click(function () {
-  //   $("body,html").animate(
-  //     {
-  //       scrollTop: 0,
-  //     },
-  //     500 // 500ミリ秒かけてページトップに戻る
-  //   );
-  //   return false;
-  // });
 
-
-  // // フッター上に停止する挙動
-  // const $fab = $(".p-top-btn").hide();
-  // const $footer = $(".l-footer");
-  // const BASE = 0; // ふだんの下余白(px)
-
-  // function update() {
-  //   const st = window.pageYOffset || document.documentElement.scrollTop;
-  //   const vh = window.innerHeight;
-  //   const ftTop = $footer[0].getBoundingClientRect().top; // フッターの画面上端
-  //   const overlap = Math.max(0, vh - ftTop);              // かぶり量（マイナスは0に）
-  //   $fab.css("bottom", BASE + overlap).toggle(st > 100);
-  // }
-
-  // $(window).on("scroll resize", () => requestAnimationFrame(update));
-  // $(".p-top-btn").on("click", ".p-top-btn__arrow", function (e) {
-  //   e.preventDefault();
-  //   $("html, body").animate({ scrollTop: 0 }, 500);
-  // });
-
-  // update(); // 初期実行
 
   // =============================
   // ハンバーガーメニュー操作
@@ -126,10 +96,10 @@ $(document).ready(function () {
   $('.p-header__hamburger').on("click", function () {
     if ($(this).hasClass("active")) {
       $(this).removeClass("active");
-      $('.p-header__items').removeClass("open");
+      $('.p-header__nav').removeClass("open");
     } else {
       $(this).addClass("active");
-      $('.p-header__items').addClass("open");
+      $('.p-header__nav').addClass("open");
     }
 
   });

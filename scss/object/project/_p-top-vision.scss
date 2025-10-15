@@ -1,4 +1,4 @@
-@charset "UTF-8";
+
 @use "../../foundation/base" as *;
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
@@ -9,7 +9,7 @@
 
   @include sp {
     padding-top: 4.6rem;
-    padding-bottom: 2.9rem;
+    padding-bottom: 3.4rem;
   }
 }
 
@@ -19,14 +19,14 @@
   line-height: calc(50 / 35);
   font-weight: 700;
   text-align: center;
-  color: $red; 
+  color: $red;
   letter-spacing: -0.02em;
 
 
   @include sp {
     font-size: 2.5rem;
     line-height: calc(40 / 25);
-    
+
   }
 }
 
@@ -34,7 +34,7 @@
   font-size: 1.8rem;
   line-height: calc(30 / 18);
   text-align: center;
-   margin-top: 1.7rem;
+  margin-top: 1.7rem;
 
   @include sp {
     text-align: left;
@@ -43,10 +43,9 @@
 }
 
 .p-diagram {
-  
-  margin: 3.5rem auto 0;
+  margin: 3.4rem auto 0;
   min-height: 24.7rem;
- 
+
 
   @include sp {
     margin-top: 2rem;
@@ -55,23 +54,23 @@
 
 .p-diagram-img picture {
   display: block;
-   
+
 }
 
-.p-diagram__items {  
+.p-diagram__items {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 1.7rem;
-  z-index: 20;  
+   row-gap: 1.7rem;
+  z-index: 20;
   margin-top: 2.5rem;
 
-  
+
   @include sp {
-      margin-top: 3.9rem;
-    
-  } 
+    margin-top: 3.4rem;
+
+  }
 }
 
 .p-diagram__item {
@@ -79,17 +78,17 @@
   justify-content: center;
   align-items: center;
   column-gap: 3rem;
- 
+
 }
 
-.p-diagram__en {
+.p-diagram-item__en {
   color: $red;
   font-weight: 700;
   min-width: 14.5rem;
   text-align: right;
   font-size: 2.5rem;
   line-height: calc(50 / 25);
- text-transform: capitalize;
+  text-transform: capitalize;
 
   @include sp {
     font-size: 2rem;
@@ -97,16 +96,16 @@
   }
 }
 
-.p-diagram__dot {
- width: 2rem;
-      height: 2rem;
-      position: relative;
-      border-radius: 50%;
-      background-color: $red;
+.p-diagram-item__dot {
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  border-radius: 50%;
+  background-color: $red;
 
 }
 
-.p-diagram__dot span {
+.p-diagram-item__dot span {
   display: block;
   width: 0.3rem;
   height: 19rem;
@@ -118,19 +117,16 @@
 
   &::after {
     content: "";
-    width: 2.2rem;
+    width: 3.2rem;
     height: 2.2rem;
     position: absolute;
-    top: -0.2rem;
-    left: 0.15rem;
-    border: 0.3rem solid;
-    border-color: $red transparent transparent $red;
-    transform-origin: left top;
-    transform: rotate(45deg);
+    top: -0.2em;
+    left: -0.77em;
+    background: url('../images/vision/vector.svg') no-repeat center center / contain;
   }
 }
 
-.p-diagram__jp {
+.p-diagram-item__jp {
   color: #000;
   min-width: 14.5rem;
   text-align: left;

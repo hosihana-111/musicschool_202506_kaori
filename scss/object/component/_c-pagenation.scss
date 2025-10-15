@@ -8,10 +8,10 @@
     justify-content: center;
     gap: 0 1rem;
     list-style-type: none;
-     padding-bottom: 21rem;
+   
     @include sp{
       gap: 0 0.5rem;
-      padding-bottom: 20rem;
+     
     }
 }
 .c-pagination__item{
@@ -28,7 +28,7 @@
     font-weight: 700;
     border: 1px solid #000000;   
     color: #000000;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
 
    &.current {
       color: #fff;
@@ -36,7 +36,7 @@
     }
 
   &:hover {
-    opacity: 1;
+   
     color: $white;
     background-color: $black;
   }

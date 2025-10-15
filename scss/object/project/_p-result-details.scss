@@ -1,4 +1,4 @@
-@charset "UTF-8";
+
 @use "../../foundation/base" as *;
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
@@ -11,7 +11,8 @@
 
     @include sp {
         padding-top: 4.5rem;
-        padding-bottom: 16.9rem;
+        padding-bottom: 19.9rem;
+;
     }
 }
 
@@ -105,17 +106,19 @@
 
     @include sp {
         flex-direction: column;
-        margin-top: 2.9rem;
+        margin-top: 2.7rem;
         row-gap: 3rem;
     }
 }
 
 .p-result-profile__table {
     border-collapse: collapse;
+    @include pc {
+        width: 40rem;
+      }
 }
 
 .p-result-profile__table tr {
-
     border: solid 1px #707070;
     height: 3.8rem;
 }
@@ -132,13 +135,14 @@
     vertical-align: middle;
 
     @include sp {
+        width: 12rem;
         line-height: calc(30 / 18);
         padding-left: 1rem;
     }
 }
 
 .p-result-profile__table td {
-    width: 26rem;
+   flex: 1;
     padding: 0;
     font-size: 1.8rem;
     line-height: calc(33 / 18);
@@ -156,10 +160,10 @@
 
 
 .p-result-profile__text {
-    width: 50%;
+    flex: 1;
     font-size: 1.8rem;
     line-height: 1.6666666667;
-    text-align: left;
+  
 
     @include sp {
         width: 100%;

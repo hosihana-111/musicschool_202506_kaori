@@ -4,19 +4,7 @@
 @use "../../foundation/mixin" as *;
 
 
-
-// .c-label {
-//     height: 2.5rem;
-//     color: $white;
-
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     font-size: 1.5rem;
-//     line-height: calc(25 / 15);
-//     margin: 0;
-// }
-
+// サムネイルのラベル
 .c-label {
   position: absolute;
   top: 0;

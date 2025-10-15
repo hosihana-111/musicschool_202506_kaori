@@ -1,11 +1,11 @@
-@charset "UTF-8";
+
 @use "../../foundation/base" as *;
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
 
 .p-top-flow {
     padding-top: 3.6rem;
-    padding-bottom: 5.3rem;
+    padding-bottom: 4.5rem;
 
     @include sp {
         padding-top: 4.6rem;
@@ -20,76 +20,114 @@
     flex-direction: column;
     row-gap: 5.9rem;
     margin-top: 5.5rem;
+    position: relative; 
+     padding-left: 4rem;
+     padding-bottom: 1rem;
     @include sp {
         margin-top: 4.4rem;
         row-gap: 4.17rem;
+        padding-left: 0;
     }
 }
+.p-top-flow__items::before{
+    display: block;
+  width: 0.3rem;
+  height: 100%;
+  content: "";
+  position: absolute;
+ top: 0;
+  left: 6rem;
+  transform: translateX(-50%);
+  background: $red;
+
+    @include sp {
+        left: 2rem;
+       height: 98%
+    }
+}
+
+
+.p-top-flow__items::after {
+    content: "";
+    width: 3.5rem;
+    height: 2rem;
+    position: absolute;
+    bottom: -0.2em;
+    left: 2.365em;    
+    background: url('../images/flow/vector.svg') no-repeat center center / contain;
+
+@include sp {   
+    left: 0.16em;
+    bottom: 0.5em;
+}
+}
+
+// .p-top-flow__items span {
+//     display: block;
+//   width: 0.3rem;
+//   height: 100%;
+//   position: absolute;
+//  top: 0;
+//   left: 6rem;
+//   transform: translateX(-50%);
+//   background: $red;
+
+//     @include sp {
+//         left: 2rem;
+       
+//     }
+// }
 
 .p-flow__item {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+  
 
     @include sp {
         flex-wrap: wrap;
         justify-content: flex-start;
-        align-items: flex-start;
+       
         row-gap: 1.3rem;
     }
 
 }
 
-.p-flow-item__dot { 
-    width: 2rem;
-    height: 2rem;
-    position: relative;
-    border-radius: 50%;
-    background-color: $red;
-    margin: 0 5rem;
-
-    @include sp {
-        margin: 0 2rem 0 0.8rem;
-    }
-
-    span {
-        display: block;
-        height: 40.9rem;
-        width: 0.3rem;
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        background: $red;
-
-        @include sp {
-            height: 67.4rem;
-        }
-    }
-}
-
-.p-flow-item__dot span::after {
-    content: "";
-    width: 2.2rem;
-    height: 2.2rem;
-    position: absolute;
-    bottom: -0.15rem;
-    left: 0.15rem;
-    border: 0.3rem solid;
-    border-color: transparent transparent $red $red;
-    transform: rotate(-45deg);
-    transform-origin: left bottom;
-}
 
 .p-flow-item__label {
-    width: 19.2rem;
+    width: 27.2rem;
+    padding-left: 8rem;
+    position: relative;
 
+    @include sp {
+        width: 100%;
+        padding-left: 5rem;
+    }
     h3 {
         font-size: 2.2rem;
         font-weight: bold;
         color: $red;
-        line-height: 1;
+        line-height: calc(33 / 22);
+
+        @include sp {
+          
+            line-height: 1;
+        }
     }
+}
+
+.p-flow-item__label::after {
+    content: "";
+    width: 2rem;
+    height: 2rem;
+  border-radius: 50%;
+  background-color: $red;
+    position: absolute;
+ top:0;
+    left:0.55em;
+    // @include sp {
+    //     left:0;;
+    // }
+   
 }
 
 

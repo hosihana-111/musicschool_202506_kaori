@@ -1,4 +1,4 @@
-@charset "UTF-8";
+
 @use "../../foundation/base" as *;
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
@@ -35,14 +35,14 @@
     display: flex;
     justify-content: space-between;
     padding-top: 7rem; // 元の値に戻す
-    padding-bottom: 18.5rem;
+    padding-bottom: 19rem;
     gap: calc(30 / 880 *100%);
     margin: 0 auto;
 
     @include sp {
         padding-top: 5rem;
         flex-direction: column;
-        padding-bottom: 16.5rem;
+        padding-bottom: 19.5rem;
     }
 }
 
@@ -115,14 +115,15 @@
         max-width: 100%; // 親に収まるように
     }
 }
-
-.p-tab-panel__text {
+.p-tab-panel__text-box01 {
        margin-top: 4rem;
 
     @include sp {
         margin-top: 2rem;
     }
 }
+
+
 
 // 記事02
 .p-blog-details__content02 {
@@ -132,11 +133,18 @@
 
     @include sp {
         margin-top: 4rem;
-        padding-bottom: 3.5rem;
+       
     }
 
 }
 
+.p-tab-panel__text-box02 {
+       margin-top: 2rem;
+
+    @include sp {
+        margin-top: 1.5rem;
+    }
+}
 .p-tab-panel__heading {
     font-size: 2rem;
     font-weight: 700;
@@ -171,11 +179,19 @@
 
 .p-blog-details__tabs hr{
     margin-block:4.1rem ;
+    @include sp {
+        margin-block: 3.9rem;
+    }
 }
 
 // 記事03
 
-
+.p-blog-details__content03{
+    margin-top: 5.3rem;
+    @include sp {
+        margin-top: 5.1rem;
+    }
+}
 .p-tab-panel__subheading {
     font-size: 2rem;
     font-weight: 700;
@@ -184,6 +200,7 @@
     background: transparent;
     border-left: 3px solid $black;
     padding-left: 1rem;
+    // margin-top:1 rem;
 
     @include sp {
         line-height: calc(30 / 20);
@@ -194,17 +211,20 @@
 
 // 引用ブロック
 .p-tab-panel__blockquote {
-    margin-top: 2.5rem;
-    margin-bottom: 2.8rem;
+    margin-block: 2.5rem;
+   
 
     @include sp {
-        margin-top: 1.95rem;
+        margin-top: 1.5rem;
         margin-bottom: 2.7rem;
     }
 
 }
 
 .p-tab-panel__link {
+    margin-top: 3rem;
+}
+.p-tab-panel__link a {
     font-size: 2rem;
     font-weight: 700;
     line-height: calc(33 / 20);

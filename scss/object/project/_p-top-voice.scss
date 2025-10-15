@@ -1,4 +1,4 @@
-@charset "UTF-8";
+
 @use "../../foundation/base" as *;
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
@@ -24,9 +24,9 @@
 
 }
 
-.p-voice__title {
-    color: $white ;
-}
+// .p-voice__title {
+//     color: $white ;
+// }
 
 .p-voice__container {
     position: relative;
@@ -43,7 +43,7 @@
 /* スライド（リンク全体） */
 .p-voice__item {
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
     row-gap: 1.7rem;
@@ -56,13 +56,14 @@
 }
 
 /* 画像枠の比率固定：PC と SP で切り替え */
-.p-voice-item__card {
+.p-voice-item__img {
     width: 100%;
     margin: 0 auto;
     overflow: hidden;
     display: block;
     aspect-ratio: 270 / 190;
     /* PC の既定比率 */
+    overflow: hidden;
 
     @include sp {
         aspect-ratio: 335 / 200;
@@ -77,11 +78,16 @@
 
     img {
         object-fit: cover;/* 伸び/歪み防止 */
+        height: auto;
+  transition: transform .6s ease; /* ゆっくり変化させる */
+  &:hover {
+    transform: scale(1.1);
+  }
     }
    
 }
 
-.p-voice-card__body {
+.p-voice-item__body {
     color: $white;
     margin-top: 1.7rem;
     @include sp {
@@ -89,7 +95,7 @@
     }
 }
 
-.p-voice-card__title {
+.p-voice-item__title {
     font-size: 2.2rem;
     line-height: calc(33 / 22);
     font-weight: 700;
@@ -99,7 +105,7 @@
    
 }
 
-.p-voice-card__desc {
+.p-voice-item__desc {
     font-size: 1.8rem;
     line-height: calc(30 / 18);
     text-align: left;

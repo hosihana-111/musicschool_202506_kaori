@@ -1,10 +1,10 @@
-@charset "UTF-8";
+
 @use "../../foundation/base" as *;
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
 
 .p-top-reason {
-    padding-top: 6.2rem;
+    padding-top: 6.4rem;
     padding-bottom: 9rem;
 
     @include sp {
@@ -38,7 +38,7 @@
     }
 }
 
-.p-top-reason__item {
+.p-reason-item {
     display: flex;
     // justify-content: center;
     
@@ -51,7 +51,7 @@
     }
 }
 
-.p-top-reason__image {
+.p-reason-item__image {
     display: block;
     width: calc(350 / 880 *100%);
     flex-shrink: 0;
@@ -73,14 +73,14 @@
     }
 }
 
-.p-top-reason__content {
+.p-reason-item__content {
     flex: 1;
 @include sp {
     margin-top: 3rem;
 }
 }
 
-.p-top-reason__title {
+.p-reason-item__title {
     font-size: 2.2rem;
     font-weight: 700;
     line-height: calc(33 / 22);
@@ -101,7 +101,7 @@
 
 
 
-.p-top-reason__text {
+.p-reason-item__text {
     text-align: left;
     display: block;
     padding-top: 3.7rem;

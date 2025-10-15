@@ -1,23 +1,23 @@
-@charset "UTF-8";
+
 @use "../../foundation/base" as *;
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
 
 .p-top-faq {
-  padding-top: 6rem;
+  padding-top: 5rem;
   padding-bottom: 3.5rem;
 
   @include sp {
-    padding-top: 4.3rem;
+    padding-top: 3.5rem;
     padding-bottom: 1rem;
   }
 }
 
 .p-faq__container {
-  margin-top: 3.6rem;
+  margin-top: 3.2rem;
 
   @include sp {
-    margin-top: 4rem;
+    margin-top: 4.1rem;
   }
 }
 
@@ -85,7 +85,7 @@
   flex: 1;
 }
 
-.p-faq__answer {
+.p-faq__answer-bg {
   display: flex;
   align-items: center;
   padding: 1.5rem 2.9rem 1.5rem 2rem;
