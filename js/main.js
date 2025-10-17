@@ -93,7 +93,7 @@ $(document).ready(function () {
   // =============================
   // ハンバーガーメニュー操作
   // =============================
-  $('.p-header__hamburger').on("click", function () {
+  $('.c-hamburger').on("click", function () {
     if ($(this).hasClass("active")) {
       $(this).removeClass("active");
       $('.p-header__nav').removeClass("open");

@@ -3,49 +3,13 @@
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
 
-// .c-thumbnail {
-//     position: relative;
-// }
-
-// .c-thumbnail__label {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     background-color: $red;
-//     min-width: 8rem;
-//     height: 3rem;
-//     z-index: 1;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     font-weight: 700;
-
-//     @include sp {
-//         min-width: 9rem;
-//     }
-// }
 
 
-// .c-thumbnail__label-large {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     background-color: $red;
-//     min-width: 10rem;
-//     height: 3rem;
-//     z-index: 1;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     font-weight: 700;
+.c-thumbnail {
+    width: 100%;   
+}
 
-//     @include sp {
-//         min-width: 9rem;
-//     }
-// }
-
-
-.c-thumbnail-img {
+.c-thumbnail__img {
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -53,7 +17,7 @@
 
 }
 
-.c-thumbnail-img img {
+.c-thumbnail__img img {
     width: 100%;
     object-fit: cover;
     display: block;

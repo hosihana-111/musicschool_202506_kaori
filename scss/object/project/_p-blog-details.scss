@@ -31,20 +31,27 @@
 }
 
 // メイン記事
-.p-blog-details__wrapper {
-    display: flex;
-    justify-content: space-between;
+.p-blog-details__wrapper {  
     padding-top: 7rem; // 元の値に戻す
-    padding-bottom: 19rem;
-    gap: calc(30 / 880 *100%);
+    padding-bottom: 19rem;    
     margin: 0 auto;
 
     @include sp {
-        padding-top: 5rem;
-        flex-direction: column;
+        padding-top: 5rem;      
         padding-bottom: 19.5rem;
     }
 }
+.p-blog-details__main {
+    display: flex;
+    justify-content: space-between;
+    gap: calc(30 / 880 *100%);
+
+    @include sp {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
 
 .p-blog-details__article {
     flex: 1;

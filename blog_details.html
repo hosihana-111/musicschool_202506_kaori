@@ -33,7 +33,7 @@
             </a>
           </div>
         </div>
-        <button class="p-header__hamburger sp" aria-controls="global-nav" aria-expanded="false" aria-label="メニューを開閉">
+        <button class="c-hamburger sp" aria-controls="global-nav" aria-expanded="false" aria-label="メニューを開閉">
           <span></span>
           <span></span>
           <span></span>
@@ -55,28 +55,23 @@
 
     <main>
       <!-- パンくずリスト -->
-      <div class="c-breadcrumb__inner">
-        <nav class="c-breadcrumb" aria-label="パンくずリスト">
-          <ol class="c-breadcrumb__items">
-            <li class="c-breadcrumb__item">
-              <a href="index.html" class="u-opacity">ホーム</a>
-            </li>
-            <li class="c-breadcrumb__item"><span>>&emsp;</span>
-              <a href="blog_list.html" class="u-opacity">ブログ</a>
-            </li>
-            <li class="c-breadcrumb__item"><span>>&emsp;</span>
-              <a href="blog_list.html" class="u-opacity">ギター</a>
-            </li>
-            <li class="c-breadcrumb__item" aria-current="page">
-              <span>>&emsp;</span>アルペジオが劇的に向上する３つの習慣
-            </li>
-          </ol>
-        </nav>
+      <div class="c-breadcrumbs">
+        <div class="c-breadcrumbs__inner">
+          <a href="./index.html" class="c-breadcrumbs__text u-opacity">ホーム</a>
+          <span class="c-breadcrumbs__sign">&#62;</span>
+          <a href="./blog-list.html" class="c-breadcrumbs__text u-opacity">ブログ</a>
+          <span class="c-breadcrumbs__sign">&#62;</span>
+          <a href="./blog-list.html" class="c-breadcrumbs__text u-opacity">ギター</a>
+          <span class="c-breadcrumbs__sign">&#62;</span>
+          <p class="c-breadcrumbs__text">アルペジオが劇的に向上する３つの習慣</p>
+        </div>
       </div>
+      
+      <!-- ブログ詳細 -->     
+      <div class="p-blog-details__wrapper l-inner">
+         <!-- メイン記事 -->
+        <div class="p-blog-details__main">
 
-      <!-- メイン記事 -->
-      <div class="p-blog-details__main  l-inner">
-        <div class="p-blog-details__wrapper">
           <article id="article" class="p-blog-details__article">
             <div class="p-blog-details__tabs">
 
@@ -87,7 +82,7 @@
                     <div class="c-thumbnail__label">
                       <p class="c-label">ギター</p>
                     </div>
-                    <div class="c-thumbnail-img">
+                    <div class="c-thumbnail__img">
                       <picture>
                         <source media="(min-width: 768px)" srcset="./images/blog_details/blog01.jpg">
                         <img src="./images/blog_details/blog01-sp.jpg" alt="アコースティックギターを弾く人">
@@ -181,10 +176,10 @@
                     <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
                   </blockquote>
                 </div>
-                <div class="p-tab-panel__link u-opacity">
-                  <a href="" >テキストリンク</a>
+                <div class="p-tab-panel__link">
+                  <a href="" class="u-opacity">テキストリンク</a>
                 </div>
-                
+
               </div>
             </div>
 
@@ -229,7 +224,7 @@
                     <div class="  c-thumbnail__label">
                       <p class="c-label">ギター</p>
                     </div>
-                    <div class="p-related-posts__eye-catch c-thumbnail-img">
+                    <div class="p-related-posts__eye-catch c-thumbnail__img">
                       <picture>
                         <source media="(min-width: 768px)" srcset="./images/blog_details/blog03-pc.jpg">
                         <img src="./images/blog_details/blog03-sp.jpg" alt="マイクで熱唱する女性">
@@ -247,7 +242,7 @@
                     <div class=" c-thumbnail__label">
                       <p class="c-label">ギター</p>
                     </div>
-                    <div class="p-related-posts__eye-catch c-thumbnail-img">
+                    <div class="p-related-posts__eye-catch c-thumbnail__img">
                       <picture>
                         <source media="(min-width: 768px)" srcset="./images/blog_details/blog03-pc.jpg">
                         <img src="./images/blog_details/blog03-sp.jpg" alt="マイクで熱唱する女性">
@@ -265,7 +260,7 @@
                     <div class=" c-thumbnail__label">
                       <p class="c-label">ギター</p>
                     </div>
-                    <div class="p-related-posts__eye-catch c-thumbnail-img">
+                    <div class="p-related-posts__eye-catch c-thumbnail__img">
                       <picture>
                         <source media="(min-width: 768px)" srcset="./images/blog_details/blog03-pc.jpg">
                         <img src="./images/blog_details/blog03-sp.jpg" alt="マイクで熱唱する女性">
@@ -287,8 +282,8 @@
             <div class="p-blog-details__widget p-sidebar-widget">
               <p class="p-sidebar-widget__title">無料メールマガジン</p>
               <div class="p-sidebar-widget__magazine">
-                <a href="">
-                  <p class="p-sidebar-widget__ad u-opacity">バナー広告</p>
+                <a href="" class="u-opacity">
+                  <p class="p-sidebar-widget__ad">バナー広告</p>
                 </a>
               </div>
             </div>
@@ -298,9 +293,9 @@
               <p class="p-sidebar-widget__title">ブログ内を検索</p>
               <div class="p-sidebar-widget__search-box">
                 <form class="p-sidebar-widget__form">
-                  <input type="text" aria-label="ブログ内検索"  name="s" placeholder="検索ワード">
+                  <input type="text" aria-label="ブログ内検索" name="s" placeholder="検索ワード">
                   <button type="submit" class="u-opacity">
-                    <span >
+                    <span>
                       <img src="./images/blog_details/icon-search.svg" alt="検索">
                     </span>
                   </button>
