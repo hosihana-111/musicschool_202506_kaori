@@ -53,10 +53,10 @@ $(document).ready(function () {
   // =============================
 
   // $(function () {
-  $(".p-faq__answer-bg").hide();
-  $(".p-faq__item").on("click", function () {
-    $(this).find(".p-faq-item__img").toggleClass("is-active");
-    $(this).find(".p-faq__answer-bg").slideToggle(400).toggleClass("u-flex");
+  $(".js-faq-answer").hide();
+  $(".js-faq").on("click", function () {
+    $(this).toggleClass("is-active");
+    $(this).find(".js-faq-answer").slideToggle(400);
   });
 
   // });
@@ -74,6 +74,20 @@ $(document).ready(function () {
     } else {
       fixArea.fadeOut();
     }
+
+    // --- footerに被ったらborder-bottomを消す---
+  const $footer = $(".p-footer");
+  const $contactBtn = $(".p-top-btn__contact");
+  if ($footer.length && $contactBtn.length) {
+    const scrollBottom = $(this).scrollTop() + $(this).height();
+    const footerTop = $footer.offset().top;
+    if (scrollBottom >= footerTop) {
+      $contactBtn.addClass("is-over-footer");
+    } else {
+      $contactBtn.removeClass("is-over-footer");
+    }
+  }
+  // 
   });
 
   //画面の高さまで表示領域を広げる

@@ -39,10 +39,7 @@
 }
 
 .p-reason-item {
-    display: flex;
-    // justify-content: center;
-    
-    
+    display: flex;   
 
     @include sp {
         flex-direction: column;

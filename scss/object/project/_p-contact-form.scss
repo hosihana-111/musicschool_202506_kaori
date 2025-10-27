@@ -40,14 +40,14 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  row-gap: 3rem;
+  row-gap: 2.7rem;
 
   @include sp {
-    row-gap: 1.5rem;
+    row-gap: 1.1rem;
   }
 }
 
-.p-contact-form__area {
+.p-contact-form__box dl {
   display: flex;
 
   @include sp {
@@ -55,13 +55,15 @@
   }
 }
 
-.p-contact-form__area dt {
+.p-contact-form__box dt {
   width: 16.9rem;
   height: 4rem;
   display: flex;
   font-size: 2rem;
   font-weight: 500;
   line-height: calc(33 / 20);
+  margin-top: 0.3rem;
+
 
 
   @include sp {
@@ -74,7 +76,7 @@
   }
 }
 
-.p-contact-form__area dd {
+.p-contact-form__box dd {
   flex: 1;
   width: 100%;
   display: flex;
@@ -92,38 +94,25 @@
     width: 100%;
     height: 4rem;
     border: 0.05rem solid #000;
-    padding-inline: 2rem;
+    padding: 0.2rem 2rem;
     background: #fff;
     font-size: 1.8rem;
     line-height: calc(30 / 18);
 
     @include sp {
       font-size: 1.6rem;
+      line-height: calc(26 / 16);
+      width: 100%;
+      height: 4rem;
 
     }
   }
 }
 
-.p-contact-form__form-control {
-  width: 100%;
-  height: 100%;
-  padding: 0.2rem 2rem;
-  // font-size: 1.5rem;
-  // line-height: calc(33 / 15);
-  border: 0.5px solid $black;
-
-  @include sp {
-    width: 100%;
-    height: 4rem;
-  }
-}
 
 
 
-.p-form-area__email {
-  @include sp {}
 
-}
 
 ::placeholder {
   color: #B2B2B2;
@@ -178,19 +167,13 @@
   row-gap: 0.9rem;
 
   @include sp {
-    row-gap: 1rem;
+    row-gap: 1.3rem;
   }
 }
 
 .p-form-checkbox__item {
-  // display: inline-flex;
-  // align-items: center;
-  // width: max-content;
-  /* 中身の幅だけ */
-  cursor: pointer;
+   cursor: pointer;
 
-  // user-select: none;
-  // gap: 0;
   input[type="checkbox"] {
     display: none;
   }
@@ -202,7 +185,7 @@
 
   @include sp {
     font-size: 1.6rem;
-    
+
   }
 }
 
@@ -258,8 +241,6 @@ input[type="checkbox"]:checked+span::after {
 
 .form-area-message {
   dt {
-
-
     @include sp {
       line-height: 1;
     }
@@ -272,14 +253,6 @@ input[type="checkbox"]:checked+span::after {
 }
 
 .form-textarea {
-  // width: 100%;
-  // min-height: 19rem;
-  // border: 0.5px solid $black;
-  // padding: 1.4rem 2rem;
-  // display: block;
-  // resize: vertical;
-  // font-size: 1.8rem;
-  // line-height: calc(30 / 18);
   width: 100%;
   background-color: #FFF;
   min-height: 30rem;
@@ -292,43 +265,44 @@ input[type="checkbox"]:checked+span::after {
   @include sp {
     padding: 1.5rem 2rem;
     min-height: 19rem;
-    margin-top: 1.1rem;
+    margin-top: 1.4rem;
 
-  }}
-
-  /*****ボタン*****/
-  .p-contact-form__contact__button {
-    margin-top: 5rem;
-    margin-inline: auto;
-    width: 25rem;
-
-
-    @include sp {
-      max-width: 33.5rem;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-
-    }
   }
+}
 
-  .p-contact-form__form-submit {
+/*****ボタン*****/
+.p-contact-form__contact__button {
+  margin-top: 5rem;
+  margin-inline: auto;
+  width: 25rem;
 
+
+  @include sp {
+    max-width: 33.5rem;
     width: 100%;
-    height: 50px;
-    font-weight: 700;
-    font-size: 2.5rem;
-    line-height: calc(33 / 25);
-    cursor: pointer;
-    display: grid;
-    place-content: center;
-    text-decoration: none;
-
-
-    @include sp {
-      font-size: 2rem;
-      line-height: calc(26 / 20);
-    }
-
+    display: flex;
+    justify-content: center;
 
   }
+}
+
+.p-contact-form__form-submit {
+
+  width: 100%;
+  height: 50px;
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: calc(33 / 25);
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+  text-decoration: none;
+
+
+  @include sp {
+    font-size: 2rem;
+    line-height: calc(26 / 20);
+  }
+
+
+}

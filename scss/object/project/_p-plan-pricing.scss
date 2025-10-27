@@ -115,11 +115,16 @@
   width: 100%;
   border-collapse: collapse;
   /* セルの線を重ねる */
-  @include sp {
-    width: 67rem;
+
+ @media screen and (710px < width <= 767px) {
+  width: 100%;
+  margin-bottom: 1.75rem;
+  }
+@media screen and (max-width:710px) {
+       width: 67rem;
     /*colgroupの合計幅*/
     margin-bottom: 1.75rem;
-  }
+}
 }
 
 .p-plan-details__table-inner {
@@ -159,12 +164,12 @@
   }
 }
 
-.p-plan-table__th-blank {
+.p-plan-table__blank {
   height: 3rem;
 }
 
-.p-plan-table__head th,
-.p-plan-table__head td {
+.p-plan-table__head th
+{
   width: 25%;
   vertical-align: bottom;
   padding-inline: 2rem;
@@ -174,7 +179,7 @@
   }
 }
 
-.p-plan-table__head td {
+.p-plan-table__head th {
   padding: 0;
 
   .th-inner {
@@ -259,7 +264,7 @@
   }
 }
 
-.p-plan-table__feature {
+.p-plan-table__body th {
   font-size: 1.7rem;
   line-height: calc(25 / 17);
   text-align: left;
@@ -275,21 +280,24 @@
 }
 
 // 料金表のbodyの行の高さ
-.p-plan-table__cell {
+.p-plan-table__body td {
   text-align: center;
-
   flex-shrink: 0;
   height: 8.5rem;
+  // 料金表のbodyの縦の線
+  border-right: solid 1px $black;
+  border-left: solid 1px $black;
+
 }
 
 // 料金表の全体の赤字
-.p-plan-table__cell .red {
+.p-plan-table__body td .red {
   color: $red;
   white-space: nowrap;
 }
 
 // 料金表のハイフン
-.p-plan-table__cell .hyphens {
+.p-plan-table__body td .hyphens {
   display: inline-block;
   width: 3rem;
   height: 0.1rem;
@@ -298,12 +306,8 @@
 
 }
 
-// 料金表のbodyの縦の線
-.p-plan-table__body td {
-  border-right: solid 1px $black;
-  border-left: solid 1px $black;
 
-}
+
 
 .p-plan-table td:last-child {
   border-right: none;
@@ -315,13 +319,13 @@
 
 }
 
-.p-plan-table__price .p-plan-table__cell {
+.p-plan-table__price td {
   font-size: 2.2rem;
   line-height: calc(33 / 22);
 
 }
 
-.p-plan__pricing-text {
+.p-plan-details__pricing-text {
   margin-top: 2.9rem;
   font-size: 1.7rem;
  

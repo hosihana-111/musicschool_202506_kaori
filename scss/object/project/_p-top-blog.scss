@@ -9,13 +9,13 @@
     padding-bottom: 20.2rem;
 
     @include sp {
-         padding-top: 3rem;
+         padding-top: 4.4rem;
         padding-bottom: 18.8rem;
     }
 }
 
 .p-top-blog__items {
-    margin-top: 3.7rem;
+    margin-top: 3.4rem;
       display: grid;
   grid-template-columns: repeat(3, 1fr);
     // justify-content: space-between;    
@@ -26,7 +26,7 @@
         display: flex;
         flex-direction: column;
         row-gap: 39px;
-        margin-top: 4.5rem;
+        margin-top: 4rem;
     }
 }
 
@@ -39,6 +39,7 @@
         width: 100%;
     }
 }
+
 
 
 
@@ -85,7 +86,7 @@
     }
 }
 
-.p-blog-item__more-link {
+.p-top-blog__more {
     margin-top: 4rem;
     text-align: right;
     
@@ -96,7 +97,7 @@
     }
 }
 
-.p-top-blog__more {
+.p-top-blog__more a{
     padding: 0.5rem 0 ;
     text-decoration-line: underline;
     text-decoration-color: $black;

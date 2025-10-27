@@ -5,13 +5,14 @@
 
 .p-top-faq {
   padding-top: 5rem;
-  padding-bottom: 3.5rem;
+  padding-bottom: 4.1rem;
 
   @include sp {
     padding-top: 3.5rem;
-    padding-bottom: 1rem;
+    padding-bottom: 0.6rem;
   }
 }
+
 
 .p-faq__container {
   margin-top: 3.2rem;
@@ -28,88 +29,102 @@
   width: 100%;
 }
 
-.p-faq__item {
+.p-faq-item {
   border-bottom: 1px solid $black;
 
   &:first-of-type {
     border-top: 1px solid $black;
   }
 }
-.p-faq-item__img{
-   width: 1.36rem;
-      transition: transform 0.4s;
-      &.is-active {
-        transform: rotate(180deg);
-      }
-}
 
-.p-faq__question {
-  display: flex;
-  align-items: center;
-  padding: 1.5rem 2.9rem 1.5rem 2rem;
+
+.p-faq-item__text {
+   position: relative;
+   display: block;
   font-size: 1.7rem;
   line-height: calc(30 / 17);
-  column-gap: 1rem;
-  color: $black;
-  cursor: pointer;
-  position: relative;
   font-weight: 500;
-
-  @include sp {
+  flex: 1;
+  padding: 1.74rem 2.9rem 1.74rem 6.5rem;
+  align-items: center;
+   @include sp {
     font-size: 1.6rem;
     line-height: calc(30 / 16);
-    padding: 1.3rem 0;
-    padding-right: 1.5rem;
-    padding-bottom: 1.2rem;
+    padding: 1.25rem 4.7rem 1.25rem 5.5rem;
+  
   }
 }
 
-
-.p-faq__question-q-badge {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.p-faq-item__question .p-faq-item__text::before{
+  content: "Q";
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  transform: translateY(-50%); 
   width: 3.5rem;
   height: 3.5rem;
   background: $black;
   color: $white;
   border-radius: 50%;
   font-weight: 700;
-  font-size: 2rem;
-  flex-shrink: 0;
+  font-size: 2rem;  
+  padding-inline: 0.9rem;
+
+  @include sp {
+     left: 0.2rem;
+  }
+ 
+}
+// 矢印部分
+.p-faq-item__question .p-faq-item__text::after{
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 2.9rem;
+      transform: translateY(-50%);
+      display: inline-block;
+      background-image: url("../../images/faq/faq-arrow.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 1.3rem;
+      height: 1.3rem;  
+      transition: transform 0.4s;
+      &.is-active {
+        transform: rotate(180deg);
+      }
+
+      @include sp {
+        right: 1.5rem;
+      }
 }
 
-.p-faq__text {
-  font-size: 1.7rem;
-  line-height: calc(30 / 17);
-  flex: 1;
+/* クリック時（is-activeが付いた時）に反転 */
+.js-faq.is-active .p-faq-item__question .p-faq-item__text::after {
+  transform: translateY(-50%) rotate(180deg);
 }
 
-.p-faq__answer-bg {
-  display: flex;
-  align-items: center;
-  padding: 1.5rem 2.9rem 1.5rem 2rem;
-  font-size: 1.7rem;
-  line-height: calc(30 / 17);
-  column-gap: 1rem;
+.p-faq-item__answer {
+   background-color: rgba(203, 0, 0, 0.1);
+
+}
+.p-faq-item__answer .p-faq-item__text {
   color: $red;
-  cursor: pointer;
-  position: relative;
+  font-size: 1.7rem;
+  line-height: calc(30 / 17);
   font-weight: 700;
-  background-color: rgba(203, 0, 0, 0.1);
 
   @include sp {
     font-size: 1.6rem;
     line-height: calc(30 / 16);
-    padding: 1.3rem 0 1.2rem 0;
-    padding-right: 1.5rem;
   }
 }
 
-.p-faq__answer-a-badge {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.p-faq-item__answer .p-faq-item__text::before{
+  content: "A";
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  transform: translateY(-50%); 
   width: 3.5rem;
   height: 3.5rem;
   background: $red;
@@ -117,18 +132,14 @@
   border-radius: 50%;
   font-weight: 700;
   font-size: 2rem;  
-  flex-shrink: 0;
-}
+  padding-inline: 1rem;
 
-.p-faq__answer p {
-  color: $red;
-  font-size: 1.7rem;
-  line-height: calc(30 / 17);
-  font-weight: 700;
-
-  @include sp {
-    font-size: 1.6rem;
-    line-height: calc(30 / 16);
+   @include sp {
+     left: 0.2rem;
   }
-
+ 
 }
+
+
+
+

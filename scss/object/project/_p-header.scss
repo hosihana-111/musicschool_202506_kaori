@@ -67,7 +67,7 @@
 
 }
 
-.p-header__logo-img {
+.p-header-logo__img {
   width: 3.2rem;
   margin-right: 1rem;
 
@@ -77,7 +77,7 @@
   }
 }
 
-.p-header__logo-text {
+.p-header-logo__text {
   font-size: 2rem;
   font-weight: 700;
   line-height: calc(23 / 20);
@@ -90,7 +90,7 @@
 
 }
 
-.p-header__logo-text-small {
+.p-header-logo__text-small {
   font-weight: 700;
   font-size: 1.5rem;
   line-height: calc(23 / 15);
@@ -149,7 +149,7 @@
 }
 
 
-.p-header__link {
+.p-header__item a {
   height: 8rem;
   display: flex;
   align-items: center;
@@ -203,11 +203,11 @@
 
   }
 }
-.p-header__link span:hover {
-  @include pc {
-      opacity: 0.5;
-    }
-  }
+// .p-header__link span:hover {
+//   @include pc {
+//       opacity: 0.5;
+//     }
+//   }
 
 
 .p-header__link::after:hover {

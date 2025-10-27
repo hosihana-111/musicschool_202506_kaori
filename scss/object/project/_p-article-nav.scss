@@ -6,13 +6,13 @@
 
 // 前後記事ナビ
 .p-article-nav {
-    margin-top: 5.2rem;
+    
     display: flex;
     justify-content: space-between;
     column-gap: 7.9rem;
 
     @include sp {
-        margin-top: 4.4rem;
+       
         column-gap: 2.2rem;
     }
 }

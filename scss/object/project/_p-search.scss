@@ -1,37 +1,38 @@
-
 @use "../../foundation/base" as *;
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
 
-.p-search{
+.p-search {
     padding-top: 6.6rem;
     padding-bottom: 21rem;
-    @include sp{
-        padding-top:  3.4rem;
-         padding-bottom: 20.3rem;
+
+    @include sp {
+        padding-top: 3.4rem;
+        padding-bottom: 20.3rem;
     }
 }
 
-.p-search__header{  
+.p-search__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
 }
 
-.p-search__title{
+.p-search__title {
     font-size: 1.8rem;
     line-height: calc(30 / 18);
-    
+
 }
-.p-search__keyword{
+
+.p-search__keyword {
     font-weight: 700;
-     font-size: 1.8rem;
+    font-size: 1.8rem;
     line-height: calc(30 / 18);
 }
 
-.p-search__count{
-     font-size: 1.8rem;
+.p-search__count {
+    font-size: 1.8rem;
     line-height: calc(30 / 18);
 }
 
@@ -39,7 +40,7 @@
     margin-top: 4.2rem;
     display: flex;
     flex-direction: column;
-    gap: 6.7rem;
+    gap: 7rem;
 
 
     @include sp {
@@ -50,7 +51,7 @@
         align-items: center;
         margin-top: 4.3rem;
         gap: 4rem;
-         padding-bottom: 5.8rem;
+        padding-bottom: 5.8rem;
     }
 }
 
@@ -61,7 +62,7 @@
     position: relative;
 }
 
-.p-search__link {
+.p-search__item a {
     display: flex;
 
     justify-content: center;
@@ -73,43 +74,46 @@
         align-items: flex-start;
     }
 }
-.p-search__img-box {
-    position: relative;
-    width: 30%;
-    flex-shrink: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+// .p-search__img {
+//     position: relative;
+//     width: 30%;
+//     flex-shrink: 0;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
 
 
-    @include sp {
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-    }
-}
+//     @include sp {
+//         width: 100%;
+//         justify-content: center;
+//         align-items: center;
+//     }
+// }
 
 
 .p-search__img {
+    position: relative;
+    width: 26rem;
     aspect-ratio: 260 / 184;
-    padding-right: 0.5rem;
-    padding-bottom: 0.5rem;
-     position: relative;
 
     @include sp {
+        width: 100%;
         aspect-ratio: 335 / 200;
         padding-right: 0;
         padding-bottom: 0;
     }
 }
-.p-search__img picture, 
+
+.p-search__img picture,
 .p-search__img img {
-  width: 100%;
-  height: 100%;
-  display: block;
+    width: 100%;
+    height: 100%;
+    display: block;
 }
-.p-search__img img { 
-  object-fit: cover;
+
+.p-search__img img {
+    object-fit: cover;
 }
 
 .p-search__body {
@@ -120,11 +124,11 @@
     font-size: 2rem;
     line-height: calc(25 / 20);
     font-weight: 700;
-    
+
 
     @include sp {
         line-height: calc(30 / 20);
-      
+
     }
 }
 
@@ -133,31 +137,32 @@
     font-size: 1.7rem;
     line-height: 1;
     margin-top: 0.5rem;
-    
+
 
     @include sp {
         text-align: right;
-          margin-top: 1rem;
-        
+        margin-top: 1rem;
+
     }
 }
 
-.p-search__excerpt {  
+.p-search__text {
     display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  overflow: hidden;
-  margin-top: 2rem;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    margin-top: 2rem;
 
-    @include sp {      
+    @include sp {
         text-align: left;
         margin-top: 1.6rem;
     }
 }
 
-.p-search__pagination{
+.p-search__pagination {
     margin-top: 7rem;
-    @include sp{
+
+    @include sp {
         margin-top: 3rem;
     }
 }

@@ -39,11 +39,15 @@
   left: 6rem;
   transform: translateX(-50%);
   background: $red;
-
-    @include sp {
+  @media screen and (530px < width <=767px) {
+    left: 2rem;
+    height: 97.9%
+  }
+@media screen and (max-width:530px) {
         left: 2rem;
-       height: 98%
+       height: 98.1%
     }
+
 }
 
 
@@ -52,31 +56,17 @@
     width: 3.5rem;
     height: 2rem;
     position: absolute;
-    bottom: -0.2em;
-    left: 2.365em;    
+    bottom: -0.36rem;
+    left: 4.27rem;    
     background: url('../images/flow/vector.svg') no-repeat center center / contain;
 
 @include sp {   
-    left: 0.16em;
-    bottom: 0.5em;
+    left: 0.29rem;
+    bottom: 0.9rem;
 }
 }
 
-// .p-top-flow__items span {
-//     display: block;
-//   width: 0.3rem;
-//   height: 100%;
-//   position: absolute;
-//  top: 0;
-//   left: 6rem;
-//   transform: translateX(-50%);
-//   background: $red;
 
-//     @include sp {
-//         left: 2rem;
-       
-//     }
-// }
 
 .p-flow__item {
     display: flex;

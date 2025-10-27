@@ -8,30 +8,29 @@
   <title>きたむらミュージックスクール</title>
   <meta name="description" content="「音楽で生きる」を叶えるミュージックスクール">
   <link rel="icon" href="./images/icon/favicon.svg" type="image/x-icon" sizes="32x32">
-  <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <div id="container">
-    <!-- ヘッダー -->
+ <!-- ヘッダー -->
     <header id="header" class="p-header l-header">
       <div class="p-header__inner">
-        <div class="p-header__logo">
-          <div>
+        <div class="p-header__logo p-header-logo">
+          <h1>
             <a href="./index.html" class="u-opacity">
-              <span class="p-header__logo-img">
+              <span class="p-header-logo__img">
                 <img src="./images/header/header-logo.svg" alt="きたむらミュージックスクール">
               </span>
-              <span class="p-header__logo-text">きたむら<br class="pc">
-                <span class="p-header__logo-text-small">ミュージックスクール</span>
+              <span class="p-header-logo__text">きたむら<br class="pc">
+                <span class="p-header-logo__text-small">ミュージックスクール</span>
               </span>
             </a>
-          </div>
+          </h1>
         </div>
         <button class="c-hamburger sp" aria-controls="global-nav" aria-expanded="false" aria-label="メニューを開閉">
           <span></span>
@@ -41,12 +40,12 @@
         <div class="p-header__right">
           <nav class="p-header__nav" id="global-nav" aria-label="グローバルナビゲーション">
             <ul class="p-header__items">
-              <li class="p-header__item"><a href="./plan.html" class="p-header__link "><span>料金</span></a></li>
-              <li class="p-header__item"><a href="./blog_list.html" class="p-header__link "><span>ブログ</span></a></li>
-              <li class="p-header__item"><a href="./result_list.html" class="p-header__link "><span>卒業実績</span></a></li>
+              <li class="p-header__item"><a href="./plan.html"><span>料金</span></a></li>
+              <li class="p-header__item"><a href="./blog_list.html"><span>ブログ</span></a></li>
+              <li class="p-header__item"><a href="./result_list.html"><span>卒業実績</span></a></li>
             </ul>
           </nav>
-          <div class="p-header__cta pc">
+          <div class="pc">
             <a href="./contact_form.html" class="c-btn c-btn--head">お問い合わせ</a>
           </div>
         </div>
@@ -62,7 +61,6 @@
             <source media="(min-width: 768px)" srcset="./images/plan/plan-fv.jpg">
             <img src="./images/plan/plan-fv_sp.jpg" alt="プラン・料金">
           </picture>
-
           <h1 class="p-child-fv__title">プラン・料金</h1>
         </div>
       </div>
@@ -76,11 +74,10 @@
         </div>
       </div>
 
-
-
-      <!-- 料金体系 -->
-      <section id="plan-pricing" class="p-plan-pricing p-pricing">
-        <div class="l-inner">
+      <!-- 料金 -->
+      <div class="l-inner">
+        <!-- 料金体系 -->
+        <section id="plan-pricing" class="p-plan-pricing p-pricing">
           <h2 class="c-section-title">料金体系</h2>
           <div class="p-pricing__items">
             <p class="p-pricing__item is-entrance">入会金 39,000円</p>
@@ -90,91 +87,89 @@
           <p class="p-pricing__description c-text">
             きたむらミュージックスクールでは、個人に合わせたサポートを行う完全オーダーメイドのプランを用意しており、サポート内容により月額料金が異なります。担当者があなたに最適なプランを提案いたしますので、お気軽にお問い合わせください。※すべての料金は税込価格となります。
           </p>
-        </div>
-      </section>
+        </section>
 
-      <!-- プラン内容・月額料金 -->
-      <section id="plan-details" class="p-plan-details">
-        <div class="l-inner">
+        <!-- プラン内容・月額料金 -->
+        <section id="plan-details" class="p-plan-details">
           <h2 class="c-section-title">プラン内容・月額料金</h2>
           <div class="p-plan-details__container">
-            <div class="p-plan-details__table">
-              <div class="p-plan-details__table-inner">
-                <table class="p-plan-details__table p-plan-table">
-                  <thead class="p-plan-table__head">
-                    <tr>
-                      <th></th>
-                      <td class="p-plan-table__th p-plan-table__th-blank"></td>
-                      <td scope="col" class="p-plan-table__th is-recommend" rowspan="2">
-                        <div class="th-inner-red">
-                          <p>
-                            <span>おすすめ</span>
-                            <br>スタンダード<br class="sp">プラン
-                          </p>
-                        </div>
-                      </td>
-                      <td class="p-plan-table__th p-plan-table__th-blank"></td>
-                    </tr>
-                    <tr>
-                      <th></th>
-                      <td scope="col" class="p-plan-table__th-bl">
-                        <div class="th-inner">
-                          <p>ベーシック<br class="sp">プラン</p>
-                        </div>
-                      </td>
-                      <td scope="col" class="p-plan-table__th-bl">
-                        <div class="th-inner">
-                          <p>プレミアム<br class="sp">プラン</p>
-                        </div>
-                      </td>
-                    </tr>
-                  </thead>
 
-                  <tbody class="p-plan-table__body">
-                    <tr class="p-plan-table__price">
-                      <th class="p-plan-table__feature">月額料金</th>
-                      <td class="p-plan-table__cell">39,000円</td>
-                      <td class="p-plan-table__cell"><span class="red">59,000円</span></td>
-                      <td class="p-plan-table__cell">128,000円</td>
-                    </tr>
-                    <tr>
-                      <th class="p-plan-table__feature">マンツーマン授業</th>
-                      <td class="p-plan-table__cell">●<br>週１回</td>
-                      <td class="p-plan-table__cell"><span class="red">●</span><br>週２回</td>
-                      <td class="p-plan-table__cell">●<br>無制限</td>
-                    </tr>
-                    <tr>
-                      <th class="p-plan-table__feature">ビジネス基本講座</th>
-                      <td class="p-plan-table__cell">●</td>
-                      <td class="p-plan-table__cell"><span class="red">●</span></td>
-                      <td class="p-plan-table__cell">●</td>
-                    </tr>
-                    <tr>
-                      <th class="p-plan-table__feature">練習ROOM利用</th>
-                      <td class="p-plan-table__cell">●<br>月10時間</td>
-                      <td class="p-plan-table__cell"><span class="red">●</span><br>月20時間</td>
-                      <td class="p-plan-table__cell">●<br>無制限</td>
-                    </tr>
-                    <tr>
-                      <th class="p-plan-table__feature">ビジネスコンサル</th>
-                      <td class="p-plan-table__cell"><span class="hyphens"></span></td>
-                      <td class="p-plan-table__cell"><span class="red">●</span><br>月２回</td>
-                      <td class="p-plan-table__cell">●<br>月３回</td>
-                    </tr>
-                    <tr>
-                      <th class="p-plan-table__feature">コミュニティ<br class="sp">参加資格</th>
-                      <td class="p-plan-table__cell"><span class="hyphens"></span></td>
-                      <td class="p-plan-table__cell"><span class="hyphens"></span></td>
-                      <td class="p-plan-table__cell">●</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+            <div class="p-plan-details__table-inner">
+              <table class="p-plan-details__table p-plan-table">
+                <thead class="p-plan-table__head">
+                  <tr>
+                    <th></th>
+                    <th class="p-plan-table__blank"></th>
+                    <th class=" is-recommend" rowspan="2">
+                      <div class="th-inner-red">
+                        <p>
+                          <span>おすすめ</span>
+                          <br>スタンダード<br class="sp">プラン
+                        </p>
+                      </div>
+                    </th>
+                    <th class=" p-plan-table__blank"></th>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <th >
+                      <div class="th-inner">
+                        <p>ベーシック<br class="sp">プラン</p>
+                      </div>
+                    </th>
+                    <th>
+                      <div class="th-inner">
+                        <p>プレミアム<br class="sp">プラン</p>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+
+                <tbody class="p-plan-table__body">
+                  <tr class="p-plan-table__price">
+                    <th>月額料金</th>
+                    <td>39,000円</td>
+                    <td><span class="red">59,000円</span></td>
+                    <td>128,000円</td>
+                  </tr>
+                  <tr>
+                    <th>マンツーマン授業</th>
+                    <td>●<br>週１回</td>
+                    <td><span class="red">●</span><br>週２回</td>
+                    <td>●<br>無制限</td>
+                  </tr>
+                  <tr>
+                    <th>ビジネス基本講座</th>
+                    <td>●</td>
+                    <td><span class="red">●</span></td>
+                    <td>●</td>
+                  </tr>
+                  <tr>
+                    <th>練習ROOM利用</th>
+                    <td>●<br>月10時間</td>
+                    <td><span class="red">●</span><br>月20時間</td>
+                    <td>●<br>無制限</td>
+                  </tr>
+                  <tr>
+                    <th>ビジネスコンサル</th>
+                    <td><span class="hyphens"></span></td>
+                    <td><span class="red">●</span><br>月２回</td>
+                    <td>●<br>月３回</td>
+                  </tr>
+                  <tr>
+                    <th>コミュニティ<br class="sp">参加資格</th>
+                    <td><span class="hyphens"></span></td>
+                    <td><span class="hyphens"></span></td>
+                    <td>●</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <p class="p-plan__pricing-text">※各サービスは１回ごとのオプション追加が可能です。詳しくは事務局までお問い合わせください。</p>
+
+            <p class="p-plan-details__pricing-text">※各サービスは１回ごとのオプション追加が可能です。詳しくは事務局までお問い合わせください。</p>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       <!-- TOPに戻るボタンのjsの修正をAIに依頼 -->
       <div class="p-top-btn">
@@ -182,53 +177,52 @@
           <a href="#" class="p-top-btn__arrow u-opacity " aria-label="ページ上部へ">
             <img src="./images/icon/goto-top.svg" alt="トップへ戻る">
           </a>
-          <a href="./contact_form.html" class="c-btn p-top-btn__contact u-opacity">お問い合わせ</a>
+          <a href="./contact_form.html" class="c-btn p-top-btn__contact">お問い合わせ</a>
         </div>
       </div>
     </main>
 
-
-    <!-- フッター -->
+<!-- フッター -->
     <footer class="p-footer">
       <div class="p-footer__inner">
-        <nav class="p-footer__nav p-footer-nav" aria-label="フッターナビゲーション">
-          <ul class="p-footer-nav__lists">
-            <li class="p-footer-nav__list">
+        <nav class="p-footer__nav" aria-label="フッターナビゲーション">
+          <ul >
+            <li>
               <a href="./index.html" class="u-opacity">ホーム</a>
             </li>
-            <li class="p-footer-nav__list">
+            <li>
               <a href="./plan.html" class="u-opacity">料金</a>
             </li>
-            <li class="p-footer-nav__list">
+            <li>
               <a href="./blog_list.html" class="u-opacity">ブログ</a>
             </li>
-            <li class="p-footer-nav__list">
+            <li>
               <a href="./result_list.html" class="u-opacity">卒業実績</a>
             </li>
           </ul>
         </nav>
-        <a href="./index.html" class="p-footer-logo u-opacity"><img src="./images/icon/logo-white.svg"
+        <a href="./index.html" class="p-footer__logo u-opacity"><img src="./images/icon/logo-white.svg"
             alt="きたむらミュージックスクール"></a>
         <p class="p-footer__copyright">Copyright&copy;0000 KITAMURA music school Inc. All Rights</p>
         <div class="p-footer__sns">
-          <ul class="p-footer__sns-items">
-            <li class="p-footer__sns-item">
-              <a href="" target="_blank" rel="noopener noreferrer" class="u-opacity">
+          <ul>
+            <li>
+              <a href="" target="_blank" class="u-opacity">
                 <img src="./images/icon/icon-twitter.svg" alt="twitterを開く">
               </a>
             </li>
-            <li class="p-footer__sns-item">
-              <a href="" target="_blank" rel="noopener noreferrer" class="u-opacity">
+            <li>
+              <a href="" target="_blank" class="u-opacity">
                 <img src="./images/icon/icon-facebook.svg" alt="facebookを開く">
               </a>
             </li>
-            <li class="p-footer__sns-item">
-              <a href="" target="_blank" rel="noopener noreferrer" class="u-opacity">
+            <li>
+              <a href="" target="_blank" class="u-opacity">
                 <img src="./images/icon/icon-youtube.svg" alt="youtubeを開く">
               </a>
             </li>
-            <li class="p-footer__sns-item">
-              <a href="" target="_blank" rel="noopener noreferrer" class="u-opacity">
+            <li>
+              <a href="" target="_blank" class="u-opacity">
                 <img src="./images/icon/icon-instagram.svg" alt="instagramを開く">
               </a>
             </li>

@@ -15,7 +15,7 @@
 }
 
 
-.p-contact-send__container-text {
+.p-contact-send__text {
   text-align: center; 
   margin: 0 auto;
 
@@ -26,7 +26,7 @@
 }
 
 /*****ボタン*****/
-.p-contact-send__btn-container {
+.p-contact-send__btn {
     margin-top: 4rem;
     margin-inline: auto;  
     width: 25rem;
@@ -40,7 +40,7 @@
     }
   }
   
-  .p-contact-send__btn {
+  .p-contact-send__btn a{
   // display: block;
   //   text-align: center;
   display: inline-grid; 

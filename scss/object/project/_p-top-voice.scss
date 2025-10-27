@@ -7,8 +7,7 @@
     padding-top: 4.4rem;
     padding-bottom: 8rem;
 
-    @include sp {
-        padding-top: 4.4rem;
+    @include sp {     
         padding-bottom: 5rem;
     }
 }
@@ -21,12 +20,7 @@
     @include sp {
         padding-inline: 2rem;
     }
-
 }
-
-// .p-voice__title {
-//     color: $white ;
-// }
 
 .p-voice__container {
     position: relative;
@@ -41,18 +35,25 @@
 }
 
 /* スライド（リンク全体） */
-.p-voice__item {
-    text-align: center;
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    row-gap: 1.7rem;
+.p-voice-item {
+   display: flex;
+  flex-direction: column;
+//   row-gap: 1.7rem;
+  text-decoration: none; /* 下線消すなら */
+  color: inherit;        /* 文字色継承 */
+  transition: transform .3s ease; /* 好みで */
 
-    @include sp {
-        row-gap: 2.5rem;
+
+    &:hover {
+       .p-voice-item__img  img {
+           transform: scale(1.1);
+       }
+
+       .p-voice-item__body {         
+           opacity: 0.7;
+       }
     }
 
-   
 }
 
 /* 画像枠の比率固定：PC と SP で切り替え */
@@ -84,7 +85,7 @@
     transform: scale(1.1);
   }
     }
-   
+
 }
 
 .p-voice-item__body {
@@ -99,9 +100,7 @@
     font-size: 2.2rem;
     line-height: calc(33 / 22);
     font-weight: 700;
-    text-align: center;
-    
-
+    text-align: center;   
    
 }
 

@@ -3,42 +3,16 @@
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
 
-// パンくずリスト
 
-.p-blog-details__breadcrumb-inner {
-    width: 100%;
-    background-color: #E8E8E8;
-
-
-}
-
-.p-blog-details__breadcrumb {
-    max-width: 940px;
-    margin-inline: auto;
-    padding-inline: 3rem;
-    font-size: 1.6rem;
-    line-height: calc(33 / 16);
-    display: block;
-    height: 5rem;
-
-
-    @include sp {
-        padding-inline: 2rem;
-        // padding-block: 0;
-        align-items: center;
-        height: 3.6rem;
-    }
-}
-
-// メイン記事
+// inner
 .p-blog-details__wrapper {  
-    padding-top: 7rem; // 元の値に戻す
+    padding-top: 7rem; 
     padding-bottom: 19rem;    
     margin: 0 auto;
 
     @include sp {
         padding-top: 5rem;      
-        padding-bottom: 19.5rem;
+        padding-bottom: 19.6rem;
     }
 }
 .p-blog-details__main {
@@ -52,9 +26,9 @@
     }
 }
 
-
+// メイン記事 
 .p-blog-details__article {
-    flex: 1;
+    flex: 1;  
 }
 
 // サイドバー
@@ -67,13 +41,13 @@
 }
 
 // 記事01
-.p-tab-panel__eyecatch {
+
+.p-blog-details__img {
     width: 100%;
     position: relative;
 }
 
-
-.p-tab-panel__title {
+.p-blog-details__title {
     margin-top: 4.6rem;
 
     font-size: 2.5rem;
@@ -86,7 +60,7 @@
     }
 }
 
-.p-tab-panel__date {
+.p-blog-details__date {
     display: block;
     letter-spacing: -0.02em;
     margin-top: 0.5rem;
@@ -95,7 +69,7 @@
 }
 
 // SNSボタン
-.p-tab-panel__sns-box {
+.p-blog-details__sns {
     display: flex;
     gap: 4px;
     margin-top: 2.1rem;
@@ -107,12 +81,12 @@
     }
 }
 
-.p-tab-panel__sns-btn {
-    display: inline-block; // li が画像サイズにフィット
+.p-blog-details__sns-btn {
+    display: inline-block; 
     list-style: none;
 }
 
-.p-tab-panel__sns-btn a {
+.p-blog-details__sns-btn a {
     display: inline-block;
     line-height: 0;
 
@@ -122,7 +96,7 @@
         max-width: 100%; // 親に収まるように
     }
 }
-.p-tab-panel__text-box01 {
+.p-blog-details__text-box {
        margin-top: 4rem;
 
     @include sp {
@@ -133,38 +107,31 @@
 
 
 // 記事02
-.p-blog-details__content02 {
-    // padding-bottom: 3.9rem;
-    // border-bottom: 0.5px solid $black;
-    margin-top: 3.3rem;
+
+.p-blog-details__heading {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: calc(40 / 20);
+   margin-top: 3.3rem;
 
     @include sp {
-        margin-top: 4rem;
+         margin-top: 4rem;
        
+        line-height: calc(30 / 20);
     }
-
 }
 
-.p-tab-panel__text-box02 {
+.p-blog-details__text-box02 {
        margin-top: 2rem;
 
     @include sp {
         margin-top: 1.5rem;
     }
 }
-.p-tab-panel__heading {
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: calc(40 / 20);
-   
 
-    @include sp {
-        line-height: calc(30 / 20);
-    }
-}
 
-.p-tab-panel__image {
-    margin-top: 1.6rem;
+.p-blog-details__subimg {
+    margin-top: 1.4rem;
     width: calc(335 / 600 *100%);
 
     @include sp {
@@ -174,7 +141,7 @@
     }
 }
 
-.p-tab-panel___lists {
+.p-blog-details__lists {
     list-style: disc;
     margin-left: 2rem;
     margin-top: 2.8rem;
@@ -184,7 +151,7 @@
     }   
 }
 
-.p-blog-details__tabs hr{
+.p-blog-details__article hr{
     margin-block:4.1rem ;
     @include sp {
         margin-block: 3.9rem;
@@ -192,14 +159,7 @@
 }
 
 // 記事03
-
-.p-blog-details__content03{
-    margin-top: 5.3rem;
-    @include sp {
-        margin-top: 5.1rem;
-    }
-}
-.p-tab-panel__subheading {
+.p-blog-details__subheading {
     font-size: 2rem;
     font-weight: 700;
     line-height: 1;
@@ -208,16 +168,17 @@
     border-left: 3px solid $black;
     padding-left: 1rem;
     // margin-top:1 rem;
+     margin-top: 5.3rem;
 
     @include sp {
         line-height: calc(30 / 20);
-       
+       margin-top: 5.1rem;
         
     }
 }
 
 // 引用ブロック
-.p-tab-panel__blockquote {
+.p-blog-details__blockquote {
     margin-block: 2.5rem;
    
 
@@ -228,10 +189,10 @@
 
 }
 
-.p-tab-panel__link {
-    margin-top: 3rem;
+.p-blog-details__link {
+    margin-top: 2rem;
 }
-.p-tab-panel__link a {
+.p-blog-details__link a {
     font-size: 2rem;
     font-weight: 700;
     line-height: calc(33 / 20);
@@ -243,6 +204,15 @@
 }
 
 
+// 前後記事ナビ
+.p-blog-details__article-nav {
+  margin-top: 5.2rem;
+
+    @include sp {
+      margin-top: 4.8rem;
+    }
+}
+
 
 // 関連記事
 .p-blog-details__related-posts {
@@ -253,13 +223,5 @@
     }
 }
 
-.p-blog-details__thumbnail {
-    position: relative;
-    flex-shrink: 0; // 縮まないように
-    width: calc(200 / 600 * 100%);
 
-    @include sp {
-        width: calc(160 / 335 * 100%);
-    }
-}
 
