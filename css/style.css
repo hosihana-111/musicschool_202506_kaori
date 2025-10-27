@@ -2421,7 +2421,7 @@ body.is-menu-open .c-page-top {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   display: inline-block;
-  background-image: url("../../images/faq/faq-arrow.svg");
+  background-image: url("./../images/faq/faq-arrow.svg");
   background-size: contain;
   background-repeat: no-repeat;
   width: 1.3rem;
