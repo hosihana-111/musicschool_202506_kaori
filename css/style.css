@@ -1059,6 +1059,7 @@ body.is-menu-open .c-page-top {
   place-content: center;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  cursor: pointer;
 }
 @media (max-width: 767px) {
   .p-sidebar__search-form button {
@@ -2065,12 +2066,14 @@ body.is-menu-open .c-page-top {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  text-decoration: none; /* 下線消すなら */
-  color: inherit; /* 文字色継承 */
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: -webkit-transform 0.3s ease;
-  transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease; /* 好みで */
+  text-decoration: none;
+  /* 下線消す */
+  color: inherit;
+  /* 文字色継承 */
+  -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease, -webkit-transform 0.3s ease;
 }
 .p-voice-item:hover .p-voice-item__img img {
   -webkit-transform: scale(1.1);
@@ -2103,21 +2106,21 @@ body.is-menu-open .c-page-top {
 }
 .p-voice-item__img img {
   -o-object-fit: cover;
-     object-fit: cover; /* 伸び/歪み防止 */
+     object-fit: cover;
+  /* 伸び/歪み防止 */
   height: auto;
   -webkit-transition: -webkit-transform 0.6s ease;
   transition: -webkit-transform 0.6s ease;
   transition: transform 0.6s ease;
-  transition: transform 0.6s ease, -webkit-transform 0.6s ease; /* ゆっくり変化させる */
-}
-.p-voice-item__img img:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transition: transform 0.6s ease, -webkit-transform 0.6s ease;
+  /* ゆっくり変化させる */
 }
 
 .p-voice-item__body {
   color: #ffffff;
   margin-top: 1.7rem;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 @media (max-width: 767px) {
   .p-voice-item__body {
@@ -2364,6 +2367,7 @@ body.is-menu-open .c-page-top {
 
 .p-faq-item {
   border-bottom: 1px solid #000000;
+  cursor: pointer;
 }
 .p-faq-item:first-of-type {
   border-top: 1px solid #000000;
@@ -2405,7 +2409,7 @@ body.is-menu-open .c-page-top {
   border-radius: 50%;
   font-weight: 700;
   font-size: 2rem;
-  padding-inline: 0.9rem;
+  padding-inline: 1rem;
 }
 @media (max-width: 767px) {
   .p-faq-item__question .p-faq-item__text::before {
@@ -2478,7 +2482,7 @@ body.is-menu-open .c-page-top {
   border-radius: 50%;
   font-weight: 700;
   font-size: 2rem;
-  padding-inline: 1rem;
+  padding-inline: 1.1rem;
 }
 @media (max-width: 767px) {
   .p-faq-item__answer .p-faq-item__text::before {
@@ -3383,7 +3387,7 @@ body.is-menu-open .c-page-top {
 }
 
 .p-contact-form {
-  margin-top: 6.2rem;
+  margin-top: 6rem;
 }
 @media (max-width: 767px) {
   .p-contact-form {
@@ -3454,7 +3458,7 @@ body.is-menu-open .c-page-top {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 1.8rem;
+  font-size: 2rem;
   line-height: 1.6666666667;
 }
 @media (max-width: 767px) {
@@ -3579,16 +3583,17 @@ body.is-menu-open .c-page-top {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  row-gap: 0.9rem;
+  row-gap: 1.8rem;
 }
 @media (max-width: 767px) {
   .p-form-checkbox__items {
-    row-gap: 1.3rem;
+    row-gap: 2.3rem;
   }
 }
 
 .p-form-checkbox__item {
   cursor: pointer;
+  line-height: 1;
 }
 .p-form-checkbox__item input[type=checkbox] {
   display: none;
@@ -3631,7 +3636,7 @@ input[type=checkbox]:checked + span::after {
   position: absolute;
   content: "";
   top: 50%;
-  left: 0.6rem;
+  left: 0.7rem;
   -webkit-transform: translate(10%, -60%) rotate(50deg);
           transform: translate(10%, -60%) rotate(50deg);
   width: 0.6rem;
@@ -3645,6 +3650,14 @@ input[type=checkbox]:checked + span::after {
   display: block;
 }
 
+.form-area-message {
+  margin-top: 0.6rem;
+}
+@media (max-width: 767px) {
+  .form-area-message {
+    margin-top: 0.3rem;
+  }
+}
 @media (max-width: 767px) {
   .form-area-message dt {
     line-height: 1;
@@ -3661,8 +3674,8 @@ input[type=checkbox]:checked + span::after {
   min-height: 30rem;
   padding: 1.4rem 2rem;
   resize: vertical;
-  font-size: 1.8rem;
-  line-height: 1.2;
+  font-size: 2rem;
+  line-height: 1.4;
   border: 0.5px solid #000000;
 }
 @media (max-width: 767px) {

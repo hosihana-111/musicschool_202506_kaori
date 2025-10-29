@@ -28,7 +28,7 @@
 }
 
 .p-contact-form {
-  margin-top: 6.2rem;
+  margin-top: 6rem;
 
   @include sp {
     margin-top: 3rem;
@@ -81,7 +81,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  font-size: 1.8rem;
+  font-size: 2rem;
   line-height: calc(30 / 18);
 
   @include sp {
@@ -164,15 +164,16 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  row-gap: 0.9rem;
+  row-gap: 1.8rem;
 
   @include sp {
-    row-gap: 1.3rem;
+    row-gap: 2.3rem;
   }
 }
 
 .p-form-checkbox__item {
    cursor: pointer;
+    line-height: 1;
 
   input[type="checkbox"] {
     display: none;
@@ -217,7 +218,7 @@ input[type="checkbox"]:checked+span::after {
   position: absolute;
   content: '';
   top: 50%;
-  left: 0.6rem;
+  left: 0.7rem;
   // transform: translateY(-60%) rotate(50deg);
   transform: translate(10%, -60%) rotate(50deg);
   width: 0.6rem;
@@ -230,6 +231,7 @@ input[type="checkbox"]:checked+span::after {
   // }
 }
 
+
 .p-form-checkbox__item input[type=checkbox]:checked {
   &+span {
     &::after {
@@ -240,6 +242,10 @@ input[type="checkbox"]:checked+span::after {
 
 
 .form-area-message {
+  margin-top: 0.6rem;
+  @include sp {
+    margin-top: 0.3rem;
+  }
   dt {
     @include sp {
       line-height: 1;
@@ -258,8 +264,8 @@ input[type="checkbox"]:checked+span::after {
   min-height: 30rem;
   padding: 1.4rem 2rem;
   resize: vertical;
-  font-size: 1.8rem;
-  line-height: 1.2;
+  font-size: 2rem;
+  line-height: 1.4;
   border: 0.5px solid $black;
 
   @include sp {

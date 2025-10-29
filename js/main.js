@@ -14,8 +14,8 @@ $(document).ready(function () {
       loop: true, // ループ
       speed: 1000, // 少しゆっくり(デフォルトは300)
       slidesPerView: 3, // 一度に表示する枚数  
-      spaceBetween: 35,
-      grabCursor: true,
+      spaceBetween: 35, // スライド間の余白
+      grabCursor: false, // カーソルがつかむ形に
       watchOverflow: true,
       // autoplay: { // 自動再生
       //   delay: 2000, // 2秒後に次のスライド
@@ -42,7 +42,7 @@ $(document).ready(function () {
         // 768px以上（PC・タブレット）
         768: {
           slidesPerView: 3,
-          spaceBetween: 35
+          spaceBetween: 35 // PC用の余白
         }
       }
     });

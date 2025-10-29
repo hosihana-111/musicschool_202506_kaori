@@ -112,6 +112,7 @@
       display: grid;
       place-content: center;
       flex-shrink: 0;
+      cursor: pointer;
       @include sp {
         width: 5.4rem;
         height: 5.4rem;
