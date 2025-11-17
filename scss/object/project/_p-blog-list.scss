@@ -3,7 +3,10 @@
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
 
-
+/* result_listの場合のみｆｖのオーバーレイを非表示にする */
+.p-child-fv--no-overlay .p-child-fv__img::before {
+    display: none;
+}
 .p-blog-list {
     padding-top: 7.5rem;
      padding-bottom: 21rem;
@@ -36,7 +39,7 @@
 .p-blog-list-item a {
     display: flex;
     justify-content: center;
-    gap: calc(50 / 880 *100%);
+    gap: 5rem;
    
 
     @include sp {
@@ -49,7 +52,7 @@
 
 
 .p-blog-list-item__img {
-    width: calc(260 / 880 * 100%);
+    width: 26rem;
     aspect-ratio: 260 / 184;
     overflow: hidden;
     padding: 0;
@@ -64,12 +67,10 @@
 }
 
 .p-blog-list-item__img img {
-    display: block;
+
      aspect-ratio: 260 / 184;
     overflow: hidden;
-    padding: 0;
-  
-    width: 100%;
+    padding: 0;  
     height: 100%;
     object-fit: cover;
 }

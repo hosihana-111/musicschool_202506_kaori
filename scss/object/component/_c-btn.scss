@@ -7,7 +7,7 @@
   text-align: center;
   background-color: $red;
   color: $white;
-   border: 1px solid $red;
+   border: 0.1rem solid $red;
   transition: all .4s ease-in-out;
 
   &:hover {
@@ -19,8 +19,8 @@
 }
 
 .c-btn--head {
-  width: 150px;
-  height: 45px;
+  width: 15rem;
+  height: 4.5rem;
   display: grid;
   place-content: center;
   background-color: $red;

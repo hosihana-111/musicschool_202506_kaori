@@ -9,18 +9,20 @@
 }
 
 .c-breadcrumbs__inner {
-   max-width: 94rem;
-  margin-inline: auto;
-  padding-inline: 3rem;
+  max-width: 94rem;
+    margin-inline: auto;
+    padding-inline: 3rem;
   display: flex;
   align-items: center;
   column-gap: 2rem;
 
 
   @include sp {
-    padding-inline: 2rem;
+ margin-left: 2rem;
+ margin-right: 2rem;
+  padding-inline:0;
     line-height: 1.4;
-    overflow-x: scroll;
+       overflow-x: scroll;
     /*IE(Internet Explorer)・Microsoft Edgeへの対応*/
     -ms-overflow-style: none;
     /*Firefoxへの対応*/
@@ -30,6 +32,9 @@
     &::-webkit-scrollbar {
       display: none;
     }
+    word-break: keep-all;
+    white-space: nowrap;
+ 
   }
 
 }
@@ -48,8 +53,9 @@
   align-items: center;
 
   @include sp {
+   
     height: 3.6rem;
-    white-space: nowrap;
+  white-space: nowrap;
   }
 
 

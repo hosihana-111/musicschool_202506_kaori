@@ -1,4 +1,3 @@
-
 @use "../../foundation/base" as *;
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
@@ -44,7 +43,7 @@
 
 .p-diagram {
   margin: 3.4rem auto 0;
-  min-height: 24.7rem;
+  // max-height: 24.7rem;
 
 
   @include sp {
@@ -52,33 +51,33 @@
   }
 }
 
-.p-diagram-img picture {
-  display: block;
 
-}
 
 .p-diagram__items {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-   row-gap: 1.7rem;
+  row-gap: 1.7rem;
   z-index: 20;
   margin-top: 2rem;
 
 
   @include sp {
     margin-top: 3.3rem;
-      row-gap: 1.77rem;
+    row-gap: 1.77rem;
 
   }
 }
 
-.p-diagram__item {
+.p-diagram-item {
   display: flex;
   justify-content: center;
   align-items: center;
   column-gap: 3rem;
+  width: 100%;
+
 
 }
 
@@ -92,6 +91,7 @@
   text-transform: capitalize;
 
   @include sp {
+    min-width: 11.5rem;
     font-size: 2rem;
     line-height: calc(50 / 20);
   }
@@ -116,16 +116,29 @@
   transform: translateX(-50%);
   background: $red;
 
+  @include sp {
+
+    height: 18rem;
+
+  }
+
   &::after {
     content: "";
-    width: 3.5rem;
-    height: 2.2rem;
+    width: 3.8rem;
+    height: 4rem;
     position: absolute;
-    top: -0.31rem;
-    left: -1.51rem;
+    top: -1.2rem;    
+    left: 50%;
+    transform: translateX(-50%);
     background: url('../images/vision/vector.svg') no-repeat center / 100%;
-    
+
+    @include sp {
+      width: 3.052rem;
+      height: 1.7rem;
+      top: -0.3rem;
+    }
   }
+
 }
 
 .p-diagram-item__jp {
@@ -136,6 +149,7 @@
   line-height: calc(50 / 23);
 
   @include sp {
+    min-width: 11.5rem;
     font-size: 2rem;
     line-height: calc(50 / 20);
   }

@@ -90,12 +90,12 @@
                 <div class="p-diagram-item__dot"></div>
                 <div class="p-diagram-item__jp">熱狂し</div>
               </div>
-              <div class="p-diagram__item">
+              <div class="p-diagram__item p-diagram-item">
                 <div class="p-diagram-item__en">Envision</div>
                 <div class="p-diagram-item__dot"></div>
                 <div class="p-diagram-item__jp">想像し</div>
               </div>
-              <div class="p-diagram__item">
+              <div class="p-diagram__item p-diagram-item">
                 <div class="p-diagram-item__en">Effulgent</div>
                 <div class="p-diagram-item__dot"><span></span></div>
                 <div class="p-diagram-item__jp">輝く存在へ</div>
@@ -290,7 +290,7 @@
                 <h3>お問い合わせ</h3>
               </div>
               <div class="p-flow-item__desc">
-                <p class="c-text">まずはフォームまたはメールでお問い合わせください。<br>ヒアリングの日程を調整します。</p>
+                <p class="c-text">まずはフォームまたはメールにてお問い合わせください。<br>ヒアリングの日程を調整します。</p>
               </div>
             </div>
 
@@ -299,7 +299,7 @@
                 <h3>ヒアリング</h3>
               </div>
               <div class="p-flow-item__desc">
-                <p class="c-text">現在の技術面や将来の目標をお伺いします。<br>
+                <p class="c-text">現在の技術面や将来の目標などをお伺いします。<br>
                   悩みや不安な事もお気軽にご相談ください。
                 </p>
               </div>
@@ -446,9 +446,11 @@
       <div class="p-top-btn">
         <div class="p-top-btn__bg">
           <a href="#" class="p-top-btn__arrow u-opacity " aria-label="ページ上部へ">
-            <img src="./images/icon/goto-top.svg" alt="トップへ戻る">
+            <div class="p-top-btn__arrow-img">
+              <img src="./images/icon/goto-top.svg" alt="トップへ戻る">
+            </div>            
           </a>
-          <a href="./contact_form.html" class="p-top-btn__contact">お問い合わせ</a>
+          <a href="./contact_form.html" class="c-btn p-top-btn__contact">お問い合わせ</a>
         </div>
       </div>
     </main>
@@ -472,8 +474,11 @@
             </li>
           </ul>
         </nav>
-        <a href="./index.html" class="p-footer__logo u-opacity"><img src="./images/icon/logo-white.svg"
-            alt="きたむらミュージックスクール"></a>
+        <div class="p-footer__logo u-opacity">
+          <a href="./index.html" >
+            <img src="./images/icon/logo-white.svg" alt="きたむらミュージックスクール">
+          </a>
+        </div>
         <p class="p-footer__copyright">Copyright&copy;0000 KITAMURA music school Inc. All Rights</p>
         <div class="p-footer__sns">
           <ul>

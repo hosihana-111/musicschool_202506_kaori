@@ -18,7 +18,7 @@
 .p-blog-details__main {
     display: flex;
     justify-content: space-between;
-    gap: calc(30 / 880 *100%);
+    gap: 3rem;
 
     @include sp {
         flex-direction: column;
@@ -33,7 +33,7 @@
 
 // サイドバー
 .p-blog-details__aside {
-    width: calc(250 / 880 *100%);
+    width: 25rem;
 
     @include sp {
         width: 100%;
@@ -71,7 +71,7 @@
 // SNSボタン
 .p-blog-details__sns {
     display: flex;
-    gap: 4px;
+    gap: 0.4rem;
     margin-top: 2.1rem;
 
 
@@ -81,17 +81,16 @@
     }
 }
 
-.p-blog-details__sns-btn {
-    display: inline-block; 
-    list-style: none;
-}
+// .p-blog-details__sns-btn {
+//     display: inline-block; 
+//     list-style: none;
+// }
 
-.p-blog-details__sns-btn a {
+.p-blog-details__sns-btn{
     display: inline-block;
     line-height: 0;
 
-    img {
-        display: block; // インライン要素特有の下の余白を消す
+    img {    
         height: auto; // 縦横比を維持
         max-width: 100%; // 親に収まるように
     }
@@ -132,7 +131,7 @@
 
 .p-blog-details__subimg {
     margin-top: 1.4rem;
-    width: calc(335 / 600 *100%);
+    width: 33.5rem;
 
     @include sp {
         margin-top: 3.9rem;
@@ -165,7 +164,7 @@
     line-height: 1;
 
     background: transparent;
-    border-left: 3px solid $black;
+    border-left: 0.3rem solid $black;
     padding-left: 1rem;
     // margin-top:1 rem;
      margin-top: 5.3rem;
@@ -199,7 +198,7 @@
     color: $red;
     text-decoration-line: underline;
     text-decoration-color: $red;
-    text-decoration-thickness: 1px;
+    text-decoration-thickness: 0.1rem;
 
 }
 

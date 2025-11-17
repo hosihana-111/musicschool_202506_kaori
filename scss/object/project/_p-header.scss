@@ -24,15 +24,14 @@
 .p-header.scroll-nav {
   top: 0; // スクロール後：上に表示
   background-color: $white;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
 
 
 
 .p-header__inner {
-  max-width: 940px;
-
+  max-width: 94rem;
   width: 100%;
   height: inherit;
   margin: 0 auto;
@@ -51,7 +50,7 @@
 .p-header__logo {
   display: flex;
   align-items: center;
-  height: inherit;
+
 
   @include sp {
     width: 26rem;
@@ -61,11 +60,15 @@
 .p-header__logo a {
   display: flex;
   align-items: center;
-  height: inherit;
+  height: 8rem;
 
+  @include sp {
 
-
+    height: 5rem;
+  }
 }
+
+
 
 .p-header-logo__img {
   width: 3.2rem;
@@ -138,7 +141,7 @@
   list-style: none;
   align-items: center;
   column-gap: 3.3rem;
-    z-index: 1000;
+  z-index: 1000;
 
   @include sp {
     display: block;
@@ -190,8 +193,8 @@
 
   }
 
-  &:hover {   
-       @include sp {
+  &:hover {
+    @include sp {
       opacity: 1;
       background: #000;
     }
@@ -203,6 +206,7 @@
 
   }
 }
+
 // .p-header__link span:hover {
 //   @include pc {
 //       opacity: 0.5;

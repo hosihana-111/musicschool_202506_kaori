@@ -54,7 +54,7 @@
     
     <main>
       <!-- FV -->
-      <div class="p-child-fv">
+      <div class="p-child-fv p-child-fv--no-overlay">
         <div class="p-child-fv__img">
           <picture>
             <source media="(min-width: 768px)" srcset="./images/result_list/result-list_fv.jpg">
@@ -257,7 +257,9 @@
       <div class="p-top-btn">
         <div class="p-top-btn__bg">
           <a href="#" class="p-top-btn__arrow u-opacity " aria-label="ページ上部へ">
-            <img src="./images/icon/goto-top.svg" alt="トップへ戻る">
+            <div class="p-top-btn__arrow-img">
+              <img src="./images/icon/goto-top.svg" alt="トップへ戻る">
+            </div>            
           </a>
           <a href="./contact_form.html" class="c-btn p-top-btn__contact">お問い合わせ</a>
         </div>
@@ -283,8 +285,11 @@
             </li>
           </ul>
         </nav>
-        <a href="./index.html" class="p-footer__logo u-opacity"><img src="./images/icon/logo-white.svg"
-            alt="きたむらミュージックスクール"></a>
+        <div class="p-footer__logo u-opacity">
+          <a href="./index.html" >
+            <img src="./images/icon/logo-white.svg" alt="きたむらミュージックスクール">
+          </a>
+        </div>
         <p class="p-footer__copyright">Copyright&copy;0000 KITAMURA music school Inc. All Rights</p>
         <div class="p-footer__sns">
           <ul>

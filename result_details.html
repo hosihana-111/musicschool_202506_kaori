@@ -17,7 +17,7 @@
 
 <body>
   <div id="container">
- <!-- ヘッダー -->
+    <!-- ヘッダー -->
     <header id="header" class="p-header l-header">
       <div class="p-header__inner">
         <div class="p-header__logo p-header-logo">
@@ -55,161 +55,164 @@
     <main>
       <!-- パンくずリスト -->
       <div class="c-breadcrumbs">
-        <div class="c-breadcrumbs__inner">
+        <div class="c-breadcrumbs__inner ">
           <a href="./index.html" class="c-breadcrumbs__text u-opacity">ホーム</a>
           <span class="c-breadcrumbs__sign">&#62;</span>
-          <a href="./result-list.html" class="c-breadcrumbs__text u-opacity">卒業実績</a>
+          <a href="./result_list.html" class="c-breadcrumbs__text u-opacity">卒業実績</a>
           <span class="c-breadcrumbs__sign">&#62;</span>
-          <a href="./result-list.html" class="c-breadcrumbs__text">ポップス</a>
+          <a href="./result_list.html" class="c-breadcrumbs__text">ポップス</a>
           <span class="c-breadcrumbs__sign">&#62;</span>
           <p class="c-breadcrumbs__text">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
         </div>
       </div>
 
       <!-- メイン記事 -->
-
-      <div class="p-result-details__wrapper  l-inner">
-        <article class="p-result-details__article">
-          <div class="p-result-details__card p-result-card">
-            <div class="p-result-card__img">
-                <span class="c-label c-label--lg">ポップス</span>             
+      <div class="p-result-details">
+        <div class="l-inner">
+          <article class="p-result-details__article">
+            <div class="p-result-details__card p-result-card">
+              <div class="p-result-card__img">
+                <span class="c-label c-label--lg">ポップス</span>
                 <picture>
                   <source media="(min-width: 768px)" srcset="./images/result_details/result01.jpg">
                   <img src="./images/result_details/result01-sp.jpg" alt="マイクを持って歌う男性の写真">
-                </picture>              
+                </picture>
+              </div>
+              <div class="p-result-details-card__body">
+                <h1 class="p-result-details-card__text">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h1>
+                <time class="p-result-details-card__date" datetime="0000-00-00">0000.00.00</time>
+              </div>
             </div>
-            <div class="p-result-details-card__body">
-              <h1 class="p-result-details-card__text">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h1>
-              <time class="p-result-details-card__date"  datetime="0000-00-00">0000.00.00</time>
+
+            <!-- プロフィール -->
+            <div class="p-result-details__profile p-result-profile">
+              <table class="p-result-profile__table">
+                <tr>
+                  <th scope="row">名前</th>
+                  <td>丸山</td>
+                </tr>
+                <tr>
+                  <th scope="row">職業</th>
+                  <td>証券会社勤務</td>
+                </tr>
+                <tr>
+                  <th scope="row">ジャンル</th>
+                  <td>入力欄</td>
+                </tr>
+                <tr>
+                  <th scope="row">実績</th>
+                  <td>入力欄</td>
+                </tr>
+                <tr>
+                  <th scope="row">SNS</th>
+                  <td>入力欄</td>
+                </tr>
+
+              </table>
+              <div class="p-result-profile__text">
+                <p>昔やっていた音楽活動で、副収入が得られるようになったので、毎日充実するようになりました。</p>
+              </div>
             </div>
-          </div>
 
-          <!-- プロフィール -->
-          <div class="p-result-details__profile p-result-profile">
-            <table class="p-result-profile__table">
-              <tr>
-                <th scope="row">名前</th>
-                <td>丸山</td>
-              </tr>
-              <tr>
-                <th scope="row">職業</th>
-                <td>証券会社勤務</td>
-              </tr>
-              <tr>
-                <th scope="row">ジャンル</th>
-                <td>入力欄</td>
-              </tr>
-              <tr>
-                <th scope="row">実績</th>
-                <td>入力欄</td>
-              </tr>
-              <tr>
-                <th scope="row">SNS</th>
-                <td>入力欄</td>
-              </tr>
-
-            </table>
-            <div class="p-result-profile__text">
-              <p>昔やっていた音楽活動で、副収入が得られるようになったので、毎日充実するようになりました。</p>
-            </div>
-          </div>
-
-          <!-- 前後記事ナビ -->
-          <div class="p-result-details__nav p-article-nav">
-            <div class="p-article-nav__item-prev">
-              <a href="" class="u-opacity">
-                <div class="p-article-nav__heading-prev">
-                  <span>◀</span>
-                  <p>前の記事</p>
-                </div>
-                <div class="p-article-nav__box">
-                  <div class="p-blog-details__box-img p-article-nav__box-img">
-                    <img src="./images/blog_details/article.jpg" alt="マイクで熱唱する女性">
+            <!-- 前後記事ナビ -->
+            <div class="p-result-details__nav p-article-nav">
+              <div class="p-article-nav__item-prev">
+                <a href="" class="u-opacity">
+                  <div class="p-article-nav__heading-prev">
+                    <span>◀</span>
+                    <p>前の記事</p>
                   </div>
-                  <p class="p-article-nav__box-text">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
-                </div>
-              </a>
-            </div>
-            <div class="p-article-nav__item-next">
-              <a href="" class="u-opacity">
-                <div class="p-article-nav__heading-next">
-                  <p>次の記事</p>
-                  <span>▶</span>
-                </div>
-                <div class="p-article-nav__box">
-                  <div class="p-blog-details__box-img p-article-nav__box-img">
-                    <img src="./images/blog_details/article.jpg" alt="マイクで熱唱する女性">
-                  </div>
-                  <p class="p-article-nav__box-text">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <!-- 関連記事 -->
-          <div class="p-result-details__related-posts p-related-posts">
-
-            <p class="p-related-posts__title">関連記事</p>
-            <div class="p-related-posts__items">
-
-              <div class="p-related-posts__item p-related-posts-item">
-                <a href="./blog_details.html" class="u-opacity">
-                  <div class="p-related-posts__img p-related-posts__img-wide">
-                    <span class="c-label c-label--lg">ロック</span>
-                    <picture>
-                      <source media="(min-width: 768px)" srcset="./images/result_details/result_details01-pc.jpg">
-                      <img src="./images/result_details/result_details01-sp.jpg" alt="ピアノの前で子犬を抱く女性">
-                    </picture>
-                  </div>
-                  <div class="p-related-posts__body">
-                    <p class="p-related-posts__text"> タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
-                    <time class="p-related-posts__date" datetime="0000-00-00">0000.00.00</time>
+                  <div class="p-article-nav__box">
+                    <div class="p-blog-details__box-img p-article-nav__box-img">
+                      <img src="./images/blog_details/article.jpg" alt="マイクで熱唱する女性">
+                    </div>
+                    <p class="p-article-nav__box-text">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
                   </div>
                 </a>
               </div>
-
-              <div class="p-related-posts__item p-related-posts-item">
-                <a href="./blog_details.html" class="u-opacity">
-                  <div class="p-related-posts__img p-related-posts__img-wide">
-                    <span class="c-label c-label--lg">ジャズ</span>
-                    <picture>
-                      <source media="(min-width: 768px)" srcset="./images/result_details/result_details02-pc.jpg">
-                      <img src="./images/result_details/result_details02-sp.jpg" alt="アコースティックギターを弾く男性">
-                    </picture>
+              <div class="p-article-nav__item-next">
+                <a href="" class="u-opacity">
+                  <div class="p-article-nav__heading-next">
+                    <p>次の記事</p>
+                    <span>▶</span>
                   </div>
-                  <div class="p-related-posts__body">
-                    <p class="p-related-posts__text"> タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
-                    <time class="p-related-posts__date" datetime="0000-00-00">0000.00.00</time>
+                  <div class="p-article-nav__box">
+                    <div class="p-blog-details__box-img p-article-nav__box-img">
+                      <img src="./images/blog_details/article.jpg" alt="マイクで熱唱する女性">
+                    </div>
+                    <p class="p-article-nav__box-text">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
                   </div>
                 </a>
               </div>
-
-              <div class="p-related-posts__item p-related-posts-item">
-                <a href="./blog_details.html" class="u-opacity">
-                  <div class="p-related-posts__img p-related-posts__img-wide">
-                    <span class="c-label c-label--lg">ラテン</span>
-                    <picture>
-                      <source media="(min-width: 768px)" srcset="./images/result_details/result_details03-pc.jpg">
-                      <img src="./images/result_details/result_details03-sp.jpg" alt="アコースティックギターを構える女性の写真">
-                    </picture>
-                  </div>
-                  <div class="p-related-posts__body">
-                    <p class="p-related-posts__text"> タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
-                    <time class="p-related-posts__date" datetime="0000-00-00">0000.00.00</time>
-                  </div>
-                </a>
-              </div>
-
             </div>
-          </div>          
-        </article>
+
+            <!-- 関連記事 -->
+            <div class="p-result-details__related-posts p-related-posts">
+
+              <p class="p-related-posts__title">関連記事</p>
+              <div class="p-related-posts__items">
+
+                <div class="p-related-posts__item p-related-posts-item">
+                  <a href="./blog_details.html" class="u-opacity">
+                    <div class="p-related-posts__img p-related-posts__img-wide">
+                      <span class="c-label c-label--lg">ロック</span>
+                      <picture>
+                        <source media="(min-width: 768px)" srcset="./images/result_details/result_details01-pc.jpg">
+                        <img src="./images/result_details/result_details01-sp.jpg" alt="ピアノの前で子犬を抱く女性">
+                      </picture>
+                    </div>
+                    <div class="p-related-posts__body">
+                      <p class="p-related-posts__text"> タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
+                      <time class="p-related-posts__date" datetime="0000-00-00">0000.00.00</time>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="p-related-posts__item p-related-posts-item">
+                  <a href="./blog_details.html" class="u-opacity">
+                    <div class="p-related-posts__img p-related-posts__img-wide">
+                      <span class="c-label c-label--lg">ジャズ</span>
+                      <picture>
+                        <source media="(min-width: 768px)" srcset="./images/result_details/result_details02-pc.jpg">
+                        <img src="./images/result_details/result_details02-sp.jpg" alt="アコースティックギターを弾く男性">
+                      </picture>
+                    </div>
+                    <div class="p-related-posts__body">
+                      <p class="p-related-posts__text"> タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
+                      <time class="p-related-posts__date" datetime="0000-00-00">0000.00.00</time>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="p-related-posts__item p-related-posts-item">
+                  <a href="./blog_details.html" class="u-opacity">
+                    <div class="p-related-posts__img p-related-posts__img-wide">
+                      <span class="c-label c-label--lg">ラテン</span>
+                      <picture>
+                        <source media="(min-width: 768px)" srcset="./images/result_details/result_details03-pc.jpg">
+                        <img src="./images/result_details/result_details03-sp.jpg" alt="アコースティックギターを構える女性の写真">
+                      </picture>
+                    </div>
+                    <div class="p-related-posts__body">
+                      <p class="p-related-posts__text"> タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
+                      <time class="p-related-posts__date" datetime="0000-00-00">0000.00.00</time>
+                    </div>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
 
-      <!-- TOPに戻るボタンのjsの修正をAIに依頼 -->
+     <!-- TOPに戻るボタンのjsの修正をAIに依頼 -->
       <div class="p-top-btn">
         <div class="p-top-btn__bg">
           <a href="#" class="p-top-btn__arrow u-opacity " aria-label="ページ上部へ">
-            <img src="./images/icon/goto-top.svg" alt="トップへ戻る">
+            <div class="p-top-btn__arrow-img">
+              <img src="./images/icon/goto-top.svg" alt="トップへ戻る">
+            </div>            
           </a>
           <a href="./contact_form.html" class="c-btn p-top-btn__contact">お問い合わせ</a>
         </div>
@@ -221,7 +224,7 @@
     <footer class="p-footer">
       <div class="p-footer__inner">
         <nav class="p-footer__nav" aria-label="フッターナビゲーション">
-          <ul >
+          <ul>
             <li>
               <a href="./index.html" class="u-opacity">ホーム</a>
             </li>
@@ -236,8 +239,11 @@
             </li>
           </ul>
         </nav>
-        <a href="./index.html" class="p-footer__logo u-opacity"><img src="./images/icon/logo-white.svg"
-            alt="きたむらミュージックスクール"></a>
+        <div class="p-footer__logo u-opacity">
+          <a href="./index.html" >
+            <img src="./images/icon/logo-white.svg" alt="きたむらミュージックスクール">
+          </a>
+        </div>
         <p class="p-footer__copyright">Copyright&copy;0000 KITAMURA music school Inc. All Rights</p>
         <div class="p-footer__sns">
           <ul>

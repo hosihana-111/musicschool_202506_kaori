@@ -67,7 +67,7 @@
     width: 20rem;
     aspect-ratio: 20 / 14;
     overflow: hidden;
-    height: auto;
+  
 
     @include sp {
         width: 16rem;
@@ -76,9 +76,7 @@
         overflow: hidden;
     }
     img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+           object-fit: cover;
 }
 }
 

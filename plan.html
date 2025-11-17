@@ -17,7 +17,7 @@
 
 <body>
   <div id="container">
- <!-- ヘッダー -->
+    <!-- ヘッダー -->
     <header id="header" class="p-header l-header">
       <div class="p-header__inner">
         <div class="p-header__logo p-header-logo">
@@ -75,9 +75,10 @@
       </div>
 
       <!-- 料金 -->
-      <div class="l-inner">
-        <!-- 料金体系 -->
-        <section id="plan-pricing" class="p-plan-pricing p-pricing">
+
+      <!-- 料金体系 -->
+      <section id="plan-pricing" class="p-plan-pricing p-pricing">
+        <div class="l-inner">
           <h2 class="c-section-title">料金体系</h2>
           <div class="p-pricing__items">
             <p class="p-pricing__item is-entrance">入会金 39,000円</p>
@@ -87,10 +88,12 @@
           <p class="p-pricing__description c-text">
             きたむらミュージックスクールでは、個人に合わせたサポートを行う完全オーダーメイドのプランを用意しており、サポート内容により月額料金が異なります。担当者があなたに最適なプランを提案いたしますので、お気軽にお問い合わせください。※すべての料金は税込価格となります。
           </p>
-        </section>
+        </div>
+      </section>
 
-        <!-- プラン内容・月額料金 -->
-        <section id="plan-details" class="p-plan-details">
+      <!-- プラン内容・月額料金 -->
+      <section id="plan-details" class="p-plan-details">
+        <div class="l-inner">
           <h2 class="c-section-title">プラン内容・月額料金</h2>
           <div class="p-plan-details__container">
 
@@ -100,7 +103,7 @@
                   <tr>
                     <th></th>
                     <th class="p-plan-table__blank"></th>
-                    <th class=" is-recommend" rowspan="2">
+                    <th class="is-recommend" rowspan="2">
                       <div class="th-inner-red">
                         <p>
                           <span>おすすめ</span>
@@ -112,7 +115,7 @@
                   </tr>
                   <tr>
                     <th></th>
-                    <th >
+                    <th>
                       <div class="th-inner">
                         <p>ベーシック<br class="sp">プラン</p>
                       </div>
@@ -134,33 +137,58 @@
                   </tr>
                   <tr>
                     <th>マンツーマン授業</th>
-                    <td>●<br>週１回</td>
-                    <td><span class="red">●</span><br>週２回</td>
-                    <td>●<br>無制限</td>
+                    <td>
+                      <span class="c-circle"></span>
+                      <p>週１回</p>
+                    </td>
+                    <td>
+                      <span class="c-circle c-circle--red"></span>
+                      <p>週２回</p>
+                    </td>
+                    <td>
+                      <span class="c-circle"></span>
+                      <p>無制限</p>
+                    </td>
                   </tr>
                   <tr>
                     <th>ビジネス基本講座</th>
-                    <td>●</td>
-                    <td><span class="red">●</span></td>
-                    <td>●</td>
+                    <td><span class="c-circle"></span></td>
+                    <td><span class="c-circle c-circle--red"></span></td>
+                    <td><span class="c-circle"></span></td>
                   </tr>
                   <tr>
                     <th>練習ROOM利用</th>
-                    <td>●<br>月10時間</td>
-                    <td><span class="red">●</span><br>月20時間</td>
-                    <td>●<br>無制限</td>
+                    <td>
+                      <span class="c-circle"></span>
+                      <p>月10時間</p>
+                    </td>
+                    <td>
+                      <span class="c-circle c-circle--red"></span>
+                      <p>月20時間</p>
+                    </td>
+                    <td>
+                      <span class="c-circle"></span>
+                      <p>無制限</p>
+                    </td>
                   </tr>
                   <tr>
                     <th>ビジネスコンサル</th>
-                    <td><span class="hyphens"></span></td>
-                    <td><span class="red">●</span><br>月２回</td>
-                    <td>●<br>月３回</td>
+                    <td>
+                      <span class="hyphens"></span>
+                    </td>
+                    <td>
+                      <span class="c-circle c-circle--red"></span>
+                      <p>月２回</p>
+                    </td>
+                    <td><span class="c-circle"></span>
+                      <p>月３回</p>
+                    </td>
                   </tr>
                   <tr>
                     <th>コミュニティ<br class="sp">参加資格</th>
                     <td><span class="hyphens"></span></td>
                     <td><span class="hyphens"></span></td>
-                    <td>●</td>
+                    <td><span class="c-circle"></span></td>
                   </tr>
                 </tbody>
               </table>
@@ -168,25 +196,28 @@
 
             <p class="p-plan-details__pricing-text">※各サービスは１回ごとのオプション追加が可能です。詳しくは事務局までお問い合わせください。</p>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
+
 
       <!-- TOPに戻るボタンのjsの修正をAIに依頼 -->
       <div class="p-top-btn">
         <div class="p-top-btn__bg">
           <a href="#" class="p-top-btn__arrow u-opacity " aria-label="ページ上部へ">
-            <img src="./images/icon/goto-top.svg" alt="トップへ戻る">
+            <div class="p-top-btn__arrow-img">
+              <img src="./images/icon/goto-top.svg" alt="トップへ戻る">
+            </div>            
           </a>
           <a href="./contact_form.html" class="c-btn p-top-btn__contact">お問い合わせ</a>
         </div>
       </div>
     </main>
 
-<!-- フッター -->
+    <!-- フッター -->
     <footer class="p-footer">
       <div class="p-footer__inner">
         <nav class="p-footer__nav" aria-label="フッターナビゲーション">
-          <ul >
+          <ul>
             <li>
               <a href="./index.html" class="u-opacity">ホーム</a>
             </li>
@@ -201,8 +232,11 @@
             </li>
           </ul>
         </nav>
-        <a href="./index.html" class="p-footer__logo u-opacity"><img src="./images/icon/logo-white.svg"
-            alt="きたむらミュージックスクール"></a>
+        <div class="p-footer__logo u-opacity">
+          <a href="./index.html" >
+            <img src="./images/icon/logo-white.svg" alt="きたむらミュージックスクール">
+          </a>
+        </div>
         <p class="p-footer__copyright">Copyright&copy;0000 KITAMURA music school Inc. All Rights</p>
         <div class="p-footer__sns">
           <ul>

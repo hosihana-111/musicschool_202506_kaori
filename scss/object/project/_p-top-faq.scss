@@ -24,17 +24,17 @@
 
 .p-faq__accordion {
   margin-inline: auto;
-  max-width: 880px;
+  max-width: 88rem;
   position: relative;
   width: 100%;
 }
 
 .p-faq-item {
-  border-bottom: 1px solid $black;
+  border-bottom: 0.1rem solid $black;
   cursor: pointer;
 
   &:first-of-type {
-    border-top: 1px solid $black;
+    border-top: 0.1rem solid $black;
   }
 }
 

@@ -73,9 +73,10 @@
     -webkit-line-clamp: 3; // 最大行
     overflow: hidden;
     font-size: 1.6rem;
+    font-weight: 700;
     line-height: calc(25 / 16);
     color: $black;
-    height: calc((25 / 16) * 1em * 3);
+    
     /* 高さ固定 */
 
     @supports not (-webkit-line-clamp: 3) {

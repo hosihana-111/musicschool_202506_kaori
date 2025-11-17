@@ -56,8 +56,8 @@
 
 .p-pricing__item-plus {
   position: relative;
-  width: 18px;
-  height: 18px;
+  width: 1.8rem;
+  height: 1.8rem;
   display: inline-block;
 
   &::before,
@@ -69,14 +69,14 @@
 
   &::before {
     width: 100%;
-    height: 3px;
+    height: 0.3rem;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
   }
 
   &::after {
-    width: 3px;
+    width: 0.3rem;
     height: 100%;
     left: 50%;
     top: 0;
@@ -107,7 +107,7 @@
   margin-top: 5.5rem;
 
   @include sp {
-    margin-top: 0.4rem;
+    margin-top: 1.2rem;
   }
 
 }
@@ -166,6 +166,9 @@
 
 .p-plan-table__blank {
   height: 3rem;
+  @include sp {
+    height:0;
+  }
 }
 
 .p-plan-table__head th
@@ -208,7 +211,11 @@
       }
     }
   }
-
+  .is-recommend {
+      
+        height: auto;
+    
+  }
   .th-inner-red {
     p {
       height: 100%;
@@ -246,6 +253,7 @@
 
 .p-plan-table__body tr {
   height: 8.5rem;
+ 
 }
 
 // 一段とばしの背景色
@@ -276,17 +284,40 @@
     font-size: 1.6rem;
     line-height: calc(25 / 16);
     padding: 1rem 0.5rem 1rem 1rem;
+   
   }
 }
+// 月額料金の太文字
+.p-plan-table__head p {
+  font-weight: 700;
+
+}
+
+
+// 料金プランの丸と線
+.c-circle {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: #000;
+
+  &--red {
+    background: $red;
+  }
+}
+
+
 
 // 料金表のbodyの行の高さ
 .p-plan-table__body td {
   text-align: center;
+   vertical-align: middle;
+
   flex-shrink: 0;
   height: 8.5rem;
-  // 料金表のbodyの縦の線
-  border-right: solid 1px $black;
-  border-left: solid 1px $black;
+  // 料金表のbodyの縦の線 
+  border-left: solid 0.1rem $black;
 
 }
 
@@ -308,21 +339,10 @@
 
 
 
-
-.p-plan-table td:last-child {
-  border-right: none;
-}
-
-// 月額料金の太文字
-.p-plan-table__price {
-  font-weight: 700;
-
-}
-
 .p-plan-table__price td {
   font-size: 2.2rem;
   line-height: calc(33 / 22);
-
+font-weight: 700;
 }
 
 .p-plan-details__pricing-text {
