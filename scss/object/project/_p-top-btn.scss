@@ -91,10 +91,12 @@
   /* お問い合わせバリエーションも同様に、contact幅に対して中央に合わせる */
   position: relative;
   align-self: flex-end;
-  right: calc((30rem - 6.8rem) / 2);
+  right: 10rem;
 
-  @include sp {
-    right: calc((33.5rem - 6.8rem) / 2);
+
+   @include sp {  
+    // SPでは常に右側に固定
+    right:3rem;
   }
 }
 
@@ -109,7 +111,7 @@
   text-decoration: none;
   font-size: 2rem;
   line-height: calc(33 / 20);
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.4rem;
   pointer-events: all;
   cursor: pointer;
   background-color: $red;

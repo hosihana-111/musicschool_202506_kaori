@@ -115,26 +115,19 @@
   left: 50%;
   transform: translateX(-50%);
   background: $red;
-
-  @include sp {
-
-    height: 18rem;
-
-  }
+  
 
   &::after {
     content: "";
-    width: 3.8rem;
-    height: 4rem;
+     width: 3.5rem;
+    height: 2rem;
     position: absolute;
-    top: -1.2rem;    
+    top: -0.2rem;    
     left: 50%;
     transform: translateX(-50%);
     background: url('../images/vision/vector.svg') no-repeat center / 100%;
 
-    @include sp {
-      width: 3.052rem;
-      height: 1.7rem;
+    @include sp {    
       top: -0.3rem;
     }
   }

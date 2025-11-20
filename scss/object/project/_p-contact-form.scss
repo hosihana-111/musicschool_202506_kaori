@@ -9,7 +9,7 @@
 
   @include sp {
     padding-top: 5rem;
-    padding-bottom: 11rem;
+    padding-bottom: 10.5rem;
   }
 }
 
@@ -31,7 +31,7 @@
   margin-top: 6.1rem;
 
   @include sp {
-    margin-top: 3rem;
+    margin-top: 2.4rem;
   }
 }
 
@@ -43,7 +43,7 @@
   row-gap: 3rem;
 
   @include sp {
-    row-gap: 1.1rem;
+    row-gap: 0.7rem;
   }
 }
 
@@ -121,9 +121,11 @@
 
 .p-contact-form__checkbox {
   display: flex;
+  
 
   @include sp {
     flex-direction: column;
+    margin-top: 0.5rem;
   }
 }
 
@@ -161,7 +163,7 @@
   row-gap: 1.9rem;
 
   @include sp {
-    row-gap: 2.3rem;
+    row-gap: 1.1rem;
   }
 }
 
@@ -176,7 +178,7 @@
 
 .p-form-checkbox__item span {
   font-size: 1.8rem;
-  line-height: 1.15;
+  line-height: 1.8;
 
   @include sp {
     font-size: 1.6rem;

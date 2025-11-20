@@ -21,7 +21,9 @@
 
     @include sp {
         font-size: 10rem;
-        left: 2rem;
+        top: 1.5rem;
+        left: 1.8rem;
+       
     }
 }
 .c-blockquote p {
@@ -37,7 +39,7 @@
     //  max-height: calc(1.8em * 3);
 
     @include sp {
-        margin: 0.9rem 0;
+        margin: 1.1rem 0;
         font-size: 1.6rem;
         line-height: calc(30 / 16);
     }
