@@ -31,7 +31,7 @@
   margin-top: 6.1rem;
 
   @include sp {
-    margin-top: 2.4rem;
+    margin-top: 3.1rem;
   }
 }
 
@@ -43,7 +43,7 @@
   row-gap: 3rem;
 
   @include sp {
-    row-gap: 0.7rem;
+    row-gap: 1.4rem;
   }
 }
 
@@ -62,7 +62,7 @@
   font-size: 2rem;
   font-weight: 500;
   line-height: calc(33 / 20);
-  margin-top: 0.7rem;
+  padding-top: 0.7rem;
 
   @include sp {
     width: 100%;
@@ -125,7 +125,7 @@
 
   @include sp {
     flex-direction: column;
-    margin-top: 0.5rem;
+   
   }
 }
 
@@ -160,10 +160,11 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  row-gap: 1.9rem;
+  row-gap: 2.2rem;
 
   @include sp {
-    row-gap: 1.1rem;
+   margin-top: 0.2rem;
+   row-gap: 2.4rem;
   }
 }
 
@@ -178,7 +179,7 @@
 
 .p-form-checkbox__item span {
   font-size: 1.8rem;
-  line-height: 1.8;
+  line-height: 1;
 
   @include sp {
     font-size: 1.6rem;
@@ -236,7 +237,11 @@ input[type="checkbox"]:checked+span::after {
 
 
 .form-area-message {
-  
+  margin-top: 0.4rem;
+
+  @include sp {
+    margin-top: 0.8rem;
+  }
 
   dt {
     @include sp {

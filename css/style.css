@@ -1438,10 +1438,15 @@ body.is-menu-open .c-page-top {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+@media (max-width: 767px) {
+  .p-footer__logo {
+    margin-top: 1.5rem;
+  }
+}
 
 .p-footer__logo a {
+  width: 4.2rem;
   display: block;
-  width: 100%;
   height: auto;
   padding: 0.5rem;
 }
@@ -1458,7 +1463,7 @@ body.is-menu-open .c-page-top {
 }
 @media (max-width: 767px) {
   .p-footer__copyright {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     padding-inline: 2rem;
     line-height: 1.3333333333;
   }
@@ -2821,7 +2826,7 @@ body.is-menu-open .c-page-top {
 }
 
 .p-plan-table__head {
-  border-bottom: 0.05rem solid #000000;
+  border-bottom: 0.1rem solid #000000;
   font-size: 2rem;
   line-height: 1.65;
   color: #ffffff;
@@ -2923,7 +2928,7 @@ body.is-menu-open .c-page-top {
 }
 
 .p-plan-table__body {
-  border-bottom: 0.05rem solid #000000;
+  border-bottom: 0.1rem solid #000000;
   font-size: 1.7rem;
 }
 
@@ -3403,7 +3408,7 @@ body.is-menu-open .c-page-top {
 }
 @media (max-width: 767px) {
   .p-contact-form {
-    margin-top: 2.4rem;
+    margin-top: 3.1rem;
   }
 }
 
@@ -3420,7 +3425,7 @@ body.is-menu-open .c-page-top {
 }
 @media (max-width: 767px) {
   .p-contact-form__box {
-    row-gap: 0.7rem;
+    row-gap: 1.4rem;
   }
 }
 
@@ -3446,7 +3451,7 @@ body.is-menu-open .c-page-top {
   font-size: 2rem;
   font-weight: 500;
   line-height: 1.65;
-  margin-top: 0.7rem;
+  padding-top: 0.7rem;
 }
 @media (max-width: 767px) {
   .p-contact-form__box dt {
@@ -3537,7 +3542,6 @@ body.is-menu-open .c-page-top {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-top: 0.5rem;
   }
 }
 
@@ -3579,11 +3583,12 @@ body.is-menu-open .c-page-top {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  row-gap: 1.9rem;
+  row-gap: 2.2rem;
 }
 @media (max-width: 767px) {
   .p-form-checkbox__items {
-    row-gap: 1.1rem;
+    margin-top: 0.2rem;
+    row-gap: 2.4rem;
   }
 }
 
@@ -3597,7 +3602,7 @@ body.is-menu-open .c-page-top {
 
 .p-form-checkbox__item span {
   font-size: 1.8rem;
-  line-height: 1.8;
+  line-height: 1;
 }
 @media (max-width: 767px) {
   .p-form-checkbox__item span {
@@ -3646,6 +3651,14 @@ input[type=checkbox]:checked + span::after {
   display: block;
 }
 
+.form-area-message {
+  margin-top: 0.4rem;
+}
+@media (max-width: 767px) {
+  .form-area-message {
+    margin-top: 0.8rem;
+  }
+}
 @media (max-width: 767px) {
   .form-area-message dt {
     line-height: 1;
