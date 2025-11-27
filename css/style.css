@@ -3651,9 +3651,6 @@ input[type=checkbox]:checked + span::after {
   display: block;
 }
 
-.form-area-message {
-  margin-top: 0.4rem;
-}
 @media (max-width: 767px) {
   .form-area-message {
     margin-top: 0.8rem;
