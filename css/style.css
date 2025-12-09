@@ -157,12 +157,6 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 1.8rem;
-  margin-top: 8rem;
-}
-@media (max-width: 767px) {
-  body {
-    margin-top: 5rem;
-  }
 }
 
 input,
@@ -171,25 +165,14 @@ textarea {
   letter-spacing: 0;
 }
 
-p,
-span,
-a,
-li,
-dt,
-dd,
-label,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  line-height: inherit;
-  letter-spacing: inherit;
-}
-
 main {
   position: relative;
+  margin-top: 8rem;
+}
+@media (max-width: 767px) {
+  main {
+    margin-top: 5rem;
+  }
 }
 
 #container {
@@ -429,6 +412,10 @@ hr {
   color: #fff;
 }
 
+.c-top-title--white span {
+  letter-spacing: -0.06rem;
+}
+
 .c-section-title {
   font-size: 2.5rem;
   line-height: 1;
@@ -487,6 +474,7 @@ hr {
 
 .c-breadcrumbs__text {
   font-size: 1.6rem;
+  line-height: 2.0625;
   text-decoration: none;
   color: #000;
   height: 5rem;
@@ -515,6 +503,11 @@ hr {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background: #E8E8E8;
+}
+@media (max-width: 767px) {
+  .c-blockquote {
+    padding-left: 7rem;
+  }
 }
 
 .c-blockquote:before {
@@ -967,6 +960,7 @@ body.is-menu-open .c-page-top {
           transform: translate(-50%, -50%);
   white-space: nowrap;
   font-size: 1.8rem;
+  line-height: 1.8333333333;
   font-weight: bold;
 }
 
@@ -1001,6 +995,7 @@ body.is-menu-open .c-page-top {
   background: #e8e8e8;
   padding-inline: 1rem;
   font-size: 1.4rem;
+  line-height: 1.8333333333;
 }
 @media (max-width: 767px) {
   .p-sidebar__search-form input {
@@ -1010,22 +1005,27 @@ body.is-menu-open .c-page-top {
 
 .p-sidebar__search-form input::-webkit-input-placeholder {
   font-size: 1.5rem;
+  line-height: 1;
 }
 
 .p-sidebar__search-form input::-moz-placeholder {
   font-size: 1.5rem;
+  line-height: 1;
 }
 
 .p-sidebar__search-form input:-ms-input-placeholder {
   font-size: 1.5rem;
+  line-height: 1;
 }
 
 .p-sidebar__search-form input::-ms-input-placeholder {
   font-size: 1.5rem;
+  line-height: 1;
 }
 
 .p-sidebar__search-form input::placeholder {
   font-size: 1.5rem;
+  line-height: 1;
 }
 
 .p-sidebar__search-form button {
@@ -1329,6 +1329,7 @@ body.is-menu-open .c-page-top {
           align-items: center;
   font-size: 1.7rem;
   font-weight: bold;
+  line-height: 1.9411764706;
   color: #000;
   position: relative;
   -webkit-transition: all 0.4s;
@@ -1340,6 +1341,7 @@ body.is-menu-open .c-page-top {
     background: #CB0000;
     color: #fff;
     font-size: 1.8rem;
+    line-height: 1.8333333333;
     padding-inline: 2rem;
     -webkit-transition: all 0.4s;
     transition: all 0.4s;
@@ -1736,7 +1738,6 @@ body.is-menu-open .c-page-top {
   font-weight: 700;
   text-align: center;
   color: #CB0000;
-  letter-spacing: -0.02em;
 }
 @media (max-width: 767px) {
   .p-vision__title {
@@ -1913,17 +1914,6 @@ body.is-menu-open .c-page-top {
   .p-top-reason {
     padding-top: 5rem;
     padding-bottom: 4rem;
-  }
-}
-
-.p-top-reason__title {
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 1.6666666667;
-}
-@media (max-width: 767px) {
-  .p-top-reason__title {
-    font-size: 2.5rem;
   }
 }
 
@@ -2930,6 +2920,7 @@ body.is-menu-open .c-page-top {
 .p-plan-table__body {
   border-bottom: 0.1rem solid #000000;
   font-size: 1.7rem;
+  line-height: 1.4705882353;
 }
 
 .p-plan-table__body tr {
@@ -3433,6 +3424,9 @@ body.is-menu-open .c-page-top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 @media (max-width: 767px) {
   .p-contact-form__box dl {
@@ -3545,23 +3539,6 @@ body.is-menu-open .c-page-top {
   }
 }
 
-.p-form-checkbox dt {
-  width: 16.9rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 2rem;
-  line-height: 1.5;
-  margin-top: 0.1rem;
-}
-@media (max-width: 767px) {
-  .p-form-checkbox dt {
-    height: 3.3rem;
-    font-size: 1.6rem;
-    line-height: 2.0625;
-  }
-}
-
 .p-form-checkbox dd {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -3587,7 +3564,7 @@ body.is-menu-open .c-page-top {
 }
 @media (max-width: 767px) {
   .p-form-checkbox__items {
-    margin-top: 0.2rem;
+    margin-top: 0.3rem;
     row-gap: 2.4rem;
   }
 }
@@ -3687,7 +3664,7 @@ input[type=checkbox]:checked + span::after {
 
 /*****ボタン*****/
 .p-contact-form__contact__button {
-  margin-top: 5rem;
+  margin-top: 5.2rem;
   margin-inline: auto;
   width: 25rem;
 }

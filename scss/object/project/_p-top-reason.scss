@@ -13,16 +13,6 @@
     }
 }
 
-.p-top-reason__title {
-    font-size: 3rem;
-    font-weight: 700;
-    line-height: calc(50 / 30);
-
-    @include sp {
-        font-size: 2.5rem;
-    }
-}
-
 .p-top-reason__items {
     margin-top: 2.8rem;
     display: flex;

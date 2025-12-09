@@ -49,7 +49,7 @@
 
 .p-contact-form__box dl {
   display: flex;
-
+align-items: flex-start;
   @include sp {
     flex-direction: column;
   }
@@ -104,11 +104,6 @@
   }
 }
 
-
-
-
-
-
 ::placeholder {
   color: #B2B2B2;
   font-size: 1.5rem;
@@ -126,21 +121,6 @@
   @include sp {
     flex-direction: column;
    
-  }
-}
-
-.p-form-checkbox dt {
-  width: 16.9rem;
-  // height: 4rem;
-  display: flex;
-  font-size: 2rem;
-  line-height: 1.5;
-  margin-top: 0.1rem;
-
-  @include sp {
-    height: 3.3rem;
-    font-size: 1.6rem;
-    line-height: calc(33 / 16);
   }
 }
 
@@ -163,7 +143,7 @@
   row-gap: 2.2rem;
 
   @include sp {
-   margin-top: 0.2rem;
+   margin-top: 0.3rem;
    row-gap: 2.4rem;
   }
 }
@@ -277,7 +257,7 @@ input[type="checkbox"]:checked+span::after {
 
 /*****ボタン*****/
 .p-contact-form__contact__button {
-  margin-top: 5rem;
+  margin-top: 5.2rem;
   margin-inline: auto;
   width: 25rem;
 

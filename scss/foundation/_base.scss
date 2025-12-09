@@ -50,10 +50,7 @@ body {
   margin: 0;
   box-sizing: border-box;
   font-size: 1.8rem;
-  margin-top: 8rem;
-@include sp {
-  margin-top: 5rem;
-}
+ 
 
 }
 
@@ -64,25 +61,29 @@ textarea {
   letter-spacing: 0;
 }
 
-p,
-span,
-a,
-li,
-dt,
-dd,
-label,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  line-height: inherit;
-  letter-spacing: inherit;
-}
+// p,
+// span,
+// a,
+// li,
+// dt,
+// dd,
+// label,
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   line-height: 1;
+//   letter-spacing: 0;
+// }
 
 main {
   position: relative;  
+   margin-top: 8rem;
+@include sp {
+  margin-top: 5rem;
+}
 }
 
 #container {

@@ -249,6 +249,7 @@
 .p-plan-table__body {
    border-bottom: 0.1rem solid $black;
     font-size: 1.7rem;
+    line-height: calc(25 / 17);
 }
 
 .p-plan-table__body tr {
@@ -347,8 +348,7 @@ font-weight: 700;
 
 .p-plan-details__pricing-text {
   margin-top: 2.9rem;
-  font-size: 1.7rem;
- 
+  font-size: 1.7rem; 
   line-height: calc(25 / 17);
 
   @include sp {

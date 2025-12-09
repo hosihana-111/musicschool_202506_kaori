@@ -50,6 +50,7 @@
     transform: translate(-50%, -50%);
     white-space: nowrap;
     font-size: 1.8rem;
+    line-height: calc(33 / 18);
     font-weight: bold;
   }
 }
@@ -82,6 +83,7 @@
   background: #e8e8e8;
   padding-inline: 1rem;
   font-size: 1.4rem;
+  line-height: calc(33 / 18);
 
   @include sp {
     height: 5.4rem;
@@ -91,6 +93,7 @@
 
 .p-sidebar__search-form input::placeholder {
   font-size: 1.5rem;
+  line-height: 1;
 }
 
 .p-sidebar__search-form button {

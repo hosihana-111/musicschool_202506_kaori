@@ -8,6 +8,10 @@
     box-sizing: border-box;  
     background: #E8E8E8;
 
+    @include sp {
+        padding-left: 7rem;
+    }
+
 }
 .c-blockquote:before{
     display: inline-block;
