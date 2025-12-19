@@ -33,7 +33,10 @@
     width: 3.2rem;
     height: 0.4rem;
     background-color: $white;
-    -webkit-transition: 0.4s;
+    transition:
+    transform .4s ease,
+    top .4s ease,
+    opacity .4s ease;
 
 }
 
@@ -54,7 +57,8 @@
 }
 
 .c-hamburger.active span:nth-of-type(2) {
-    display: none;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .c-hamburger.active span:nth-of-type(3) {

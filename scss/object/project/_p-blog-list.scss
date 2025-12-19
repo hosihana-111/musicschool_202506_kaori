@@ -53,7 +53,7 @@
 
 .p-blog-list-item__img {
     width: 26rem;
-    aspect-ratio: 260 / 184;
+  
     overflow: hidden;
     padding: 0;
  
@@ -67,12 +67,13 @@
 }
 
 .p-blog-list-item__img img {
-
      aspect-ratio: 260 / 184;
+     height: auto;
     overflow: hidden;
-    padding: 0;  
-    height: 100%;
+    padding: 0;   
     object-fit: cover;
+    @include sp {     
+        aspect-ratio: 335 / 200;}
 }
 
 .p-blog-list-item__body {

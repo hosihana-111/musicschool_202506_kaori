@@ -34,14 +34,8 @@
 .p-sidebar__magazine {
   padding: 1.5rem;
   border: 0.1rem solid #000;
-
-  @include sp {
-    padding: 2rem;
-  }
-}
-
-.p-sidebar__magazine-img {
   position: relative;
+
 
   p {
     position: absolute;
@@ -52,6 +46,10 @@
     font-size: 1.8rem;
     line-height: calc(33 / 18);
     font-weight: bold;
+  }
+
+  @include sp {
+    padding: 2rem;
   }
 }
 
@@ -146,16 +144,20 @@
 }
 
 .p-sidebar__recommendation-item__img {
-  width: 9.5rem;  
-  aspect-ratio: 95 / 75;
+  width: 9.5rem;
+
   @include sp {
     width: 16rem;
-    aspect-ratio: 160 / 110;
   }
 
   img {
-       object-fit: cover;
-       height: 100%;
+    object-fit: cover;
+    aspect-ratio: 95 / 75;
+    height: auto;
+
+    @include sp {
+      aspect-ratio: 160 / 110;
+    }
   }
 }
 

@@ -28,7 +28,9 @@
     font-weight: 700;
     border: 0.1rem solid #000000;   
     color: #000000;
-    transition: all 0.4s ease;
+    transition:
+    background-color 0.4s ease,
+    color 0.4s ease;
 
    &.current {
       color: #fff;

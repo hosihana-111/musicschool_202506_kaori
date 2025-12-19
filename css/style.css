@@ -150,13 +150,15 @@ html {
 }
 
 body {
-  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "Noto Sans JP", "ヒラギノ角ゴ Pro W3", sans-serif;
+  font-family: "Yu Gothic", "游ゴシック体", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   font-weight: 500;
   font-style: normal;
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 1.8rem;
+  line-height: 1;
+  letter-spacing: 0;
 }
 
 input,
@@ -276,8 +278,8 @@ hr {
   background-color: #CB0000;
   color: #ffffff;
   border: 0.1rem solid #CB0000;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  -webkit-transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
 }
 .c-btn:hover {
   background-color: #ffffff;
@@ -295,8 +297,8 @@ hr {
   font-size: 1.5rem;
   line-height: 2.2;
   font-weight: 700;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  -webkit-transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
 }
 .c-btn--head:hover {
   background-color: #ffffff;
@@ -358,8 +360,8 @@ hr {
   font-weight: 700;
   border: 0.1rem solid #000000;
   color: #000000;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  -webkit-transition: background-color 0.4s ease, color 0.4s ease;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 .c-pagination__item.current {
   color: #fff;
@@ -616,7 +618,10 @@ hr {
   width: 3.2rem;
   height: 0.4rem;
   background-color: #ffffff;
-  -webkit-transition: 0.4s;
+  -webkit-transition: top 0.4s ease, opacity 0.4s ease, -webkit-transform 0.4s ease;
+  transition: top 0.4s ease, opacity 0.4s ease, -webkit-transform 0.4s ease;
+  transition: transform 0.4s ease, top 0.4s ease, opacity 0.4s ease;
+  transition: transform 0.4s ease, top 0.4s ease, opacity 0.4s ease, -webkit-transform 0.4s ease;
 }
 
 .c-hamburger span:nth-of-type(1) {
@@ -634,7 +639,8 @@ hr {
 }
 
 .c-hamburger.active span:nth-of-type(2) {
-  display: none;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .c-hamburger.active span:nth-of-type(3) {
@@ -812,6 +818,9 @@ body.is-menu-open .c-page-top {
   -webkit-column-gap: 3rem;
      -moz-column-gap: 3rem;
           column-gap: 3rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 @media (max-width: 767px) {
   .p-related-posts__item a {
@@ -828,32 +837,24 @@ body.is-menu-open .c-page-top {
 .p-related-posts__img {
   position: relative;
   width: 20rem;
-  aspect-ratio: 20/14;
   display: block;
   overflow: hidden;
 }
 @media (max-width: 767px) {
   .p-related-posts__img {
     width: 16rem;
-    aspect-ratio: 16/11;
   }
 }
 .p-related-posts__img img {
-  width: 100%;
-  height: 100%;
+  aspect-ratio: 20/14;
+  height: auto;
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
-.p-related-posts__img-wide {
-  width: 26rem;
-  aspect-ratio: 26/18.3;
-}
 @media (max-width: 767px) {
-  .p-related-posts__img-wide {
-    width: 16rem;
-    aspect-ratio: 16/11.3;
+  .p-related-posts__img img {
+    aspect-ratio: 16/11;
   }
 }
 
@@ -879,6 +880,10 @@ body.is-menu-open .c-page-top {
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.25;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }
 @media (max-width: 767px) {
   .p-related-posts__text {
@@ -942,17 +947,9 @@ body.is-menu-open .c-page-top {
 .p-sidebar__magazine {
   padding: 1.5rem;
   border: 0.1rem solid #000;
-}
-@media (max-width: 767px) {
-  .p-sidebar__magazine {
-    padding: 2rem;
-  }
-}
-
-.p-sidebar__magazine-img {
   position: relative;
 }
-.p-sidebar__magazine-img p {
+.p-sidebar__magazine p {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -962,6 +959,11 @@ body.is-menu-open .c-page-top {
   font-size: 1.8rem;
   line-height: 1.8333333333;
   font-weight: bold;
+}
+@media (max-width: 767px) {
+  .p-sidebar__magazine {
+    padding: 2rem;
+  }
 }
 
 .p-sidebar__search {
@@ -1081,18 +1083,22 @@ body.is-menu-open .c-page-top {
 
 .p-sidebar__recommendation-item__img {
   width: 9.5rem;
-  aspect-ratio: 95/75;
 }
 @media (max-width: 767px) {
   .p-sidebar__recommendation-item__img {
     width: 16rem;
-    aspect-ratio: 160/110;
   }
 }
 .p-sidebar__recommendation-item__img img {
   -o-object-fit: cover;
      object-fit: cover;
-  height: 100%;
+  aspect-ratio: 95/75;
+  height: auto;
+}
+@media (max-width: 767px) {
+  .p-sidebar__recommendation-item__img img {
+    aspect-ratio: 160/110;
+  }
 }
 
 .p-sidebar__recommendation-text {
@@ -1239,6 +1245,7 @@ body.is-menu-open .c-page-top {
   font-weight: 700;
   line-height: 1.15;
   display: inline-block;
+  margin-top: 0.5rem;
 }
 @media (max-width: 767px) {
   .p-header-logo__text {
@@ -1270,6 +1277,7 @@ body.is-menu-open .c-page-top {
           align-items: center;
   height: inherit;
   gap: 3.3rem;
+  padding-top: 0.5rem;
 }
 
 .p-header__nav {
@@ -1332,8 +1340,6 @@ body.is-menu-open .c-page-top {
   line-height: 1.9411764706;
   color: #000;
   position: relative;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
 }
 @media (max-width: 767px) {
   .p-header__item a {
@@ -1343,8 +1349,8 @@ body.is-menu-open .c-page-top {
     font-size: 1.8rem;
     line-height: 1.8333333333;
     padding-inline: 2rem;
-    -webkit-transition: all 0.4s;
-    transition: all 0.4s;
+    -webkit-transition: background-color 0.4s ease, color 0.4s ease;
+    transition: background-color 0.4s ease, color 0.4s ease;
   }
 }
 @media (min-width: 768px) {
@@ -1352,14 +1358,14 @@ body.is-menu-open .c-page-top {
     content: "";
     width: 100%;
     height: 0.2rem;
-    background: #000;
+    background: #999;
     border-radius: 0.1rem;
     position: absolute;
     left: 0;
     bottom: 2.4rem;
     clip-path: inset(0 100% 0 0);
-    -webkit-transition: all 0.4s;
-    transition: all 0.4s;
+    -webkit-transition: clip-path 0.4s ease;
+    transition: clip-path 0.4s ease;
     opacity: 1;
   }
 }
@@ -1627,13 +1633,15 @@ body.is-menu-open .c-page-top {
   text-decoration: none;
   font-size: 2rem;
   line-height: 1.65;
-  letter-spacing: 0.4rem;
+  letter-spacing: 0.3rem;
   pointer-events: all;
   cursor: pointer;
   background-color: #CB0000;
   color: #ffffff;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  -webkit-transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+  padding-top: 0.7rem;
+  padding-left: 0.1rem;
   /* PC：右端（親のalign-items:flex-endのまま） */
   /* 下ボーダーを消す */
 }
@@ -3081,7 +3089,6 @@ body.is-menu-open .c-page-top {
 
 .p-blog-list-item__img {
   width: 26rem;
-  aspect-ratio: 260/184;
   overflow: hidden;
   padding: 0;
 }
@@ -3096,11 +3103,16 @@ body.is-menu-open .c-page-top {
 
 .p-blog-list-item__img img {
   aspect-ratio: 260/184;
+  height: auto;
   overflow: hidden;
   padding: 0;
-  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (max-width: 767px) {
+  .p-blog-list-item__img img {
+    aspect-ratio: 335/200;
+  }
 }
 
 .p-blog-list-item__body {
