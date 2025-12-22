@@ -1251,6 +1251,7 @@ body.is-menu-open .c-page-top {
   .p-header-logo__text {
     font-size: 1.3rem;
     line-height: 1.0769230769;
+    margin-top: 0;
   }
 }
 
@@ -1803,12 +1804,8 @@ body.is-menu-open .c-page-top {
 }
 
 .p-diagram-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: grid;
+  grid-template-columns: minmax(14.5rem, 1fr) 2rem minmax(14.5rem, 1fr);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1816,6 +1813,11 @@ body.is-menu-open .c-page-top {
      -moz-column-gap: 3rem;
           column-gap: 3rem;
   width: 100%;
+}
+@media (max-width: 767px) {
+  .p-diagram-item {
+    grid-template-columns: minmax(11.5rem, 1fr) 2rem minmax(11.5rem, 1fr);
+  }
 }
 
 .p-diagram-item__en {
@@ -1826,6 +1828,7 @@ body.is-menu-open .c-page-top {
   font-size: 2.5rem;
   line-height: 2;
   text-transform: capitalize;
+  white-space: nowrap; /* 2段防止 */
 }
 @media (max-width: 767px) {
   .p-diagram-item__en {

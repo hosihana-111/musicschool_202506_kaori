@@ -72,14 +72,22 @@
 }
 
 .p-diagram-item {
-  display: flex;
-  justify-content: center;
+  // display: flex; 
+  // justify-content: center;
+  display: grid;
+  grid-template-columns: minmax(14.5rem, 1fr) 2rem minmax(14.5rem, 1fr);
   align-items: center;
   column-gap: 3rem;
   width: 100%;
 
+  @include sp {
+    grid-template-columns:minmax(11.5rem, 1fr) 2rem minmax(11.5rem, 1fr);
+  
+  }
+
 
 }
+
 
 .p-diagram-item__en {
   color: $red;
@@ -89,6 +97,7 @@
   font-size: 2.5rem;
   line-height: calc(50 / 25);
   text-transform: capitalize;
+  white-space: nowrap; /* 2段防止 */
 
   @include sp {
     min-width: 11.5rem;
