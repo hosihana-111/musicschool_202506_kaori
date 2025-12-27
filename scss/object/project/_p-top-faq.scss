@@ -30,11 +30,11 @@
 }
 
 .p-faq-item {
-  border-bottom: 0.1rem solid $black;
+  border-bottom: 0.1rem solid #999;
   cursor: pointer;
 
   &:first-of-type {
-    border-top: 0.1rem solid $black;
+    border-top: 0.1rem solid #999;
   }
 }
 

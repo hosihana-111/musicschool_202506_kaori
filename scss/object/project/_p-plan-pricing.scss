@@ -154,7 +154,7 @@
 
 // テーブルヘッダー
 .p-plan-table__head {
-  border-bottom: 0.1rem solid $black;
+  border-bottom: 0.1rem solid #999;
   font-size: 2rem;
   line-height: calc(33 / 20);
   color: $white;
@@ -247,7 +247,7 @@
 
 // 料金表本体
 .p-plan-table__body {
-   border-bottom: 0.1rem solid $black;
+   border-bottom: 0.1rem solid #999;
     font-size: 1.7rem;
     line-height: calc(25 / 17);
 }
@@ -318,7 +318,7 @@
   flex-shrink: 0;
   height: 8.5rem;
   // 料金表のbodyの縦の線 
-  border-left: solid 0.1rem $black;
+  border-left: solid 0.1rem #999;
 
 }
 

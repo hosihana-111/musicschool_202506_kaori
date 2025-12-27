@@ -1,4 +1,3 @@
-
 @use "../../foundation/base" as *;
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
@@ -20,33 +19,37 @@
     flex-direction: column;
     row-gap: 5.9rem;
     margin-top: 5.5rem;
-    position: relative; 
-     padding-left: 4rem;
-     padding-bottom: 1rem;
+    position: relative;
+    padding-left: 4rem;
+    padding-bottom: 1rem;
+
     @include sp {
         margin-top: 4.4rem;
         row-gap: 4.25rem;
         padding-left: 0;
     }
 }
-.p-top-flow__items::before{
+
+.p-top-flow__items::before {
     display: block;
-  width: 0.3rem;
-  height: 100%;
-  content: "";
-  position: absolute;
- top: 0;
-  left: 6rem;
-  transform: translateX(-50%);
-  background: $red;
-  @media screen and (435px < width <=767px) {
-    left: 2rem;
-    height: 97%
-  }
-@media screen and (max-width:435px) {
+    width: 0.3rem;
+    height: 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 6rem;
+    transform: translateX(-50%);
+    background: $red;
+
+    @media screen and (435px < width <=767px) {
         left: 2rem;
-    //    height: 98.1%
-    height: 97.8%
+        height: 97%
+    }
+
+    @media screen and (max-width:435px) {
+        left: 2rem;
+        //    height: 98.1%
+        height: 97.8%
     }
 
 }
@@ -58,29 +61,31 @@
     height: 2rem;
     position: absolute;
     bottom: -0.36rem;
-    left: 4.27rem;    
+    left: 4.27rem;
     background: url('../images/flow/vector.svg') no-repeat center center / contain;
 
-@media screen and (435px < width <=767px)  {   
-    left: 0.29rem;
-    bottom: 1.4rem;
+    @media screen and (435px < width <=767px) {
+        left: 0.29rem;
+        bottom: 1.4rem;
+    }
+
+    @media screen and (max-width:435px) {
+        left: 0.29rem;
+        bottom: 1.3rem;
+    }
 }
-@media screen and (max-width:435px) {
-    left: 0.29rem;
-    bottom: 1.3rem;
-}}
 
 
 
 .p-flow__item {
     display: flex;
     justify-content: space-between;
-  
+
 
     @include sp {
         flex-wrap: wrap;
         justify-content: flex-start;
-       
+
         row-gap: 1.3rem;
     }
 
@@ -96,14 +101,15 @@
         width: 100%;
         padding-left: 5rem;
     }
+
     h3 {
         font-size: 2.2rem;
-        font-weight: bold;
+        font-weight: 700;
         color: $red;
         line-height: calc(33 / 22);
 
         @include sp {
-          
+
             line-height: 1;
         }
     }
@@ -113,15 +119,15 @@
     content: "";
     width: 2rem;
     height: 2rem;
-  border-radius: 50%;
-  background-color: $red;
+    border-radius: 50%;
+    background-color: $red;
     position: absolute;
- top:0;
-    left:0.55em;
+    top: 0;
+    left: 0.55em;
     // @include sp {
     //     left:0;;
     // }
-   
+
 }
 
 

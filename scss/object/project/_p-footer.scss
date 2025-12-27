@@ -7,7 +7,7 @@
   background-color: $red;
   color: $white;
   text-align: center;
-  padding-top: 5.1rem;
+  padding-top: 4.7rem;
   padding-bottom: 5rem;
   width: 100%;
 
@@ -38,6 +38,7 @@
 
 .p-footer__nav li a {
   color: $white;
+   display: block;
   font-size: 1.7rem;
   font-weight: 700;
   line-height: 1;
@@ -49,7 +50,7 @@
 }
 
 .p-footer__logo {
-  margin-top: 2.2rem;
+  margin-top: 1.9rem;
 
   display: inline-block;
   text-align: center;
@@ -76,7 +77,6 @@
   display: block;
   text-align: center;
   margin-top: 2.5rem;
-
   letter-spacing: 0.01em;
 
   @include sp {

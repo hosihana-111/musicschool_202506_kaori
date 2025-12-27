@@ -76,32 +76,57 @@ $(document).ready(function () {
     }
 
     // --- footerに被ったらborder-bottomを消す---
-  const $footer = $(".p-footer");
-  const $contactBtn = $(".p-top-btn__contact");
-  if ($footer.length && $contactBtn.length) {
-    const scrollBottom = $(this).scrollTop() + $(this).height();
-    const footerTop = $footer.offset().top;
-    if (scrollBottom >= footerTop) {
-      $contactBtn.addClass("is-over-footer");
-    } else {
-      $contactBtn.removeClass("is-over-footer");
+    const $footer = $(".p-footer");
+    const $contactBtn = $(".p-top-btn__contact");
+    if ($footer.length && $contactBtn.length) {
+      const scrollBottom = $(this).scrollTop() + $(this).height();
+      const footerTop = $footer.offset().top;
+      if (scrollBottom >= footerTop) {
+        $contactBtn.addClass("is-over-footer");
+      } else {
+        $contactBtn.removeClass("is-over-footer");
+      }
     }
-  }
-  // 
+    // 
   });
 
-  //画面の高さまで表示領域を広げる
+  // 画面の高さまで表示領域を広げる（リサイズ時に再計算についてAIで確認）
   const $footer = $(".p-footer");
-  if (window.innerHeight > $footer.offset().top + $footer.outerHeight()) {
-    console.log($footer.offset().top);
-    $footer.attr({
-      style:
-        "position:fixed; width:100%; top:" +
-        (window.innerHeight - $footer.outerHeight()) +
-        "px;",
-    });
+  function adjustFooter() {
+    if (!$footer.length) return;
+    const footerTop = $footer.offset().top;
+    const footerHeight = $footer.outerHeight();
+    if (window.innerHeight > footerTop + footerHeight) {
+      $footer.css({
+        position: "fixed",
+        width: "100%",
+        top: (window.innerHeight - footerHeight) + "px",
+      });
+    } else {
+      $footer.removeAttr("style");
+    }
   }
+  // 初期表示とリサイズ時に再計算（デバウンス）
+  adjustFooter();
+  let resizeTimer;
+  $(window).on("resize", function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(adjustFooter, 150);
+  });
+  //画面の高さまで表示領域を広げる
+  // const $footer = $(".p-footer");
+  // if (window.innerHeight > $footer.offset().top + $footer.outerHeight()) {
+  //   console.log($footer.offset().top);
+  //   $footer.attr({
+  //     style:
+  //       "position:fixed; width:100%; top:" +
+  //       (window.innerHeight - $footer.outerHeight()) +
+  //       "px;",
+  //   });
+  // }
 
+
+ 
 
 
   // =============================

@@ -44,14 +44,7 @@ html {
 }
 
 body {
-  font-family:
-    "Yu Gothic",
-    "游ゴシック体",
-    YuGothic,
-    "ヒラギノ角ゴ ProN",
-    "Hiragino Kaku Gothic ProN",
-    Meiryo,
-    sans-serif;
+  font-family:$font-gothic;
   font-weight: 500;
   font-style: normal;
   margin: 0;
