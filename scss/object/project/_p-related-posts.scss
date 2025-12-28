@@ -87,17 +87,17 @@
     }
 }
 
-// .p-related-posts__img-wide {
-//     width: 26rem;
-//     aspect-ratio: 26 / 18.3;
+.p-related-posts__img-wide {
+    width: 26rem;
+    aspect-ratio: 26 / 18.3;
 
-//     @include sp {
-//         width: 16rem;
-//         aspect-ratio: 16 / 11.3;
+    @include sp {
+        width: 16rem;
+        aspect-ratio: 16 / 11.3;
 
-//     }
+    }
 
-// }
+}
 
 .p-related-posts__body {
     flex: 1;

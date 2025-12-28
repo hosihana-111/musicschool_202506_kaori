@@ -91,42 +91,33 @@ $(document).ready(function () {
   });
 
   // 画面の高さまで表示領域を広げる（リサイズ時に再計算についてAIで確認）
-  const $footer = $(".p-footer");
-  function adjustFooter() {
-    if (!$footer.length) return;
-    const footerTop = $footer.offset().top;
-    const footerHeight = $footer.outerHeight();
-    if (window.innerHeight > footerTop + footerHeight) {
-      $footer.css({
-        position: "fixed",
-        width: "100%",
-        top: (window.innerHeight - footerHeight) + "px",
-      });
-    } else {
-      $footer.removeAttr("style");
-    }
-  }
-  // 初期表示とリサイズ時に再計算（デバウンス）
-  adjustFooter();
-  let resizeTimer;
-  $(window).on("resize", function () {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(adjustFooter, 150);
-  });
-  //画面の高さまで表示領域を広げる
   // const $footer = $(".p-footer");
-  // if (window.innerHeight > $footer.offset().top + $footer.outerHeight()) {
-  //   console.log($footer.offset().top);
-  //   $footer.attr({
-  //     style:
-  //       "position:fixed; width:100%; top:" +
-  //       (window.innerHeight - $footer.outerHeight()) +
-  //       "px;",
-  //   });
+  // function adjustFooter() {
+  //   if (!$footer.length) return;
+  //   const footerTop = $footer.offset().top;
+  //   const footerHeight = $footer.outerHeight();
+  //   if (window.innerHeight > footerTop + footerHeight) {
+  //     $footer.css({
+  //       position: "fixed",
+  //       width: "100%",
+  //       top: (window.innerHeight - footerHeight) + "px",
+  //     });
+  //   } else {
+  //     $footer.removeAttr("style");
+  //   }
   // }
+  // // 初期表示とリサイズ時に再計算（デバウンス）
+  // adjustFooter();
+  // let resizeTimer;
+  // $(window).on("resize", function () {
+  //   clearTimeout(resizeTimer);
+  //   resizeTimer = setTimeout(adjustFooter, 150);
+  // });
 
 
- 
+  
+
+  
 
 
   // =============================
