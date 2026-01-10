@@ -14,8 +14,7 @@
      
     }
 }
-.c-pagination__item{
-    
+.c-pagination__item{   
  
     box-sizing: border-box;
     display: flex;
@@ -46,6 +45,7 @@
   @include sp{
     width: 4.4rem;
     height: 4.4rem;
+    font-size: 1.6rem;
   }
 
 }
@@ -62,7 +62,7 @@
      
     padding-inline: 1rem;
     @include sp{
-      padding-inline:0;
+      padding-inline:0.7rem;
     }
   }
 

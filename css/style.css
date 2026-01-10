@@ -386,6 +386,7 @@ hr {
   .c-pagination__item {
     width: 4.4rem;
     height: 4.4rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -404,7 +405,7 @@ hr {
 }
 @media (max-width: 767px) {
   .c-pagination__dot {
-    padding-inline: 0;
+    padding-inline: 0.7rem;
   }
 }
 
@@ -4015,7 +4016,7 @@ input[type=checkbox]:checked + span::after {
 @media (max-width: 767px) {
   .p-result-list {
     padding-top: 4.5rem;
-    padding-bottom: 13.7rem;
+    padding-bottom: 20.3rem;
   }
 }
 
