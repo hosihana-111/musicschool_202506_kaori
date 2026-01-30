@@ -38,18 +38,13 @@
 .p-voice-item {
     display: flex;
     flex-direction: column;
-    //   row-gap: 1.7rem;
-    text-decoration: none;
-    /* 下線消す */
-    color: inherit;
-    /* 文字色継承 */
+
+    text-decoration: none; /* 下線消す */
+    color: inherit;    /* 文字色継承 */
     transition: transform 0.3s ease, opacity 0.3s ease;
-
-
 
     &:hover {
 
-        // cursor: default;
         .p-voice-item__img img {
             transform: scale(1.1);
         }
@@ -63,25 +58,21 @@
 
 /* 画像枠の比率固定：PC と SP で切り替え */
 .p-voice-item__img {
-    width: 100%;
+    width: 27rem;
     margin: 0 auto;
-    overflow: hidden;
-    display: block;
-    aspect-ratio: 270 / 190;
-    /* PC の既定比率 */
-    overflow: hidden;
-
-    @include sp {
-        aspect-ratio: 335 / 200;
-    }
-
-    
+        @include sp {
+        width: 100%;
+    }    
 
     img {
-        object-fit: cover;/* 伸び/歪み防止 */    
+         aspect-ratio: 270 / 190;
+        height: auto;
+        display: block;
+        object-fit: cover;
         transition: transform .6s ease;
-        /* ゆっくり変化させる */
-
+     @include sp {
+        aspect-ratio: 335 / 200;
+    }
     }
 
 }
@@ -123,7 +114,7 @@
     height: 0; // 高さ不要
 }
 
-/* === 矢印ボタン === */
+/*  矢印ボタン  */
 .p-voice__swiper-button-prev,
 .p-voice__swiper-button-next {
     position: absolute;
@@ -148,7 +139,6 @@
 
 /* 矢印カスタマイズ */
 .p-voice__swiper-button-prev {
-
     left: -4.5rem; // スライダーの左外側に配置
 
     @include sp {

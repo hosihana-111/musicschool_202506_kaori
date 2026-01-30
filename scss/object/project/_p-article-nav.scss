@@ -61,7 +61,9 @@
     }
     img {        
          aspect-ratio: 98 / 68;
-          object-fit: cover;
+           height: auto;
+        display: block;
+        object-fit: cover;
     }
 }
 

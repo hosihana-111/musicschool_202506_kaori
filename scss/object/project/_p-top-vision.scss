@@ -19,8 +19,6 @@
   font-weight: 700;
   text-align: center;
   color: $red;
-  // letter-spacing: -0.02em;
-
 
   @include sp {
     font-size: 2.5rem;
@@ -43,8 +41,6 @@
 
 .p-diagram {
   margin: 3.4rem auto 0;
-  // max-height: 24.7rem;
-
 
   @include sp {
     margin-top: 2rem;
@@ -72,8 +68,6 @@
 }
 
 .p-diagram-item {
-  // display: flex; 
-  // justify-content: center;
   display: grid;
   grid-template-columns: minmax(14.5rem, 1fr) 2rem minmax(14.5rem, 1fr);
   align-items: center;
@@ -81,11 +75,9 @@
   width: 100%;
 
   @include sp {
-    grid-template-columns:minmax(11.5rem, 1fr) 2rem minmax(11.5rem, 1fr);
-  
+    grid-template-columns: minmax(11.5rem, 1fr) 2rem minmax(11.5rem, 1fr);
+
   }
-
-
 }
 
 
@@ -97,7 +89,8 @@
   font-size: 2.5rem;
   line-height: calc(50 / 25);
   text-transform: capitalize;
-  white-space: nowrap; /* 2段防止 */
+  white-space: nowrap;
+  /* 2段防止 */
 
   @include sp {
     min-width: 11.5rem;
@@ -124,19 +117,19 @@
   left: 50%;
   transform: translateX(-50%);
   background: $red;
-  
+
 
   &::after {
     content: "";
-     width: 3.5rem;
+    width: 3.5rem;
     height: 2rem;
     position: absolute;
-    top: -0.2rem;    
+    top: -0.2rem;
     left: 50%;
     transform: translateX(-50%);
     background: url('../images/vision/vector.svg') no-repeat center / 100%;
 
-    @include sp {    
+    @include sp {
       top: -0.3rem;
     }
   }
@@ -144,7 +137,7 @@
 }
 
 .p-diagram-item__jp {
-  color: #000;
+  color: $black;
   min-width: 14.5rem;
   text-align: left;
   font-size: 2.3rem;

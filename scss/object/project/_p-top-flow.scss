@@ -10,9 +10,7 @@
         padding-top: 4.6rem;
         padding-bottom: 1.3rem;
     }
-
 }
-
 
 .p-top-flow__items {
     display: flex;
@@ -51,9 +49,7 @@
         //    height: 98.1%
         height: 97.8%
     }
-
 }
-
 
 .p-top-flow__items::after {
     content: "";
@@ -75,22 +71,16 @@
     }
 }
 
-
-
 .p-flow__item {
     display: flex;
     justify-content: space-between;
 
-
     @include sp {
         flex-wrap: wrap;
         justify-content: flex-start;
-
         row-gap: 1.3rem;
     }
-
 }
-
 
 .p-flow-item__label {
     width: 27.2rem;
@@ -124,10 +114,7 @@
     position: absolute;
     top: 0;
     left: 0.55em;
-    // @include sp {
-    //     left:0;;
-    // }
-
+ 
 }
 
 

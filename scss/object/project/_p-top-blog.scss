@@ -1,4 +1,3 @@
-
 @use "../../foundation/base" as *;
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
@@ -9,15 +8,15 @@
     padding-bottom: 20.2rem;
 
     @include sp {
-         padding-top: 4.4rem;
+        padding-top: 4.4rem;
         padding-bottom: 18.8rem;
     }
 }
 
 .p-top-blog__items {
     margin-top: 3.2rem;
-      display: grid;
-  grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     // justify-content: space-between;    
     width: 100%;
     gap: 5rem;
@@ -32,22 +31,13 @@
 
 .p-blog-item {
     position: relative;
-    width: 100%;
-    cursor: pointer;
-
-    @include sp {
-        width: 100%;
-    }
 }
-
-
 
 
 .p-blog-item__body {
     margin-top: 1.9rem;
     display: flex;
     flex-direction: column;
-
 
     @include sp {
         margin-top: 3rem;
@@ -76,20 +66,16 @@
     font-size: 1.7rem;
     line-height: calc(30 / 17);
     text-align: right;
-    
     margin-top: 1.1rem;
 
     @include sp {
-
-        margin-top: 0.7rem;
-        
+    margin-top: 0.7rem;
     }
 }
 
 .p-top-blog__more {
     margin-top: 4rem;
     text-align: right;
-    
 
     @include sp {
         margin-top: 3.8rem;
@@ -97,13 +83,13 @@
     }
 }
 
-.p-top-blog__more a{
-    padding: 0.5rem 0 ;
+.p-top-blog__more a {
+    padding: 0.5rem 0;
     text-decoration-line: underline;
     text-decoration-color: $black;
     text-decoration-thickness: 0.1rem;
     color: $black;
     font-size: 1.8rem;
-    line-height: calc(30 / 18);   
-   
+    line-height: calc(30 / 18);
+
 }

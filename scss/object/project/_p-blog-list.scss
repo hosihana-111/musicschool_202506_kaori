@@ -27,8 +27,7 @@
     @include sp {
         align-items: center;
         margin-top: 4rem;
-        gap: 4rem;
-        padding-bottom: 0;
+        gap: 4rem;     
     }
 }
 
@@ -52,25 +51,17 @@
 
 
 .p-blog-list-item__img {
-    width: 26rem;
-  
-    overflow: hidden;
-    padding: 0;
+    width: 26rem;  
  
-
     @include sp {
-        width: 100%;
-        aspect-ratio: 335 / 200;
-        padding-right: 0;
-        padding-bottom: 0;
-    }
+        width: 100%;      
+         }
 }
 
 .p-blog-list-item__img img {
      aspect-ratio: 260 / 184;
-     height: auto;
-    overflow: hidden;
-    padding: 0;   
+     height: auto; 
+     display: block;
     object-fit: cover;
     @include sp {     
         aspect-ratio: 335 / 200;}
@@ -83,12 +74,10 @@
 .p-blog-list-item__heading {
     font-size: 2rem;
     line-height: calc(25 / 20);
-    font-weight: 700;
-    
+    font-weight: 700;    
 
     @include sp {
-        line-height: calc(30 / 20);
-       
+        line-height: calc(30 / 20);       
     }
 }
 
@@ -96,13 +85,11 @@
     display: block;
     font-size: 1.7rem;
     line-height: calc(30 / 17);
-    margin-top:0.2rem;
-   
+    margin-top:0.2rem;   
 
     @include sp {
         text-align: right;
-         margin-top: 0.5rem;
-        
+         margin-top: 0.5rem;        
     }
 }
 
@@ -113,8 +100,7 @@
   overflow: hidden;
    margin-top: 1.2rem;
 
-    @include sp {
-       
+    @include sp {       
         text-align: left;
         margin-top: 1rem;
     }

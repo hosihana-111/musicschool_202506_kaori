@@ -17,20 +17,23 @@
 
 .p-result-card__img {
     width: 88rem;
-    aspect-ratio: 880 / 400;
     position: relative;
-    overflow: hidden;
 
     @include sp {
         width: 100%;
-        aspect-ratio: 335 / 236;
     }
-
 }
 
 
 .p-result-card__img img {
+    aspect-ratio: 880 / 400;
+    height: auto;
+    display: block;
     object-fit: cover;
+
+    @include sp {
+    aspect-ratio: 335 / 236;
+    }
 }
 
 .p-result-details-card__body {
@@ -177,20 +180,6 @@
     }
 }
 
-.p-result-details__thumbnail {
-    position: relative;
-    flex-shrink: 0; // 縮まないように
-    width: 26rem;
-
-    @include sp {
-        width: 16rem;
-    }
-}
-
-.p-result-details__eye-catch {
-    aspect-ratio: 260 / 183;
-    overflow: hidden;
-}
 
 .p-result-details__body {
     @include sp {

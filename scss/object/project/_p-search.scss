@@ -79,11 +79,9 @@
 .p-search__img {
     position: relative;
     width: 26rem;
-    aspect-ratio: 260 / 184;
 
     @include sp {
         width: 100%;
-        aspect-ratio: 335 / 200;
         padding-right: 0;
         padding-bottom: 0;
     }
@@ -91,7 +89,15 @@
 
 
 .p-search__img img {
+    aspect-ratio: 260 / 184;
+    height: auto;
+    display: block;
     object-fit: cover;
+
+    @include sp {
+        aspect-ratio: 335 / 200;
+
+    }
 }
 
 .p-search__body {

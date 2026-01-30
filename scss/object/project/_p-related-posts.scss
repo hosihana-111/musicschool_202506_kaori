@@ -66,10 +66,7 @@
 .p-related-posts__img {
     position: relative;
     width: 20rem;
-    display: block;
-    overflow: hidden;
-
-
+    
     @include sp {
         width: 16rem;
     }
@@ -88,13 +85,23 @@
 }
 
 .p-related-posts__img-wide {
-    width: 26rem;
-    aspect-ratio: 26 / 18.3;
+    width: 26rem;   
 
     @include sp {
-        width: 16rem;
-        aspect-ratio: 16 / 11.3;
+        width: 16rem;     
 
+    }
+
+     img {
+         aspect-ratio: 26 / 18.3;
+        height: auto;
+        display: block;
+        object-fit: cover;
+
+        @include sp {
+              aspect-ratio: 16 / 11.3;
+
+        }
     }
 
 }

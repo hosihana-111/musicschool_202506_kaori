@@ -311,6 +311,7 @@
 
 
 // 料金表のbodyの行の高さ
+
 .p-plan-table__body td {
   text-align: center;
    vertical-align: middle;
@@ -338,7 +339,10 @@
 
 }
 
+.p-plan-table__price th{
+  font-weight: 700;
 
+}
 
 .p-plan-table__price td {
   font-size: 2.2rem;
