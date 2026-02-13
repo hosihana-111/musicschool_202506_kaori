@@ -1,69 +1,221 @@
+@use "../../foundation/base" as *;
 @use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
 
 
 .p-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 940px;
+  height: 8rem;
+  color: $black;
+  background-color: #fff;
+
+  display: flex;
+  justify-content: space-between;
+  transition: background-color .5s, color .3s;
+
+
+  @include sp {
+    height: 5rem;
+
+  }
+}
+
+
+.p-header.scroll-nav {
+  top: 0; // スクロール後：上に表示
+  background-color: $white;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+.p-header__inner {
+  max-width: 94rem;
+  width: 100%;
+  height: inherit;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 3rem;
+  position: relative;
+
+  @include sp {
+    padding-left: 2rem;
+    padding-right: 0;
+  }
+}
+
+.p-header__logo {
+  display: flex;
+  align-items: center;
+
+
+  @include sp {
+    width: 26rem;
+  }
+}
+
+.p-header__logo a {
+  display: flex;
+  align-items: center;
+  height: 8rem;
+
+  @include sp {
+
+    height: 5rem;
+  }
+}
+
+
+
+.p-header-logo__img {
+  width: 3.2rem;
+  margin-right: 1rem;
+
+  @include sp {
+    width: 2rem;
+    margin-right: 0.8rem;
+  }
+}
+
+.p-header-logo__text {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: calc(23 / 20);
+  display: inline-block;
+  margin-top: 0.5rem;
+
+  @include sp {
+    font-size: 1.3rem;
+    line-height: calc(14 / 13);
+    margin-top: 0;
+  }
+
+}
+
+.p-header-logo__text-small {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: calc(23 / 15);
+
+  @include sp {
+    font-size: 1.3rem;
+    line-height: calc(14 / 13);
+    letter-spacing: -0.02em;
+    margin-left: -0.4rem;
+  }
+}
+
+.p-header__right {
+  display: flex;
+  align-items: center;
+  height: inherit;
+  gap: 3.3rem;
+
+}
+
+.p-header__nav {
+
+  display: flex;
+  align-items: center;
+  height: inherit;
+
+  @include sp {
+    width: 30rem;
+    height: auto;
+    position: fixed;
+    top: 5rem;
+    right: -100%;
+    z-index: 9997;
+    transition: right 0.4s;
+
+    &.open {
+      right: 0;
+    }
+  }
+
+}
+
+.p-header__items {
+  display: flex;
+  height: 8rem;
+  list-style: none;
+  align-items: center;
+  column-gap: 3.3rem;
+  z-index: 1000;
+
+  @include sp {
+    display: block;
+    height: auto;
     width: 100%;
-    margin: 0 auto;
-    height: 8rem;
-}
-.p-header__logo{
-    width: 19.2rem;
-    height: inherit;
+  }
+
 }
 
-.p-header__logo__link{
-    display: flex;
-    align-items: center;
-    height: inherit;
-    
+
+.p-header__item a {
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: calc(33 / 17);
+  color: $black;
+  position: relative;
+
+
+
+  @include sp {
+    height: 5.8rem;
+    background: $red;
+    color: #fff;
+    font-size: 1.8rem;
+    line-height: calc(33 / 18);
+    padding-inline: 2rem;
+    transition:
+      background-color 0.4s ease,
+      color 0.4s ease;
+
+  }
+
+  &::after {
+    @include pc {
+      content: "";
+      width: 100%;
+      height: 0.2rem;
+      background: #000;
+      border-radius: 0.1rem;
+      position: absolute;
+      left: 0;
+      bottom: 2.4rem;
+      clip-path: inset(0 100% 0 0);
+      transition:
+        clip-path 0.4s ease;
+      opacity: 1;
+    }
+
+    @include sp {
+      display: none;
+    }
+
+  }
+
+  &:hover {
+    @include sp {
+      opacity: 1;
+      background: #000;
+    }
+
+    &::after {
+      clip-path: inset(0 0 0 0);
+
+    }
+
+  }
 }
 
-.p-header__logo__img{
-    width: 3.2rem;
-}
-
-.p-header__logo__text{
-    font-size: 1.7rem;
-    font-weight: 700;
- 
-    display:inline-block;
-    
-     
-}
-.p-header__logo__text__span{
-    font-size: 1.5rem;
-    
-}
-.p-header__right{
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-}
-.p-header__nav{
-    display: flex;
-    align-items: center;
-    height: inherit;
-}
-.p-header__nav__lists{
-    display: flex;
-    align-items: center;
-    
-    height: inherit;
-}
-.p-header__nav__list__link{
-    height: inherit;
-    display: flex;
-    align-items: center;    
-    text-decoration: none;
-    padding: 2.5rem 1.5rem;
-    font-size: 1.7rem;
-    font-weight: 900;
-    line-height: calc(33/17);   
-    transition: all 0.3s ease;
-  
-
+.p-header__link::after:hover {
+  opacity: 1;
 }

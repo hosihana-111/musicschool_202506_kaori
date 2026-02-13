@@ -1,0 +1,25 @@
+@charset "UTF-8";
+@use "../../foundation/base" as *;
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+
+
+.c-thumbnail {
+    width: 100%;   
+}
+
+.c-thumbnail__img {
+    width: 100%;
+    position: relative;
+    
+
+
+}
+
+.c-thumbnail__img img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+
+}

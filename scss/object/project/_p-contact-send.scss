@@ -1,0 +1,36 @@
+@use "../../foundation/base" as *;
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+.p-contact-send {
+  padding-top: 6.7rem;
+  padding-bottom: 9rem;
+
+
+  @include sp {
+    padding-top: 4.7rem;
+    padding-bottom: 5rem;
+  }
+}
+
+
+.p-contact-send__container {
+  text-align: center;
+
+  @include sp {
+    text-align: left;
+  }
+
+}
+
+/*****ボタン*****/
+.p-contact-send__btn {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+
+  @include sp {
+    margin-top: 3.9rem;
+
+  }
+}

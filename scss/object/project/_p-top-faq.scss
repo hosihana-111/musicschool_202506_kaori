@@ -1,0 +1,146 @@
+
+@use "../../foundation/base" as *;
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+.p-top-faq {
+  padding-top: 5rem;
+  padding-bottom: 4.1rem;
+
+  @include sp {
+    padding-top: 3.5rem;
+    padding-bottom: 0.6rem;
+  }
+}
+
+
+.p-faq__container {
+  margin-top: 3.2rem;
+
+  @include sp {
+    margin-top: 3.8rem;
+  }
+}
+
+.p-faq__accordion {
+  margin-inline: auto;
+  max-width: 88rem;
+  position: relative;
+  width: 100%;
+}
+
+.p-faq-item {
+  border-bottom: 0.1rem solid #999;
+  cursor: pointer;
+
+  &:first-of-type {
+    border-top: 0.1rem solid #999;
+  }
+}
+
+
+.p-faq-item__text {
+   position: relative;
+   display: block;
+  font-size: 1.7rem;
+  line-height: calc(30 / 17);
+  font-weight: 500;
+  flex: 1;
+  padding: 1.74rem 2.9rem 1.74rem 6.5rem;
+  align-items: center;
+   @include sp {
+    font-size: 1.6rem;
+    line-height: calc(30 / 16);
+    padding: 1.25rem 4.7rem 1.25rem 5.5rem;
+  
+  }
+}
+
+.p-faq-item__question .p-faq-item__text::before{
+  content: "Q";
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  transform: translateY(-50%); 
+  width: 3.5rem;
+  height: 3.5rem;
+  background: $black;
+  color: $white;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 2rem;  
+  padding-inline: 1rem;
+
+  @include sp {
+     left: 0.2rem;
+  }
+ 
+}
+// 矢印部分
+.p-faq-item__question .p-faq-item__text::after{
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 2.9rem;
+      transform: translateY(-50%);
+      display: inline-block;
+      background-image: url("./../images/faq/faq-arrow.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 1.3rem;
+      height: 1.3rem;  
+      transition: transform 0.4s;
+      &.is-active {
+        transform: rotate(180deg);
+      }
+
+      @include sp {
+        right: 1.5rem;
+      }
+}
+
+/* クリック時（is-activeが付いた時）に反転 */
+.js-faq.is-active .p-faq-item__question .p-faq-item__text::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.p-faq-item__answer {
+   background-color: rgba(203, 0, 0, 0.1);
+
+}
+.p-faq-item__answer .p-faq-item__text {
+  color: $red;
+  font-size: 1.7rem;
+  line-height: calc(30 / 17);
+  font-weight: 700;
+
+  @include sp {
+    font-size: 1.6rem;
+    line-height: calc(30 / 16);
+  }
+}
+
+.p-faq-item__answer .p-faq-item__text::before{
+  content: "A";
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  transform: translateY(-50%); 
+  width: 3.5rem;
+  height: 3.5rem;
+  background: $red;
+  color: $white;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 2rem;  
+  padding-inline: 1.1rem;
+
+   @include sp {
+     left: 0.2rem;
+  }
+ 
+}
+
+
+
+

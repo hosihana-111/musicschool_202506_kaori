@@ -1,0 +1,188 @@
+@use "../../foundation/base" as *;
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+
+// メイン記事
+.p-result-details {
+    padding-top: 6.9rem;
+    padding-bottom: 16rem;
+
+    @include sp {
+        padding-top: 4.5rem;
+        padding-bottom: 19.9rem;
+        ;
+    }
+}
+
+.p-result-card__img {
+    width: 88rem;
+    position: relative;
+
+    @include sp {
+        width: 100%;
+    }
+}
+
+
+.p-result-card__img img {
+    aspect-ratio: 880 / 400;
+    height: auto;
+    display: block;
+    object-fit: cover;
+
+    @include sp {
+    aspect-ratio: 335 / 236;
+    }
+}
+
+.p-result-details-card__body {
+    margin-top: 5rem;
+
+    @include sp {
+        margin-top: 3rem;
+
+    }
+}
+
+.p-result-details-card__text {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: calc(40 / 25);
+    text-align: left;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+
+    @include sp {
+        font-size: 2rem;
+        line-height: calc(32 / 20);
+        -webkit-line-clamp: 2;
+    }
+
+}
+
+.p-result-details-card__date {
+    display: block;
+    font-size: 1.8rem;
+    line-height: calc(32 / 18);
+    text-align: left;
+    margin-top: 1.5rem;
+    letter-spacing: -0.02em;
+
+    @include sp {
+        margin-top: 0.8rem;
+        font-size: 1.7rem;
+        line-height: 1;
+        letter-spacing: -0.01em;
+    }
+}
+
+
+
+// プロフィール 
+.p-result-profile {
+    margin-top: 5.5rem;
+    display: flex;
+    column-gap: 4rem;
+
+    @include sp {
+        flex-direction: column;
+        margin-top: 2.7rem;
+        row-gap: 3rem;
+    }
+}
+
+.p-result-profile__table {
+    border-collapse: collapse;
+
+    @include pc {
+        width: 40rem;
+    }
+}
+
+.p-result-profile__table tr {
+    border: solid 0.1rem #707070;
+    height: 3.8rem;
+}
+
+.p-result-profile__table th {
+    width: 14rem;
+    padding: 0;
+    background-color: #e5e5e5;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: calc(33 / 18);
+    padding-left: 2rem;
+    text-align: left;
+    vertical-align: middle;
+
+    @include sp {
+        width: 12rem;
+        line-height: calc(30 / 18);
+        padding-left: 1rem;
+    }
+}
+
+.p-result-profile__table td {
+    flex: 1;
+    padding: 0;
+    font-size: 1.8rem;
+    line-height: calc(33 / 18);
+    padding-left: 2rem;
+    text-align: left;
+    vertical-align: middle;
+    border-left: solid 0.1rem #707070;
+
+    @include sp {
+        line-height: calc(30 / 18);
+        padding-left: 1rem;
+    }
+}
+
+
+
+.p-result-profile__text {
+    width: 50%;
+    font-size: 1.8rem;
+    line-height: 1.6666666667;
+
+
+    @include sp {
+        width: 100%;
+        line-height: calc(30 / 18);
+    }
+}
+
+
+// 前後記事ナビ
+.p-result-details__nav {
+    margin-top: 6.2rem;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20rem;
+
+    @include sp {
+        margin-top: 3.7rem;
+        column-gap: 2.2rem;
+    }
+}
+
+
+// 関連記事
+.p-result-details__related-posts {
+    margin-top: 9rem;
+
+    @include sp {
+        margin-top: 6.2rem;
+
+    }
+}
+
+
+.p-result-details__body {
+    @include sp {
+        margin-top: 0;
+    }
+}

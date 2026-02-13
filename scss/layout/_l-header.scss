@@ -1,0 +1,14 @@
+@charset "UTF-8";
+@use "../foundation/base" as *;
+@use "../foundation/variable" as *;
+@use "../foundation/mixin" as *;
+
+
+.l-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 777;
+  margin: 0 auto;
+}

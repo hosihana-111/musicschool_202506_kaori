@@ -1,0 +1,262 @@
+@use "../../foundation/base" as *;
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+.p-contact {
+  padding-top: 7rem;
+  padding-bottom: 10rem;
+  position: relative;
+
+  @include sp {
+    padding-top: 5rem;
+    padding-bottom: 10.8rem;
+  }
+}
+
+.p-contact__container {
+  max-width: 88rem;
+  margin-inline: auto;
+}
+
+.p-contact__container-text {
+  text-align: center; 
+
+  @include sp {
+    text-align: left;
+  }
+}
+
+.p-contact-form {
+  margin-top: 6.1rem;
+
+  @include sp {
+    margin-top: 3.1rem;
+  }
+}
+
+
+.p-contact-form__box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  row-gap: 3rem;
+
+  @include sp {
+    row-gap: 1.4rem;
+  }
+}
+
+.p-contact-form__box dl {
+  display: flex;
+  align-items: flex-start;
+
+  @include sp {
+    flex-direction: column;
+  }
+}
+
+.p-contact-form__box dt {
+  width: 16.9rem;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: calc(33 / 20);
+  padding-top: 0.7rem;
+
+  @include sp {
+    width: 100%;
+    height: initial;
+    font-size: 1.6rem;
+    line-height: calc(33 / 16);
+    padding-top: 0;
+  }
+}
+
+.p-contact-form__box dd {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  line-height: calc(30 / 18);
+
+  @include sp {
+    font-size: 1.6rem;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"] {
+    width: 100%;
+    // height: 4rem;
+    border: 0.05rem solid #000;
+    padding: 0.3rem 2rem;
+    background: #fff;
+    font-size: 1.5rem;
+    line-height: calc(33 / 15);
+
+    @include sp {
+      width: 100%;
+      // height: 4rem;
+
+    }
+  }
+}
+
+::placeholder {
+  color: #B2B2B2;
+  font-size: 1.5rem;
+  line-height: calc(22 / 15);
+
+
+}
+
+/*****チェックボックス*****/
+
+.p-contact-form__checkbox {
+  display: flex;
+
+  @include sp {
+    flex-direction: column;
+
+  }
+}
+
+
+.p-form-checkbox dd {
+  flex: 1;
+  width: 100%;
+  display: block;
+  padding: 0; // ← 余白を完全になくす
+  margin: 0;
+
+}
+
+
+.p-form-checkbox__items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 2.2rem;
+
+  @include sp {
+    margin-top: 0.3rem;
+    row-gap: 2.4rem;
+  }
+}
+
+.p-form-checkbox__item {
+  cursor: pointer;
+  line-height: 1;
+
+  input[type="checkbox"] {
+    display: none;
+  }
+}
+
+.p-form-checkbox__item span {
+  font-size: 1.8rem;
+  line-height: 1;
+
+  @include sp {
+    font-size: 1.6rem;
+
+  }
+}
+
+.p-form-checkbox__item input[type=checkbox]+span {
+  position: relative;
+  display: inline-block;
+  padding-left: 4rem;
+
+  @include sp {
+    padding-left: 3rem;
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background: #fff;
+    border: 0.05rem solid #000;
+    width: 2rem;
+    height: 2rem;
+
+  }
+
+}
+
+input[type="checkbox"]:checked+span::after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 0.7rem; 
+  transform: translate(10%, -60%) rotate(50deg);
+  width: 0.6rem;
+  height: 1.2rem;
+  border-right: 0.2rem solid $red;
+  border-bottom: 0.2rem solid $red;
+  display: none;
+
+}
+
+
+.p-form-checkbox__item input[type=checkbox]:checked {
+  &+span {
+    &::after {
+      display: block;
+    }
+  }
+}
+
+
+.form-area-message {
+
+  @include sp {
+    margin-top: 0.8rem;
+  }
+
+  dt {
+    @include sp {
+      line-height: 1;
+    }
+  }
+
+  dd {
+    padding: 0;
+    border: 0;
+  }
+}
+
+.form-textarea {
+  width: 100%;
+  background-color: #FFF;
+  min-height: 30rem;
+  padding: 1.8rem 2rem;
+  resize: vertical;
+  font-size: 1.5rem;
+  line-height: calc(33 / 15);
+  border: 0.05rem solid $black;
+
+
+  @include sp {
+    padding: 1.5rem 2rem;
+    min-height: 19rem;
+    margin-top: 1.4rem;
+    line-height: calc(25 / 15);
+
+  }
+}
+
+/*****ボタン*****/
+.p-contact-form__button {
+  margin-top: 5.2rem;
+  display: flex;
+  justify-content: center;
+
+  @include sp {
+    margin-top: 4.9rem;
+  }
+}

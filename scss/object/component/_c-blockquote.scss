@@ -1,0 +1,45 @@
+@charset "UTF-8";
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+.c-blockquote{
+    position: relative;
+    padding: 0.8rem 3rem 0.5rem 6.7rem;
+    box-sizing: border-box;  
+    background: #E8E8E8;
+
+    @include sp {
+        padding-left: 7rem;
+    }
+
+}
+.c-blockquote:before{
+    display: inline-block;
+    position: absolute;
+    top: 1rem;
+    left: 2.5rem;
+    content: "“";    
+    color: #A3A3A2;
+    font-size: 9rem;
+    line-height: 1;
+
+    @include sp {
+        font-size: 10rem;
+        top: 1.5rem;
+        left: 1.8rem;
+       
+    }
+}
+.c-blockquote p {
+    padding: 0;
+    margin: 1.2rem 0;
+    font-size: 1.8rem;
+    line-height: calc(30 / 18);
+    
+
+    @include sp {
+        margin: 1rem 0;
+        font-size: 1.6rem;
+        line-height: calc(30 / 16);
+    }
+}

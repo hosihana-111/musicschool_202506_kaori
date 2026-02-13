@@ -1,0 +1,29 @@
+@charset "UTF-8";
+@use "../../foundation/base" as *;
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+
+// サムネイルのラベル
+.c-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: $red;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 0.7rem 1.6rem;
+  min-width: 8rem;
+  text-align: center;
+  z-index: 1;
+  line-height: 1.15;
+}
+
+.c-label--lg {
+  min-width: 10rem;
+
+  @include sp {
+    min-width: 8rem;
+  }
+}

@@ -1,0 +1,113 @@
+
+@use "../../foundation/base" as *;
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+/* result_listの場合のみｆｖのオーバーレイを非表示にする */
+.p-child-fv--no-overlay .p-child-fv__img::before {
+    display: none;
+}
+.p-blog-list {
+    padding-top: 7.5rem;
+     padding-bottom: 21rem;
+
+    @include sp {
+        padding-top: 4.5rem;
+       padding-bottom: 20.3rem;
+    }
+}
+
+.p-blog-list__items {
+    margin-top: 4.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
+
+
+    @include sp {
+        align-items: center;
+        margin-top: 4rem;
+        gap: 4rem;     
+    }
+}
+
+.p-blog-list-item {
+    position: relative;
+}
+
+.p-blog-list-item a {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+   
+
+    @include sp {
+        flex-direction: column;
+        gap: 3rem;
+        align-items: flex-start;
+    }
+}
+
+
+
+.p-blog-list-item__img {
+    width: 26rem;  
+ 
+    @include sp {
+        width: 100%;      
+         }
+}
+
+.p-blog-list-item__img img {
+     aspect-ratio: 260 / 184;
+     height: auto; 
+     display: block;
+    object-fit: cover;
+    @include sp {     
+        aspect-ratio: 335 / 200;}
+}
+
+.p-blog-list-item__body {
+    flex: 1;
+}
+
+.p-blog-list-item__heading {
+    font-size: 2rem;
+    line-height: calc(25 / 20);
+    font-weight: 700;    
+
+    @include sp {
+        line-height: calc(30 / 20);       
+    }
+}
+
+.p-blog-list-item__date {
+    display: block;
+    font-size: 1.7rem;
+    line-height: calc(30 / 17);
+    margin-top:0.2rem;   
+
+    @include sp {
+        text-align: right;
+         margin-top: 0.5rem;        
+    }
+}
+
+.p-blog-list-item__text {   
+    display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+   margin-top: 1.2rem;
+
+    @include sp {       
+        text-align: left;
+        margin-top: 1rem;
+    }
+}
+.p-blog-list__pagination{
+    margin-top: 7rem;
+    @include sp {
+      margin-top: 5.7rem;
+    }
+}

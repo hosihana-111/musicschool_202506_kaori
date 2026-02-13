@@ -1,0 +1,131 @@
+@use "../../foundation/base" as *;
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+.p-top-flow {
+    padding-top: 3.6rem;
+    padding-bottom: 4.5rem;
+
+    @include sp {
+        padding-top: 4.6rem;
+        padding-bottom: 1.3rem;
+    }
+}
+
+.p-top-flow__items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5.9rem;
+    margin-top: 5.5rem;
+    position: relative;
+    padding-left: 4rem;
+    padding-bottom: 1rem;
+
+    @include sp {
+        margin-top: 4.4rem;
+        row-gap: 4.25rem;
+        padding-left: 0;
+    }
+}
+
+.p-top-flow__items::before {
+    display: block;
+    width: 0.3rem;
+    height: 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 6rem;
+    transform: translateX(-50%);
+    background: $red;
+
+    @media screen and (435px < width <=767px) {
+        left: 2rem;
+        height: 97%
+    }
+
+    @media screen and (max-width:435px) {
+        left: 2rem;
+        //    height: 98.1%
+        height: 97.8%
+    }
+}
+
+.p-top-flow__items::after {
+    content: "";
+    width: 3.5rem;
+    height: 2rem;
+    position: absolute;
+    bottom: -0.36rem;
+    left: 4.27rem;
+    background: url('../images/flow/vector.svg') no-repeat center center / contain;
+
+    @media screen and (435px < width <=767px) {
+        left: 0.29rem;
+        bottom: 1.4rem;
+    }
+
+    @media screen and (max-width:435px) {
+        left: 0.29rem;
+        bottom: 1.3rem;
+    }
+}
+
+.p-flow__item {
+    display: flex;
+    justify-content: space-between;
+
+    @include sp {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        row-gap: 1.3rem;
+    }
+}
+
+.p-flow-item__label {
+    width: 27.2rem;
+    padding-left: 8rem;
+    position: relative;
+
+    @include sp {
+        width: 100%;
+        padding-left: 5rem;
+    }
+
+    h3 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: $red;
+        line-height: calc(33 / 22);
+
+        @include sp {
+
+            line-height: 1;
+        }
+    }
+}
+
+.p-flow-item__label::after {
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: $red;
+    position: absolute;
+    top: 0;
+    left: 0.55em;
+ 
+}
+
+
+
+.p-flow-item__desc {
+    @include pc {
+        flex: 1;
+    }
+
+    @include sp {
+        width: 100%;
+        margin-left: 4.8rem;
+    }
+}

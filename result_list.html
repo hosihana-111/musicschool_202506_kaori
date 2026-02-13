@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>きたむらミュージックスクール</title>
+  <meta name="description" content="「音楽で生きる」を叶えるミュージックスクール"> 
+ <link rel="icon" href="./images/icon/favicon.svg" id="favicon" type="image/x-icon" sizes="32x32">
+ <!-- font -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+<!-- css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <!-- ヘッダー -->
+    <header id="header" class="p-header l-header">
+      <div class="p-header__inner">
+        <div class="p-header__logo p-header-logo">
+          <a href="./index.html" class="u-opacity">
+            <span class="p-header-logo__img">
+              <img src="./images/header/header-logo.svg" alt="きたむらミュージックスクール">
+            </span>
+            <span class="p-header-logo__text">きたむら<br class="pc">
+              <span class="p-header-logo__text-small">ミュージックスクール</span>
+            </span>
+          </a>
+        </div>
+        <button class="c-hamburger sp" aria-controls="global-nav" aria-expanded="false" aria-label="メニューを開閉">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="p-header__right">
+          <nav class="p-header__nav" id="global-nav" aria-label="グローバルナビゲーション">
+            <ul class="p-header__items">
+              <li class="p-header__item"><a href="./plan.html"><span>料金</span></a></li>
+              <li class="p-header__item"><a href="./blog_list.html"><span>ブログ</span></a></li>
+              <li class="p-header__item"><a href="./result_list.html"><span>卒業実績</span></a></li>
+            </ul>
+          </nav>
+          <div class="pc">
+            <a href="./contact_form.html" class="c-btn c-btn--head">お問い合わせ</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- FV -->
+      <div class="p-child-fv p-child-fv--no-overlay">
+        <div class="p-child-fv__img">
+          <picture>
+            <source media="(min-width: 768px)" srcset="./images/result_list/result-list_fv.jpg">
+            <img src="./images/result_list/result-list_fv.jpg" alt="卒業実績">
+          </picture>
+          <h1 class="p-child-fv__title">卒業実績</h1>
+        </div>
+      </div>
+
+      <!-- パンくずリスト -->
+      <div class="c-breadcrumbs">
+        <div class="c-breadcrumbs__inner">
+          <a href="./index.html" class="c-breadcrumbs__text u-opacity">ホーム</a>
+          <span class="c-breadcrumbs__sign">&#62;</span>
+          <p class="c-breadcrumbs__text">卒業実績</p>
+        </div>
+      </div>
+
+
+      <!-- 卒業実績-->
+      <section id="result-list" class="p-result-list">
+        <div class="l-inner">
+          <h2 class="c-section-title">卒業実績一覧</h2>
+
+          <div class="p-result-list__grid">
+            <div class="p-result-list__item p-result-list-item">
+              <a href="./result_details.html" class="u-opacity">
+                <div class="p-result-list-item__img">
+                  <span class="c-label c-label--lg">ポップス</span>
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="./images/result_list/result01_pc.jpg">
+                    <img src="./images/result_list/result01_pc.jpg" alt="マイクを持って歌う男性の写真">
+                  </picture>
+                </div>
+                <div class="p-result-list-item__body">
+                  <h3 class="p-result-list-item__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h3>
+                  <time class="p-result-list-item__date" datetime="0000-00-00">0000.00.00</time>
+                </div>
+              </a>
+            </div>
+
+            <div class="p-result-list__item p-result-list-item">
+              <a href="./result_details.html" class="u-opacity">
+                <div class="p-result-list-item__img">
+                  <span class="c-label c-label--lg">ロック</span>
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="./images/result_list/result02_pc.jpg">
+                    <img src="./images/result_list/result02_pc.jpg" alt="ピアノを弾く女性の写真">
+                  </picture>
+                </div>
+                <div class="p-result-list-item__body">
+                  <h3 class="p-result-list-item__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h3>
+                  <time class="p-result-list-item__date" datetime="0000-00-00">0000.00.00</time>
+                </div>
+              </a>
+            </div>
+
+            <div class="p-result-list__item p-result-list-item">
+              <a href="./result_details.html" class="u-opacity">
+                <div class="p-result-list-item__img">
+                  <span class="c-label c-label--lg">ジャズ</span>
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="./images/result_list/result03_pc.jpg">
+                    <img src="./images/result_list/result03_pc.jpg" alt="アコースティックギターを持つ男性の写真">
+                  </picture>
+                </div>
+                <div class="p-result-list-item__body">
+                  <h3 class="p-result-list-item__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h3>
+                  <time class="p-result-list-item__date" datetime="0000-00-00">0000.00.00</time>
+                </div>
+              </a>
+            </div>
+
+            <div class="p-result-list__item p-result-list-item">
+              <a href="./result_details.html" class="u-opacity">
+                <div class="p-result-list-item__img">
+                  <span class="c-label c-label--lg">ラテン</span>
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="./images/result_list/result04_pc.jpg">
+                    <img src="./images/result_list/result04_pc.jpg" alt="アコースティックギターを構える女性の写真">
+                  </picture>
+                </div>
+                <div class="p-result-list-item__body">
+                  <h3 class="p-result-list-item__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h3>
+                  <time class="p-result-list-item__date" datetime="0000-00-00">0000.00.00</time>
+                </div>
+              </a>
+            </div>
+
+            <div class="p-result-list__item p-result-list-item">
+              <a href="./result_details.html" class="u-opacity">
+                <div class="p-result-list-item__img">
+                  <span class="c-label c-label--lg">クラシック</span>
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="./images/result_list/result05_pc.jpg">
+                    <img src="./images/result_list/result05_pc.jpg" alt="ボーカルマイクの前に立つ女性の写真">
+                  </picture>
+                </div>
+                <div class="p-result-list-item__body">
+                  <h3 class="p-result-list-item__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h3>
+                  <time class="p-result-list-item__date" datetime="0000-00-00">0000.00.00</time>
+                </div>
+              </a>
+            </div>
+
+            <div class="p-result-list__item p-result-list-item">
+              <a href="./result_details.html" class="u-opacity">
+                <div class="p-result-list-item__img">
+                  <span class="c-label c-label--lg">ポップス</span>
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="./images/result_list/result06_pc.jpg">
+                    <img src="./images/result_list/result06_pc.jpg" alt="ギターを持って立つ女性の写真">
+                  </picture>
+                </div>
+                <div class="p-result-list-item__body">
+                  <h3 class="p-result-list-item__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h3>
+                  <time class="p-result-list-item__date" datetime="0000-00-00">0000.00.00</time>
+                </div>
+              </a>
+            </div>
+
+            <div class="p-result-list__item p-result-list-item">
+              <a href="./result_details.html" class="u-opacity">
+                <div class="p-result-list-item__img">
+                  <span class="c-label c-label--lg">ロック</span>
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="./images/result_list/result07_pc.jpg">
+                    <img src="./images/result_list/result07_pc.jpg" alt="マイクを持って歌う男性のライブ写真">
+                  </picture>
+                </div>
+                <div class="p-result-list-item__body">
+                  <h3 class="p-result-list-item__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h3>
+                  <time class="p-result-list-item__date" datetime="0000-00-00">0000.00.00</time>
+                </div>
+              </a>
+            </div>
+
+            <div class="p-result-list__item p-result-list-item">
+              <a href="./result_details.html" class="u-opacity">
+                <div class="p-result-list-item__img">
+                  <span class="c-label c-label--lg">ジャズ</span>
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="./images/result_list/result08_pc.jpg">
+                    <img src="./images/result_list/result08_pc.jpg" alt="サックスを持ち椅子に座る女性の写真">
+                  </picture>
+                </div>
+                <div class="p-result-list-item__body">
+                  <h3 class="p-result-list-item__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h3>
+                  <time class="p-result-list-item__date" datetime="0000-00-00">0000.00.00</time>
+                </div>
+              </a>
+            </div>
+
+            <div class="p-result-list__item p-result-list-item">
+              <a href="./result_details.html" class="u-opacity">
+                <div class="p-result-list-item__img">
+                  <span class="c-label c-label--lg">ラテン</span>
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="./images/result_list/result09_pc.jpg">
+                    <img src="./images/result_list/result09_pc.jpg" alt="鮮やかな髪色の女性のポートレート写真">
+                  </picture>
+                </div>
+                <div class="p-result-list-item__body">
+                  <h3 class="p-result-list-item__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h3>
+                  <time class="p-result-list-item__date" datetime="0000-00-00">0000.00.00</time>
+                </div>
+              </a>
+            </div>
+
+            <div class="p-result-list__item p-result-list-item">
+              <a href="./result_details.html" class="u-opacity">
+                <div class="p-result-list-item__img">
+                  <span class="c-label c-label--lg">クラシック</span>
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="./images/result_list/result10_pc.jpg">
+                    <img src="./images/result_list/result10_pc.jpg" alt="フルートを持って微笑む女性の写真">
+                  </picture>
+                </div>
+                <div class="p-result-list-item__body">
+                  <h3 class="p-result-list-item__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h3>
+                  <time class="p-result-list-item__date" datetime="0000-00-00">0000.00.00</time>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="p-result-list__pagination">
+            <ol class="c-pagination">
+              <li><span class="c-pagination__item current">1</span></li>
+              <li><a href="" class="c-pagination__item">2</a></li>
+              <li><a href="" class="c-pagination__item">3</a></li>
+              <li><span class="c-pagination__dot">…</span></li>
+              <li><a href="" class="c-pagination__item">9</a></li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- TOPに戻るボタンのjsの修正をAIに依頼 -->
+      <div class="p-top-btn">
+        <div class="p-top-btn__bg">
+          <a href="#" class="p-top-btn__arrow u-opacity " aria-label="ページ上部へ">
+            <div class="p-top-btn__arrow-img">
+              <img src="./images/icon/goto-top.svg" alt="トップへ戻る">
+            </div>
+          </a>
+          <a href="./contact_form.html" class="c-btn p-top-btn__contact">お問い合わせ</a>
+        </div>
+      </div>
+    </main>
+
+    <!-- フッター -->
+    <footer class="p-footer">
+      <div class="p-footer__inner">
+        <nav class="p-footer__nav" aria-label="フッターナビゲーション">
+          <ul>
+            <li>
+              <a href="./index.html" class="u-opacity">ホーム</a>
+            </li>
+            <li>
+              <a href="./plan.html" class="u-opacity">料金</a>
+            </li>
+            <li>
+              <a href="./blog_list.html" class="u-opacity">ブログ</a>
+            </li>
+            <li>
+              <a href="./result_list.html" class="u-opacity">卒業実績</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="p-footer__logo">
+          <a href="./index.html" class="u-opacity">
+            <img src="./images/icon/logo-white.svg" alt="きたむらミュージックスクール">
+          </a>
+        </div>
+        <p class="p-footer__copyright">Copyright&nbsp;&copy;&nbsp;0000 KITAMURA music school Inc. All Rights</p>
+        <div class="p-footer__sns">
+          <ul>
+            <li>
+              <a href="" target="_blank" class="u-opacity">
+                <img src="./images/icon/icon-twitter.svg" alt="twitterを開く">
+              </a>
+            </li>
+            <li>
+              <a href="" target="_blank" class="u-opacity">
+                <img src="./images/icon/icon-facebook.svg" alt="facebookを開く">
+              </a>
+            </li>
+            <li>
+              <a href="" target="_blank" class="u-opacity">
+                <img src="./images/icon/icon-youtube.svg" alt="youtubeを開く">
+              </a>
+            </li>
+            <li>
+              <a href="" target="_blank" class="u-opacity">
+                <img src="./images/icon/icon-instagram.svg" alt="instagramを開く">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

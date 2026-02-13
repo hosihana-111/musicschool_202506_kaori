@@ -1,0 +1,152 @@
+@use "../../foundation/base" as *;
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+.p-search {
+    padding-top: 6.6rem;
+    padding-bottom: 21rem;
+
+    @include sp {
+        padding-top: 3.4rem;
+        padding-bottom: 20.3rem;
+    }
+}
+
+.p-search__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.p-search__title {
+    font-size: 1.8rem;
+    line-height: calc(30 / 18);
+
+}
+
+.p-search__keyword {
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: calc(30 / 18);
+}
+
+.p-search__count {
+    font-size: 1.8rem;
+    line-height: calc(30 / 18);
+}
+
+.p-search__items {
+    margin-top: 4.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
+
+
+    @include sp {
+        position: static;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 4.3rem;
+        gap: 4rem;
+        padding-bottom: 5.8rem;
+    }
+}
+
+
+
+
+.p-search__item {
+    position: relative;
+}
+
+.p-search__item a {
+    display: flex;
+
+    justify-content: center;
+    gap: 5rem;
+
+    @include sp {
+        flex-direction: column;
+        gap: 3rem;
+        align-items: flex-start;
+    }
+}
+
+
+.p-search__img {
+    position: relative;
+    width: 26rem;
+
+    @include sp {
+        width: 100%;
+        padding-right: 0;
+        padding-bottom: 0;
+    }
+}
+
+
+.p-search__img img {
+    aspect-ratio: 260 / 184;
+    height: auto;
+    display: block;
+    object-fit: cover;
+
+    @include sp {
+        aspect-ratio: 335 / 200;
+
+    }
+}
+
+.p-search__body {
+    flex: 1;
+}
+
+.p-search__heading {
+    font-size: 2rem;
+    line-height: calc(25 / 20);
+    font-weight: 700;
+
+
+    @include sp {
+        line-height: calc(30 / 20);
+
+    }
+}
+
+.p-search__date {
+    display: block;
+    font-size: 1.7rem;
+    line-height: 1;
+    margin-top: 0.5rem;
+
+
+    @include sp {
+        text-align: right;
+        margin-top: 1rem;
+
+    }
+}
+
+.p-search__text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    margin-top: 2rem;
+
+    @include sp {
+        text-align: left;
+        margin-top: 1.6rem;
+    }
+}
+
+.p-search__pagination {
+    margin-top: 7rem;
+
+    @include sp {
+        margin-top: 3rem;
+    }
+}

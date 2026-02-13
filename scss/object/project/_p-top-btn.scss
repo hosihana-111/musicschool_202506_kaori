@@ -1,0 +1,146 @@
+@use "../../foundation/base" as *;
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+
+// 固定ボタンエリア
+
+.p-top-btn {
+  width: 30rem;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  pointer-events: none; // クリックは子で許可
+
+  @include sp {
+    width: 100%;
+    right: 0;
+    left: 0;
+    transform: none;
+  }
+}
+
+//  矢印を常に右端へは配置する方法をAIに依頼。
+.p-top-btn__bg {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; //  矢印を常に右端へ
+  row-gap: 3rem;
+  position: sticky;
+  top: calc(100% - 15.8rem); // ← 画面下からの見え方を決める閾値
+  transition: transform .35s ease, opacity .35s ease;
+  transform: translateY(0.8rem); // ふわっと感（初期は少し下げておく）
+  opacity: .0;
+
+  /* 透明→不透明 */
+  &.is-visible,
+  :where(html) & {
+    // 表示状態になっていればトランジション適用
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  @include sp {
+    row-gap: 2rem;
+    top: calc(100% - 14.8rem);
+  }
+}
+
+// お問い合わせページの下マージン調整
+.p-top-btn__bg--contact {
+  margin-bottom: 3rem;
+
+  @include sp {
+    margin-bottom: 2rem;
+
+
+  }
+
+}
+
+/* トップへ：丸ボタン（常に右端） */
+.p-top-btn__arrow {
+  display: grid;
+  place-content: center;
+  width: 6.8rem;
+  height: 6.8rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  pointer-events: all; // クリック可
+  /* 親の右端基準で相対的に左へ移動
+     お問い合わせボタン（PC:30rem ）の中央に重なるようにする */
+  position: relative;
+  align-self: flex-end;
+  /* PCでのオフセット： (contact_width - arrow_width) / 2 */
+  right: calc((30rem - 6.8rem) / 2);
+
+
+  @include sp {
+    // SPでは常に右側に固定
+    right: 2rem;
+  }
+}
+
+.p-top-btn__arrow-img {
+  width: 2.9rem;
+}
+
+.p-top-btn__arrow--contact {
+  /* お問い合わせバリエーションも同様に、contact幅に対して中央に合わせる */
+  position: relative;
+  align-self: flex-end;
+  right: 10rem;
+
+
+  @include sp {
+    // SPでは常に右側に固定
+    right: 3rem;
+  }
+}
+
+/* お問い合わせ：PCは右端／SPは中央へ */
+.p-top-btn__contact {
+  display: grid;
+  place-content: center;
+  border: 0.1rem solid $red;
+  font-weight: 700;
+  width: 30rem;
+  height: 6rem;
+  text-decoration: none;
+  font-size: 2rem;
+  line-height: calc(33 / 20);
+  letter-spacing: 0.3rem;
+  pointer-events: all;
+  cursor: pointer;
+  background-color: $red;
+  color: $white;
+  transition:
+    background-color .4s ease-in-out,
+    color .4s ease-in-out;
+  padding-top: 0.7rem;
+  padding-left: 0.1rem;
+
+  /* PC：右端（親のalign-items:flex-endのまま） */
+
+  @include sp {
+    width: 33.5rem;
+    align-self: center; // SP時のみ中央配置
+    margin: 0 auto;
+  }
+
+  &:hover {
+    background-color: $white;
+    color: $red;
+  }
+
+  /* 下ボーダーを消す */
+  &.is-over-footer:hover {
+    border-bottom: 0;
+    border-top: 0.1rem solid $red;
+    border-right: 0.1rem solid $red;
+    border-left: 0.1rem solid $red;
+  }
+}

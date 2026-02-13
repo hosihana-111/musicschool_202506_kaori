@@ -1,0 +1,93 @@
+
+@use "../../foundation/base" as *;
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+
+// 前後記事ナビ
+.p-article-nav {
+    
+    display: flex;
+    justify-content: space-between;
+    column-gap: 7.9rem;
+
+    @include sp {
+       
+        column-gap: 2.2rem;
+    }
+}
+
+.p-article-nav__heading-prev,
+.p-article-nav__heading-next {
+    color: $white;
+    background-color: $black;
+    display: flex;
+    align-items: center;
+    padding: 0.4rem 2rem;
+
+}
+
+.p-article-nav__heading-next {
+    justify-content: flex-end;
+}
+
+.p-article-nav__heading-prev p,
+.p-article-nav__heading-next p {
+    font-size: 1.7rem;
+    line-height: calc(30 / 17);
+}
+
+.p-article-nav__heading-prev p {
+    padding-left: 0.4rem;
+}
+
+.p-article-nav__heading-next p {
+    padding-right: 0.4rem;
+}
+
+.p-article-nav__box {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1.6rem;
+    margin-top: 1.6rem;
+
+}
+
+.p-article-nav__box-img {   
+ width: 9.8rem;
+
+    @include sp {
+        display: none;
+    }
+    img {        
+         aspect-ratio: 98 / 68;
+           height: auto;
+        display: block;
+        object-fit: cover;
+    }
+}
+
+.p-article-nav__box-text {
+    flex: 1;
+    text-align: left;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; // 最大行
+    overflow: hidden;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: calc(25 / 16);
+    color: $black;
+    
+    /* 高さ固定 */
+
+    @supports not (-webkit-line-clamp: 3) {
+        display: block;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        height: auto;
+    }
+
+
+}

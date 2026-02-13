@@ -1,0 +1,10 @@
+@use "../../foundation/base" as *;
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+.u-opacity{
+  transition: opacity 0.4s;
+  &:hover {
+    opacity: 0.6;
+  }
+}

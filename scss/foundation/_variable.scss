@@ -1,11 +1,16 @@
-// colors
-$white:  #ffffff;
-$black:  #000000;
-
-$red:    #CB0000;
-
-
-
 // font
-// Medium 500
-// Bold   900
+$font-gothic: "Yu Gothic", "Yu Gothic UI", "YuGothic","游ゴシック","游ゴシック体", "Noto Sans JP",  sans-serif;
+
+
+// colors
+$white: #ffffff;
+$black: #000000;
+
+$red: #CB0000;
+
+
+
+// vw関数
+@function vw($pixelSize, $baseWidth: 1080) {
+  @return calc($pixelSize / $baseWidth * 100vw);
+}

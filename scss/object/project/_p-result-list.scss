@@ -1,0 +1,84 @@
+@use "../../foundation/base" as *;
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+
+.p-result-list {
+  padding-top: 7.5rem;
+  padding-bottom: 21rem;
+
+  @include sp {
+    padding-top: 4.5rem;
+        padding-bottom: 20.3rem;
+  }
+}
+
+.p-result-list__grid {
+  margin-top: 4.3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 10.6rem;
+  row-gap: 6.1rem;
+
+  @include sp {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 4.1rem;
+  }
+
+}
+
+
+
+.p-result-list-item__img {
+   position: relative;
+
+}
+.p-result-list-item__body {
+  margin-top: 1.9rem;
+  display: flex;
+  flex-direction: column;
+
+
+  @include sp {
+    margin-top: 3rem;
+    width: 100%;
+  }
+}
+
+.p-result-list-item__title {
+  text-align: left;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: calc(25 / 20);
+  margin: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+
+  @include sp {
+    line-height: calc(30 / 20);
+
+  }
+}
+
+.p-result-list-item__date {
+  font-size: 1.8rem;
+  line-height: calc(32 / 18);
+  text-align: right;  
+  margin-top: 1.1rem;
+
+  @include sp {
+    margin-top: 0.7rem;
+ 
+  }
+}
+
+.p-result-list__pagination {
+  margin-top: 6rem;
+  text-align: center;
+
+  @include sp {
+    margin-top: 4rem;
+  }
+}

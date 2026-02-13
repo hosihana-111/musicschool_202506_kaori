@@ -1,0 +1,206 @@
+@charset "UTF-8";
+@use "../../foundation/base" as *;
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+.p-sidebar {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+
+  @include sp {
+    margin-top: 3rem;
+
+  }
+
+}
+
+// 共通項目
+
+.p-sidebar__title {
+  background: $black;
+  color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: calc(33 / 18);
+  padding-block: 0.8rem;
+}
+
+
+//無料メールマガジン
+.p-sidebar__magazine {
+  padding: 1.5rem;
+  border: 0.1rem solid #000;
+  position: relative;
+
+
+  p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    font-size: 1.8rem;
+    line-height: calc(33 / 18);
+    font-weight: 700;
+    color: $black;
+  }
+}
+
+// ブログ内を検索
+.p-sidebar__search {
+  padding: 1.5rem;
+  border: 0.1rem solid $black;
+
+  @include sp {
+    padding: 2rem;
+  }
+}
+
+.p-sidebar__search-form {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.p-sidebar__search-form input {
+  display: block;
+  flex: 1;
+  min-width: 0;
+  height: 4rem;
+  background: #e8e8e8;
+  padding-inline: 1rem;
+  font-size: 1.4rem;
+  line-height: calc(33 / 18);
+
+  @include sp {
+    height: 5.4rem;
+  }
+
+}
+
+.p-sidebar__search-form input::placeholder {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.p-sidebar__search-form button {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  background: #000;
+  display: grid;
+  place-content: center;
+  flex-shrink: 0;
+  cursor: pointer;
+
+  @include sp {
+    width: 5.4rem;
+    height: 5.4rem;
+  }
+
+  span {
+    display: block;
+   
+
+    @include sp {
+      width: 2.6rem;
+    }
+  }
+}
+
+// おすすめの記事投稿
+
+.p-sidebar__recommendation-items {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+
+  @include sp {
+    margin-top: 2rem;
+    row-gap: 2rem;
+  }
+
+}
+
+.p-sidebar__recommendation-item {
+  a {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+
+}
+
+.p-sidebar__recommendation-item__img {
+  width: 9.5rem;
+
+  @include sp {
+    width: 16rem;
+  }
+
+  img {
+    object-fit: cover;
+    aspect-ratio: 95 / 75;
+    height: auto;
+
+    @include sp {
+      aspect-ratio: 160 / 110;
+    }
+  }
+}
+
+
+
+.p-sidebar__recommendation-text {
+  flex: 1;
+  font-size: 1.7rem;
+  color: #222;
+  line-height: calc(28 / 17);
+  overflow: hidden;
+  /* WebKit系での2行省略（…） */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+
+  // Firefox など非対応ブラウザ用のフォールバック（1行のみ省略）    
+  @supports not (-webkit-line-clamp: 2) {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  @include sp {
+    margin-top: 0.5rem;
+  }
+
+}
+
+// カテゴリー
+.p-sidebar__category {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.p-sidebar__category li {
+  border-bottom: 0.1rem solid $black;
+
+  // padding: 0.73rem 0;    
+  a {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.7rem;
+    line-height: calc(28 / 17);
+    color: #222;
+    text-decoration: none;
+    height: 4.7rem;
+
+  }
+}

@@ -1,0 +1,37 @@
+
+@use "../../foundation/base" as *;
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+
+.p-404 {
+  padding-top: 6.7rem;
+  padding-bottom: 9rem;
+
+  @include sp {
+    padding-top: 4.7rem;
+    padding-bottom: 5rem;
+  }
+}
+
+
+
+.p-404__text {
+  text-align: center; 
+  @include sp {
+    text-align: left;
+  }
+}
+
+/*****ボタン*****/
+.p-404__btn-container {
+  margin-top: 4rem;
+ display: flex;
+  justify-content: center;
+ 
+
+  @include sp {    
+    margin-top: 3.9rem; 
+  }
+}
+

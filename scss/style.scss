@@ -1,37 +1,29 @@
-/*
- * foundation
- */
-@use "foundation/_reset";
-@use "foundation/_base";
-@use "foundation/_mixin";
-@use "foundation/_variable";
+/******** foundation*******/
+@use "./foundation/reset";
+@use "./foundation/base";
+@use "./foundation/mixin";
+@use "./foundation/variable";
 
-/*
- * layout
- */
-@use "layout/_footer";
-@use "layout/_header";
+
+/******** layout*******/
+// @use "./layout/p-footer";
+@use "./layout/l-header";
+@use "./layout/l-inner";
 // @use "layout/_main";
 // @use "layout/_sidebar";
 
-/*
- * object
- */
-// Component
-@use "object/component/c-btn";
-// @use "object/component/_grid";
-// @use "object/component/_media";
-// @use "object/component/_title";
 
-// Project
-@use "object/project/_p-header";
-@use "object/project/_p-fv";
-@use "object/project/_p-vision";
-@use "object/project/_p-ad-banner";
-// @use "object/project/_comments";
-// @use "object/project/_gallery";
-// @use "object/project/_profile";
-// @use "object/project/_section";
+/********* object*******/
+// Componentのindex.scssの読み込み
+@use "./object/component";
+
+
+// Projectのindex.scssの読み込み
+@use "./object/project";
+
+// utilityのindex.scssの読み込み
+
+@use "./object/utility";
 
 // Utility
 // @use "object/utility/_align";
