@@ -1,66 +1,12 @@
-<!DOCTYPE html>
-<html lang="ja">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>きたむらミュージックスクール</title>
-  <meta name="description" content="「音楽で生きる」を叶えるミュージックスクール"> 
- <link rel="icon" href="./images/icon/favicon.svg" id="favicon" type="image/x-icon" sizes="32x32">
- <!-- font -->
- <link rel="preconnect" href="https://fonts.googleapis.com">
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
-<!-- css -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-  <div id="container">
-    <!-- ヘッダー -->
-    <header id="header" class="p-header l-header">
-      <div class="p-header__inner">
-        <h1 class="p-header__logo p-header-logo">
-          <a href="./index.html" class="u-opacity">
-            <span class="p-header-logo__img">
-              <img src="./images/header/header-logo.svg" alt="きたむらミュージックスクール">
-            </span>
-            <span class="p-header-logo__text">きたむら<br class="pc">
-              <span class="p-header-logo__text-small">ミュージックスクール</span>
-            </span>
-          </a>
-        </h1>
-
-        <button class="c-hamburger sp" aria-controls="global-nav" aria-expanded="false" aria-label="メニューを開閉">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <div class="p-header__right">
-          <nav class="p-header__nav" id="global-nav" aria-label="グローバルナビゲーション">
-            <ul class="p-header__items">
-              <li class="p-header__item"><a href="./plan.html"><span>料金</span></a></li>
-              <li class="p-header__item"><a href="./blog_list.html"><span>ブログ</span></a></li>
-              <li class="p-header__item"><a href="./result_list.html"><span>卒業実績</span></a></li>
-            </ul>
-          </nav>
-          <div class="pc">
-            <a href="./contact_form.html" class="c-btn c-btn--head">お問い合わせ</a>
-          </div>
-        </div>
-      </div>
-    </header>
-
+<?php get_header(); ?>
 
     <main>
       <!-- FV -->
       <div id="fv" class="p-fv">
         <div class="p-fv__img">
           <picture>
-            <source srcset="./images/fv/fv_pc.jpg" media="(min-width: 768px)" type="image/jpeg">
-            <img src="./images/fv/fv_sp.jpg" alt="「音楽で生きる」を叶えるミュージックスクール">
+            <source srcset="<?php echo get_template_directory_uri(); ?>/images/fv/fv_pc.jpg" media="(min-width: 768px)" type="image/jpeg">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/fv/fv_sp.jpg" alt="「音楽で生きる」を叶えるミュージックスクール">
           </picture>
         </div>
         <div class="p-fv__contents">
@@ -80,8 +26,8 @@
           <div class="p-vision__diagram p-diagram">
             <div class="p-diagram-img">
               <picture>
-                <source srcset="./images/vision/semicircle.jpg" media="(min-width: 768px)" type="image/jpeg">
-                <img src="./images/vision/semicircle-sp.jpg" alt="半円の図に『Enthusiasm・Envision・Effulgent』の3語が並ぶビジョン図">
+                <source srcset="<?php echo get_template_directory_uri(); ?>/images/vision/semicircle.jpg" media="(min-width: 768px)" type="image/jpeg">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/vision/semicircle-sp.jpg" alt="半円の図に『Enthusiasm・Envision・Effulgent』の3語が並ぶビジョン図">
               </picture>
             </div>
 
@@ -127,8 +73,8 @@
             <div class="p-top-reason__item p-reason-item">
               <div class="p-reason-item__image">
                 <picture>
-                  <source srcset="./images/reason/reason01-pc.jpg" media="(min-width: 768px)" type="image/jpeg">
-                  <img src="./images/reason/reason01-sp.jpg" alt="ピアノを演奏する講師と犬">
+                  <source srcset="<?php echo get_template_directory_uri(); ?>/images/reason/reason01-pc.jpg" media="(min-width: 768px)" type="image/jpeg">
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/reason/reason01-sp.jpg" alt="ピアノを演奏する講師と犬">
                 </picture>
               </div>
               <div class="p-reason-item__content">
@@ -143,8 +89,8 @@
             <div class="p-top-reason__item p-reason-item">
               <div class="p-reason-item__image">
                 <picture>
-                  <source srcset="./images/reason/reason02-pc.jpg" media="(min-width: 768px)" type="image/jpeg">
-                  <img src="./images/reason/reason02-sp.jpg" alt="丁寧に収益化の方法を説明する女性スタッフ">
+                  <source srcset="<?php echo get_template_directory_uri(); ?>/images/reason/reason02-pc.jpg" media="(min-width: 768px)" type="image/jpeg">
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/reason/reason02-sp.jpg" alt="丁寧に収益化の方法を説明する女性スタッフ">
                 </picture>
               </div>
               <div class="p-reason-item__content">
@@ -159,8 +105,8 @@
             <div class="p-top-reason__item p-reason-item">
               <div class="p-reason-item__image">
                 <picture>
-                  <source srcset="./images/reason/reason03-pc.jpg" media="(min-width: 768px)" type="image/jpeg">
-                  <img src="./images/reason/reason03-sp.jpg" alt="ギターと鍵盤を使った作曲練習">
+                  <source srcset="<?php echo get_template_directory_uri(); ?>/images/reason/reason03-pc.jpg" media="(min-width: 768px)" type="image/jpeg">
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/reason/reason03-sp.jpg" alt="ギターと鍵盤を使った作曲練習">
                 </picture>
               </div>
               <div class="p-reason-item__content">
@@ -187,8 +133,8 @@
                 <a href="./result_details.html" class="p-voice__swiper-item p-voice-item swiper-slide ">
                   <div class="p-voice-item__img">
                     <picture>
-                      <source srcset="./images/voice/voice01-pc.jpg" media="(min-width: 768px)" type="image/jpeg">
-                      <img src="./images/voice/voice01-sp.jpg" alt="証券会社勤務　丸山さん">
+                      <source srcset="<?php echo get_template_directory_uri(); ?>/images/voice/voice01-pc.jpg" media="(min-width: 768px)" type="image/jpeg">
+                      <img src="<?php echo get_template_directory_uri(); ?>/images/voice/voice01-sp.jpg" alt="証券会社勤務　丸山さん">
                     </picture>
                   </div>
                   <div class="p-voice-item__body">
@@ -201,8 +147,8 @@
                 <a href="./result_details.html" class="p-voice__swiper-item  p-voice-item swiper-slide ">
                   <div class="p-voice-item__img">
                     <picture>
-                      <source srcset="./images/voice/voice02-pc.jpg" media="(min-width: 768px)" type="image/jpeg">
-                      <img src="./images/voice/voice02-pc.jpg" alt="IT会社勤務　S.Eさん">
+                      <source srcset="<?php echo get_template_directory_uri(); ?>/images/voice/voice02-pc.jpg" media="(min-width: 768px)" type="image/jpeg">
+                      <img src="<?php echo get_template_directory_uri(); ?>/images/voice/voice02-pc.jpg" alt="IT会社勤務　S.Eさん">
                     </picture>
                   </div>
                   <div class="p-voice-item__body">
@@ -215,8 +161,8 @@
                 <a href="./result_details.html" class="p-voice__swiper-item  p-voice-item swiper-slide ">
                   <div class="p-voice-item__img">
                     <picture>
-                      <source srcset="./images/voice/voice03-pc.jpg" media="(min-width: 768px)" type="image/jpeg">
-                      <img src="./images/voice/voice03-pc.jpg" alt="都内大学生　田森さん">
+                      <source srcset="<?php echo get_template_directory_uri(); ?>/images/voice/voice03-pc.jpg" media="(min-width: 768px)" type="image/jpeg">
+                      <img src="<?php echo get_template_directory_uri(); ?>/images/voice/voice03-pc.jpg" alt="都内大学生　田森さん">
                     </picture>
                   </div>
                   <div class="p-voice-item__body">
@@ -229,8 +175,8 @@
                 <a href="./result_details.html" class="p-voice__swiper-item  p-voice-item swiper-slide">
                   <div class="p-voice-item__img">
                     <picture>
-                      <source srcset="./images/voice/voice01-pc.jpg" media="(min-width: 768px)" type="image/jpeg">
-                      <img src="./images/voice/voice01-sp.jpg" alt="証券会社勤務　丸山さん">
+                      <source srcset="<?php echo get_template_directory_uri(); ?>/images/voice/voice01-pc.jpg" media="(min-width: 768px)" type="image/jpeg">
+                      <img src="<?php echo get_template_directory_uri(); ?>/images/voice/voice01-sp.jpg" alt="証券会社勤務　丸山さん">
                     </picture>
                   </div>
                   <div class="p-voice-item__body">
@@ -243,8 +189,8 @@
                 <a href="./result_details.html" class="p-voice__swiper-item  p-voice-item swiper-slide">
                   <div class="p-voice-item__img">
                     <picture>
-                      <source srcset="./images/voice/voice02-pc.jpg" media="(min-width: 768px)" type="image/jpeg">
-                      <img src="./images/voice/voice02-pc.jpg" alt="IT会社勤務　S.Eさん">
+                      <source srcset="<?php echo get_template_directory_uri(); ?>/images/voice/voice02-pc.jpg" media="(min-width: 768px)" type="image/jpeg">
+                      <img src="<?php echo get_template_directory_uri(); ?>/images/voice/voice02-pc.jpg" alt="IT会社勤務　S.Eさん">
                     </picture>
                   </div>
                   <div class="p-voice-item__body">
@@ -257,8 +203,8 @@
                 <a href="./result_details.html" class="p-voice__swiper-item  p-voice-item swiper-slide ">
                   <div class="p-voice-item__img">
                     <picture>
-                      <source srcset="./images/voice/voice03-pc.jpg" media="(min-width: 768px)" type="image/jpeg">
-                      <img src="./images/voice/voice03-pc.jpg" alt="都内大学生　田森さん">
+                      <source srcset="<?php echo get_template_directory_uri(); ?>/images/voice/voice03-pc.jpg" media="(min-width: 768px)" type="image/jpeg">
+                      <img src="<?php echo get_template_directory_uri(); ?>/images/voice/voice03-pc.jpg" alt="都内大学生　田森さん">
                     </picture>
                   </div>
                   <div class="p-voice-item__body">
@@ -271,10 +217,10 @@
               </div>
             </div>
             <button class="p-voice__swiper-button-prev">
-              <img src="./images/voice/arrow-left.svg" alt="矢印">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/voice/arrow-left.svg" alt="矢印">
             </button>
             <button class="p-voice__swiper-button-next">
-              <img src="./images/voice/arrow-right.svg" alt="矢印">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/voice/arrow-right.svg" alt="矢印">
             </button>
           </div>
         </div>
@@ -394,8 +340,8 @@
                 <div class="p-blog-item__img">
                   <span class="c-label">SNS</span>
                   <picture>
-                    <source media="(min-width: 768px)" srcset="./images/blog/blog01-pc.jpg" type="image/jpeg">
-                    <img src="./images/blog/blog01-sp.jpg" alt="マイクで熱唱する女性">
+                    <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/images/blog/blog01-pc.jpg" type="image/jpeg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/blog/blog01-sp.jpg" alt="マイクで熱唱する女性">
                   </picture>
                 </div>
                 <div class="p-blog-item__body">
@@ -410,8 +356,8 @@
                 <div class="p-blog-item__img">
                   <span class="c-label">集客方法</span>
                   <picture>
-                    <source media="(min-width: 768px)" srcset="./images/blog/blog02-pc.jpg" type="image/jpeg">
-                    <img src="./images/blog/blog02-sp.jpg" alt="悩み顔の男性が頭を抱える">
+                    <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/images/blog/blog02-pc.jpg" type="image/jpeg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/blog/blog02-sp.jpg" alt="悩み顔の男性が頭を抱える">
                   </picture>
                 </div>
                 <div class="p-blog-item__body">
@@ -426,8 +372,8 @@
                 <div class="p-blog-item__img">
                   <span class="c-label">ギター</span>
                   <picture>
-                    <source media="(min-width: 768px)" srcset="./images/blog/blog03-pc.jpg" type="image/jpeg">
-                    <img src="./images/blog/blog03-sp.jpg" alt="アコースティックギターを弾く人">
+                    <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/images/blog/blog03-pc.jpg" type="image/jpeg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/blog/blog03-sp.jpg" alt="アコースティックギターを弾く人">
                   </picture>
                 </div>
                 <div class="p-blog-item__body">
@@ -448,7 +394,7 @@
         <div class="p-top-btn__bg">
           <a href="#" class="p-top-btn__arrow u-opacity " aria-label="ページ上部へ">
             <div class="p-top-btn__arrow-img">
-              <img src="./images/icon/goto-top.svg" alt="トップへ戻る">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/icon/goto-top.svg" alt="トップへ戻る">
             </div>
           </a>
           <a href="./contact_form.html" class="c-btn p-top-btn__contact">お問い合わせ</a>
@@ -456,62 +402,5 @@
       </div>
     </main>
 
-    <!-- フッター -->
-    <footer class="p-footer">
-      <div class="p-footer__inner">
-        <nav class="p-footer__nav" aria-label="フッターナビゲーション">
-          <ul>
-            <li>
-              <a href="./index.html" class="u-opacity">ホーム</a>
-            </li>
-            <li>
-              <a href="./plan.html" class="u-opacity">料金</a>
-            </li>
-            <li>
-              <a href="./blog_list.html" class="u-opacity">ブログ</a>
-            </li>
-            <li>
-              <a href="./result_list.html" class="u-opacity">卒業実績</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="p-footer__logo">
-          <a href="./index.html" class="u-opacity">
-            <img src="./images/icon/logo-white.svg" alt="きたむらミュージックスクール">
-          </a>
-        </div>
-        <p class="p-footer__copyright">Copyright&nbsp;&copy;&nbsp;0000 KITAMURA music school Inc. All Rights</p>
-        <div class="p-footer__sns">
-          <ul>
-            <li>
-              <a href="" target="_blank" class="u-opacity">
-                <img src="./images/icon/icon-twitter.svg" alt="twitterを開く">
-              </a>
-            </li>
-            <li>
-              <a href="" target="_blank" class="u-opacity">
-                <img src="./images/icon/icon-facebook.svg" alt="facebookを開く">
-              </a>
-            </li>
-            <li>
-              <a href="" target="_blank" class="u-opacity">
-                <img src="./images/icon/icon-youtube.svg" alt="youtubeを開く">
-              </a>
-            </li>
-            <li>
-              <a href="" target="_blank" class="u-opacity">
-                <img src="./images/icon/icon-instagram.svg" alt="instagramを開く">
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </footer>
-  </div>
+<?php get_footer(); ?>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="js/main.js"></script>
-</body>
-
-</html>

@@ -207,11 +207,13 @@ a {
 
 a:focus:not(:focus-visible) {
   outline: none;
-  /* マウスクリック時は消す */
 }
 a:focus:not(:focus-visible) a:active {
   background-color: transparent;
   /* 押下時の色変化を打ち消す */
+}
+a:focus:not(:focus-visible) {
+  /* マウスクリック時は消す */
 }
 
 a,
@@ -493,11 +495,13 @@ hr {
     /*Firefoxへの対応*/
     scrollbar-width: none;
     /*Google Chrome、Safariへの対応*/
-    word-break: keep-all;
-    white-space: nowrap;
   }
   .c-breadcrumbs__inner::-webkit-scrollbar {
     display: none;
+  }
+  .c-breadcrumbs__inner {
+    word-break: keep-all;
+    white-space: nowrap;
   }
 }
 
@@ -1676,7 +1680,6 @@ body.is-menu-open .c-page-top {
   padding-top: 0.7rem;
   padding-left: 0.1rem;
   /* PC：右端（親のalign-items:flex-endのまま） */
-  /* 下ボーダーを消す */
 }
 @media (max-width: 767px) {
   .p-top-btn__contact {
@@ -1689,6 +1692,9 @@ body.is-menu-open .c-page-top {
 .p-top-btn__contact:hover {
   background-color: #ffffff;
   color: #CB0000;
+}
+.p-top-btn__contact {
+  /* 下ボーダーを消す */
 }
 .p-top-btn__contact.is-over-footer:hover {
   border-bottom: 0;
