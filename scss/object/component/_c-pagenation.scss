@@ -2,7 +2,10 @@
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
 
-.c-pagination{
+.c-pager{
+  .wp-pagenavi{
+     width: 100%;
+     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,9 +16,9 @@
       gap: 0 0.5rem;
      
     }
-}
-.c-pagination__item{   
- 
+
+a,
+.current{  
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -31,39 +34,48 @@
     background-color 0.4s ease,
     color 0.4s ease;
 
-   &.current {
-      color: #fff;
-      background: #000;
-    }
-
-  &:hover {
-   
-    color: $white;
-    background-color: $black;
-  }
-
   @include sp{
     width: 4.4rem;
     height: 4.4rem;
     font-size: 1.6rem;
   }
-
 }
 
-.c-pagination a:not(:hover) {
-    text-decoration: none;
-}
-.c-pagination li:nth-of-type(4) a{
-    border: none;
-    width: 3rem;
-    height: 3rem;
-}
-.c-pagination__dot{
-     
-    padding-inline: 1rem;
-    @include sp{
-      padding-inline:0.7rem;
+    .current {
+      color: #fff;
+      background: #000;
+    }
+
+  a:hover {
+      color: $white;
+      background-color: $black;
+    }
+  .extend {
+      display: inline-block;
+      padding-inline: 1rem;
+      padding-bottom: 1rem;
+      font-size: 1.8rem;
+      font-weight: bold;
+      border: none;
+      @include sp {
+        font-size: 1.6rem;
+        padding-inline: 0.7rem;
+        padding-bottom: 1rem;
+      }
     }
   }
+}
+
+// .p-blog-list__pagination{
+//   .wp-pagenavi { 
+//     a:not(:hover) {
+//     text-decoration: none;
+// }
+// li:nth-of-type(4) a{
+//     border: none;
+//     width: 3rem;
+//     height: 3rem;
+// }
 
 
+// }}

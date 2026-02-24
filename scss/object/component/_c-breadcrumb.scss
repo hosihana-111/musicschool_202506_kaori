@@ -3,9 +3,12 @@
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
 
-.c-breadcrumbs {
-  width: 100%;
+.c-breadcrumbs { 
   background-color: #E8E8E8;
+    height: 5rem;
+  @include sp {
+    height: 3.6rem;
+  }
 }
 
 .c-breadcrumbs__inner {
@@ -36,6 +39,19 @@
     white-space: nowrap;
  
   }
+  & > span {
+      &:last-of-type {
+        @include pc {
+          flex: 1;
+          overflow: hidden;
+          span {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+          }
+        }
+      }
+    }
 
 }
 
@@ -44,11 +60,12 @@
   display: none;
 }
 
-.c-breadcrumbs__text {
+ .c-breadcrumbs .current-item,
+  .c-breadcrumbs a {
   font-size: 1.6rem;
   line-height: calc(33 / 16);
   text-decoration: none;
-  color: #000;
+  color: $black;
   height: 5rem;
   display: flex;
   align-items: center;
@@ -61,6 +78,9 @@
 
 
 }
+.c-breadcrumbs .current-item {
+    height: initial;
+  }
 
 .c-breadcrumbs__sign {
   display: block;

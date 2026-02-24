@@ -389,17 +389,7 @@
         </div>
       </section>
 
-      <!-- TOPに戻るボタンのjsの修正をAIに依頼 -->
-      <div class="p-top-btn">
-        <div class="p-top-btn__bg">
-          <a href="#" class="p-top-btn__arrow u-opacity " aria-label="ページ上部へ">
-            <div class="p-top-btn__arrow-img">
-              <img src="<?php echo get_template_directory_uri(); ?>/images/icon/goto-top.svg" alt="トップへ戻る">
-            </div>
-          </a>
-          <a href="./contact_form.html" class="c-btn p-top-btn__contact">お問い合わせ</a>
-        </div>
-      </div>
+    <?php get_template_part('template-parts/fix-area'); ?>
     </main>
 
 <?php get_footer(); ?>
