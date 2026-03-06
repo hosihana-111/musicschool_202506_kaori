@@ -1,6 +1,7 @@
+// "use strict";
+// $(document).ready(function () {
 "use strict";
-$(document).ready(function () {
-
+jQuery(function ($) {
 
   // function init() {
   // =============================
@@ -9,7 +10,8 @@ $(document).ready(function () {
   if (typeof Swiper !== "undefined" && document.querySelector(".swiper")) {
 
 
-    // const swiper = 
+
+    // const swiper  
     new Swiper(".swiper", {
       loop: true, // ループ
       speed: 1000, // 少しゆっくり(デフォルトは300)
@@ -133,6 +135,8 @@ $(document).ready(function () {
     }
 
   });
+
+  $('body').show();
 
 });
 

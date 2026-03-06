@@ -16,7 +16,7 @@
 
 </head>
 
-<body>
+<body style="display: none;">
   <div id="container">
     <!-- ヘッダー -->
     <header id="header" class="p-header l-header">
@@ -48,15 +48,18 @@
 
         <div class="p-header__right">
           <nav class="p-header__nav" id="global-nav" aria-label="グローバルナビゲーション">
-            <ul class="p-header__items">
-              <li class="p-header__item"><a href="./plan.html"><span>料金</span></a></li>
-              <li class="p-header__item"><a href="./blog_list.html"><span>ブログ</span></a></li>
-              <li class="p-header__item"><a href="./result_list.html"><span>卒業実績</span></a></li>
-            </ul>
+            <?php
+            wp_nav_menu(array(
+              'menu_class' => 'p-header__items',  
+              'theme_location' => 'primary',
+              'container' => false,
+                         
+            ));
+            ?>
           </nav>
-          <div class="pc">
+          <!-- <div class="pc">
             <a href="./contact_form.html" class="c-btn c-btn--head">お問い合わせ</a>
-          </div>
+          </div> -->
         </div>
       </div>
       <?php wp_head(); ?>

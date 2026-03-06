@@ -19,7 +19,11 @@
       <!-- 卒業実績-->
       <section id="result-list" class="p-result-list">
         <div class="l-inner">
-          <h2 class="c-section-title">卒業実績一覧</h2>
+            <?php
+            $term = get_queried_object();
+            $term_name = isset($term->name) ? $term->name : 'カテゴリー名不明';
+            ?>
+          <h2 class="c-section-title"><?php echo esc_html($term_name); ?></h2>
 
           <div class="p-result-list__grid">
             <?php

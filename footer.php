@@ -2,23 +2,17 @@
     <footer class="p-footer">
       <div class="p-footer__inner">
         <nav class="p-footer__nav" aria-label="フッターナビゲーション">
-          <ul>
-            <li>
-              <a href="./index.html" class="u-opacity">ホーム</a>
-            </li>
-            <li>
-              <a href="./plan.html" class="u-opacity">料金</a>
-            </li>
-            <li>
-              <a href="./blog_list.html" class="u-opacity">ブログ</a>
-            </li>
-            <li>
-              <a href="./result_list.html" class="u-opacity">卒業実績</a>
-            </li>
-          </ul>
+          <?php
+            wp_nav_menu(array(
+              'menu_class' => 'p-footer__nav ul',  
+              'theme_location' => 'footer',
+              'container' => false,
+                         
+            ));
+            ?>
         </nav>
         <div class="p-footer__logo">
-          <a href="./index.html" class="u-opacity">
+          <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="u-opacity">
             <img src="<?php echo get_template_directory_uri(); ?>/images/icon/logo-white.svg" alt="きたむらミュージックスクール">
           </a>
         </div>
@@ -53,7 +47,7 @@
 
  
 
-  <?php wp_footer(); ?>
+<?php wp_footer(); ?>
 </body>
 
 </html>

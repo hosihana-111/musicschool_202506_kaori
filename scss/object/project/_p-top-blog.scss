@@ -29,8 +29,20 @@
     }
 }
 
-.p-blog-item {
-    position: relative;
+// .p-blog-item {
+//     position: relative;
+
+// }
+
+.p-blog-item__img {
+   position: relative;
+    img {
+      aspect-ratio: 260 / 200;
+      object-fit: cover;
+      @include sp {
+        aspect-ratio: 335 / 200;
+      }
+    }
 }
 
 

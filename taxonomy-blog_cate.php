@@ -20,7 +20,11 @@
       <!-- ブログ一覧 -->
       <section id="blog-list" class="p-blog-list">
         <div class="l-inner">
-          <h2 class="c-section-title">ブログ一覧</h2>
+            <?php
+            $term = get_queried_object();
+            $term_name = isset($term->name) ? $term->name : 'カテゴリー名不明';
+            ?>
+          <h2 class="c-section-title"><?php echo esc_html($term_name); ?></h2>
           <div class="p-blog-list__items">
             <?php
             if (have_posts()):

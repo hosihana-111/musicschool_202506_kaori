@@ -13,19 +13,12 @@
                 </div>
               </div>
               <!-- ブログ内を検索 -->
-              <div class="p-sidebar__box">
-                <p class="p-sidebar__title">ブログ内を検索</p>
-                <div class="p-sidebar__search">
-                  <form class="p-sidebar__search-form" action="./search.html" method="get">
-                    <input type="text" aria-label="ブログ内検索" name="s" placeholder="検索ワード">
-                    <button type="submit" class="u-opacity">
-                      <span>
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/blog_details/icon-search.svg" alt="検索">
-                      </span>
-                    </button>
-                  </form>
-                </div>
-              </div>
+        <div class="p-sidebar__box">
+          <p class="p-sidebar__title">ブログ内を検索</p>
+           <div class="p-sidebar__search">
+            <?php get_search_form(); ?>
+          </div>
+        </div>
 
               <!-- おすすめの記事投稿 -->
               <div class="p-sidebar__box">

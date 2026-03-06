@@ -42,19 +42,36 @@ function add_files(){
     
     // jqueryの読み込み
     wp_enqueue_script('jquery', '//code.jquery.com/jquery-3.7.1.min.js', "",NULL,false); 
+    
+    // SwiperのCSS（CDN）
+   wp_enqueue_style(
+        'swiper',
+        'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css',
+        array(),
+        null
+    );
+
+
+    // ★ Swiper（CDN）
+wp_enqueue_script(
+  'swiper',
+  'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',
+  array(),
+  NULL,
+  true
+);
+
+
 
     // JS登録
-    wp_register_script('common-script', get_theme_file_uri('/js/script.js'), array('jquery'), $now, true);
+    wp_register_script('common-script', get_theme_file_uri('/js/main.js'), array('jquery', 'swiper'), $now, true);
 
 
     // 共通のJS
     wp_enqueue_script('slick-script', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'), NULL, true);
     wp_enqueue_script( 'common-script' );
 
-    if (is_front_page()) {
-        wp_enqueue_script('top-script', get_theme_file_uri('/js/top.js'), array('jquery'), $now, true);
-       
-    }
+    
 }
 add_action('wp_enqueue_scripts', 'add_files');
 
@@ -80,3 +97,20 @@ function remove_menus () {
   remove_menu_page( 'edit.php' );
 }
 add_action('admin_menu', 'remove_menus');
+
+// Contact Form 7で自動挿入されるPタグ、brタグを削除
+add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');
+function wpcf7_autop_return_false()
+{
+  return false;
+}
+
+//管理画面「外観＞メニュー」 を表示
+function register_my_menus() {
+  register_nav_menus(array(
+      'primary' => 'Primary Menu',
+      'footer' => 'Footer Menu',
+    )
+  );
+}
+add_action('after_setup_theme','register_my_menus');
