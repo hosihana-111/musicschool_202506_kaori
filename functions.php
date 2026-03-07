@@ -87,6 +87,12 @@ function my_page_conditions($query)
       // 表示件数を10件に設定
       $query->set('posts_per_page', 10);
     }
+
+      // 検索結果ページの場合
+    if ($query->is_search()) {
+       $query->set('posts_type', 'blog'); // 'blog' カスタム投稿タイプのみに絞る
+
+  }
   }
 }
 add_action('pre_get_posts', 'my_page_conditions');

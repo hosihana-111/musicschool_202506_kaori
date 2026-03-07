@@ -28,7 +28,7 @@
                 the_post();
             ?>
             <div class="p-result-list__item p-result-list-item">
-              <a href="./result_details.html" class="u-opacity">
+              <a href="<?php the_permalink(); ?>" class="u-opacity">
                 <div class="p-result-list-item__img">
                   <span class="c-label c-label--lg">                  
                   <?php
