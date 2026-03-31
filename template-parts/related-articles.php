@@ -5,6 +5,8 @@
 
             $taxonomy_map = [
               'blog' => 'blog_cate',
+              'result' => 'genre',
+              
             ];
 
             if (!isset($taxonomy_map[$post_type])) {
@@ -13,8 +15,8 @@
                 $taxonomy = $taxonomy_map[$post_type];
                 $terms = get_the_terms($post_id, $taxonomy);
 
-            if (!empty($terms)):
-              $term_ids = wp_list_pluck( $terms,'term_id');
+            if (!empty($terms)) :
+             $term_ids = wp_list_pluck($terms, 'term_id');
 
               $args = [
                 'posts_per_page' => 3,
@@ -43,9 +45,8 @@
               <div class="p-related-posts__items">
                 <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
                 <?php
-                 
                 $post_terms = get_the_terms(get_the_ID(), $taxonomy);
-                $term_name = (!empty($post_terms))? $post_terms[0]->name : '';
+                $term_name = (!empty($post_terms)) ? $post_terms[0]->name : '';
                 ?>
                 
                   <a href="<?php the_permalink(); ?>" class="u-opacity">
@@ -76,5 +77,7 @@
                 
               </div>
             </div>
-            <?php endif; ?>
-            <?php endif; ?>
+            <?php
+         endif;
+        endif;
+        ?>

@@ -321,7 +321,7 @@ hr {
 .p-btn__main {
   display: inline-grid;
   place-items: center;
-  width: 25rem;
+  width: 25rem !important;
   height: 5rem;
   font-size: 2.5rem;
   line-height: 1.32;
@@ -1396,7 +1396,7 @@ body.is-menu-open .c-page-top {
   }
 }
 
-.p-header__item a {
+.menu-item a {
   height: 8rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1411,9 +1411,10 @@ body.is-menu-open .c-page-top {
   position: relative;
 }
 @media (max-width: 767px) {
-  .p-header__item a {
+  .menu-item a {
     height: 5.8rem;
     background: #CB0000;
+    width: 100%;
     color: #fff;
     font-size: 1.8rem;
     line-height: 1.8333333333;
@@ -1423,7 +1424,7 @@ body.is-menu-open .c-page-top {
   }
 }
 @media (min-width: 768px) {
-  .p-header__item a::after {
+  .menu-item a::after {
     content: "";
     width: 100%;
     height: 0.2rem;
@@ -1439,22 +1440,47 @@ body.is-menu-open .c-page-top {
   }
 }
 @media (max-width: 767px) {
-  .p-header__item a::after {
+  .menu-item a::after {
     display: none;
   }
 }
 @media (max-width: 767px) {
-  .p-header__item a:hover {
+  .menu-item a:hover {
     opacity: 1;
     background: #000;
   }
 }
-.p-header__item a:hover::after {
+.menu-item a:hover::after {
   clip-path: inset(0 0 0 0);
 }
 
-.p-header__link::after:hover {
+.p-header__nav ul li:last-of-type a {
+  width: 15rem;
+  height: 4.5rem;
+  color: #fff;
+  font-size: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.p-header__nav ul li:last-of-type a::after {
+  display: none;
+}
+.p-header__nav ul li:last-of-type a:hover {
+  color: #CB0000;
   opacity: 1;
+}
+
+@media (max-width: 767px) {
+  .p-header__nav ul li:last-of-type {
+    display: none;
+  }
 }
 
 .p-footer {
@@ -3592,7 +3618,9 @@ body.is-menu-open .c-page-top {
   }
 }
 
-.p-contact-form__box {
+/* Snow Monkey Forms */
+.p-contact-form .smf-form {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3600,24 +3628,15 @@ body.is-menu-open .c-page-top {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100%;
   row-gap: 3rem;
 }
 @media (max-width: 767px) {
-  .p-contact-form__box {
+  .p-contact-form .smf-form {
     row-gap: 1.4rem;
   }
 }
-.p-contact-form__box .wpcf7-form-control-wrap {
-  display: block;
-  width: 100%;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  min-width: 0;
-}
 
-.p-contact-form__box dl {
+.p-contact-form .smf-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3626,16 +3645,30 @@ body.is-menu-open .c-page-top {
           align-items: flex-start;
 }
 @media (max-width: 767px) {
-  .p-contact-form__box dl {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .p-contact-form .smf-item {
+    display: block;
   }
 }
 
-.p-contact-form__box dt {
+.p-contact-form .smf-item__col--label {
   width: 16.9rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 16.9rem;
+          flex: 0 0 16.9rem;
+}
+@media (max-width: 767px) {
+  .p-contact-form .smf-item__col--label {
+    width: 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.p-contact-form .smf-item__label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3645,16 +3678,15 @@ body.is-menu-open .c-page-top {
   padding-top: 0.7rem;
 }
 @media (max-width: 767px) {
-  .p-contact-form__box dt {
-    width: 100%;
-    height: initial;
+  .p-contact-form .smf-item__label {
     font-size: 1.6rem;
     line-height: 2.0625;
     padding-top: 0;
   }
 }
 
-.p-contact-form__box dd {
+/* 入力欄 */
+.p-contact-form .smf-item__col--controls {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -3670,13 +3702,18 @@ body.is-menu-open .c-page-top {
   min-width: 0;
 }
 @media (max-width: 767px) {
-  .p-contact-form__box dd {
+  .p-contact-form .smf-item__col--controls {
     font-size: 1.6rem;
   }
 }
-.p-contact-form__box dd input[type=text],
-.p-contact-form__box dd input[type=email],
-.p-contact-form__box dd input[type=tel] {
+
+.p-contact-form .smf-item__controls {
+  width: 100%;
+}
+
+.p-contact-form input[type=text],
+.p-contact-form input[type=email],
+.p-contact-form input[type=tel] {
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -3688,48 +3725,58 @@ body.is-menu-open .c-page-top {
   line-height: 2.2;
 }
 @media (max-width: 767px) {
-  .p-contact-form__box dd input[type=text],
-  .p-contact-form__box dd input[type=email],
-  .p-contact-form__box dd input[type=tel] {
+  .p-contact-form input[type=text],
+  .p-contact-form input[type=email],
+  .p-contact-form input[type=tel] {
     width: 100%;
   }
 }
-
-::-webkit-input-placeholder {
+.p-contact-form ::-webkit-input-placeholder {
   color: #B2B2B2;
   font-size: 1.5rem;
   line-height: 1.4666666667;
 }
-
-::-moz-placeholder {
+.p-contact-form ::-moz-placeholder {
   color: #B2B2B2;
   font-size: 1.5rem;
   line-height: 1.4666666667;
 }
-
-:-ms-input-placeholder {
+.p-contact-form :-ms-input-placeholder {
   color: #B2B2B2;
   font-size: 1.5rem;
   line-height: 1.4666666667;
 }
-
-::-ms-input-placeholder {
+.p-contact-form ::-ms-input-placeholder {
   color: #B2B2B2;
   font-size: 1.5rem;
   line-height: 1.4666666667;
 }
-
-::placeholder {
+.p-contact-form ::placeholder {
   color: #B2B2B2;
   font-size: 1.5rem;
   line-height: 1.4666666667;
 }
 
 /*****チェックボックス*****/
-.p-contact-form__box .wpcf7-list-item {
-  margin: 0;
+.p-contact-form .smf-checkboxes-control__control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 2rem;
 }
-.p-contact-form__box .wpcf7-checkbox {
+@media (max-width: 767px) {
+  .p-contact-form .smf-checkboxes-control__control {
+    row-gap: 2.3rem;
+  }
+}
+
+.p-contact-form .smf-checkbox-control,
+.p-contact-form .smf-radio-button-control,
+.p-contact-form .smf-control-checkbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3740,30 +3787,25 @@ body.is-menu-open .c-page-top {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  row-gap: 0.9rem;
 }
-@media (max-width: 767px) {
-  .p-contact-form__box .wpcf7-checkbox {
-    row-gap: 1.3rem;
-  }
-}
-.p-contact-form__box label {
+.p-contact-form label {
   cursor: pointer;
 }
-.p-contact-form__box label input[type=checkbox] {
+.p-contact-form label input[type=checkbox] {
   display: none;
 }
-.p-contact-form__box label input[type=checkbox] + span {
+.p-contact-form label input[type=checkbox] + span {
   display: inline-block;
   padding-left: 4rem;
   position: relative;
+  line-height: 1.1;
 }
 @media (max-width: 767px) {
-  .p-contact-form__box label input[type=checkbox] + span {
+  .p-contact-form label input[type=checkbox] + span {
     padding-left: 3rem;
   }
 }
-.p-contact-form__box label input[type=checkbox] + span::before {
+.p-contact-form label input[type=checkbox] + span::before {
   content: "";
   width: 2rem;
   height: 2rem;
@@ -3774,7 +3816,7 @@ body.is-menu-open .c-page-top {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-.p-contact-form__box label input[type=checkbox] + span::after {
+.p-contact-form label input[type=checkbox] + span::after {
   content: "";
   width: 1.6rem;
   height: 0.8rem;
@@ -3787,47 +3829,56 @@ body.is-menu-open .c-page-top {
           transform: translateY(calc(-50% - 0.2rem)) rotate(-50deg);
   display: none;
 }
-.p-contact-form__box label input[type=checkbox]:checked + span::after {
+.p-contact-form label input[type=checkbox]:checked + span::after {
   display: block;
 }
-
-@media (max-width: 767px) {
-  .form-area-message {
-    margin-top: 0.8rem;
-  }
+.p-contact-form .smf-item__description {
+  margin-top: 0.1rem;
+  font-size: 2rem !important;
+  line-height: 1.5 !important;
+  color: #000 !important;
 }
 @media (max-width: 767px) {
-  .form-area-message dt {
-    line-height: 1;
+  .p-contact-form .smf-item__description {
+    font-size: 1.6rem !important;
+    line-height: 2.0625 !important;
+    margin-left: 1.5rem;
   }
 }
-.form-area-message dd {
-  padding: 0;
-  border: 0;
+.p-contact-form {
+  /*****テキストエリア*****/
 }
-
-.p-contact-form__box textarea {
+.p-contact-form .p-contact-form .smf-form .smf-textarea-control__control {
+  padding: 1.8rem 2rem !important;
+}
+@media (max-width: 767px) {
+  .p-contact-form .p-contact-form .smf-form .smf-textarea-control__control {
+    padding: 1.5rem 2rem !important;
+  }
+}
+.p-contact-form .p-contact-form .smf-textarea-control__control,
+.p-contact-form textarea {
   width: 100%;
   background-color: #FFF;
+  border: 0.05rem solid #000 !important;
   min-height: 30rem;
-  padding: 1.8rem 2rem;
+  padding: 1.8rem 2rem !important;
   resize: vertical;
   font-size: 1.5rem;
   line-height: 2.2;
-  border: 0.05rem solid #000000;
 }
 @media (max-width: 767px) {
-  .p-contact-form__box textarea {
-    padding: 1.5rem 2rem;
+  .p-contact-form .p-contact-form .smf-textarea-control__control,
+  .p-contact-form textarea {
+    padding: 1.5rem 2rem !important;
     min-height: 19rem;
-    margin-top: 1.4rem;
     line-height: 1.6666666667;
   }
 }
 
 /*****ボタン*****/
-.p-contact-form__button {
-  margin-top: 5.2rem;
+.p-contact-form .smf-action {
+  margin-top: 4.8rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3836,43 +3887,51 @@ body.is-menu-open .c-page-top {
           justify-content: center;
 }
 @media (max-width: 767px) {
-  .p-contact-form__button {
+  .p-contact-form .smf-action {
     margin-top: 4.9rem;
   }
 }
-
-.wpcf7-spinner {
-  display: none;
-}
-
-.wpcf7-not-valid-tip {
-  margin-top: 6px;
-  color: #CB0000;
-}
-
-.wpcf7 form.invalid .wpcf7-response-output {
-  border: none;
-  font-size: 1.8rem;
-  text-align: center;
-  color: #CB0000;
+.p-contact-form .smf-button-control {
+  display: block;
 }
 @media (max-width: 767px) {
-  .wpcf7 form.invalid .wpcf7-response-output {
-    font-size: 1.6rem;
-    line-height: 1.5;
+  .p-contact-form .smf-button-control {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
-
-.wpcf7 form.sent .wpcf7-response-output {
+.p-contact-form .smf-button-control__control {
+  display: inline-grid;
+  place-items: center;
+  height: 5rem;
+  width: 25rem;
+  font-size: 2.5rem;
+  line-height: 1.32;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
   border: none;
-  font-size: 1.8rem;
-  text-align: center;
-  color: #CB0000;
+  background: #CB0000;
+  color: #fff;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  padding: 0;
 }
 @media (max-width: 767px) {
-  .wpcf7 form.sent .wpcf7-response-output {
-    font-size: 1.6rem;
-    line-height: 1.5;
+  .p-contact-form .smf-button-control__control {
+    font-size: 2rem;
+    line-height: 1.3;
+    width: 100%;
+    max-width: 33.55rem;
   }
 }
 

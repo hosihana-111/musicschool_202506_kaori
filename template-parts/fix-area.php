@@ -1,4 +1,4 @@
-<!-- TOPに戻るボタンのjsの修正をAIに依頼 -->
+
       <div class="p-top-btn">
         <div class="p-top-btn__bg">
           <a href="#" class="p-top-btn__arrow u-opacity " aria-label="ページ上部へ">

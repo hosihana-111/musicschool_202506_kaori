@@ -25,7 +25,7 @@
               通常３営業日以内にメールにてご連絡させていただきます。</p>
             <div class="p-contact__form p-contact-form">
               <?php 
-              // Contact Form 7表示
+              // SnowMonkey Contact Form 表示
               if (have_posts()) :
                 while (have_posts()) : the_post();
                  remove_filter('the_content','wpautop');

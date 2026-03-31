@@ -19,7 +19,7 @@
 }
 
 .p-contact__container-text {
-  text-align: center; 
+  text-align: center;
 
   @include sp {
     text-align: left;
@@ -34,39 +34,43 @@
   }
 }
 
-
-.p-contact-form__box {
+/* Snow Monkey Forms */
+.p-contact-form .smf-form {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  width: 100%;
   row-gap: 3rem;
 
   @include sp {
     row-gap: 1.4rem;
   }
- .wpcf7-form-control-wrap {
-    display: block;  
-    width: 100%;
-    flex: 1;      
-    min-width: 0;
-  }
 
-
-   
 }
 
-
-.p-contact-form__box dl {
+.p-contact-form .smf-item {
   display: flex;
   align-items: flex-start;
 
   @include sp {
-    flex-direction: column;
+    display: block;
+   
   }
 }
 
-.p-contact-form__box dt {
+
+.p-contact-form .smf-item__col--label {
   width: 16.9rem;
+  flex: 0 0 16.9rem;
+
+  @include sp {
+    width: 100%;
+    flex: none;
+    display: flex;
+
+  }
+}
+
+.p-contact-form .smf-item__label {
   display: flex;
   font-size: 2rem;
   font-weight: 500;
@@ -74,33 +78,43 @@
   padding-top: 0.7rem;
 
   @include sp {
-    width: 100%;
-    height: initial;
     font-size: 1.6rem;
     line-height: calc(33 / 16);
     padding-top: 0;
   }
 }
 
-.p-contact-form__box dd {
+
+
+/* 入力欄 */
+
+
+.p-contact-form .smf-item__col--controls {
   flex: 1;
   width: 100%;
   display: flex;
   align-items: center;
   font-size: 1.8rem;
   line-height: calc(30 / 18);
-min-width: 0; 
+  min-width: 0;
+
   @include sp {
     font-size: 1.6rem;
   }
+}
+
+.p-contact-form .smf-item__controls {
+  width: 100%;
+}
+
+.p-contact-form {
 
   input[type="text"],
   input[type="email"],
   input[type="tel"] {
     width: 100%;
-     box-sizing: border-box;
+    box-sizing: border-box;
     display: block;
-    
     border: 0.05rem solid #000;
     padding: 0.3rem 2rem;
     background: #fff;
@@ -109,148 +123,63 @@ min-width: 0;
 
     @include sp {
       width: 100%;
-     
+
 
     }
   }
+
+
+  ::placeholder {
+    color: #B2B2B2;
+    font-size: 1.5rem;
+    line-height: calc(22 / 15);
+
+
+  }
 }
 
-::placeholder {
-  color: #B2B2B2;
-  font-size: 1.5rem;
-  line-height: calc(22 / 15);
-
-
-}
 
 /*****チェックボックス*****/
-
-// .p-contact-form__checkbox {
-//   display: flex;
-
-//   @include sp {
-//     flex-direction: column;
-
-//   }
-// }
-
-
-// .p-form-checkbox dd {
-//   flex: 1;
-//   width: 100%;
-//   display: block;
-//   padding: 0; // ← 余白を完全になくす
-//   margin: 0;
-
-// }
-
-
-// .p-form-checkbox__items {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: flex-start;
-//   row-gap: 2.2rem;
-
-//   @include sp {
-//     margin-top: 0.3rem;
-//     row-gap: 2.4rem;
-//   }
-// }
-
-// .p-form-checkbox__item {
-//   cursor: pointer;
-//   line-height: 1;
-
-//   input[type="checkbox"] {
-//     display: none;
-//   }
-// }
-
-// .p-form-checkbox__item span {
-//   font-size: 1.8rem;
-//   line-height: 1;
-
-//   @include sp {
-//     font-size: 1.6rem;
-
-//   }
-// }
-
-// .p-form-checkbox__item input[type=checkbox]+span {
-//   position: relative;
-//   display: inline-block;
-//   padding-left: 4rem;
-
-//   @include sp {
-//     padding-left: 3rem;
-//   }
-
-//   &::before {
-//     position: absolute;
-//     content: '';
-//     top: 50%;
-//     left: 0;
-//     transform: translateY(-50%);
-//     background: #fff;
-//     border: 0.05rem solid #000;
-//     width: 2rem;
-//     height: 2rem;
-
-//   }
-
-// }
-
-// input[type="checkbox"]:checked+span::after {
-//   position: absolute;
-//   content: '';
-//   top: 50%;
-//   left: 0.7rem; 
-//   transform: translate(10%, -60%) rotate(50deg);
-//   width: 0.6rem;
-//   height: 1.2rem;
-//   border-right: 0.2rem solid $red;
-//   border-bottom: 0.2rem solid $red;
-//   display: none;
-
-// }
-
-
-// .p-form-checkbox__item input[type=checkbox]:checked {
-//   &+span {
-//     &::after {
-//       display: block;
-//     }
-//   }
-// }
-.p-contact-form__box {
-  .wpcf7-list-item {
-    margin: 0;
+.p-contact-form .smf-checkboxes-control__control {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+@include sp {
+    row-gap: 2.3rem;
   }
-    .wpcf7-checkbox {
+
+}
+
+
+.p-contact-form {
+
+  .smf-checkbox-control,
+  .smf-radio-button-control,
+  .smf-control-checkbox {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    row-gap: 0.9rem;
-          
-    @include sp {
-      row-gap: 1.3rem;
-    }
+
+
+
   }
-label {
+
+  label {
     cursor: pointer;
-    
+
     input[type="checkbox"] {
       display: none;
-            
+
       &+span {
         display: inline-block;
         padding-left: 4rem;
         position: relative;
-        
+        line-height: 1.1;
+
         @include sp {
           padding-left: 3rem;
         }
-              
+
         &::before {
           content: "";
           width: 2rem;
@@ -261,7 +190,7 @@ label {
           left: 0;
           transform: translateY(-50%);
         }
-              
+
         &::after {
           content: "";
           width: 1.6rem;
@@ -275,7 +204,7 @@ label {
           display: none;
         }
       }
-            
+
       &:checked {
         &+span {
           &::after {
@@ -285,86 +214,101 @@ label {
       }
     }
   }
-}
 
+  .smf-item__description {
+    margin-top: 0.1rem;
+    font-size: 2rem !important;
+    line-height: calc(30 / 20) !important;
+    color: #000 !important;
 
-.form-area-message {
-
-  @include sp {
-    margin-top: 0.8rem;
-  }
-
-  dt {
     @include sp {
-      line-height: 1;
+      font-size: 1.6rem !important;
+      line-height: calc(33 / 16) !important;
+      margin-left: 1.5rem;
     }
   }
 
-  dd {
-    padding: 0;
-    border: 0;
+  /*****テキストエリア*****/
+
+  .p-contact-form .smf-form .smf-textarea-control__control {
+    padding: 1.8rem 2rem !important;
+
+    @include sp {
+      padding: 1.5rem 2rem !important;
+    }
+  }
+
+  .p-contact-form .smf-textarea-control__control,
+  textarea {
+    width: 100%;
+    background-color: #FFF;
+    border: 0.05rem solid #000 !important;
+    min-height: 30rem;
+    padding: 1.8rem 2rem !important;
+    ;
+    resize: vertical;
+    font-size: 1.5rem;
+    line-height: calc(33 / 15);
+
+
+    @include sp {
+      padding: 1.5rem 2rem !important;
+      min-height: 19rem;
+      
+      line-height: calc(25 / 15);
+
+    }
   }
 }
 
-.p-contact-form__box{
-  textarea {
-  width: 100%;
-  background-color: #FFF;
-  min-height: 30rem;
-  padding: 1.8rem 2rem;
-  resize: vertical;
-  font-size: 1.5rem;
-  line-height: calc(33 / 15);
-  border: 0.05rem solid $black;
-
-
-  @include sp {
-    padding: 1.5rem 2rem;
-    min-height: 19rem;
-    margin-top: 1.4rem;
-    line-height: calc(25 / 15);
-
-  }
-}}
 
 /*****ボタン*****/
-.p-contact-form__button {
-  margin-top: 5.2rem;
-  display: flex;
-  justify-content: center;
+.p-contact-form {
+  .smf-action {
+    margin-top: 4.8rem;
+    display: flex;
+    justify-content: center;
 
-  @include sp {
-    margin-top: 4.9rem;
+    @include sp {
+      margin-top: 4.9rem;
+    }
   }
-}
 
-.wpcf7-spinner {
-  display: none;
-}
+ 
 
-.wpcf7-not-valid-tip {
-  margin-top: 6px;
-  color: $red;
-}
+    .smf-button-control {
+    display: block;
 
-.wpcf7 form.invalid .wpcf7-response-output {
-  border: none;
-  font-size: 1.8rem;
-  text-align: center;
-  color: $red;
-  @include sp {
-    font-size: 1.6rem;
-    line-height: 1.5;
+    @include sp {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
   }
-}
 
-.wpcf7 form.sent .wpcf7-response-output {
-  border: none;
-  font-size: 1.8rem;
-  text-align: center;
-  color: $red;
-  @include sp {
-    font-size: 1.6rem;
-    line-height: 1.5;
+  .smf-button-control__control {
+    display: inline-grid;
+    place-items: center;
+    height: 5rem;
+    width: 25rem ;
+    font-size: 2.5rem;
+    line-height: calc(33 / 25);
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    background: $red;
+    color: #fff;
+    border-radius: 0;
+    box-shadow: none;
+    appearance: none;
+    padding: 0;
+
+    @include sp {
+      font-size: 2rem;
+      line-height: calc(26 / 20);
+      width: 100% ;
+      max-width: 33.55rem;
+    }
   }
 }

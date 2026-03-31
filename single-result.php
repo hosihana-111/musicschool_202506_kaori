@@ -80,7 +80,7 @@
 
             <!-- 関連記事 -->
             <div class="p-result-details__related-posts p-related-posts">
-              <?php get_template_part('template-parts/related-articles'); ?>              
+                  <?php get_template_part('template-parts/related-articles'); ?>          
             </div>
           </article>
         </div>
