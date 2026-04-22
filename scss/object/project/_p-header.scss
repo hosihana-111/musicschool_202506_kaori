@@ -155,8 +155,9 @@
 
 }
 
-// .p-header__item a
- .menu-item a{
+
+  
+ .p-header__items .menu-item a{
   height: 8rem;
   display: flex;
   align-items: center;
@@ -216,7 +217,9 @@
     }
 
   }
-}
+} 
+
+                 
 
 // .p-header__link::after:hover {
 //   opacity: 1;

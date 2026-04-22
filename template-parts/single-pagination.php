@@ -9,7 +9,7 @@
                ?>
 
                 
-              <div class="p-blog-details__article-nav p-article-nav <?php echo $add_class_result; ?>">
+              <div class="p-article-nav p-article-nav <?php echo $add_class_result; ?>">
                 <div class="p-article-nav__item-prev">
                   <?php if (!empty($prev_post)): ?>
                   <a href="<?php echo get_permalink($prev_post->ID); ?>" class="u-opacity">
@@ -18,7 +18,7 @@
                       <p>前の記事</p>
                     </div>
                     <div class="p-article-nav__box">
-                      <div class="p-blog-details__box-img p-article-nav__box-img">
+                      <div class="p-article-nav__box-img">
                         <?php if (has_post_thumbnail($prev_post->ID)): ?>
                         <?php echo get_the_post_thumbnail($prev_post->ID); ?>
                         <?php else: ?>
@@ -38,7 +38,7 @@
                       <span>▶︎</span>
                     </div>
                     <div class="p-article-nav__box">
-                      <div class="p-blog-details__box-img p-article-nav__box-img">
+                      <div class="p-article-nav__box-img">
                         <?php if (has_post_thumbnail($next_post->ID)): ?>
                         <?php echo get_the_post_thumbnail($next_post->ID); ?>
                         <?php else: ?>

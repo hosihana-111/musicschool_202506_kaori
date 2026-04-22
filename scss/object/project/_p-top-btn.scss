@@ -50,15 +50,26 @@
 }
 
 // お問い合わせページの下マージン調整
-.p-top-btn__bg--contact {
-  margin-bottom: 3rem;
+//  .p-top-btn__bg--contact {
+//   margin-bottom: 3rem;
 
-  @include sp {
-    margin-bottom: 2rem;
+//   @include sp {
+//     margin-bottom: 2rem;
 
 
+//   }
+
+// }
+
+.p-contact {
+  .p-top-btn {
+    height: auto;
+    bottom: 3rem;
+    right: -1.4rem;
+    @include sp {
+      bottom: 2rem;
+    }
   }
-
 }
 
 /* トップへ：丸ボタン（常に右端） */

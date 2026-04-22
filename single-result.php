@@ -41,40 +41,39 @@
 
             <!-- プロフィール -->
             <div class="p-result-details__profile p-result-profile">
-              <table class="p-result-profile__table">
-                <tr>
-                  <th scope="row">名前</th>
-                  <td><?php the_field('name'); ?></td>
-                </tr>
-                <tr>
-                  <th scope="row">職業</th>
-                  <td><?php the_field('job'); ?></td>
-                </tr>
-                <tr>
-                  <th scope="row">ジャンル</th>
-                  <td><?php
+              <div class="p-result-profile__table">
+                <dl>
+                  <dt scope="row">名前</dt>
+                  <dd><?php the_field('name'); ?></dd>
+                </dl>
+                <dl>
+                  <dt scope="row">職業</dt>
+                  <dd><?php the_field('job'); ?></dd>
+                </dl>
+                <dl>
+                  <dt scope="row">ジャンル</dt>
+                  <dd><?php
                       $terms = get_the_terms(get_the_ID(), 'genre');
                      echo $terms[0]->name;
                      ?>
-                     </td>
-                </tr>
-                <tr>
-                  <th scope="row">実績</th>
-                  <td><?php the_field('achievements'); ?></td>
-                </tr>
-                <tr>
-                  <th scope="row">SNS</th>
-                  <td><?php the_field('sns'); ?></td>
-                </tr>
-
-              </table>
+                     </dd>
+                </dl>
+                <dl>
+                  <dt scope="row">実績</dt>
+                  <dd><?php the_field('achievements'); ?></dd>
+                </dl>
+                <dl>
+                  <dt scope="row">SNS</dt>
+                  <dd><?php the_field('sns'); ?></dd>
+                </dl>
+              </div>
               <div class="p-result-profile__text">
-                <p><?php the_content(); ?></p>
+                <?php the_content(); ?>
               </div>
             </div>
 
             <!-- 前後記事ナビ -->
-            <div class="p-result-details__nav p-article-nav">           
+            <div class="p-result-details__nav">           
                <?php get_template_part('template-parts/single-pagination'); ?>
             </div>
 

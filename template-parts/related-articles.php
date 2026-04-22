@@ -37,7 +37,7 @@
               if ($the_query->have_posts()):
             ?>
             
-             <div class="p-blog-details__related-posts p-related-posts">
+          
               <div class="p-related-posts__title">
                 <h2>関連記事</h2>
               </div>
@@ -76,7 +76,7 @@
 
                 
               </div>
-            </div>
+            
             <?php
          endif;
         endif;

@@ -256,7 +256,7 @@
   @include sp {
     column-gap: 1.7rem;
     padding: 1.7rem 2rem 1.1rem 2.5rem;
-    margin-bottom: 2.6rem;
+    margin-bottom: 3rem;
   }
       
   &::before {
@@ -272,6 +272,11 @@
     flex: 1;
     font-size: 1.8rem;
     line-height: calc(30/18);
+
+    @include sp {
+      font-size: 1.6rem;
+      line-height: calc(30/16);
+    }
 
   }
 }
@@ -406,6 +411,6 @@ border-bottom: 0.5px solid;
     margin-top: 9rem;
 
     @include sp {
-        margin-top: 6rem;
+        margin-top: 6.2rem;
     }
 }

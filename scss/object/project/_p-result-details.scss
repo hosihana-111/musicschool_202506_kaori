@@ -32,7 +32,7 @@
     object-fit: cover;
 
     @include sp {
-    aspect-ratio: 335 / 236;
+        aspect-ratio: 335 / 236;
     }
 }
 
@@ -102,77 +102,115 @@
     }
 }
 
-.p-result-profile__table tr {
-    border: solid 0.1rem #707070;
-    height: 3.8rem;
+.p-result-profile__table dl {
+    display: flex;
+    border-left: 0.1rem solid #707070;
+    border-right: 0.1rem solid #707070;
+    border-bottom: 0.1rem solid #707070;
+
+    &:first-child {
+        border-top: 0.1rem solid #707070;
+    }
 }
 
-.p-result-profile__table th {
-    width: 14rem;
-    padding: 0;
-    background-color: #e5e5e5;
-    font-size: 1.8rem;
-    font-weight: 700;
-    line-height: calc(33 / 18);
-    padding-left: 2rem;
+.p-result-profile__table dt,
+.p-result-profile__table dd {
+    height: 3.8rem;
+    //   border: solid 0.1rem #707070;
+    display: flex;
+    align-items: center;
     text-align: left;
-    vertical-align: middle;
+    font-size: 1.8rem;   
+    line-height: calc(33 / 18);
+    padding: 0 0 0 2rem;
+
+    @include sp {
+        line-height: calc(30 / 18);
+        padding-left: 1rem;
+    }
+
+}
+
+.p-result-profile__table dt {
+    width: 14rem;
+    background-color: #e5e5e5;
+
 
     @include sp {
         width: 12rem;
-        line-height: calc(30 / 18);
-        padding-left: 1rem;
+
     }
 }
 
-.p-result-profile__table td {
+.p-result-profile__table dd {
     flex: 1;
-    padding: 0;
-    font-size: 1.8rem;
-    line-height: calc(33 / 18);
-    padding-left: 2rem;
-    text-align: left;
-    vertical-align: middle;
-    border-left: solid 0.1rem #707070;
-
-    @include sp {
-        line-height: calc(30 / 18);
-        padding-left: 1rem;
-    }
+    border-left: 0.1rem solid #707070;
 }
 
 
 
 .p-result-profile__text {
     width: 50%;
+
+    @include sp {
+        width: 100%;
+    }
+}
+
+.p-result-profile__text p {
+
+
     font-size: 1.8rem;
     line-height: 1.6666666667;
-
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    overflow: hidden;
 
     @include sp {
         width: 100%;
         line-height: calc(30 / 18);
+        -webkit-line-clamp: 3;
+
     }
+}
+
+.p-result-profile__text>* {
+    margin-top: 0;
+}
+
+.p-result-profile__text>*:last-child {
+    margin-bottom: 0;
 }
 
 
 // 前後記事ナビ
 .p-result-details__nav {
-    margin-top: 6.2rem;
-    display: flex;
+    margin-top: 5.7rem;
+
+
+    .p-article-nav{
+        display: flex;
     justify-content: space-between;
-    column-gap: 20rem;
+    column-gap: 19.9rem;
+
+     @include sp {
+      
+        column-gap: 2.2rem;
+    }
+    }
+    
 
     @include sp {
-        margin-top: 3.7rem;
-        column-gap: 2.2rem;
+        margin-top: 3.5rem;
+     
     }
 }
 
 
 // 関連記事
 .p-result-details__related-posts {
-    margin-top: 9rem;
+    margin-top: 10rem;
 
     @include sp {
         margin-top: 6.2rem;

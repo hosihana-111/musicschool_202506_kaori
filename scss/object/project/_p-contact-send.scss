@@ -14,23 +14,149 @@
 }
 
 
-.p-contact-send__container {
+// .p-contact-send__container {
+//   text-align: center;
+
+//   @include sp {
+//     text-align: left;
+//   }
+
+// }
+
+// /*****ボタン*****/
+// .p-contact-send__btn {
+//   margin-top: 4rem;
+//   display: flex;
+//   justify-content: center;
+
+//   @include sp {
+//     margin-top: 3.9rem;
+
+//   }
+// }
+
+// .p-contact-send,
+// .p-contact-form .smf-complete-content {
+//   padding-top: 6.7rem;
+//   padding-bottom: 9rem;
+
+//   @include sp {
+//     padding-top: 4.7rem;
+//     padding-bottom: 5rem;
+//   }
+// }
+
+.p-contact-send__container,
+.p-contact-form .smf-complete-content {
   text-align: center;
 
   @include sp {
     text-align: left;
   }
-
 }
 
-/*****ボタン*****/
-.p-contact-send__btn {
+/***** 完了画面内テキスト *****/
+.p-contact-form .smf-complete-content p,
+.p-contact-send__container p {
+  font-size: 1.8rem;
+  line-height: calc(33 / 20);
+
+  @include sp {
+    font-size: 1.6rem;
+    line-height: 1.9;
+  }
+}
+
+.p-contact-form .smf-complete-content p + p,
+.p-contact-send__container p + p {
+  margin-top: 1.2rem;
+
+  @include sp {
+    margin-top: 0.8rem;
+  }
+}
+
+.p-contact {
+  padding-top: 7rem;
+  padding-bottom: 10rem;
+  position: relative;
+
+  &:has(.snow-monkey-form[data-screen="complete"]) {
+  
+    padding-bottom: 4.2rem;
+  }
+
+  @include sp {
+    padding-top: 5rem;
+    padding-bottom: 10.8rem;
+  }
+}
+.p-contact__form.p-contact-form {
+  // padding-top: 6.1rem;
+
+    @include sp {
+    margin-top: 3.1rem;
+  }
+
+  &:has(.snow-monkey-form[data-screen="complete"]) {
+    margin-top: 0;
+  }
+}
+
+/***** ボタン *****/
+.p-contact-send__btn,
+.p-contact-form .smf-complete-content .p-contact-send__btn {
   margin-top: 4rem;
   display: flex;
   justify-content: center;
 
   @include sp {
-    margin-top: 3.9rem;
-
+    margin-top: 3.8rem;
+    width: 100%;
   }
 }
+
+.p-contact-form {
+  .smf-complete-content {
+    .wp-block-buttons {
+      justify-content: center;
+      margin-top: 4rem;
+    }
+
+    // .wp-block-button {
+    //   width: 25rem;
+    // }
+
+    .wp-block-button > .wp-block-button__link,
+    .wp-block-button > .wp-block-button__link:link,
+    .wp-block-button > .wp-block-button__link:visited {
+      display: inline-grid;
+      place-items: center;
+      width: 25rem;
+      height: 5rem;
+      padding: 0;
+      text-decoration: none;
+      font-weight: 700;
+        font-size: 2.5rem;
+  line-height: calc(33 / 25);
+      background-color: $red;
+      color: $white;
+      border: 0.1rem solid $red;
+      border-radius: 0;
+      box-shadow: none;
+      transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    
+   
+    }
+
+    .wp-block-button > .wp-block-button__link:hover,
+    .wp-block-button > .wp-block-button__link:focus,
+    .wp-block-button > .wp-block-button__link:active {
+      background-color: $white !important;
+      color: $red !important;
+      border-color: $red !important;
+      text-decoration: none;
+    }
+  }
+}
+  

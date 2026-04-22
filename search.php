@@ -29,7 +29,8 @@
             
               <a href="<?php the_permalink(); ?>" class="p-search__item u-opacity">
                 <div class="p-search__img">
-                  <span class="c-label"><?php
+                  <span class="c-label">
+                    <?php
                       $terms = get_the_terms(get_the_ID(), 'blog_cate');
                       if (!empty($terms) && !is_wp_error($terms)) {
                         echo esc_html($terms[0]->name);

@@ -14,7 +14,12 @@
   
 }
 
-.p-footer__nav ul {
+.p-footer__nav {
+  width: 100%;
+}
+
+
+.p-footer__items{
   display: flex;
   justify-content: center;
   margin: 0 auto;
@@ -27,12 +32,13 @@
   }
 }
 
-.p-footer__nav li {
+.p-footer__items  .menu-item {
   list-style: none;
-
+  margin: 0;
+  padding: 0;
 }
 
-.p-footer__nav li a {
+.p-footer__items  .menu-item a{
   color: $white;
    display: block;
   font-size: 1.7rem;
@@ -42,7 +48,10 @@
   height: inherit;
   padding: 0.5rem;
   text-transform: none;
-
+  transition: opacity 0.4s;
+  &:hover {
+    opacity: 0.6;
+  }
 }
 
 .p-footer__logo {

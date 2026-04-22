@@ -36,7 +36,7 @@
               <?php endif; ?>
               </div>
               <h1 class="p-blog-details__title"><?php the_title(); ?></h1>
-              <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
+              <time  class="p-blog-details__date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
 
               <!--  SNSボタン -->
               <div class="p-blog-details__sns">
@@ -85,13 +85,14 @@
               </div>
 
               <!-- 前後記事ナビ -->
-               
+               <div class="p-blog-details__article-nav ">
                 <?php get_template_part('template-parts/single-pagination'); ?>
             </div>
             <!-- 関連記事 -->
-             
-            <?php get_template_part('template-parts/related-articles'); ?>
-            
+             <div class="p-blog-details__related-posts p-related-posts">
+                  <?php get_template_part('template-parts/related-articles'); ?>           
+                        
+            </div>
           </article>
 
         <?php

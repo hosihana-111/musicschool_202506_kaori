@@ -4,7 +4,7 @@
         <nav class="p-footer__nav" aria-label="フッターナビゲーション">
           <?php
             wp_nav_menu(array(
-              'menu_class' => 'p-footer__nav ul',  
+              'menu_class' => 'p-footer__items',  
               'theme_location' => 'footer',
               'container' => false,
                          

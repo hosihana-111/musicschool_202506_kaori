@@ -312,3 +312,8 @@
     }
   }
 }
+
+/*****Snow Monkey Forms*****/
+.p-contact__container:has(.snow-monkey-form[data-screen="complete"]) .p-contact__container-text {
+  display: none;
+}

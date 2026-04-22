@@ -317,7 +317,8 @@
                     <?php endif; ?>
                   </div>
                   <div class="p-blog-item__body">
-                    <h3 class="p-blog-item__title"><?php echo wp_trim_words(get_the_title(), 15, '...'); ?></h3>
+                    <h3 class="p-blog-item__title pc"><?php echo wp_trim_words(get_the_title(), 20, '...'); ?></h3>
+                    <h3 class="p-blog-item__title sp"><?php echo wp_trim_words(get_the_title(), 35, '...'); ?></h3>
                     <time class="p-blog-item__date" datetime="0000-00-00">0000.00.00</time>
                   </div>
                 </a>

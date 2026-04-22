@@ -63,7 +63,30 @@
 
 
 
-.p-related-posts__img {
+// .p-related-posts__img {
+//     position: relative;
+//     width: 20rem;
+    
+//     @include sp {
+//         width: 16rem;
+//     }
+
+//     img {
+//         aspect-ratio: 20 / 14;
+//         height: auto;
+//         display: block;
+//         object-fit: cover;
+
+//         @include sp {
+//             aspect-ratio: 16 / 11;
+
+//         }
+//     }
+// }
+
+// blog用
+.p-blog-details__related-posts {
+    .p-related-posts__img {
     position: relative;
     width: 20rem;
     
@@ -83,6 +106,35 @@
         }
     }
 }
+
+}       
+
+
+
+// result用
+.p-result-details__related-posts {
+.p-related-posts__img {
+    position: relative;
+    width: 26rem;
+    
+    @include sp {
+        width: 16rem;
+    }
+
+    img {
+        aspect-ratio: 26 / 18.3;
+        height: auto;
+        display: block;
+        object-fit: cover;
+
+        @include sp {
+            aspect-ratio: 16 / 11.3;
+
+        }
+    }
+}
+}
+
 
 .p-related-posts__img-wide {
     width: 26rem;   
